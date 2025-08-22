@@ -1,280 +1,193 @@
 import React from "react";
 import Image from "next/image";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin, FaStopwatch, FaXTwitter } from "react-icons/fa6";
 import { GrInstagram } from "react-icons/gr";
-import { IoLogoFacebook } from "react-icons/io";
+import { IoLogoFacebook, IoMdMail, IoMdStopwatch } from "react-icons/io";
 import { ImLinkedin } from "react-icons/im";
 import Link from "next/link";
+import { IoCallSharp } from "react-icons/io5";
 
 const Footer = () => {
   return (
     <>
       <footer className="text-white bg-[url('/images/footer-bg-image.png')] bg-cover bg-center">
         <div className="container flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+          {/* Left brand / summary */}
           <div className="w-96 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
             <Image
               src="/images/jetsys-footer.svg"
               width={150}
               height={50}
-              alt="Picture of the author"
-              className=" mb-6"
+              alt="Jetsys logo"
+              className="mb-6"
             />
-            <p className="mt-2 text-base font-medium text-white mb-6 ">
+            <p className="mt-2 text-base font-medium text-white mb-6">
               In the context of fast-changing defense technologies, the
               resultant gap needs to be constantly filled essentially by the
-              import of hi-tech defense equipment
+              import of hi-tech defense equipment.
             </p>
-            <div className=" flex gap-8">
-              <FaXTwitter />
-              <GrInstagram />
-              <IoLogoFacebook />
-              <ImLinkedin />
-            </div>
+
+            <ul
+              className="flex gap-8 justify-center md:justify-start"
+              aria-label="Social links"
+            >
+              <li>
+                <Link href="/" aria-label="Twitter">
+                  <FaXTwitter />
+                </Link>
+              </li>
+              <li>
+                <Link href="/" aria-label="Instagram">
+                  <GrInstagram />
+                </Link>
+              </li>
+              <li>
+                <Link href="/" aria-label="Facebook">
+                  <IoLogoFacebook />
+                </Link>
+              </li>
+              <li>
+                <Link href="/" aria-label="LinkedIn">
+                  <ImLinkedin />
+                </Link>
+              </li>
+            </ul>
           </div>
-          <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-            {/* <!-- Column 1 --> */}
+
+          {/* Right columns */}
+          <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt:10 md:text-left text-center">
+            {/* Column 1 */}
             <div className="lg:w-1/2 md:w-1/2 w-full px-4">
-              <h2 className=" font-bold text-white text-xl tracking-widest  mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
-                Aviation Equipment
+              <h2 className="font-bold text-white text-xl tracking-widest mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
+                Aviation Equipment
               </h2>
-              <nav className="list-none mb-5 text-base font-medium text-white">
+              <ul className="list-none mb-5 text-base font-medium text-white space-y-1">
                 <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
+                  <Link href="/">Ground Support Equipment</Link>
                 </li>
                 <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
+                  <Link href="/">Ground Supply Equipment</Link>
                 </li>
                 <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
+                  <Link href="/">Ground Handling Equipment</Link>
                 </li>
-              </nav>
-              <h2 className=" font-bold text-white text-xl tracking-widest  mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
-                Aviation Equipment
+                <li>
+                  <Link href="/">Ground Test Equipment</Link>
+                </li>
+              </ul>
+
+              <h2 className="font-bold text-white text-xl tracking-widest mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
+                Runway Spares
               </h2>
-              <nav className="list-none mb-5 text-base font-medium text-white">
+              <ul className="list-none mb-5 text-base font-medium text-white space-y-1">
                 <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
+                  <Link href="/">Mafi Spares</Link>
                 </li>
                 <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
+                  <Link href="/">Runway Lights</Link>
                 </li>
                 <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
+                  <Link href="/">Others</Link>
                 </li>
-              </nav>
-              <h2 className=" font-bold text-white text-xl tracking-widest  mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
-                Aviation Equipment
+              </ul>
+
+              <h2 className="font-bold text-white text-xl tracking-widest mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
+                Solutions
               </h2>
-              <nav className="list-none mb-5 text-base font-medium text-white">
+              <ul className="list-none mb-5 text-base font-medium text-white space-y-1">
                 <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
+                  <Link href="/">Indigenization</Link>
                 </li>
                 <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
+                  <Link href="/">Testing &amp; Maintenance</Link>
                 </li>
-                <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
-                </li>
-              </nav>
-              <h2 className=" font-bold text-white text-xl tracking-widest  mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
-                Aviation Equipment
+              </ul>
+
+              <h2 className="font-bold text-white text-xl tracking-widest mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
+                Other Offerings
               </h2>
-              <nav className="list-none mb-0 text-base font-medium text-white">
+              <ul className="list-none mb-0 text-base font-medium text-white space-y-1">
                 <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
+                  <Link href="/">Aircraft ROH</Link>
                 </li>
                 <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
+                  <Link href="/">Aircraft Spares</Link>
                 </li>
                 <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
+                  <Link href="/">Raw Materials</Link>
                 </li>
-              </nav>
+              </ul>
             </div>
 
-            {/* <!-- Column 2 --> */}
+            {/* Column 2 */}
             <div className="lg:w-1/2 md:w-1/2 w-full px-4">
-              <h2 className=" font-bold text-white text-xl tracking-widest  mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
-                Aviation Equipment
+              <h2 className="font-bold text-white text-xl tracking-widest mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
+                Headquarters
               </h2>
-              <nav className="list-none mb-5 text-base font-medium text-white">
+              <ul className="list-none mb-5 text-base font-medium text-white space-y-3">
                 <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
+                  G07, C-Wing, Salman CHS, Vashi, Sector 9A, Navi Mumbai, India
+                  400703
                 </li>
                 <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
+                  Plot no. 34A, Rangara Complex, Dahisar Mori, Taloja,
+                  Maharashtra, India 410208
                 </li>
-                <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
-                </li>
-              </nav>
-              <h2 className=" font-bold text-white text-xl tracking-widest  mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
-                Aviation Equipment
+              </ul>
+              <h2 className="font-bold text-white text-xl tracking-widest mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
+                Office Hours
               </h2>
-              <nav className="list-none mb-5 text-base font-medium text-white">
+              <ul className="list-none mb-5 text-base font-medium text-white space-y-3">
                 <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
+                  <div className=" flex gap-2">
+                    <div>
+                      <FaStopwatch className=" text-primary text-2xl" />
+                    </div>
+                    <div>Mon-Sat: 10am - 7pm Weekends by appointment</div>
+                  </div>
                 </li>
-                <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
-                </li>
-              </nav>
-              <h2 className=" font-bold text-white text-xl tracking-widest  mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
-                Aviation Equipment
+              </ul>
+              <h2 className="font-bold text-white text-xl tracking-widest mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
+                Office Hours
               </h2>
-              <nav className="list-none mb-5 text-base font-medium text-white">
+              <ul className="list-none mb-5 text-base font-medium text-white space-y-3">
                 <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
+                  <div className=" flex gap-2">
+                    <div>
+                      <IoCallSharp className=" text-primary text-2xl" />
+                    </div>
+                    <div>+91 90046 45224</div>
+                  </div>
                 </li>
                 <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
+                  <div className=" flex gap-2">
+                    <div>
+                      <IoMdMail className=" text-primary text-2xl" />
+                    </div>
+                    <div>info@jetsys.co.in</div>
+                  </div>
                 </li>
                 <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
+                  <div className=" flex gap-2">
+                    <div>
+                      <FaLinkedin className=" text-primary text-2xl" />
+                    </div>
+                    <div>linkedin.com/jetsysdefence</div>
+                  </div>
                 </li>
-              </nav>
-              <h2 className=" font-bold text-white text-xl tracking-widest  mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
-                Aviation Equipment
-              </h2>
-              <nav className="list-none mb-9 text-base font-medium text-white">
-                <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/" className="">
-                    Ground Support Equipmen
-                  </Link>
-                </li>
-              </nav>
+              </ul>
             </div>
-          </div>
-        </div>
-
-        <div className="bg-[#2B2908] text-white">
-          <div className=" mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-            <p className="text-gray-500 text-sm text-center sm:text-left">
-              © 2020 Tailblocks —
-              <a
-                href="https://twitter.com/knyttneve"
-                rel="noopener noreferrer"
-                className="text-gray-600 ml-1"
-                target="_blank"
-              >
-                @knyttneve
-              </a>
-            </p>
-            <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-              <a className="text-gray-500">
-                <svg
-                  fill="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                </svg>
-              </a>
-              <a className="ml-3 text-gray-500">
-                <svg
-                  fill="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                </svg>
-              </a>
-              <a className="ml-3 text-gray-500">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
-                >
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                </svg>
-              </a>
-              <a className="ml-3 text-gray-500">
-                <svg
-                  fill="currentColor"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="0"
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="none"
-                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
-                  ></path>
-                  <circle cx="4" cy="4" r="2" stroke="none"></circle>
-                </svg>
-              </a>
-            </span>
           </div>
         </div>
       </footer>
+      <section className=" bg-[#2B2908]">
+        <div className="container !py-5 ">
+          <div className=" flex justify-between text-white font-medium text-base">
+            <p>Design by Dynsimulation Technologies pvt ltd</p>
+            <p>© Jetsys Defence</p>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

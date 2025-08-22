@@ -115,75 +115,83 @@ export default function Home() {
       </section>
       {/* DESIGN */}
       <div className="">
-        <div className=" bg-primary h-28 mt-0  z-10"></div>
-        <div className=" max-w-7xl px-5 mx-auto flex justify-between">
+        <div className=" max-w-7xl px-5 mx-auto flex justify-between -z-10">
           <Image
             src="/images/ring.svg"
             width={210}
             height={210}
             alt="Picture of the author"
-            className=""
+            className=" -z-10"
           />
           <Image
             src="/images/ring.svg"
             width={210}
             height={210}
             alt="Picture of the author"
+            className=" -z-10"
           />
           <Image
             src="/images/ring.svg"
             width={210}
             height={210}
             alt="Picture of the author"
+            className=" -z-10"
           />
           <Image
             src="/images/ring.svg"
             width={210}
             height={210}
             alt="Picture of the author"
+            className=" -z-10"
           />
           <Image
             src="/images/ring.svg"
             width={210}
             height={210}
             alt="Picture of the author"
+            className=" -z-10"
           />
         </div>
+        <div className=" bg-primary h-28 -mt-40 -mb-[147px] z-10"></div>
         <div className=" max-w-7xl px-5 mx-auto flex justify-between">
           <Image
             src="/images/expert.svg"
             width={182}
             height={182}
             alt="Picture of the author"
+            className=" relative left-[14px]"
           />
           <Image
-            src="/images/expert.svg"
+            src="/images/Rapid Deployment.svg"
+            width={182}
+            height={182}
+            alt="Picture of the author"
+            className=" relative left-[8px]"
+          />
+          <Image
+            src="/images/Global Reach.svg"
             width={182}
             height={182}
             alt="Picture of the author"
           />
           <Image
-            src="/images/expert.svg"
+            src="/images/Indigenous Capability.svg"
             width={182}
             height={182}
             alt="Picture of the author"
+            className=" relative -left-[6px]"
           />
           <Image
-            src="/images/expert.svg"
+            src="/images/Precise Production.svg"
             width={182}
             height={182}
             alt="Picture of the author"
-          />
-          <Image
-            src="/images/expert.svg"
-            width={182}
-            height={182}
-            alt="Picture of the author"
+            className=" relative right-[12px]"
           />
         </div>
       </div>
       <section>
-        <div className="container"></div>
+        <div className="container !py-12"></div>
       </section>
       {/* TRUSTED */}
       <section className=" bg-[#EBE4CF]">
