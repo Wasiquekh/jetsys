@@ -1,15 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local"; //
 import "./globals.css";
+import { Montserrat } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Montserrat (Google font)
+const montserrat = Montserrat({
   subsets: ["latin"],
+  variable: "--font-montserrat",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+// Horizon font
+const horizon = localFont({
+  src: [
+    {
+      path: "/fonts/Horizon.woff2", // ✅ correct
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-horizon",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${montserrat.variable} ${horizon.variable} antialiased`}
       >
         {children}
       </body>
