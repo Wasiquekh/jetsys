@@ -5,7 +5,9 @@
 
 }
 @theme {
-  --color-primary: #767101; /* A light primary color */
+  --color-primary: #767101;
+   --color-secondary: #C2B27F; 
+
 }
 
 
