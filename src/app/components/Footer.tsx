@@ -184,7 +184,7 @@ const Footer = () => {
         <div className="container !py-5 ">
           <div className=" flex flex-col-reverse md:flex-row items-center justify-between text-white font-medium text-base">
             <Link target="_blank" href="https://www.dynsimulation.com/">
-              <p className=" hover:text-secondary">
+              <p className=" hover:text-secondary text-center">
                 Design by Dynsimulation Technologies pvt ltd
               </p>
             </Link>
