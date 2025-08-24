@@ -266,7 +266,7 @@ export default function Home() {
         </div>
       </section>
       {/* END MOBILE DESIGN */}
-      {/* OPTIONAL  SPACE FOR DESKTOP */} 
+      {/* OPTIONAL  SPACE FOR DESKTOP */}
       <section className=" hidden md:block">
         <div className="container !py-12"></div>
       </section>
@@ -282,50 +282,99 @@ export default function Home() {
             technologies for airborne platforms, avionics, and tactical systems
             — engineered for performance, reliability, and national impact.
           </p>
-          <div className=" w-full bg-white grid grid-cols-2 md:grid-cols-5 gap-6 py-5 px-5 rounded mt-10 ">
-            <div className=" w-full">
-              {" "}
+          {/* desktop */}
+          <div className="hidden md:flex w-full bg-white  justify-between gap-6 py-5 px-5 rounded mt-10">
+            <div className="w-full flex">
               <Image
                 src="/images/client-1.svg"
-                width={248}
-                height={83}
-                alt="Picture of the author"
+                width={118}
+                height={129}
+                alt="Client 1"
+                className="w-[90%] mx-auto"
               />
             </div>
-            <div className=" w-full">
-              {" "}
+            <div className="w-full flex">
               <Image
                 src="/images/client-2.svg"
-                width={212}
-                height={87}
-                alt="Picture of the author"
-              />{" "}
+                width={118}
+                height={129}
+                alt="Client 2"
+                className="w-[90%] mx-auto"
+              />
             </div>
-            <div className=" w-full">
-              {" "}
+            <div className="w-full flex">
               <Image
                 src="/images/client-3.svg"
-                width={119}
-                height={118}
-                alt="Picture of the author"
-              />{" "}
+                width={118}
+                height={129}
+                alt="Client 3"
+                className="mx-auto"
+              />
             </div>
-            <div className=" w-full">
-              {" "}
+            <div className="w-full flex">
               <Image
                 src="/images/client-4.svg"
                 width={118}
                 height={129}
-                alt="Picture of the author"
+                alt="Client 4"
+                className="mx-auto"
               />
             </div>
-            <div className=" w-full">
-              {" "}
+            <div className="w-full flex">
               <Image
                 src="/images/client-5.svg"
-                width={157}
-                height={79}
-                alt="Picture of the author"
+                width={118}
+                height={129}
+                alt="Client 5"
+                className="mx-auto"
+              />
+            </div>
+          </div>
+          {/* mobile */}
+          <div className="  md:hidden grid grid-cols-2 gap-6  w-full bg-white  py-5 px-5 rounded mt-10">
+            <div className="w-full flex">
+              <Image
+                src="/images/client-1.svg"
+                width={118}
+                height={129}
+                alt="Client 1"
+                className="mx-auto w-full"
+              />
+            </div>
+            <div className="w-full flex">
+              <Image
+                src="/images/client-2.svg"
+                width={118}
+                height={129}
+                alt="Client 2"
+                className="mx-auto w-full"
+              />
+            </div>
+            <div className="w-full flex">
+              <Image
+                src="/images/client-3.svg"
+                width={118}
+                height={129}
+                alt="Client 3"
+                className="mx-auto w-[80%]"
+              />
+            </div>
+            <div className="w-full flex">
+              <Image
+                src="/images/client-4.svg"
+                width={118}
+                height={129}
+                alt="Client 4"
+                className="mx-auto w-[90%]"
+              />
+            </div>
+            <div className="w-full flex">
+              <Image
+                src="/images/client-5.svg"
+                width={118}
+                height={129}
+                alt="Client 5"
+                className="mx-auto w-full"
               />
             </div>
           </div>
