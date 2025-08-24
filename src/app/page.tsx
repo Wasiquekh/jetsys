@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Header />
       {/* HOME TOP */}
-      <section className="relative w-full h-[600px] overflow-hidden">
+      <section className="relative w-full  h-[600px] overflow-hidden">
         {/* Background Video */}
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
@@ -83,7 +83,7 @@ export default function Home() {
       {/* ABOUT SECTION */}
       <section>
         <div className="container">
-          <h1 className=" text-center text-primary text-[40px] font-extrabold uppercase mb-5 horizon-text">
+          <h1 className=" text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text">
             About our organization
           </h1>
           <p className=" text-base text-primary font-medium text-center mb-5 ">
@@ -92,7 +92,7 @@ export default function Home() {
             technologies for airborne platforms, avionics, and tactical systems
             — engineered for performance, reliability, and national impact.
           </p>
-          <div className=" py-10 px-24 w-full bg-primary mt-12 flex flex-col items-center">
+          <div className=" py-10 px-4 md:px-24 w-full bg-primary mt-12 flex flex-col items-center">
             <Image
               src="/images/mission.svg"
               width={58}
@@ -100,7 +100,7 @@ export default function Home() {
               alt="Picture of the author"
               className=" mb-4"
             />
-            <h2 className=" mb-4 text-3xl font-bold text-white">
+            <h2 className=" mb-4 text-3xl font-bold text-white text-center">
               Our Mission and Vision
             </h2>
             <p className=" text-base font-medium text-white text-center ">
@@ -113,8 +113,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* DESIGN */}
-      <div className="">
+      {/* DESIGN DESKTOP */}
+      <div className=" hidden md:block">
         <div className=" max-w-7xl px-5 mx-auto flex justify-between -z-10">
           <Image
             src="/images/ring.svg"
@@ -189,14 +189,91 @@ export default function Home() {
             className=" relative right-[12px]"
           />
         </div>
+        <div className="max-w-7xl px-5 mx-auto flex justify-between mt-10">
+          <div className=" w-full">
+            <p className="text-center text-lg  relative -left-5 ">
+              Expert Engineers
+            </p>
+          </div>
+          <div className=" w-full">
+            <p className="text-center text-lg relative -left-2">
+              Rapid Deployment
+            </p>
+          </div>
+          <div className=" w-full">
+            <p className="text-center text-lg">Global Reach</p>
+          </div>
+          <div className=" w-full">
+            <p className="text-center text-lg relative left-3">
+              Indigenous Capability
+            </p>
+          </div>
+          <div className=" w-full">
+            <p className="text-center text-lg relative left-[25px]">
+              Precise Production
+            </p>
+          </div>
+        </div>
       </div>
-      <section>
+      {/* DESIGN MOBILE */}
+      <section className=" block md:hidden">
+        <div className="container  grid grid-cols-2 gap-0">
+          <div className=" w-full">
+            <Image
+              src="/images/d1.svg"
+              width={500}
+              height={500}
+              alt="Picture of the author"
+              className=" w-full mb-4"
+            />
+          </div>
+          <div className=" w-full">
+            <Image
+              src="/images/d2.svg"
+              width={500}
+              height={500}
+              alt="Picture of the author"
+              className=" w-full"
+            />
+          </div>
+          <div className=" w-full">
+            <Image
+              src="/images/d3.svg"
+              width={500}
+              height={500}
+              alt="Picture of the author"
+              className=" w-full mb-4"
+            />
+          </div>
+          <div className=" w-full">
+            <Image
+              src="/images/d4.svg"
+              width={500}
+              height={500}
+              alt="Picture of the author"
+              className=" w-full"
+            />
+          </div>
+          <div className=" w-full">
+            <Image
+              src="/images/d5.svg"
+              width={500}
+              height={500}
+              alt="Picture of the author"
+              className=" w-full"
+            />
+          </div>
+        </div>
+      </section>
+      {/* END MOBILE DESIGN */}
+      {/* OPTIONAL  SPACE FOR DESKTOP */} 
+      <section className=" hidden md:block">
         <div className="container !py-12"></div>
       </section>
       {/* TRUSTED */}
       <section className=" bg-[#EBE4CF]">
         <div className="container">
-          <h1 className=" mx-auto text-center text-primary text-[40px] font-extrabold uppercase mb-5 horizon-text w-full md:w-[80%]">
+          <h1 className=" mx-auto text-center text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text w-full md:w-[80%]">
             TRUSTED BY LEADERS, BUILT FOR EXCELLENCE
           </h1>
           <p className=" text-base text-black font-medium text-center mb-5 ">
@@ -205,44 +282,59 @@ export default function Home() {
             technologies for airborne platforms, avionics, and tactical systems
             — engineered for performance, reliability, and national impact.
           </p>
-          <div className=" w-full bg-white flex justify-between py-5 px-5 rounded mt-10 ">
-            <Image
-              src="/images/client-1.svg"
-              width={248}
-              height={83}
-              alt="Picture of the author"
-            />
-            <Image
-              src="/images/client-2.svg"
-              width={212}
-              height={87}
-              alt="Picture of the author"
-            />
-            <Image
-              src="/images/client-3.svg"
-              width={119}
-              height={118}
-              alt="Picture of the author"
-            />
-            <Image
-              src="/images/client-4.svg"
-              width={118}
-              height={129}
-              alt="Picture of the author"
-            />
-            <Image
-              src="/images/client-5.svg"
-              width={157}
-              height={79}
-              alt="Picture of the author"
-            />
+          <div className=" w-full bg-white grid grid-cols-2 md:grid-cols-5 gap-6 py-5 px-5 rounded mt-10 ">
+            <div className=" w-full">
+              {" "}
+              <Image
+                src="/images/client-1.svg"
+                width={248}
+                height={83}
+                alt="Picture of the author"
+              />
+            </div>
+            <div className=" w-full">
+              {" "}
+              <Image
+                src="/images/client-2.svg"
+                width={212}
+                height={87}
+                alt="Picture of the author"
+              />{" "}
+            </div>
+            <div className=" w-full">
+              {" "}
+              <Image
+                src="/images/client-3.svg"
+                width={119}
+                height={118}
+                alt="Picture of the author"
+              />{" "}
+            </div>
+            <div className=" w-full">
+              {" "}
+              <Image
+                src="/images/client-4.svg"
+                width={118}
+                height={129}
+                alt="Picture of the author"
+              />
+            </div>
+            <div className=" w-full">
+              {" "}
+              <Image
+                src="/images/client-5.svg"
+                width={157}
+                height={79}
+                alt="Picture of the author"
+              />
+            </div>
           </div>
         </div>
       </section>
       {/* OUR OFFERING */}
       <section className=" ">
         <div className="container">
-          <h1 className=" mx-auto text-center text-primary text-[40px] font-extrabold uppercase mb-5 horizon-text w-full md:w-[80%]">
+          <h1 className=" mx-auto text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text w-full md:w-[80%]">
             Our Offerings
           </h1>
           <p className=" text-base text-black font-medium text-center mb-5 ">
@@ -420,7 +512,7 @@ export default function Home() {
       {/* WHY CHOOSE US */}
       <section className=" bg-[#EBE4CF]">
         <div className="container">
-          <h1 className=" mx-auto text-center text-black text-[40px] font-extrabold uppercase mb-5 horizon-text w-full md:w-[80%]">
+          <h1 className=" mx-auto text-center text-black text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text w-full md:w-[80%]">
             Why Choose Us?
           </h1>
           <p className=" text-base text-black font-medium text-center mb-5 ">
@@ -436,9 +528,10 @@ export default function Home() {
                 width={305}
                 height={220}
                 alt="Picture of the author"
+                className="w-full"
               />
               <p className=" bg-white border-b-3 border-primary text-black text-center text-2xl font-bold py-2">
-                Advanced Manufacturing
+                Advanced <br /> Manufacturing
               </p>
             </div>
             <div className="">
@@ -447,6 +540,7 @@ export default function Home() {
                 width={305}
                 height={220}
                 alt="Picture of the author"
+                className="w-full"
               />
               <p className=" bg-white border-b-3 border-primary text-black text-center text-2xl font-bold py-2">
                 Partner <br /> Focused
@@ -458,6 +552,7 @@ export default function Home() {
                 width={305}
                 height={220}
                 alt="Picture of the author"
+                className="w-full"
               />
               <p className=" bg-white border-b-3 border-primary text-black text-center text-2xl font-bold py-2">
                 System <br /> Integration
@@ -469,6 +564,7 @@ export default function Home() {
                 width={305}
                 height={220}
                 alt="Picture of the author"
+                className="w-full"
               />
               <p className=" bg-white border-b-3 border-primary text-black text-center text-2xl font-bold py-2">
                 Timely <br /> Delivery

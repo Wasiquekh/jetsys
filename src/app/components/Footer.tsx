@@ -13,13 +13,13 @@ const Footer = () => {
       <footer className="text-white bg-[url('/images/footer-bg-image.png')] bg-cover bg-center">
         <div className="container flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           {/* Left brand / summary */}
-          <div className="w-96 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+          <div className="w-full md:w-96 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
             <Image
               src="/images/jetsys-footer.svg"
               width={150}
               height={50}
               alt="Jetsys logo"
-              className="mb-6"
+              className="mb-6 mx-auto md"
             />
             <p className="mt-2 text-base font-medium text-white mb-6">
               In the context of fast-changing defense technologies, the
@@ -28,7 +28,7 @@ const Footer = () => {
             </p>
 
             <ul
-              className="flex gap-8 justify-center md:justify-start"
+              className="flex gap-8 justify-center md:justify-start mb-6"
               aria-label="Social links"
             >
               <li>
@@ -143,7 +143,7 @@ const Footer = () => {
                     <div>
                       <FaStopwatch className=" text-primary text-2xl" />
                     </div>
-                    <div>Mon-Sat: 10am - 7pm Weekends by appointment</div>
+                    <div>Mon-Sat: 10am - 7pm Weekends by appointment</div>
                   </div>
                 </li>
               </ul>
@@ -152,7 +152,7 @@ const Footer = () => {
               </h2>
               <ul className="list-none mb-5 text-base font-medium text-white space-y-3">
                 <li>
-                  <div className=" flex gap-2">
+                  <div className=" flex gap-2 justify-center  md:justify-start">
                     <div>
                       <IoCallSharp className=" text-primary text-2xl" />
                     </div>
@@ -160,7 +160,7 @@ const Footer = () => {
                   </div>
                 </li>
                 <li>
-                  <div className=" flex gap-2">
+                  <div className=" flex gap-2 justify-center  md:justify-start">
                     <div>
                       <IoMdMail className=" text-primary text-2xl" />
                     </div>
@@ -168,7 +168,7 @@ const Footer = () => {
                   </div>
                 </li>
                 <li>
-                  <div className=" flex gap-2">
+                  <div className=" flex gap-2 justify-center  md:justify-start">
                     <div>
                       <FaLinkedin className=" text-primary text-2xl" />
                     </div>
@@ -182,8 +182,13 @@ const Footer = () => {
       </footer>
       <section className=" bg-[#2B2908]">
         <div className="container !py-5 ">
-          <div className=" flex justify-between text-white font-medium text-base">
-            <p>Design by Dynsimulation Technologies pvt ltd</p>
+          <div className=" flex flex-col-reverse md:flex-row items-center justify-between text-white font-medium text-base">
+            <Link target="_blank" href="https://www.dynsimulation.com/">
+              <p className=" hover:text-secondary">
+                Design by Dynsimulation Technologies pvt ltd
+              </p>
+            </Link>
+
             <p>© Jetsys Defence</p>
           </div>
         </div>
