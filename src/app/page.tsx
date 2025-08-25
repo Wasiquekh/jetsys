@@ -46,8 +46,8 @@ export default function Home() {
               Expanding Horizons in Aerospace
             </p>
             <p className=" text-base font-medium text-white mb-8">
-              Driving innovation to redefine the possibilities in defence
-              andaerospace industries.
+              Driving innovation to redefine the possibilities in defence and
+              aerospace industries.
             </p>
             <button className=" bg-primary text-base font-semibold py-2 px-6 rounded mb-0 text-white">
               Know More
