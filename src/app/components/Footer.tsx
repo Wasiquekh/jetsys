@@ -19,7 +19,7 @@ const Footer = () => {
               width={150}
               height={50}
               alt="Jetsys logo"
-              className="mb-6 mx-auto md"
+              className="mb-6 mx-auto md:mx-0"
             />
             <p className="mt-2 text-base font-medium text-white mb-6">
               In the context of fast-changing defense technologies, the
@@ -135,7 +135,7 @@ const Footer = () => {
                 </li>
               </ul>
               <h2 className="font-bold text-white text-xl tracking-widest mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
-                Office Hours
+                Office Hours
               </h2>
               <ul className="list-none mb-5 text-base font-medium text-white space-y-3">
                 <li>
@@ -148,7 +148,7 @@ const Footer = () => {
                 </li>
               </ul>
               <h2 className="font-bold text-white text-xl tracking-widest mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
-                Office Hours
+                Office Hours
               </h2>
               <ul className="list-none mb-5 text-base font-medium text-white space-y-3">
                 <li>
@@ -156,7 +156,7 @@ const Footer = () => {
                     <div>
                       <IoCallSharp className=" text-primary text-2xl" />
                     </div>
-                    <div>+91 90046 45224</div>
+                    <div>+91 90046 45224</div>
                   </div>
                 </li>
                 <li>
@@ -182,10 +182,10 @@ const Footer = () => {
       </footer>
       <section className=" bg-[#2B2908]">
         <div className="container !py-5 ">
-          <div className=" flex flex-col-reverse md:flex-row items-center justify-between text-white font-medium text-base">
+          <div className=" flex flex-col-reverse md:flex-row items-center justify-between gap-1 text-white font-medium text-xs md:text-sm">
             <Link target="_blank" href="https://www.dynsimulation.com/">
               <p className=" hover:text-secondary text-center">
-                Design by Dynsimulation Technologies pvt ltd
+                Powered by Dynsimulation Technologies pvt ltd
               </p>
             </Link>
 
