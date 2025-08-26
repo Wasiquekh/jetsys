@@ -437,7 +437,10 @@ export default function Home() {
         </div>
       </section>
       {/* OUR OFFERING */}
-      <section className=" ">
+      <section
+        // ref={ref}
+        className=" "
+      >
         <div className="container">
           <h1 className=" mx-auto text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text w-full md:w-[80%]">
             Our Offerings
@@ -449,7 +452,11 @@ export default function Home() {
             — engineered for performance, reliability, and national impact.
           </p>
           <div className=" grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            <div className=" border-1  border-primary rounded  p-3">
+            <div
+              className={`border-1  border-primary rounded  p-3 hover:shadow-xl ${
+                isVisible ? "animate-fadeUp delay-200" : ""
+              }`}
+            >
               <Image
                 src="/images/offer-1.png"
                 width={600}
@@ -468,7 +475,11 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className=" border-1  border-primary rounded  p-3">
+            <div
+              className={`border-1  border-primary rounded  p-3 hover:shadow-xl ${
+                isVisible ? "animate-fadeUp delay-400" : ""
+              }`}
+            >
               <Image
                 src="/images/offer-2.png"
                 width={600}
@@ -486,7 +497,11 @@ export default function Home() {
                 </p>
               </Link>
             </div>
-            <div className=" border-1  border-primary rounded  p-3">
+            <div
+              className={`border-1  border-primary rounded  p-3 hover:shadow-xl ${
+                isVisible ? "animate-fadeUp delay-600" : ""
+              }`}
+            >
               <Image
                 src="/images/offer-3.png"
                 width={600}
@@ -504,7 +519,11 @@ export default function Home() {
                 </p>
               </Link>
             </div>
-            <div className=" border-1  border-primary rounded  p-3">
+            <div
+              className={`border-1  border-primary rounded  p-3 hover:shadow-xl ${
+                isVisible ? "animate-fadeUp delay-800" : ""
+              }`}
+            >
               <Image
                 src="/images/offer-4.png"
                 width={600}
@@ -522,7 +541,11 @@ export default function Home() {
                 </p>
               </Link>
             </div>
-            <div className=" border-1  border-primary rounded  p-3">
+            <div
+              className={`border-1  border-primary rounded  p-3 hover:shadow-xl ${
+                isVisible ? "animate-fadeUp delay-1000" : ""
+              }`}
+            >
               <Image
                 src="/images/offer-5.png"
                 width={600}
@@ -540,7 +563,11 @@ export default function Home() {
                 </p>
               </Link>
             </div>
-            <div className=" border-1  border-primary rounded  p-3">
+            <div
+              className={`border-1  border-primary rounded  p-3 hover:shadow-xl ${
+                isVisible ? "animate-fadeUp delay-1200" : ""
+              }`}
+            >
               <Image
                 src="/images/offer-6.png"
                 width={600}
@@ -558,7 +585,11 @@ export default function Home() {
                 </p>
               </Link>
             </div>
-            <div className=" border-1  border-primary rounded  p-3">
+            <div
+              className={`border-1  border-primary rounded  p-3 hover:shadow-xl ${
+                isVisible ? "animate-fadeUp delay-1400" : ""
+              }`}
+            >
               <Image
                 src="/images/offer-7.png"
                 width={600}
@@ -576,7 +607,11 @@ export default function Home() {
                 </p>
               </Link>
             </div>
-            <div className=" border-1  border-primary rounded  p-3">
+            <div
+              className={`border-1  border-primary rounded  p-3 hover:shadow-xl ${
+                isVisible ? "animate-fadeUp delay-1600" : ""
+              }`}
+            >
               <Image
                 src="/images/offer-8.png"
                 width={600}
@@ -594,7 +629,11 @@ export default function Home() {
                 </p>
               </Link>
             </div>
-            <div className=" border-1  border-primary rounded  p-3">
+            <div
+              className={`border-1  border-primary rounded  p-3 hover:shadow-xl ${
+                isVisible ? "animate-fadeUp delay-1800" : ""
+              }`}
+            >
               <Image
                 src="/images/offer-9.png"
                 width={600}
