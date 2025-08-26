@@ -4,31 +4,44 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { motion, type Variants } from "framer-motion";
+
+const container: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.25 },
+  },
+};
+
+const item: Variants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] },
+  },
+};
+
+const cards = [
+  { img: "/images/offer-1.png", title: "Aviation Equipment" },
+  { img: "/images/offer-2.png", title: "Raw Materials" },
+  { img: "/images/offer-3.png", title: "Testing & Maintainence" },
+  { img: "/images/offer-4.png", title: "Indigenization" },
+  { img: "/images/offer-5.png", title: "Aircraft Spares" },
+  { img: "/images/offer-6.png", title: "Runway Spares" },
+  { img: "/images/offer-7.png", title: "Test Rigs & Test Chambers" },
+  { img: "/images/offer-8.png", title: "Ground Support & Handling Equipment" },
+  { img: "/images/offer-9.png", title: "Others" },
+];
+const chooseCards = [
+  { img: "/images/choose-1.png", title: "Advanced <br /> Manufacturing" },
+  { img: "/images/choose-2.png", title: "Partner <br /> Focused" },
+  { img: "/images/choose-3.png", title: "System <br /> Integration" },
+  { img: "/images/choose-4.png", title: "Timely <br /> Delivery" },
+];
 
 export default function Home() {
-  const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect(); // stop after first trigger
-        }
-      },
-      { threshold: 0.3 } // trigger when 30% of section is visible
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) observer.unobserve(ref.current);
-    };
-  }, []);
-
   return (
     <>
       <Header />
@@ -44,7 +57,7 @@ export default function Home() {
           poster="/images/poster.jpg" // fallback poster image
         >
           <source src="/images/bg-video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+          Your browser does not support the video tag
         </video>
 
         {/* Overlay */}
@@ -56,7 +69,7 @@ export default function Home() {
             We Build,What Sky Demands
           </h1>
           <p className="mt-4 text-base font-semibold text-white md:text-xl  max-w-2xl uppercase">
-            Leading aerospace with bold innovation.
+            Leading aerospace with bold innovation
           </p>
           <button className="mt-6 px-10 py-3 bg-white text-base text-primary font-bold rounded shadow-lg hover:bg-primary transition border border-primary hover:text-white">
             Get Started
@@ -64,42 +77,41 @@ export default function Home() {
         </div>
       </section>
       {/* AFTER TOP SECTION */}
-      <section ref={ref} className="">
-        <div className=" container grid grid-cols-1 md:grid-cols-3 gap-10">
-          <div
-            className={`fade-item relative w-full bg-[url('/images/landing-1.png')] bg-cover bg-center px-8 py-16 rounded text-center overflow-hidden group ${
-              isVisible ? "animate-fadeUp delay-0" : ""
-            }`}
+      <section>
+        <div className="container grid grid-cols-1 md:grid-cols-3 gap-10">
+          {/* Card 1 */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }} // start hidden + below
+            whileInView={{ opacity: 1, y: 0 }} // fade + move up
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.2 }} // trigger only once when 20% visible
+            className="relative w-full bg-[url('/images/landing-1.png')] bg-cover bg-center px-8 py-16 rounded text-center overflow-hidden group transition duration-500 transform hover:scale-105 hover:shadow-4xl"
           >
             <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-500"></div>
-
             <p className="relative text-2xl text-white font-bold mb-8">
               Expanding Horizons in Aerospace
             </p>
-
             <p className="relative text-base font-medium text-white mb-8">
               Driving innovation to redefine the possibilities in defence and
               aerospace industries.
             </p>
-
             <button className="relative bg-primary text-base font-semibold py-2 px-6 rounded text-white hover:bg-white hover:text-black border border-primary">
               Know More
             </button>
-          </div>
+          </motion.div>
 
-          <div
-            className={`fade-item relative w-full bg-[url('/images/landing-3.png')] bg-cover bg-center px-8 py-16 rounded text-center overflow-hidden group ${
-              isVisible ? "animate-fadeUp delay-200" : ""
-            }`}
+          {/* Card 2 */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }} // small delay for stagger effect
+            viewport={{ once: true, amount: 0.2 }}
+            className="relative w-full bg-[url('/images/landing-3.png')] bg-cover bg-center px-8 py-16 rounded text-center overflow-hidden group transition duration-500 transform hover:scale-105 hover:shadow-4xl"
           >
-            {/* Overlay */}
             <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-500"></div>
-
-            {/* Content */}
             <div className="relative z-10">
               <p className="text-2xl text-white font-bold mb-8">
-                Indigenous <br />
-                Innovations
+                Indigenous <br /> Innovations
               </p>
               <p className="text-base font-medium text-white mb-8">
                 Proudly delivering homegrown solutions for a self-reliant
@@ -109,31 +121,30 @@ export default function Home() {
                 Know More
               </button>
             </div>
-          </div>
+          </motion.div>
 
-          <div
-            className={`fade-item relative w-full bg-[url('/images/landing-2.png')] bg-cover bg-center px-8 py-16 rounded text-center overflow-hidden group ${
-              isVisible ? "animate-fadeUp delay-400" : ""
-            }`}
+          {/* Card 3 */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }} // stagger more
+            viewport={{ once: true, amount: 0.2 }}
+            className="relative w-full bg-[url('/images/landing-2.png')] bg-cover bg-center px-8 py-16 rounded text-center overflow-hidden group transition duration-500 transform hover:scale-105 hover:shadow-4xl"
           >
-            {/* Overlay */}
             <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-500"></div>
-
-            {/* Content */}
             <div className="relative z-10">
               <p className="text-2xl text-white font-bold mb-8">
                 Precision Maintenance Systems
               </p>
               <p className="text-base font-medium text-white mb-8">
                 Ensuring operational superiority with advanced maintenance{" "}
-                <br />
-                technologies.
+                <br /> technologies.
               </p>
               <button className="bg-primary text-base font-semibold py-2 px-6 rounded mb-0 text-white hover:bg-white hover:text-black border border-primary">
                 Know More
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
       {/* ABOUT SECTION */}
@@ -437,10 +448,7 @@ export default function Home() {
         </div>
       </section>
       {/* OUR OFFERING */}
-      <section
-        // ref={ref}
-        className=" "
-      >
+      <section className="">
         <div className="container">
           <h1 className=" mx-auto text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text w-full md:w-[80%]">
             Our Offerings
@@ -451,205 +459,35 @@ export default function Home() {
             technologies for airborne platforms, avionics, and tactical systems
             — engineered for performance, reliability, and national impact.
           </p>
-          <div className=" grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            <div
-              className={`border-1  border-primary rounded  p-3 hover:shadow-xl ${
-                isVisible ? "animate-fadeUp delay-200" : ""
-              }`}
-            >
-              <Image
-                src="/images/offer-1.png"
-                width={600}
-                height={600}
-                alt="Picture of the author"
-                className=" mb-2"
-              />
-              <p className=" text-2xl font-bold text-primary mb-10">
-                Aviation Equipment
-              </p>
-
-              <Link href="/">
-                <p className=" text-base font-medium text-primary underline">
-                  Know More
-                </p>
-              </Link>
-            </div>
-
-            <div
-              className={`border-1  border-primary rounded  p-3 hover:shadow-xl ${
-                isVisible ? "animate-fadeUp delay-400" : ""
-              }`}
-            >
-              <Image
-                src="/images/offer-2.png"
-                width={600}
-                height={600}
-                alt="Picture of the author"
-                className=" mb-2"
-              />
-              <p className=" text-2xl font-bold text-primary mb-10">
-                Raw Materials
-              </p>
-
-              <Link href="/">
-                <p className=" text-base font-medium text-primary underline">
-                  Know More
-                </p>
-              </Link>
-            </div>
-            <div
-              className={`border-1  border-primary rounded  p-3 hover:shadow-xl ${
-                isVisible ? "animate-fadeUp delay-600" : ""
-              }`}
-            >
-              <Image
-                src="/images/offer-3.png"
-                width={600}
-                height={600}
-                alt="Picture of the author"
-                className=" mb-2"
-              />
-              <p className=" text-2xl font-bold text-primary mb-10">
-                Testing & Maintainence
-              </p>
-
-              <Link href="/">
-                <p className=" text-base font-medium text-primary underline">
-                  Know More
-                </p>
-              </Link>
-            </div>
-            <div
-              className={`border-1  border-primary rounded  p-3 hover:shadow-xl ${
-                isVisible ? "animate-fadeUp delay-800" : ""
-              }`}
-            >
-              <Image
-                src="/images/offer-4.png"
-                width={600}
-                height={600}
-                alt="Picture of the author"
-                className=" mb-2"
-              />
-              <p className=" text-2xl font-bold text-primary mb-10">
-                Indigenization
-              </p>
-
-              <Link href="/">
-                <p className=" text-base font-medium text-primary underline">
-                  Know More
-                </p>
-              </Link>
-            </div>
-            <div
-              className={`border-1  border-primary rounded  p-3 hover:shadow-xl ${
-                isVisible ? "animate-fadeUp delay-1000" : ""
-              }`}
-            >
-              <Image
-                src="/images/offer-5.png"
-                width={600}
-                height={600}
-                alt="Picture of the author"
-                className=" mb-2"
-              />
-              <p className=" text-2xl font-bold text-primary mb-10">
-                Aircraft Spares
-              </p>
-
-              <Link href="/">
-                <p className=" text-base font-medium text-primary underline">
-                  Know More
-                </p>
-              </Link>
-            </div>
-            <div
-              className={`border-1  border-primary rounded  p-3 hover:shadow-xl ${
-                isVisible ? "animate-fadeUp delay-1200" : ""
-              }`}
-            >
-              <Image
-                src="/images/offer-6.png"
-                width={600}
-                height={600}
-                alt="Picture of the author"
-                className=" mb-2"
-              />
-              <p className=" text-2xl font-bold text-primary mb-10">
-                Runway Spares
-              </p>
-
-              <Link href="/">
-                <p className=" text-base font-medium text-primary underline">
-                  Know More
-                </p>
-              </Link>
-            </div>
-            <div
-              className={`border-1  border-primary rounded  p-3 hover:shadow-xl ${
-                isVisible ? "animate-fadeUp delay-1400" : ""
-              }`}
-            >
-              <Image
-                src="/images/offer-7.png"
-                width={600}
-                height={600}
-                alt="Picture of the author"
-                className=" mb-2"
-              />
-              <p className=" text-2xl font-bold text-primary mb-10">
-                Test Rigs & Test Chambers
-              </p>
-
-              <Link href="/">
-                <p className=" text-base font-medium text-primary underline">
-                  Know More
-                </p>
-              </Link>
-            </div>
-            <div
-              className={`border-1  border-primary rounded  p-3 hover:shadow-xl ${
-                isVisible ? "animate-fadeUp delay-1600" : ""
-              }`}
-            >
-              <Image
-                src="/images/offer-8.png"
-                width={600}
-                height={600}
-                alt="Picture of the author"
-                className=" mb-2"
-              />
-              <p className=" text-2xl font-bold text-primary mb-10">
-                Ground Support & Handling Equipment
-              </p>
-
-              <Link href="/">
-                <p className=" text-base font-medium text-primary underline">
-                  Know More
-                </p>
-              </Link>
-            </div>
-            <div
-              className={`border-1  border-primary rounded  p-3 hover:shadow-xl ${
-                isVisible ? "animate-fadeUp delay-1800" : ""
-              }`}
-            >
-              <Image
-                src="/images/offer-9.png"
-                width={600}
-                height={600}
-                alt="Picture of the author"
-                className=" mb-2"
-              />
-              <p className=" text-2xl font-bold text-primary mb-10">Others</p>
-
-              <Link href="/">
-                <p className=" text-base font-medium text-primary underline">
-                  Know More
-                </p>
-              </Link>
-            </div>
-          </div>
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16"
+          >
+            {cards.map(({ img, title }, i) => (
+              <motion.div
+                key={i}
+                variants={item}
+                className="border-1 border-primary rounded p-3 hover:shadow-xl transform transition duration-200 hover:scale-103"
+              >
+                <Image
+                  src={img}
+                  width={600}
+                  height={600}
+                  alt={title}
+                  className="mb-2"
+                />
+                <p className="text-2xl font-bold text-primary mb-10">{title}</p>
+                <Link href="/">
+                  <p className="text-base font-medium text-primary underline">
+                    Know More
+                  </p>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
@@ -665,56 +503,33 @@ export default function Home() {
             engineering and rigorous testing, our solutions ensure reliability
             in mission-critical environments.
           </p>
-          <div className=" grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
-            <div className="">
-              <Image
-                src="/images/choose-1.png"
-                width={305}
-                height={220}
-                alt="Picture of the author"
-                className="w-full"
-              />
-              <p className=" bg-white border-b-3 border-primary text-black text-center text-2xl font-bold py-2">
-                Advanced <br /> Manufacturing
-              </p>
-            </div>
-            <div className="">
-              <Image
-                src="/images/choose-2.png"
-                width={305}
-                height={220}
-                alt="Picture of the author"
-                className="w-full"
-              />
-              <p className=" bg-white border-b-3 border-primary text-black text-center text-2xl font-bold py-2">
-                Partner <br /> Focused
-              </p>
-            </div>
-            <div className="">
-              <Image
-                src="/images/choose-3.png"
-                width={305}
-                height={220}
-                alt="Picture of the author"
-                className="w-full"
-              />
-              <p className=" bg-white border-b-3 border-primary text-black text-center text-2xl font-bold py-2">
-                System <br /> Integration
-              </p>
-            </div>
-            <div className="">
-              <Image
-                src="/images/choose-4.png"
-                width={305}
-                height={220}
-                alt="Picture of the author"
-                className="w-full"
-              />
-              <p className=" bg-white border-b-3 border-primary text-black text-center text-2xl font-bold py-2">
-                Timely <br /> Delivery
-              </p>
-            </div>
-          </div>
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12"
+          >
+            {chooseCards.map(({ img, title }, i) => (
+              <motion.div
+                key={i}
+                variants={item}
+                className="transition duration-300 transform hover:scale-103 hover:shadow-xl rounded"
+              >
+                <Image
+                  src={img}
+                  width={305}
+                  height={220}
+                  alt={title.replace(/<br \/>/g, " ")}
+                  className="w-full"
+                />
+                <p
+                  className="bg-white border-b-3 border-primary text-black text-center text-2xl font-bold py-2"
+                  dangerouslySetInnerHTML={{ __html: title }}
+                />
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
       <Footer />

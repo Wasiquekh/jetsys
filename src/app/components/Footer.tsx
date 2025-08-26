@@ -34,22 +34,38 @@ const Footer = () => {
               aria-label="Social links"
             >
               <li>
-                <Link href="/" aria-label="Twitter">
+                <Link
+                  href="/"
+                  aria-label="Twitter"
+                  className=" hover:text-secondary"
+                >
                   <FaXTwitter />
                 </Link>
               </li>
               <li>
-                <Link href="/" aria-label="Instagram">
+                <Link
+                  href="/"
+                  aria-label="Instagram"
+                  className=" hover:text-secondary"
+                >
                   <GrInstagram />
                 </Link>
               </li>
               <li>
-                <Link href="/" aria-label="Facebook">
+                <Link
+                  href="/"
+                  aria-label="Facebook"
+                  className=" hover:text-secondary"
+                >
                   <IoLogoFacebook />
                 </Link>
               </li>
               <li>
-                <Link href="/" aria-label="LinkedIn">
+                <Link
+                  href="/"
+                  aria-label="LinkedIn"
+                  className=" hover:text-secondary"
+                >
                   <ImLinkedin />
                 </Link>
               </li>
@@ -64,16 +80,16 @@ const Footer = () => {
                 Aviation Equipment
               </h2>
               <ul className="list-none mb-5 text-base font-medium text-white space-y-1">
-                <li>
+                <li className=" hover:text-secondary">
                   <Link href="/">Ground Support Equipment</Link>
                 </li>
-                <li>
+                <li className=" hover:text-secondary">
                   <Link href="/">Ground Supply Equipment</Link>
                 </li>
-                <li>
+                <li className=" hover:text-secondary">
                   <Link href="/">Ground Handling Equipment</Link>
                 </li>
-                <li>
+                <li className=" hover:text-secondary">
                   <Link href="/">Ground Test Equipment</Link>
                 </li>
               </ul>
@@ -82,13 +98,13 @@ const Footer = () => {
                 Runway Spares
               </h2>
               <ul className="list-none mb-5 text-base font-medium text-white space-y-1">
-                <li>
+                <li className=" hover:text-secondary">
                   <Link href="/">Mafi Spares</Link>
                 </li>
-                <li>
+                <li className=" hover:text-secondary">
                   <Link href="/">Runway Lights</Link>
                 </li>
-                <li>
+                <li className=" hover:text-secondary">
                   <Link href="/">Others</Link>
                 </li>
               </ul>
@@ -98,10 +114,14 @@ const Footer = () => {
               </h2>
               <ul className="list-none mb-5 text-base font-medium text-white space-y-1">
                 <li>
-                  <Link href="/">Indigenization</Link>
+                  <Link className=" hover:text-secondary" href="/">
+                    Indigenization
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">Testing &amp; Maintenance</Link>
+                  <Link className=" hover:text-secondary" href="/">
+                    Testing &amp; Maintenance
+                  </Link>
                 </li>
               </ul>
 
@@ -110,13 +130,19 @@ const Footer = () => {
               </h2>
               <ul className="list-none mb-0 text-base font-medium text-white space-y-1">
                 <li>
-                  <Link href="/">Aircraft ROH</Link>
+                  <Link className=" hover:text-secondary" href="/">
+                    Aircraft ROH
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">Aircraft Spares</Link>
+                  <Link className=" hover:text-secondary" href="/">
+                    Aircraft Spares
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">Raw Materials</Link>
+                  <Link className=" hover:text-secondary" href="/">
+                    Raw Materials
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -158,7 +184,7 @@ const Footer = () => {
                     <div>
                       <IoCallSharp className=" text-primary text-2xl" />
                     </div>
-                    <div>+91 90046 45224</div>
+                    <div className=" hover:text-secondary">+91 90046 45224</div>
                   </div>
                 </li>
                 <li>
@@ -166,7 +192,9 @@ const Footer = () => {
                     <div>
                       <IoMdMail className=" text-primary text-2xl" />
                     </div>
-                    <div>info@jetsys.co.in</div>
+                    <div className=" hover:text-secondary">
+                      info@jetsys.co.in
+                    </div>
                   </div>
                 </li>
                 <li>
@@ -174,7 +202,9 @@ const Footer = () => {
                     <div>
                       <FaLinkedin className=" text-primary text-2xl" />
                     </div>
-                    <div>linkedin.com/jetsysdefence</div>
+                    <div className=" hover:text-secondary">
+                      linkedin.com/jetsysdefence
+                    </div>
                   </div>
                 </li>
               </ul>

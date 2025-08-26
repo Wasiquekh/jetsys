@@ -38,48 +38,7 @@ body {
 }
 }
 
-/* facein */
-.fade-item {
-  opacity: 0;
-  transform: translateY(40px);
-}
 
-/* Keyframes for fade up */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fadeUp {
-  animation: fadeUp 0.8s ease forwards;
-}
-
-.delay-0 { animation-delay: 0s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-400 { animation-delay: 0.4s; }
-
-/* zoomin */
-/* Already have fade-up */
-@keyframes zoomIn {
-  from {
-    opacity: 0;
-    transform: scale(0.85);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.animate-zoomIn {
-  animation: zoomIn 0.8s ease forwards;
-}
 
 
 
