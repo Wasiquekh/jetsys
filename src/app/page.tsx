@@ -1,9 +1,34 @@
+"use client";
 import Image from "next/image";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // stop after first trigger
+        }
+      },
+      { threshold: 0.3 } // trigger when 30% of section is visible
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) observer.unobserve(ref.current);
+    };
+  }, []);
+
   return (
     <>
       <Header />
@@ -30,53 +55,84 @@ export default function Home() {
           <h1 className="text-4xl md:text-6xl  font-extrabold text-white uppercase horizon-text w-full  md:w-3/4">
             We Build,What Sky Demands
           </h1>
-          <p className="mt-4 text-base font-semibold text-white md:text-xl  max-w-2xl">
+          <p className="mt-4 text-base font-semibold text-white md:text-xl  max-w-2xl uppercase">
             Leading aerospace with bold innovation.
           </p>
-          <button className="mt-6 px-10 py-3 bg-white text-base text-primary font-bold rounded shadow-lg hover:bg-secondary transition">
+          <button className="mt-6 px-10 py-3 bg-white text-base text-primary font-bold rounded shadow-lg hover:bg-primary transition border border-primary hover:text-white">
             Get Started
           </button>
         </div>
       </section>
       {/* AFTER TOP SECTION */}
-      <section className="">
+      <section ref={ref} className="">
         <div className=" container grid grid-cols-1 md:grid-cols-3 gap-10">
-          <div className=" w-full bg-[url('/images/landing-1.png')] bg-cover bg-center px-8 py-16 rounded text-center">
-            <p className=" text-2xl text-white font-bold mb-8">
+          <div
+            className={`fade-item relative w-full bg-[url('/images/landing-1.png')] bg-cover bg-center px-8 py-16 rounded text-center overflow-hidden group ${
+              isVisible ? "animate-fadeUp delay-0" : ""
+            }`}
+          >
+            <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+            <p className="relative text-2xl text-white font-bold mb-8">
               Expanding Horizons in Aerospace
             </p>
-            <p className=" text-base font-medium text-white mb-8">
+
+            <p className="relative text-base font-medium text-white mb-8">
               Driving innovation to redefine the possibilities in defence and
               aerospace industries.
             </p>
-            <button className=" bg-primary text-base font-semibold py-2 px-6 rounded mb-0 text-white">
+
+            <button className="relative bg-primary text-base font-semibold py-2 px-6 rounded text-white hover:bg-white hover:text-black border border-primary">
               Know More
             </button>
           </div>
-          <div className=" w-full bg-[url('/images/landing-2.png')] bg-cover bg-center px-8 py-16 rounded text-center">
-            <p className=" text-2xl text-white font-bold mb-8">
-              Indigenous <br />
-              Innovations
-            </p>
-            <p className=" text-base font-medium text-white mb-8">
-              Proudly delivering homegrown solutions for a self-reliant defence
-              ecosystem.
-            </p>
-            <button className=" bg-primary text-base font-semibold py-2 px-6 rounded mb-0 text-white">
-              Know More
-            </button>
+
+          <div
+            className={`fade-item relative w-full bg-[url('/images/landing-3.png')] bg-cover bg-center px-8 py-16 rounded text-center overflow-hidden group ${
+              isVisible ? "animate-fadeUp delay-200" : ""
+            }`}
+          >
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+            {/* Content */}
+            <div className="relative z-10">
+              <p className="text-2xl text-white font-bold mb-8">
+                Indigenous <br />
+                Innovations
+              </p>
+              <p className="text-base font-medium text-white mb-8">
+                Proudly delivering homegrown solutions for a self-reliant
+                defence ecosystem.
+              </p>
+              <button className="bg-primary text-base font-semibold py-2 px-6 rounded mb-0 text-white hover:bg-white hover:text-black border border-primary">
+                Know More
+              </button>
+            </div>
           </div>
-          <div className=" w-full bg-[url('/images/landing-3.png')] bg-cover bg-center px-8 py-16 rounded text-center">
-            <p className=" text-2xl text-white font-bold mb-8">
-              Precision Maintenance Systems
-            </p>
-            <p className=" text-base font-medium text-white mb-8">
-              Ensuring operational superiority with advanced maintenance <br />
-              technologies.
-            </p>
-            <button className=" bg-primary text-base font-semibold py-2 px-6 rounded mb-0 text-white">
-              Know More
-            </button>
+
+          <div
+            className={`fade-item relative w-full bg-[url('/images/landing-2.png')] bg-cover bg-center px-8 py-16 rounded text-center overflow-hidden group ${
+              isVisible ? "animate-fadeUp delay-400" : ""
+            }`}
+          >
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+            {/* Content */}
+            <div className="relative z-10">
+              <p className="text-2xl text-white font-bold mb-8">
+                Precision Maintenance Systems
+              </p>
+              <p className="text-base font-medium text-white mb-8">
+                Ensuring operational superiority with advanced maintenance{" "}
+                <br />
+                technologies.
+              </p>
+              <button className="bg-primary text-base font-semibold py-2 px-6 rounded mb-0 text-white hover:bg-white hover:text-black border border-primary">
+                Know More
+              </button>
+            </div>
           </div>
         </div>
       </section>

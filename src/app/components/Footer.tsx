@@ -14,13 +14,15 @@ const Footer = () => {
         <div className="container flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           {/* Left brand / summary */}
           <div className="w-full md:w-96 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-            <Image
-              src="/images/jetsys-footer.svg"
-              width={150}
-              height={50}
-              alt="Jetsys logo"
-              className="mb-6 mx-auto md:mx-0"
-            />
+            <Link href="/">
+              <Image
+                src="/images/jetsys-footer.svg"
+                width={150}
+                height={50}
+                alt="Jetsys logo"
+                className="mb-6 mx-auto md:mx-0"
+              />
+            </Link>
             <p className="mt-2 text-base font-medium text-white mb-6">
               In the context of fast-changing defense technologies, the
               resultant gap needs to be constantly filled essentially by the

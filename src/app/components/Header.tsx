@@ -50,28 +50,30 @@ const Header = () => {
       <header className="text-white w-full bg-black border-b-2 border-b-secondary">
         <div className=" max-w-7xl mx-auto px-5 py-3 flex justify-between md:flex-row items-center">
           <div>
-            <Image
-              src="/images/jetsys-logo.svg"
-              width={150}
-              height={50}
-              alt="Picture of the author"
-            />
+            <Link href="/">
+              <Image
+                src="/images/jetsys-footer.svg"
+                width={85}
+                height={85}
+                alt="Picture of the author"
+              />
+            </Link>
           </div>
 
-          <nav className=" hidden  md:ml-auto md:flex flex-wrap items-center text-base font-medium justify-center pr-0 ">
-            <Link href="/" className="mr-5">
+          <nav className=" hidden  md:ml-auto md:flex flex-wrap items-center text-base font-medium justify-center pr-0  ">
+            <Link href="/" className="mr-5 hover:text-secondary">
               ABOUT US
             </Link>
-            <Link href="/" className="mr-5">
+            <Link href="/" className="mr-5 hover:text-secondary">
               PRODUCTS
             </Link>
-            <Link href="/" className="mr-5">
+            <Link href="/" className="mr-5 hover:text-secondary">
               SOLUTIONS
             </Link>
-            <Link href="/" className="mr-10">
+            <Link href="/" className="mr-10 hover:text-secondary">
               COMPANY
             </Link>
-            <button className=" hidden md:inline-flex items-center bg-primary border-0 py-2 px-6 focus:outline-none hover:bg-secondary rounded text-base font-medium mt-4 md:mt-0">
+            <button className=" hidden md:inline-flex items-center bg-primary border border-primary py-2 px-6 focus:outline-none  rounded text-base font-medium mt-4 md:mt-0 hover:bg-white text-white hover:text-black transition">
               Get In Touch
             </button>
           </nav>
