@@ -5,6 +5,8 @@ import Footer from "./components/Footer";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { motion, type Variants } from "framer-motion";
+import BannerHeading from "./components/ScrollHeader";
+import TrustedByLeadersHeading from "./components/ScrollHeader";
 
 const GAP_PX = 24; // equals Tailwind gap-6
 const PEEK_RATIO = 0.1; // ~10% viewport peeks
@@ -478,9 +480,12 @@ export default function Home() {
       {/* TRUSTED */}
       <section className=" bg-[#EBE4CF]">
         <div className="container">
-          <h1 className=" mx-auto text-center text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text w-full md:w-[80%]">
-            TRUSTED BY LEADERS, BUILT FOR EXCELLENCE
-          </h1>
+          {/* ------------------ */}
+          <div className="banner-heading-wrapper relative text-center ">
+            <TrustedByLeadersHeading></TrustedByLeadersHeading>
+          </div>
+
+          {/* ------------------ */}
           <p className=" text-base text-black font-medium text-center mb-5 ">
             Jetsys Defence is an agile, innovation-driven aerospace and defence
             company based in India. We specialize in mission-critical
