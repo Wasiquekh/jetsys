@@ -80,13 +80,7 @@ export default function Home() {
       <section>
         <div className="container grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Card 1 */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }} // start hidden + below
-            whileInView={{ opacity: 1, y: 0 }} // fade + move up
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.2 }} // trigger only once when 20% visible
-            className="relative w-full bg-[url('/images/landing-1.png')] bg-cover bg-center px-8 py-16 rounded text-center overflow-hidden group transition duration-500 transform hover:scale-105 hover:shadow-4xl"
-          >
+          <div className="relative w-full bg-[url('/images/landing-1.png')] bg-cover bg-center px-8 py-16 rounded text-center overflow-hidden group transition duration-500 transform hover:scale-105 hover:shadow-4xl">
             <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-500"></div>
             <p className="relative text-2xl text-white font-bold mb-8">
               Expanding Horizons in Aerospace
@@ -98,16 +92,10 @@ export default function Home() {
             <button className="relative bg-primary text-base font-semibold py-2 px-6 rounded text-white hover:bg-white hover:text-black border border-primary">
               Know More
             </button>
-          </motion.div>
+          </div>
 
           {/* Card 2 */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }} // small delay for stagger effect
-            viewport={{ once: true, amount: 0.2 }}
-            className="relative w-full bg-[url('/images/landing-3.png')] bg-cover bg-center px-8 py-16 rounded text-center overflow-hidden group transition duration-500 transform hover:scale-105 hover:shadow-4xl"
-          >
+          <div className="relative w-full bg-[url('/images/landing-3.png')] bg-cover bg-center px-8 py-16 rounded text-center overflow-hidden group transition duration-500 transform hover:scale-105 hover:shadow-4xl">
             <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-500"></div>
             <div className="relative z-10">
               <p className="text-2xl text-white font-bold mb-8">
@@ -121,16 +109,10 @@ export default function Home() {
                 Know More
               </button>
             </div>
-          </motion.div>
+          </div>
 
           {/* Card 3 */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }} // stagger more
-            viewport={{ once: true, amount: 0.2 }}
-            className="relative w-full bg-[url('/images/landing-2.png')] bg-cover bg-center px-8 py-16 rounded text-center overflow-hidden group transition duration-500 transform hover:scale-105 hover:shadow-4xl"
-          >
+          <div className="relative w-full bg-[url('/images/landing-2.png')] bg-cover bg-center px-8 py-16 rounded text-center overflow-hidden group transition duration-500 transform hover:scale-105 hover:shadow-4xl">
             <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-500"></div>
             <div className="relative z-10">
               <p className="text-2xl text-white font-bold mb-8">
@@ -138,13 +120,14 @@ export default function Home() {
               </p>
               <p className="text-base font-medium text-white mb-8">
                 Ensuring operational superiority with advanced maintenance{" "}
-                <br /> technologies.
+                <br />
+                technologies.
               </p>
               <button className="bg-primary text-base font-semibold py-2 px-6 rounded mb-0 text-white hover:bg-white hover:text-black border border-primary">
                 Know More
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
       {/* ABOUT SECTION */}
