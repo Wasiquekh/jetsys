@@ -48,7 +48,7 @@ const Header = () => {
       )}
 
       <header className="text-white w-full bg-black border-b-2 border-b-secondary">
-        <div className=" max-w-7xl mx-auto px-5 py-3 flex justify-between md:flex-row items-center">
+        <div className=" max-w-[1120px] mx-auto px-5 py-3 flex justify-between md:flex-row items-center">
           <div>
             <Link href="/">
               <Image

@@ -68,7 +68,7 @@ export default function Home() {
           <h1 className="text-4xl md:text-6xl  font-extrabold text-white uppercase horizon-text w-full  md:w-3/4">
             We Build,What Sky Demands
           </h1>
-          <p className="mt-4 text-base font-semibold text-white md:text-xl  max-w-2xl uppercase">
+          <p className="mt-4 text-base font-semibold text-white md:text-xl  max-w-2xl capitalize">
             Leading aerospace with bold innovation
           </p>
           <button className="mt-6 px-10 py-3 bg-white text-base text-primary font-bold rounded shadow-lg hover:bg-primary transition border border-primary hover:text-white">
@@ -78,7 +78,7 @@ export default function Home() {
       </section>
       {/* AFTER TOP SECTION */}
       <section>
-        <div className="container grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="container grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Card 1 */}
           <motion.div
             initial={{ opacity: 0, y: 50 }} // start hidden + below
@@ -182,7 +182,8 @@ export default function Home() {
       </section>
       {/* DESIGN DESKTOP */}
       <div className=" hidden md:block">
-        <div className=" max-w-7xl px-5 mx-auto flex justify-between -z-10">
+        {/* RING */}
+        <div className=" max-w-[1120px] px-5 mx-auto flex justify-between -z-10">
           <Image
             src="/images/ring.svg"
             width={210}
@@ -219,8 +220,10 @@ export default function Home() {
             className=" -z-10"
           />
         </div>
+        {/* BACKGROUND THEME COLOR LINE */}
         <div className=" bg-primary h-28 -mt-40 -mb-[147px] z-10"></div>
-        <div className=" max-w-7xl px-5 mx-auto flex justify-between">
+        {/* ICON IMAGES */}
+        <div className=" max-w-[1120px] px-5 mx-auto flex justify-between">
           <Image
             src="/images/expert.svg"
             width={182}
@@ -233,13 +236,14 @@ export default function Home() {
             width={182}
             height={182}
             alt="Picture of the author"
-            className=" relative left-[8px]"
+            className=" relative left-[7px]"
           />
           <Image
             src="/images/Global Reach.svg"
             width={182}
             height={182}
             alt="Picture of the author"
+            className=" relative left-[1px]"
           />
           <Image
             src="/images/Indigenous Capability.svg"
@@ -253,17 +257,18 @@ export default function Home() {
             width={182}
             height={182}
             alt="Picture of the author"
-            className=" relative right-[12px]"
+            className=" relative right-3"
           />
         </div>
-        <div className="max-w-7xl px-5 mx-auto flex justify-between mt-10">
+        {/* TEXT */}
+        <div className="max-w-[1120px] px-5 mx-auto flex justify-between mt-10">
           <div className=" w-full">
             <p className="text-center text-lg  relative -left-5 ">
               Expert Engineers
             </p>
           </div>
           <div className=" w-full">
-            <p className="text-center text-lg relative -left-2">
+            <p className="text-center text-lg relative -left-0">
               Rapid Deployment
             </p>
           </div>
@@ -271,12 +276,12 @@ export default function Home() {
             <p className="text-center text-lg">Global Reach</p>
           </div>
           <div className=" w-full">
-            <p className="text-center text-lg relative left-3">
+            <p className="text-center text-lg relative left-0">
               Indigenous Capability
             </p>
           </div>
           <div className=" w-full">
-            <p className="text-center text-lg relative left-[25px]">
+            <p className="text-center text-lg relative left-3 w-[98%]">
               Precise Production
             </p>
           </div>
