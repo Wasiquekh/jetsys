@@ -24,12 +24,7 @@ body {
 .horizon-text {
   font-family: var(--font-horizon), sans-serif; /* optional Horizon font */
 }
-.no-scrollbar {
-  scrollbar-width: none;
-}
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
+
 @keyframes floatY {
   0%   { transform: translateY(0); }
   50%  { transform: translateY(-10px); }

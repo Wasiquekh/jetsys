@@ -8,9 +8,7 @@ import { motion, type Variants } from "framer-motion";
 import BannerHeading from "./components/ScrollHeader";
 import TrustedByLeadersHeading from "./components/ScrollHeader";
 
-const GAP_PX = 24; // equals Tailwind gap-6
-const PEEK_RATIO = 0.1; // ~10% viewport peeks
-const SCROLL_SPEED = 8; // hover scroll speed (higher = faster)
+
 
 // CODE FOR CLIENT LOGO FADE BOTTOM
 const logoWrapperVariants: Variants = {
@@ -71,58 +69,6 @@ const cards = [
 
 export default function Home() {
   // CODE FOR SCROLL ANIMATION AFTER TOP SECTION
-  const scrollerRef = useRef<HTMLDivElement | null>(null);
-  const rafRef = useRef<number | null>(null);
-  const speedRef = useRef(0);
-
-  // hover auto-scroll loop
-  const loop = () => {
-    const el = scrollerRef.current;
-    if (!el) return;
-    if (speedRef.current !== 0) {
-      el.scrollLeft += speedRef.current;
-      rafRef.current = requestAnimationFrame(loop);
-    } else {
-      rafRef.current = null;
-    }
-  };
-  const start = (dir: "left" | "right") => {
-    speedRef.current = dir === "left" ? -SCROLL_SPEED : SCROLL_SPEED;
-    if (rafRef.current == null) rafRef.current = requestAnimationFrame(loop);
-  };
-  const stop = () => {
-    speedRef.current = 0;
-    if (rafRef.current) {
-      cancelAnimationFrame(rafRef.current);
-      rafRef.current = null;
-    }
-  };
-
-  // Center on cards 2 & 3 with slight peeks
-  const centerOnSecondAndThird = () => {
-    const el = scrollerRef.current;
-    if (!el) return;
-    const cards = el.querySelectorAll<HTMLElement>("[data-card]");
-    if (cards.length < 3) return;
-
-    const w = cards[0].offsetWidth;
-    const vw = el.clientWidth;
-    const peek = vw * PEEK_RATIO;
-    const leftOfCard2 = 1 * (w + GAP_PX);
-    el.scrollLeft = Math.max(leftOfCard2 - peek, 0);
-  };
-
-  useEffect(() => {
-    const id = requestAnimationFrame(centerOnSecondAndThird);
-    const ro = new ResizeObserver(centerOnSecondAndThird);
-    if (scrollerRef.current) ro.observe(scrollerRef.current);
-
-    return () => {
-      cancelAnimationFrame(id);
-      ro.disconnect();
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-    };
-  }, []);
 
   // END CODE FOR SCROLL ANIMATION AFTER TOP SECTION
   return (
@@ -160,127 +106,99 @@ export default function Home() {
         </div>
       </section>
       {/* AFTER TOP SECTION */}
-      <section className="py-[110px] md:py-28">
-        <div className="relative">
-          {/* Hover zones */}
-          <div
-            className="hidden md:block absolute left-0 top-0 h-full w-[35%] z-20"
-            onMouseEnter={() => start("left")}
-            onMouseLeave={stop}
-          />
-          <div
-            className="hidden md:block absolute right-0 top-0 h-full w-[35%] z-20"
-            onMouseEnter={() => start("right")}
-            onMouseLeave={stop}
-          />
-
-          {/* Viewport */}
-          <div
-            ref={scrollerRef}
-            className="relative overflow-x-auto overflow-y-visible no-scrollbar pb-10"
-          >
-            <div className="flex gap-6 px-2 md:px-4 lg:px-6 lg:pl-0 justify-start py-6">
-              {/* Card 1 */}
-              <div
-                data-card
-                className="shrink-0 basis-[85%] md:basis-[45%] lg:basis-[40%]"
-              >
-                <div className="relative w-full min-h-[380px] md:min-h-[440px] bg-[url('/images/landing-1.png')] bg-cover bg-center px-8 py-20 md:py-24 rounded-2xl text-center overflow-hidden transition-transform duration-500 hover:scale-105 hover:shadow-4xl">
-                  <div className="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-500 hover:opacity-100" />
-                  <div className="relative">
-                    <p className="text-2xl text-white font-bold mb-8">
-                      Expanding Horizons in Aerospace
-                    </p>
-                    <p className="text-base text-white/90 font-medium mb-8">
-                      Driving innovation to redefine the possibilities in
-                      defence and aerospace industries.
-                    </p>
-                    <button className="bg-primary text-base font-semibold py-2 px-6 rounded text-white hover:bg-white hover:text-black border border-primary">
-                      Know More
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Card 2 */}
-              <div
-                data-card
-                className="shrink-0 basis-[85%] md:basis-[45%] lg:basis-[40%]"
-              >
-                <div className="relative w-full min-h-[380px] md:min-h-[440px] bg-[url('/images/landing-3.png')] bg-cover bg-center px-8 py-20 md:py-24 rounded-2xl text-center overflow-hidden transition-transform duration-500 hover:scale-105 hover:shadow-4xl">
-                  <div className="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-500 hover:opacity-100" />
-                  <div className="relative z-10">
-                    <p className="text-2xl text-white font-bold mb-8">
-                      Indigenous Innovations
-                    </p>
-                    <p className="text-base text-white/90 font-medium mb-8">
-                      Proudly delivering homegrown solutions for a self-reliant
-                      defence ecosystem.
-                    </p>
-                    <button className="bg-primary text-base font-semibold py-2 px-6 rounded mb-0 text-white hover:bg-white hover:text-black border border-primary">
-                      Know More
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Card 3 */}
-              <div
-                data-card
-                className="shrink-0 basis-[85%] md:basis-[45%] lg:basis-[40%]"
-              >
-                <div className="relative w-full min-h-[380px] md:min-h-[440px] bg-[url('/images/landing-2.png')] bg-cover bg-center px-8 py-20 md:py-24 rounded-2xl text-center overflow-hidden transition-transform duration-500 hover:scale-105 hover:shadow-4xl">
-                  <div className="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-500 hover:opacity-100" />
-                  <div className="relative z-10">
-                    <p className="text-2xl text-white font-bold mb-8">
-                      Precision Maintenance Systems
-                    </p>
-                    <p className="text-base text-white/90 font-medium mb-8">
-                      Ensuring operational superiority with advanced maintenance
-                      technologies.
-                    </p>
-                    <button className="bg-primary text-base font-semibold py-2 px-6 rounded mb-0 text-white hover:bg-white hover:text-black border border-primary">
-                      Know More
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Card 4 */}
-              <div
-                data-card
-                className="shrink-0 basis-[85%] md:basis-[45%] lg:basis-[40%]"
-              >
-                <div className="relative w-full min-h-[380px] md:min-h-[440px] bg-[url('/images/landing-2.png')] bg-cover bg-center px-8 py-20 md:py-24 rounded-2xl text-center overflow-hidden transition-transform duration-500 hover:scale-105 hover:shadow-4xl">
-                  <div className="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-500 hover:opacity-100" />
-                  <div className="relative z-10">
-                    <p className="text-2xl text-white font-bold mb-8">
-                      Precision Maintenance Systems
-                    </p>
-                    <p className="text-base text-white/90 font-medium mb-8">
-                      Ensuring operational superiority with advanced maintenance
-                      technologies.
-                    </p>
-                    <button className="bg-primary text-base font-semibold py-2 px-6 rounded mb-0 text-white hover:bg-white hover:text-black border border-primary">
-                      Know More
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+<section className="py-[110px] md:py-28">
+  <div className="relative overflow-x-auto overflow-y-visible pb-10">
+    <div className="flex gap-6 px-2 md:px-4 lg:px-6 lg:pl-0 justify-start py-6">
+      
+      {/* Card 1 */}
+      <div
+        className="shrink-0 basis-[85%] md:basis-[45%] lg:basis-[40%] group"
+      >
+        <div className="relative w-full min-h-[380px] md:min-h-[440px] bg-[url('/images/landing-1.png')] bg-cover bg-center px-8 py-20 md:py-24 rounded-2xl text-center overflow-hidden transition-transform duration-500 group-hover:scale-105 group-hover:shadow-4xl">
+          <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="relative z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p className="text-2xl text-white font-bold mb-8">
+              Expanding Horizons in Aerospace
+            </p>
+            <p className="text-base text-white/90 font-medium mb-8">
+              Driving innovation to redefine the possibilities in
+              defence and aerospace industries.
+            </p>
+            <button className="bg-primary text-base font-semibold py-2 px-6 rounded text-white hover:bg-white hover:text-black border border-primary">
+              Know More
+            </button>
           </div>
-
-          {/* Utilities */}
-          <style jsx global>{`
-            .no-scrollbar {
-              scrollbar-width: none;
-            }
-            .no-scrollbar::-webkit-scrollbar {
-              display: none;
-            }
-          `}</style>
         </div>
-      </section>
+      </div>
+
+      {/* Card 2 */}
+      <div
+        className="shrink-0 basis-[85%] md:basis-[45%] lg:basis-[40%] group"
+      >
+        <div className="relative w-full min-h-[380px] md:min-h-[440px] bg-[url('/images/landing-3.png')] bg-cover bg-center px-8 py-20 md:py-24 rounded-2xl text-center overflow-hidden transition-transform duration-500 group-hover:scale-105 group-hover:shadow-4xl">
+          <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="relative z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p className="text-2xl text-white font-bold mb-8">
+              Indigenous Innovations
+            </p>
+            <p className="text-base text-white/90 font-medium mb-8">
+              Proudly delivering homegrown solutions for a self-reliant
+              defence ecosystem.
+            </p>
+            <button className="bg-primary text-base font-semibold py-2 px-6 rounded mb-0 text-white hover:bg-white hover:text-black border border-primary">
+              Know More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Card 3 */}
+      <div
+        className="shrink-0 basis-[85%] md:basis-[45%] lg:basis-[40%] group"
+      >
+        <div className="relative w-full min-h-[380px] md:min-h-[440px] bg-[url('/images/landing-2.png')] bg-cover bg-center px-8 py-20 md:py-24 rounded-2xl text-center overflow-hidden transition-transform duration-500 group-hover:scale-105 group-hover:shadow-4xl">
+          <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="relative z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p className="text-2xl text-white font-bold mb-8">
+              Precision Maintenance Systems
+            </p>
+            <p className="text-base text-white/90 font-medium mb-8">
+              Ensuring operational superiority with advanced maintenance
+              technologies.
+            </p>
+            <button className="bg-primary text-base font-semibold py-2 px-6 rounded mb-0 text-white hover:bg-white hover:text-black border border-primary">
+              Know More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Card 4 */}
+      <div
+        className="shrink-0 basis-[85%] md:basis-[45%] lg:basis-[40%] group"
+      >
+        <div className="relative w-full min-h-[380px] md:min-h-[440px] bg-[url('/images/landing-2.png')] bg-cover bg-center px-8 py-20 md:py-24 rounded-2xl text-center overflow-hidden transition-transform duration-500 group-hover:scale-105 group-hover:shadow-4xl">
+          <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="relative z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p className="text-2xl text-white font-bold mb-8">
+              Precision Maintenance Systems
+            </p>
+            <p className="text-base text-white/90 font-medium mb-8">
+              Ensuring operational superiority with advanced maintenance
+              technologies.
+            </p>
+            <button className="bg-primary text-base font-semibold py-2 px-6 rounded mb-0 text-white hover:bg-white hover:text-black border border-primary">
+              Know More
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
       {/* ABOUT SECTION */}
       <section>
