@@ -60,32 +60,31 @@ body {
 }
 }
 
+/* TURSTED */
 .banner-heading-wrapper {
   position: relative;
-  display: inline-block;
   overflow: hidden;
   width: 100%;
-  margin:  0 auto;
+  margin: 0 auto;
+}
+
+.banner-heading-top,
+.banner-heading-bottom {
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 
 .banner-heading-top {
-  will-change: transform;
-  transform: translate3d(-0.00%, 0, 0);
-  transform-style: preserve-3d;
-  color: #000; /* darker top layer */
+  transform: translate3d(-15%, 0, 0); /* Initial position on the left */
 }
 
 .banner-heading-bottom {
-  will-change: transform;
-  transform: translate3d(0.00%, 0, 0);
-  transform-style: preserve-3d;
-  color: #000; /* lighter bottom layer */
+  transform: translate3d(15%, 0, 0); /* Initial position on the right */
 }
 
-.will-change-transform { will-change: transform; }
-/* globals.css */
-.will-change-transform { will-change: transform; }
-.banner-heading-wrapper h1 { line-height: 1.1; } /* prevent accidental wrap/overlap */
+h1 {
+  line-height: 1.1;
+}
 
 
 

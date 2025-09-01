@@ -479,77 +479,79 @@ export default function Home() {
       </section>
       {/* TRUSTED */}
       <section className=" bg-[#EBE4CF]">
-        <div className="container">
+        <div className="container !max-w-full">
           {/* ------------------ */}
           <div className="banner-heading-wrapper relative text-center ">
             <TrustedByLeadersHeading></TrustedByLeadersHeading>
           </div>
+          <div className="container">
+            {/* ------------------ */}
+            <p className=" text-base text-black font-medium text-center mb-5 ">
+              Jetsys Defence is an agile, innovation-driven aerospace and
+              defence company based in India. We specialize in mission-critical
+              technologies for airborne platforms, avionics, and tactical
+              systems — engineered for performance, reliability, and national
+              impact.
+            </p>
+            {/* desktop */}
+            <motion.div
+              variants={logoWrapperVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              className="hidden md:flex w-full bg-white justify-between gap-6 py-5 px-5 rounded mt-10"
+            >
+              <motion.div variants={logoItemVariants} className="w-full flex">
+                <Image
+                  src="/images/client-1.svg"
+                  width={118}
+                  height={129}
+                  alt="Client 1"
+                  className="w-[90%] mx-auto"
+                />
+              </motion.div>
 
-          {/* ------------------ */}
-          <p className=" text-base text-black font-medium text-center mb-5 ">
-            Jetsys Defence is an agile, innovation-driven aerospace and defence
-            company based in India. We specialize in mission-critical
-            technologies for airborne platforms, avionics, and tactical systems
-            — engineered for performance, reliability, and national impact.
-          </p>
-          {/* desktop */}
-          <motion.div
-            variants={logoWrapperVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="hidden md:flex w-full bg-white justify-between gap-6 py-5 px-5 rounded mt-10"
-          >
-            <motion.div variants={logoItemVariants} className="w-full flex">
-              <Image
-                src="/images/client-1.svg"
-                width={118}
-                height={129}
-                alt="Client 1"
-                className="w-[90%] mx-auto"
-              />
-            </motion.div>
+              <motion.div variants={logoItemVariants} className="w-full flex">
+                <Image
+                  src="/images/client-2.svg"
+                  width={118}
+                  height={129}
+                  alt="Client 2"
+                  className="w-[90%] mx-auto"
+                />
+              </motion.div>
 
-            <motion.div variants={logoItemVariants} className="w-full flex">
-              <Image
-                src="/images/client-2.svg"
-                width={118}
-                height={129}
-                alt="Client 2"
-                className="w-[90%] mx-auto"
-              />
-            </motion.div>
+              <motion.div variants={logoItemVariants} className="w-full flex">
+                <Image
+                  src="/images/client-3.svg"
+                  width={118}
+                  height={129}
+                  alt="Client 3"
+                  className="mx-auto"
+                />
+              </motion.div>
 
-            <motion.div variants={logoItemVariants} className="w-full flex">
-              <Image
-                src="/images/client-3.svg"
-                width={118}
-                height={129}
-                alt="Client 3"
-                className="mx-auto"
-              />
-            </motion.div>
+              <motion.div variants={logoItemVariants} className="w-full flex">
+                <Image
+                  src="/images/client-4.svg"
+                  width={118}
+                  height={129}
+                  alt="Client 4"
+                  className="mx-auto"
+                />
+              </motion.div>
 
-            <motion.div variants={logoItemVariants} className="w-full flex">
-              <Image
-                src="/images/client-4.svg"
-                width={118}
-                height={129}
-                alt="Client 4"
-                className="mx-auto"
-              />
+              <motion.div variants={logoItemVariants} className="w-full flex">
+                <Image
+                  src="/images/client-5.svg"
+                  width={118}
+                  height={129}
+                  alt="Client 5"
+                  className="mx-auto"
+                />
+              </motion.div>
             </motion.div>
-
-            <motion.div variants={logoItemVariants} className="w-full flex">
-              <Image
-                src="/images/client-5.svg"
-                width={118}
-                height={129}
-                alt="Client 5"
-                className="mx-auto"
-              />
-            </motion.div>
-          </motion.div>
+          </div>
 
           {/* mobile */}
           <div className="  md:hidden grid grid-cols-2 gap-6  w-full bg-white  py-5 px-5 rounded mt-10">
