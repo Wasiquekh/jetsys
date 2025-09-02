@@ -35,8 +35,8 @@ const CARDS: Card[] = [
 
 export default function MobileLandingCards() {
   return (
-    <section className="md:hidden py-6">
-      <div className="container px-4">
+    <section className="md:hidden py-0">
+      <div className="container px-0">
         <Swiper
           modules={[Autoplay]}
           slidesPerView={1.05}
