@@ -10,6 +10,7 @@ import TrustedByLeadersHeading from "./components/ScrollHeader";
 import ScalableImage from "./components/test";
 import Carousel from "./components/test";
 import CustomCarasoul from "./components/CustomCarasoul";
+import OurOffering from "./components/OurOfferings";
 
 // CODE FOR CLIENT LOGO FADE BOTTOM
 const logoWrapperVariants: Variants = {
@@ -140,7 +141,15 @@ export default function Home() {
                 passion, precision, and purpose.
               </p>
             </div>
-            <div></div>
+            <div>
+              <Image
+                src="/images/mission.png"
+                width={340}
+                height={340}
+                alt="Picture of the author"
+                className=" block md:hidden"
+              />
+            </div>
             <div className=" -ml-1">
               <h2 className=" mb-4 text-3xl font-bold text-white text-center md:text-left">
                 Our Vision
@@ -284,7 +293,7 @@ export default function Home() {
               alt="Picture of the author"
               className=" w-full mb-2"
             />
-            <p className=" text-center">Expert Engineers</p>
+            <p className=" text-center">Rapid Deployment </p>
           </div>
           <div className=" w-full">
             <Image
@@ -294,7 +303,7 @@ export default function Home() {
               alt="Picture of the author"
               className=" w-full mb-2"
             />
-            <p className=" text-center">Expert Engineers</p>
+            <p className=" text-center">Global Reach</p>
           </div>
           <div className=" w-full">
             <Image
@@ -304,7 +313,7 @@ export default function Home() {
               alt="Picture of the author"
               className=" w-full mb-2"
             />
-            <p className=" text-center">Expert Engineers</p>
+            <p className=" text-center">Indigenous Capability</p>
           </div>
           <div className=" w-full">
             <Image
@@ -314,7 +323,7 @@ export default function Home() {
               alt="Picture of the author"
               className=" w-full mb-2"
             />
-            <p className=" text-center">Expert Engineers</p>
+            <p className=" text-center">Precise Production</p>
           </div>
         </div>
       </section>
