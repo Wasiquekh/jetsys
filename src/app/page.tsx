@@ -129,7 +129,7 @@ export default function Home() {
               className=" absolute left-1/2 -translate-x-1/2 hidden md:block"
             />
             <div>
-              <h2 className=" mb-4 text-3xl font-bold text-white ">
+              <h2 className=" mb-4 text-3xl font-bold text-white text-center md:text-left ">
                 Our Mission
               </h2>
               <p className=" text-base font-normal text-white text-justify ">
@@ -142,7 +142,7 @@ export default function Home() {
             </div>
             <div></div>
             <div className=" -ml-1">
-              <h2 className=" mb-4 text-3xl font-bold text-white">
+              <h2 className=" mb-4 text-3xl font-bold text-white text-center md:text-left">
                 Our Vision
               </h2>
               <p className=" text-base font-normal text-white text-justify">
