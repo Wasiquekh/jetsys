@@ -11,6 +11,7 @@ import ScalableImage from "./components/test";
 import Carousel from "./components/test";
 import CustomCarasoul from "./components/CustomCarasoul";
 import OurOffering from "./components/OurOfferings";
+import MobileLandingCards from "./components/MobileLandingCards";
 
 // CODE FOR CLIENT LOGO FADE BOTTOM
 const logoWrapperVariants: Variants = {
@@ -108,7 +109,14 @@ export default function Home() {
         </div>
       </section>
       {/* AFTER TOP SECTION */}
-      <CustomCarasoul />
+      <section className=" hidden md:block">
+        {" "}
+        <CustomCarasoul />
+      </section>
+      <section className=" block md:hidden">
+        <MobileLandingCards />
+      </section>
+
       {/* ABOUT SECTION */}
       <section>
         <div className="container">
@@ -459,51 +467,7 @@ export default function Home() {
         </div>
       </section>
       {/* OUR OFFERING */}
-      <section className="">
-        <div className="container">
-          <h1 className=" mx-auto text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text w-full md:w-[80%]">
-            Our Offerings
-          </h1>
-          <p className=" text-base text-black font-medium text-center mb-5 ">
-            Jetsys Defence is an agile, innovation-driven aerospace and defence
-            company based in India. We specialize in mission-critical
-            technologies for airborne platforms, avionics, and tactical systems
-            — engineered for performance, reliability, and national impact.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            {cards.map((card, idx) => (
-              <div key={idx} className="group [perspective:1000px]">
-                <div className="relative h-75 w-full rounded shadow-xl transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                  {/* Front Side */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center rounded border border-primary bg-white p-2 [backface-visibility:hidden]">
-                    <Image
-                      src={card.img}
-                      width={300}
-                      height={300}
-                      alt={card.title}
-                      className="mb-2 w-full"
-                    />
-                    <p className="text-xl font-semibold text-primary mb-0 text-center">
-                      {card.title}
-                    </p>
-                  </div>
-
-                  {/* Back Side */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center rounded border border-primary bg-primary text-white p-3 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                    <p className="text-lg font-semibold mb-5 text-center">
-                      {card.title}
-                    </p>
-                    <Link href="/" className="underline">
-                      Know More
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      <OurOffering />
       {/* WHY CHOOSE US */}
       <section className=" bg-[#EBE4CF]">
         <div className="container">

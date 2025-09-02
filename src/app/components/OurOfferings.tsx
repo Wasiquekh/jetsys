@@ -1,43 +1,27 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
+import { useRef, useState } from "react";
 
 export default function OurOffering() {
-  // 9 cards
+  // Your original cards
   const cards = [
-    { img: "/images/offerings/avionics.png", title: "Avionics Systems" },
+    { img: "/images/offer-1.png", title: "Aviation Equipment" },
+    { img: "/images/offer-2.png", title: "Raw Materials" },
+    { img: "/images/offer-3.png", title: "Testing & Maintenance" },
+    { img: "/images/offer-4.png", title: "Indigenization" },
+    { img: "/images/offer-5.png", title: "Aircraft Spares" },
+    { img: "/images/offer-6.png", title: "Runway Spares" },
+    { img: "/images/offer-7.png", title: "Test Rigs & Test Chambers" },
     {
-      img: "/images/offerings/airborne-platforms.png",
-      title: "Airborne Platforms",
+      img: "/images/offer-8.png",
+      title: "Ground Support & Handling Equipment",
     },
-    {
-      img: "/images/offerings/tactical-systems.png",
-      title: "Tactical Systems",
-    },
-    {
-      img: "/images/offerings/mission-computers.png",
-      title: "Mission Computers",
-    },
-    {
-      img: "/images/offerings/flight-control.png",
-      title: "Flight Control & Autopilot",
-    },
-    { img: "/images/offerings/navigation.png", title: "Navigation (GPS/INS)" },
-    { img: "/images/offerings/datalinks-sdr.png", title: "Datalinks & SDR" },
-    {
-      img: "/images/offerings/ew-systems.png",
-      title: "Electronic Warfare (EW)",
-    },
-    { img: "/images/offerings/gcs.png", title: "Ground Control Stations" },
+    { img: "/images/offer-9.png", title: "Others" },
   ];
 
-  // flip state per card index
   const [flipped, setFlipped] = useState<Record<number, boolean>>({});
+  const suppressClickUntil = useRef<number>(0);
   const toggle = (i: number) => setFlipped((s) => ({ ...s, [i]: !s[i] }));
 
   return (
@@ -54,89 +38,80 @@ export default function OurOffering() {
           for performance, reliability, and national impact.
         </p>
 
-        <Swiper
-          modules={[Pagination]}
-          pagination={{ clickable: true }}
-          spaceBetween={20}
-          slidesPerView={1.05}
-          centeredSlides={false}
-          breakpoints={{
-            640: { slidesPerView: 2, spaceBetween: 20 },
-            768: { slidesPerView: 3, spaceBetween: 24 },
-            1024: { slidesPerView: 3, spaceBetween: 28 },
-          }}
-          className="mt-16"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
           {cards.map((card, idx) => {
             const isFlipped = !!flipped[idx];
-            return (
-              <SwiperSlide key={idx}>
-                <div className="[perspective:1000px]">
-                  <div
-                    role="button"
-                    tabIndex={0}
-                    className={[
-                      "relative h-[360px] w-full rounded shadow-xl border border-primary",
-                      "cursor-pointer select-none outline-none",
-                      // 3D context + mobile quirks
-                      "[transform-style:preserve-3d] [-webkit-transform-style:preserve-3d] [will-change:transform]",
-                      "[touch-action:manipulation] [-webkit-tap-highlight-color:transparent]",
-                      // keep hover flip for desktop too
-                      "md:group-hover:[transform:rotateY(180deg)]",
-                    ].join(" ")}
-                    style={{
-                      transform: isFlipped ? "rotateY(180deg)" : undefined,
-                      WebkitTransform: isFlipped
-                        ? "rotateY(180deg)"
-                        : undefined,
-                      transition:
-                        "transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1)",
-                    }}
-                    onClick={() => toggle(idx)} // works in DevTools mobile & real devices
-                    onTouchStart={() => toggle(idx)} // instant on touch
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter" || e.key === " ") {
-                        e.preventDefault();
-                        toggle(idx);
-                      }
-                    }}
-                    aria-pressed={isFlipped}
-                    aria-label={`${card.title} card; tap to flip`}
-                  >
-                    {/* Front */}
-                    <div className="absolute inset-0 flex flex-col items-center justify-center rounded bg-white p-2 border border-primary [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
-                      <Image
-                        src={card.img}
-                        width={300}
-                        height={300}
-                        alt={card.title}
-                        className="mb-2 w-full pointer-events-none"
-                      />
-                      <p className="text-xl font-semibold text-primary mb-0 text-center">
-                        {card.title}
-                      </p>
-                    </div>
 
-                    {/* Back */}
-                    <div className="absolute inset-0 flex flex-col items-center justify-center rounded bg-primary text-white p-3 border border-primary [transform:rotateY(180deg)] [-webkit-transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
-                      <p className="text-lg font-semibold mb-5 text-center">
-                        {card.title}
-                      </p>
-                      {/* Navigate to home ("/") */}
-                      <Link
-                        href="/"
-                        className="underline"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        Home
-                      </Link>
-                    </div>
+            return (
+              <div key={idx} className="group [perspective:1000px]">
+                <div
+                  role="button"
+                  tabIndex={0}
+                  className={[
+                    "relative h-[360px] w-full rounded shadow-xl cursor-pointer",
+                    "transition-transform duration-500",
+                    "[transform-style:preserve-3d] [-webkit-transform-style:preserve-3d]",
+                    "[touch-action:manipulation] select-none [-webkit-tap-highlight-color:transparent]",
+                    "group-hover:[transform:rotateY(180deg)]", // desktop hover
+                  ].join(" ")}
+                  style={{
+                    transform: isFlipped ? "rotateY(180deg)" : undefined,
+                    WebkitTransform: isFlipped ? "rotateY(180deg)" : undefined,
+                  }}
+                  // Flip on real touch ASAP; then ignore the follow-up synthetic click
+                  onTouchStartCapture={() => {
+                    toggle(idx);
+                    suppressClickUntil.current = Date.now() + 400;
+                  }}
+                  // Flip on ANY click (so DevTools mobile preview also works)
+                  onClickCapture={(e) => {
+                    const t = e.target as HTMLElement;
+                    if (t.closest("a")) return; // don't flip when tapping the link
+                    if (Date.now() < suppressClickUntil.current) return; // skip synthetic click after touch
+                    toggle(idx);
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      toggle(idx);
+                    }
+                  }}
+                  aria-pressed={isFlipped}
+                  aria-label={`${card.title} card; tap to flip`}
+                >
+                  {/* Front Side */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center rounded border border-primary bg-white p-2 [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
+                    <Image
+                      src={card.img}
+                      width={300}
+                      height={300}
+                      alt={card.title}
+                      className="mb-2 w-full pointer-events-none"
+                    />
+                    <p className="text-xl font-semibold text-primary mb-0 text-center">
+                      {card.title}
+                    </p>
+                  </div>
+
+                  {/* Back Side */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center rounded border border-primary bg-primary text-white p-3 [transform:rotateY(180deg)] [-webkit-transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
+                    <p className="text-lg font-semibold mb-5 text-center">
+                      {card.title}
+                    </p>
+                    {/* Navigate to home ("/") */}
+                    <Link
+                      href="/"
+                      className="underline"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Home
+                    </Link>
                   </div>
                 </div>
-              </SwiperSlide>
+              </div>
             );
           })}
-        </Swiper>
+        </div>
       </div>
     </section>
   );
