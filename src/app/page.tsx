@@ -286,7 +286,7 @@ export default function Home() {
           </div>
           <div className=" w-full">
             <Image
-              src="/images/global.gif"
+              src="/images/Global.gif"
               width={500}
               height={500}
               alt="Picture of the author"
