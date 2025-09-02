@@ -1,9 +1,11 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function OurOffering() {
+  // 9 cards
   const cards = [
     { img: "/images/offerings/avionics.png", title: "Avionics Systems" },
     {
@@ -32,7 +34,6 @@ export default function OurOffering() {
   ];
 
   const [flipped, setFlipped] = useState<Record<number, boolean>>({});
-  const suppressClickUntil = useRef<number>(0);
   const toggle = (i: number) => setFlipped((s) => ({ ...s, [i]: !s[i] }));
 
   return (
@@ -54,33 +55,22 @@ export default function OurOffering() {
             const isFlipped = !!flipped[idx];
 
             return (
-              <div key={idx} className="group [perspective:1000px]">
-                <div
+              <div key={idx} className="[perspective:1000px]">
+                <motion.div
                   role="button"
                   tabIndex={0}
                   className={[
-                    "relative h-[360px] w-full rounded shadow-xl cursor-pointer",
-                    "transition-transform duration-500",
-                    "[transform-style:preserve-3d] [-webkit-transform-style:preserve-3d]",
-                    "[touch-action:manipulation] select-none [-webkit-tap-highlight-color:transparent]",
-                    "group-hover:[transform:rotateY(180deg)]", // desktop hover
+                    "relative h-[360px] w-full rounded shadow-xl border border-primary",
+                    "cursor-pointer select-none outline-none",
+                    // 3D context + mobile quirks
+                    "[transform-style:preserve-3d] [-webkit-transform-style:preserve-3d] [will-change:transform]",
+                    "[touch-action:manipulation] [-webkit-tap-highlight-color:transparent]",
                   ].join(" ")}
-                  style={{
-                    transform: isFlipped ? "rotateY(180deg)" : undefined,
-                    WebkitTransform: isFlipped ? "rotateY(180deg)" : undefined,
-                  }}
-                  // Flip on real touch ASAP; then ignore the follow-up synthetic click
-                  onTouchStartCapture={() => {
-                    toggle(idx);
-                    suppressClickUntil.current = Date.now() + 400;
-                  }}
-                  // Flip on ANY click (so desktop mobile preview works too)
-                  onClickCapture={(e) => {
-                    const t = e.target as HTMLElement;
-                    if (t.closest("a")) return; // don't flip when tapping the link
-                    if (Date.now() < suppressClickUntil.current) return; // skip synthetic click after touch
-                    toggle(idx);
-                  }}
+                  // Hover flips on desktop; animate keeps state for tap/click
+                  animate={{ rotateY: isFlipped ? 180 : 0 }}
+                  whileHover={{ rotateY: 180 }}
+                  transition={{ duration: 0.55, ease: [0.2, 0.7, 0.2, 1] }}
+                  onClick={() => toggle(idx)} // works in real mobile & DevTools mobile
                   onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
                       e.preventDefault();
@@ -89,9 +79,12 @@ export default function OurOffering() {
                   }}
                   aria-pressed={isFlipped}
                   aria-label={`${card.title} card; tap to flip`}
+                  style={{
+                    WebkitTransform: isFlipped ? "rotateY(180deg)" : undefined, // iOS hint
+                  }}
                 >
                   {/* Front */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center rounded border border-primary bg-white p-2 [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center rounded bg-white p-2 [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
                     <Image
                       src={card.img}
                       width={300}
@@ -105,15 +98,20 @@ export default function OurOffering() {
                   </div>
 
                   {/* Back */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center rounded border border-primary bg-primary text-white p-3 [transform:rotateY(180deg)] [-webkit-transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center rounded bg-primary text-white p-3 [transform:rotateY(180deg)] [-webkit-transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
                     <p className="text-lg font-semibold mb-5 text-center">
                       {card.title}
                     </p>
-                    <Link href="/" className="underline">
+                    {/* Navigate to home ("/"); stop click from re-toggling */}
+                    <Link
+                      href="/"
+                      className="underline"
+                      onClick={(e) => e.stopPropagation()}
+                    >
                       Home
                     </Link>
                   </div>
-                </div>
+                </motion.div>
               </div>
             );
           })}
