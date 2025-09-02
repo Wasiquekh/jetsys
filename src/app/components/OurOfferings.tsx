@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function OurOffering() {
   const cards = [
@@ -32,6 +32,8 @@ export default function OurOffering() {
   ];
 
   const [flipped, setFlipped] = useState<Record<number, boolean>>({});
+  const suppressClickUntil = useRef<number>(0);
+  const toggle = (i: number) => setFlipped((s) => ({ ...s, [i]: !s[i] }));
 
   return (
     <section className="">
@@ -57,40 +59,38 @@ export default function OurOffering() {
                   role="button"
                   tabIndex={0}
                   className={[
-                    "relative h-[360px] w-full rounded shadow-xl transition-transform duration-500",
+                    "relative h-[360px] w-full rounded shadow-xl cursor-pointer",
+                    "transition-transform duration-500",
                     "[transform-style:preserve-3d] [-webkit-transform-style:preserve-3d]",
-                    "[touch-action:manipulation] [will-change:transform]",
-                    "select-none [-webkit-tap-highlight-color:transparent]",
+                    "[touch-action:manipulation] select-none [-webkit-tap-highlight-color:transparent]",
                     "group-hover:[transform:rotateY(180deg)]", // desktop hover
                   ].join(" ")}
                   style={{
                     transform: isFlipped ? "rotateY(180deg)" : undefined,
                     WebkitTransform: isFlipped ? "rotateY(180deg)" : undefined,
                   }}
-                  // Tap-to-flip on mobile (capture so children don't block it)
-                  onTouchStartCapture={() =>
-                    setFlipped((s) => ({ ...s, [idx]: !s[idx] }))
-                  }
-                  // Fallback click on coarse pointers (Android Chrome etc.)
-                  onClickCapture={(e) => {
-                    // Avoid triggering when the back-side link is tapped
-                    const t = e.target as HTMLElement;
-                    if (t.closest("a")) return;
-                    if (window.matchMedia("(pointer: coarse)").matches) {
-                      setFlipped((s) => ({ ...s, [idx]: !s[idx] }));
-                    }
+                  // Flip on real touch ASAP; then ignore the follow-up synthetic click
+                  onTouchStartCapture={() => {
+                    toggle(idx);
+                    suppressClickUntil.current = Date.now() + 400;
                   }}
-                  // Keyboard accessibility
+                  // Flip on ANY click (so desktop mobile preview works too)
+                  onClickCapture={(e) => {
+                    const t = e.target as HTMLElement;
+                    if (t.closest("a")) return; // don't flip when tapping the link
+                    if (Date.now() < suppressClickUntil.current) return; // skip synthetic click after touch
+                    toggle(idx);
+                  }}
                   onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
                       e.preventDefault();
-                      setFlipped((s) => ({ ...s, [idx]: !s[idx] }));
+                      toggle(idx);
                     }
                   }}
                   aria-pressed={isFlipped}
                   aria-label={`${card.title} card; tap to flip`}
                 >
-                  {/* Front Side */}
+                  {/* Front */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center rounded border border-primary bg-white p-2 [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
                     <Image
                       src={card.img}
@@ -104,12 +104,11 @@ export default function OurOffering() {
                     </p>
                   </div>
 
-                  {/* Back Side */}
+                  {/* Back */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center rounded border border-primary bg-primary text-white p-3 [transform:rotateY(180deg)] [-webkit-transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
                     <p className="text-lg font-semibold mb-5 text-center">
                       {card.title}
                     </p>
-                    {/* Always go to home ("/") */}
                     <Link href="/" className="underline">
                       Home
                     </Link>
