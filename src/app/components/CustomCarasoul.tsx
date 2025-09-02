@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 
 const AMPLITUDE = 22; // px bounce (try 18–26)
-const FREQ = 0.85; // cycles per second (try 0.6–1.2)
+const FREQ = 0.3; // cycles per second (try 0.6–1.2)
 const SMOOTHING = 0.12; // 0..1 (lower = floatier, higher = snappier)
 const IDLE_MS = 220; // stop oscillation after this many ms of no movement
 

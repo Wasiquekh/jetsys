@@ -120,13 +120,13 @@ export default function Home() {
             technologies for airborne platforms, avionics, and tactical systems
             — engineered for performance, reliability, and national impact.
           </p>
-          <div className=" py-10 px-4 md:px-10 w-full bg-primary mt-30 mb-16  grid grid-cols-3 gap-10  items-center relative">
+          <div className=" py-10 px-4 md:px-10 w-full bg-primary mt-30 mb-16   grid grid-cols-1 md:grid-cols-3 gap-10  items-center relative">
             <Image
               src="/images/mission.png"
               width={340}
               height={340}
               alt="Picture of the author"
-              className=" absolute left-1/2 -translate-x-1/2"
+              className=" absolute left-1/2 -translate-x-1/2 hidden md:block"
             />
             <div>
               <h2 className=" mb-4 text-3xl font-bold text-white ">
@@ -156,7 +156,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* DESIGN DESKTOP */}
+      {/* ICON DESIGN DESKTOP */}
       <div className=" hidden md:block">
         {/* RING */}
         <div className=" max-w-[1120px] px-5 mx-auto flex justify-between -z-10">
@@ -201,35 +201,35 @@ export default function Home() {
         {/* ICON IMAGES */}
         <div className=" max-w-[1120px] px-5 mx-auto flex justify-between">
           <Image
-            src="/images/expert.svg"
+            src="/images/Expert-Engineers.gif"
             width={182}
             height={182}
             alt="Picture of the author"
             className=" relative left-[14px]"
           />
           <Image
-            src="/images/Rapid Deployment.svg"
+            src="/images/Rapid-Deployment.gif"
             width={182}
             height={182}
             alt="Picture of the author"
             className=" relative left-[7px]"
           />
           <Image
-            src="/images/Global Reach.svg"
+            src="/images/Global-Reach.gif"
             width={182}
             height={182}
             alt="Picture of the author"
             className=" relative left-[1px]"
           />
           <Image
-            src="/images/Indigenous Capability.svg"
+            src="/images/Indigenous-Capability.gif"
             width={182}
             height={182}
             alt="Picture of the author"
             className=" relative -left-[6px]"
           />
           <Image
-            src="/images/Precise Production.svg"
+            src="/images/Precise-Production.gif"
             width={182}
             height={182}
             alt="Picture of the author"
@@ -265,10 +265,10 @@ export default function Home() {
       </div>
       {/* DESIGN MOBILE */}
       <section className=" block md:hidden">
-        <div className="container  grid grid-cols-2 gap-0">
+        <div className="container  grid grid-cols-2 gap-4">
           <div className=" w-full">
             <Image
-              src="/images/d1.svg"
+              src="/images/Expert.gif"
               width={500}
               height={500}
               alt="Picture of the author"
@@ -277,7 +277,7 @@ export default function Home() {
           </div>
           <div className=" w-full">
             <Image
-              src="/images/d2.svg"
+              src="/images/Rapid.gif"
               width={500}
               height={500}
               alt="Picture of the author"
@@ -286,7 +286,7 @@ export default function Home() {
           </div>
           <div className=" w-full">
             <Image
-              src="/images/d3.svg"
+              src="/images/global.gif"
               width={500}
               height={500}
               alt="Picture of the author"
@@ -295,7 +295,7 @@ export default function Home() {
           </div>
           <div className=" w-full">
             <Image
-              src="/images/d4.svg"
+              src="/images/Indigenous.gif"
               width={500}
               height={500}
               alt="Picture of the author"
@@ -304,7 +304,7 @@ export default function Home() {
           </div>
           <div className=" w-full">
             <Image
-              src="/images/d5.svg"
+              src="/images/Precise.gif"
               width={500}
               height={500}
               alt="Picture of the author"
