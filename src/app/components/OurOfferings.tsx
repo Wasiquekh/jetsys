@@ -1,10 +1,9 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 export default function OurOffering() {
-  // 9 cards — no per-card links now
   const cards = [
     { img: "/images/offerings/avionics.png", title: "Avionics Systems" },
     {
@@ -32,10 +31,7 @@ export default function OurOffering() {
     { img: "/images/offerings/gcs.png", title: "Ground Control Stations" },
   ];
 
-  // tap-to-flip state per card
   const [flipped, setFlipped] = useState<Record<number, boolean>>({});
-  const touchGuardRef = useRef<number | null>(null);
-  const toggle = (i: number) => setFlipped((s) => ({ ...s, [i]: !s[i] }));
 
   return (
     <section className="">
@@ -54,40 +50,42 @@ export default function OurOffering() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
           {cards.map((card, idx) => {
             const isFlipped = !!flipped[idx];
-            const base =
-              "relative h-75 min-h-[360px] w-full rounded shadow-xl transition-transform duration-500 " +
-              "[transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] " +
-              "[&.is-flipped]:[transform:rotateY(180deg)]";
-            const cls = base + (isFlipped ? " is-flipped" : "");
 
             return (
               <div key={idx} className="group [perspective:1000px]">
                 <div
                   role="button"
                   tabIndex={0}
-                  className={cls}
-                  // Mobile/touch: flip on tap
-                  onTouchStart={() => {
-                    toggle(idx);
-                    touchGuardRef.current = Date.now();
+                  className={[
+                    "relative h-[360px] w-full rounded shadow-xl transition-transform duration-500",
+                    "[transform-style:preserve-3d] [-webkit-transform-style:preserve-3d]",
+                    "[touch-action:manipulation] [will-change:transform]",
+                    "select-none [-webkit-tap-highlight-color:transparent]",
+                    "group-hover:[transform:rotateY(180deg)]", // desktop hover
+                  ].join(" ")}
+                  style={{
+                    transform: isFlipped ? "rotateY(180deg)" : undefined,
+                    WebkitTransform: isFlipped ? "rotateY(180deg)" : undefined,
                   }}
-                  // Prevent double toggle (touch→click), only allow click on coarse pointers
-                  onClick={(e) => {
+                  // Tap-to-flip on mobile (capture so children don't block it)
+                  onTouchStartCapture={() =>
+                    setFlipped((s) => ({ ...s, [idx]: !s[idx] }))
+                  }
+                  // Fallback click on coarse pointers (Android Chrome etc.)
+                  onClickCapture={(e) => {
+                    // Avoid triggering when the back-side link is tapped
                     const t = e.target as HTMLElement;
-                    if (t.closest("a")) return; // don't flip if a link is tapped
-                    const isCoarse =
-                      window.matchMedia("(pointer: coarse)").matches;
-                    if (!isCoarse) return;
-                    if (
-                      touchGuardRef.current &&
-                      Date.now() - touchGuardRef.current < 350
-                    )
-                      return;
-                    toggle(idx);
+                    if (t.closest("a")) return;
+                    if (window.matchMedia("(pointer: coarse)").matches) {
+                      setFlipped((s) => ({ ...s, [idx]: !s[idx] }));
+                    }
                   }}
                   // Keyboard accessibility
                   onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") toggle(idx);
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      setFlipped((s) => ({ ...s, [idx]: !s[idx] }));
+                    }
                   }}
                   aria-pressed={isFlipped}
                   aria-label={`${card.title} card; tap to flip`}
@@ -99,7 +97,7 @@ export default function OurOffering() {
                       width={300}
                       height={300}
                       alt={card.title}
-                      className="mb-2 w-full"
+                      className="mb-2 w-full pointer-events-none"
                     />
                     <p className="text-xl font-semibold text-primary mb-0 text-center">
                       {card.title}
@@ -111,9 +109,9 @@ export default function OurOffering() {
                     <p className="text-lg font-semibold mb-5 text-center">
                       {card.title}
                     </p>
-                    {/* Always navigate to home ("/") */}
+                    {/* Always go to home ("/") */}
                     <Link href="/" className="underline">
-                      Go Home
+                      Home
                     </Link>
                   </div>
                 </div>
