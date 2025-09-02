@@ -95,6 +95,9 @@ h1 {
   scrollbar-width: none;     /* Firefox */
 }
 
+.bg-landing-1 { background-image: url('/images/landing-1.png'); }
+.bg-landing-2 { background-image: url('/images/landing-2.png'); }
+.bg-landing-3 { background-image: url('/images/landing-3.png'); }
 
 
 
