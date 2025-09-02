@@ -272,8 +272,9 @@ export default function Home() {
               width={500}
               height={500}
               alt="Picture of the author"
-              className=" w-full mb-4"
+              className=" w-full mb-2"
             />
+            <p className=" text-center">Expert Engineers</p>
           </div>
           <div className=" w-full">
             <Image
@@ -281,8 +282,9 @@ export default function Home() {
               width={500}
               height={500}
               alt="Picture of the author"
-              className=" w-full"
+              className=" w-full mb-2"
             />
+            <p className=" text-center">Expert Engineers</p>
           </div>
           <div className=" w-full">
             <Image
@@ -290,8 +292,9 @@ export default function Home() {
               width={500}
               height={500}
               alt="Picture of the author"
-              className=" w-full mb-4"
+              className=" w-full mb-2"
             />
+            <p className=" text-center">Expert Engineers</p>
           </div>
           <div className=" w-full">
             <Image
@@ -299,8 +302,9 @@ export default function Home() {
               width={500}
               height={500}
               alt="Picture of the author"
-              className=" w-full"
+              className=" w-full mb-2"
             />
+            <p className=" text-center">Expert Engineers</p>
           </div>
           <div className=" w-full">
             <Image
@@ -308,8 +312,9 @@ export default function Home() {
               width={500}
               height={500}
               alt="Picture of the author"
-              className=" w-full"
+              className=" w-full mb-2"
             />
+            <p className=" text-center">Expert Engineers</p>
           </div>
         </div>
       </section>
