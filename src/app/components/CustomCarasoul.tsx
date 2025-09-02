@@ -1,6 +1,11 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 
+const AMPLITUDE = 22; // px bounce (try 18–26)
+const FREQ = 0.85; // cycles per second (try 0.6–1.2)
+const SMOOTHING = 0.12; // 0..1 (lower = floatier, higher = snappier)
+const IDLE_MS = 220; // stop oscillation after this many ms of no movement
+
 const CustomCarasoul: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -29,7 +34,6 @@ const CustomCarasoul: React.FC = () => {
     const syncCardsArrays = () => {
       const els = queryCards();
       cardsRef.current = els;
-      // keep existing values if same length; else (re)init to 0
       if (currentYRef.current.length !== els.length) {
         currentYRef.current = new Array(els.length).fill(0);
       }
@@ -55,20 +59,15 @@ const CustomCarasoul: React.FC = () => {
       }
 
       const elapsed = (t - oscStart.current) / 1000;
-
-      // tune feel
-      const amplitude = 50; // px (try 14–24)
-      const cyclesPerSecond = 0.2; // Hz (try 0.6–1.2)
-      const omega = 2 * Math.PI * cyclesPerSecond;
-      const smoothing = 0.12; // 0..1 (lower = smoother, higher = snappier)
+      const omega = 2 * Math.PI * FREQ;
 
       for (let i = 0; i < cards.length; i++) {
         const phase = i % 2 === 0 ? 0 : Math.PI; // alternate up/down
-        const targetY = Math.sin(omega * elapsed + phase) * amplitude;
+        const targetY = Math.sin(omega * elapsed + phase) * AMPLITUDE;
 
         // LERP toward target for buttery motion
         const prev = currentYRef.current[i] ?? 0;
-        const next = prev + (targetY - prev) * smoothing;
+        const next = prev + (targetY - prev) * SMOOTHING;
         currentYRef.current[i] = next;
 
         cards[i].style.transform = `translate3d(0, ${next}px, 0)`;
@@ -87,7 +86,8 @@ const CustomCarasoul: React.FC = () => {
       // start/keep oscillating as long as the mouse keeps moving
       if (!oscActive.current) {
         oscActive.current = true;
-        oscStart.current = performance.now();
+        // don't reset oscStart if already ran before; but if first time, init:
+        if (!oscStart.current) oscStart.current = performance.now();
         if (oscRafRef.current) cancelAnimationFrame(oscRafRef.current);
         oscRafRef.current = requestAnimationFrame(oscillate);
       }
@@ -100,8 +100,8 @@ const CustomCarasoul: React.FC = () => {
           cancelAnimationFrame(oscRafRef.current);
           oscRafRef.current = null;
         }
-        // leave transforms as-is
-      }, 220);
+        // leave transforms as-is (paused pose)
+      }, IDLE_MS);
     };
 
     const onMouseLeave = () => {
@@ -136,7 +136,6 @@ const CustomCarasoul: React.FC = () => {
       const max = Math.max(0, container.scrollWidth - container.clientWidth);
       targetScroll.current = Math.min(targetScroll.current, max);
       currentScroll.current = Math.min(currentScroll.current, max);
-      // resync in case layout changed
       syncCardsArrays();
     };
     window.addEventListener("resize", onResize);
@@ -178,7 +177,7 @@ const CustomCarasoul: React.FC = () => {
         className={`shrink-0 basis-[85%] md:basis-[45%] lg:basis-[40%] group ${extraClasses}`}
       >
         <div
-          className="card relative w-full min-h-[380px] md:min-h-[440px] px-8 py-20 md:py-24 rounded-2xl text-center overflow-hidden transform-gpu will-change-transform backface-hidden"
+          className="card relative w-full min-h-[380px] md:min-h-[440px] px-8 py-20 md:py-24 rounded-2xl text-center overflow-hidden transform-gpu"
           style={style}
         >
           <div className="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100" />
@@ -248,7 +247,7 @@ const CustomCarasoul: React.FC = () => {
           /* GPU-friendly hints */
           transform: translate3d(0, 0, 0);
           backface-visibility: hidden;
-          contain: paint; /* prevents repaint leaks */
+          contain: paint;
         }
       `}</style>
     </div>
