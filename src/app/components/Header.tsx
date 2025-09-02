@@ -52,9 +52,9 @@ const Header = () => {
           <div>
             <Link href="/">
               <Image
-                src="/images/jetsys-footer.svg"
-                width={85}
-                height={85}
+                src="/images/jetsys-logo.svg"
+                width={150}
+                height={150}
                 alt="Picture of the author"
               />
             </Link>

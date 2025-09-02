@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="w-full md:w-96 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
             <Link href="/">
               <Image
-                src="/images/jetsys-footer.svg"
+                src="/images/footer-logo.svg"
                 width={150}
                 height={50}
                 alt="Jetsys logo"

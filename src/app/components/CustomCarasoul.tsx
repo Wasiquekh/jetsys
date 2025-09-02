@@ -55,7 +55,7 @@ const CustomCarasoul: React.FC = () => {
 
   return (
     <div>
-      <section className="py-[75px] md:py-28 max-w-[1540px] mx-auto">
+      <section className="py-[75px] md:pt-[75px] md:pb-0 max-w-[1540px] mx-auto">
         <div
           ref={containerRef}
           className="relative overflow-x-scroll overflow-y-hidden pb-10 cs-scroll"

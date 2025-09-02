@@ -120,24 +120,39 @@ export default function Home() {
             technologies for airborne platforms, avionics, and tactical systems
             — engineered for performance, reliability, and national impact.
           </p>
-          <div className=" py-10 px-4 md:px-24 w-full bg-primary mt-12 flex flex-col items-center">
+          <div className=" py-10 px-4 md:px-10 w-full bg-primary mt-30 mb-16  grid grid-cols-3 gap-10  items-center relative">
             <Image
-              src="/images/mission.svg"
-              width={58}
-              height={58}
+              src="/images/mission.png"
+              width={340}
+              height={340}
               alt="Picture of the author"
-              className=" mb-4"
+              className=" absolute left-1/2 -translate-x-1/2"
             />
-            <h2 className=" mb-4 text-3xl font-bold text-white text-center">
-              Our Mission and Vision
-            </h2>
-            <p className=" text-base font-medium text-white text-center ">
-              We envision a future where our advanced technology and relentless
-              pursuit of perfection redefine the standards of safety, security,
-              and efficiency in the industry. To accelerate growth and redefine
-              the future of defence and aerospace with passion, precision, and
-              purpose.
-            </p>
+            <div>
+              <h2 className=" mb-4 text-3xl font-bold text-white ">
+                Our Mission
+              </h2>
+              <p className=" text-base font-normal text-white text-justify ">
+                We envision a future where our advanced technology and
+                relentless pursuit of perfection redefine the standards of
+                safety, security, and efficiency in the industry. To accelerate
+                growth and redefine the future of defence and aerospace with
+                passion, precision, and purpose.
+              </p>
+            </div>
+            <div></div>
+            <div className=" -ml-1">
+              <h2 className=" mb-4 text-3xl font-bold text-white">
+                Our Vision
+              </h2>
+              <p className=" text-base font-normal text-white text-justify">
+                We envision a future where our advanced technology and
+                relentless pursuit of perfection redefine the standards of
+                safety, security, and efficiency in the industry. To accelerate
+                growth and redefine the future of defence and aerospace with
+                passion, precision, and purpose.
+              </p>
+            </div>
           </div>
         </div>
       </section>
