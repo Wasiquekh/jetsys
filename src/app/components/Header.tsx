@@ -9,44 +9,6 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   return (
     <div>
-      {/* MOBILE  MENU LIST */}
-      {isMobileMenuOpen && (
-        <div className=" fixed top-0 left-0 bg-white w-full h-screen z-50 flex  gap-6 flex-col justify-center items-center">
-          <AiOutlineClose
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className=" absolute top-6 right-5 text-3xl text-black"
-          />
-          <Link
-            href="/"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className=" text-xl font-medium text-black"
-          >
-            HOME
-          </Link>
-          <Link
-            href="/"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className=" text-xl font-medium text-black"
-          >
-            PRODUCTS
-          </Link>
-          <Link
-            href="/"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className=" text-xl font-medium text-black"
-          >
-            SOLUTIONS
-          </Link>
-          <Link
-            href="/"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className=" text-xl font-medium text-black"
-          >
-            COMPANY
-          </Link>
-        </div>
-      )}
-
       <header className="text-white w-full bg-black border-b-2 border-b-secondary">
         <div className=" max-w-[1120px] mx-auto px-5 py-3 flex justify-between md:flex-row items-center">
           <div>
@@ -84,6 +46,43 @@ const Header = () => {
             />
           </div>
         </div>
+        {/* MOBILE  MENU LIST */}
+        {isMobileMenuOpen && (
+          <div className=" fixed top-0 left-0 bg-white w-full h-screen z-50 flex  gap-6 flex-col justify-center items-center">
+            <AiOutlineClose
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className=" absolute top-6 right-5 text-3xl text-black"
+            />
+            <Link
+              href="/"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className=" text-xl font-medium text-black"
+            >
+              HOME
+            </Link>
+            <Link
+              href="/"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className=" text-xl font-medium text-black"
+            >
+              PRODUCTS
+            </Link>
+            <Link
+              href="/"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className=" text-xl font-medium text-black"
+            >
+              SOLUTIONS
+            </Link>
+            <Link
+              href="/"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className=" text-xl font-medium text-black"
+            >
+              COMPANY
+            </Link>
+          </div>
+        )}
       </header>
     </div>
   );
