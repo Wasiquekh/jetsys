@@ -40,12 +40,17 @@ export default function MobileLandingCards() {
         <Swiper
           modules={[Autoplay]}
           slidesPerView={1.05}
-          centeredSlides
           spaceBetween={16}
-          loop
+          loop={true}
           grabCursor
-          speed={600}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          speed={3000} // faster smooth scroll (3s)
+          autoplay={{
+            delay: 0, // continuous flow
+            disableOnInteraction: false,
+          }}
+          onSwiper={(swiper) => {
+            swiper.slideToLoop(0, 0); // always start at first slide
+          }}
         >
           {CARDS.map((card, i) => (
             <SwiperSlide key={i}>
@@ -61,9 +66,7 @@ export default function MobileLandingCards() {
                   <h2 className="text-[28px] font-medium leading-tight">
                     {card.title}
                   </h2>
-                  <p className="max-w-[22rem] text-base opacity-90">
-                    {card.desc}
-                  </p>
+                  <p className="max-w-[22rem] text-base">{card.desc}</p>
                   {card.cta && (
                     <button
                       type="button"
