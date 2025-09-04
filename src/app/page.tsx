@@ -12,6 +12,7 @@ import Carousel from "./components/test";
 import CustomCarasoul from "./components/CustomCarasoul";
 import OurOffering from "./components/OurOfferings";
 import MobileLandingCards from "./components/MobileLandingCards";
+import StickyHeader from "./components/StickyHeader";
 
 // CODE FOR CLIENT LOGO FADE BOTTOM
 const logoWrapperVariants: Variants = {
@@ -77,6 +78,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      <StickyHeader />
       {/* HOME TOP */}
       <section className="relative w-full  h-[600px] overflow-hidden">
         {/* Background Video */}
@@ -119,11 +121,11 @@ export default function Home() {
 
       {/* ABOUT SECTION */}
       <section>
-        <div className="container">
+        <div className="container !pt-0 ">
           <h1 className=" text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text">
             About our organization
           </h1>
-          <p className=" text-base text-primary font-medium text-center mb-5 ">
+          <p className=" text-base text-primary font-medium text-center mb-0 ">
             Jetsys Defence is an agile, innovation-driven aerospace and defence
             company based in India. We specialize in mission-critical
             technologies for airborne platforms, avionics, and tactical systems
@@ -341,13 +343,13 @@ export default function Home() {
         <div className="container !py-12"></div>
       </section>
       {/* TRUSTED */}
-      <section className=" bg-[#EBE4CF]">
-        <div className="container !max-w-full">
+      <section className=" bg-[#EBE4CF] pb-[75px]">
+        <div className="container !max-w-full !mb-0">
           {/* ------------------ */}
           <div className="banner-heading-wrapper relative text-center ">
             <TrustedByLeadersHeading></TrustedByLeadersHeading>
           </div>
-          <div className="container">
+          <div className=" mt-[75px]">
             {/* ------------------ */}
             <p className=" text-base text-black font-medium text-center mb-5 ">
               Jetsys Defence is an agile, innovation-driven aerospace and
@@ -356,64 +358,6 @@ export default function Home() {
               systems — engineered for performance, reliability, and national
               impact.
             </p>
-            {/* desktop */}
-            <motion.div
-              variants={logoWrapperVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              className="hidden md:flex w-full bg-white justify-between gap-6 py-5 px-5 rounded mt-10"
-            >
-              <motion.div variants={logoItemVariants} className="w-full flex">
-                <Image
-                  src="/images/client-1.svg"
-                  width={118}
-                  height={129}
-                  alt="Client 1"
-                  className="w-[90%] mx-auto"
-                />
-              </motion.div>
-
-              <motion.div variants={logoItemVariants} className="w-full flex">
-                <Image
-                  src="/images/client-2.svg"
-                  width={118}
-                  height={129}
-                  alt="Client 2"
-                  className="w-[90%] mx-auto"
-                />
-              </motion.div>
-
-              <motion.div variants={logoItemVariants} className="w-full flex">
-                <Image
-                  src="/images/client-3.svg"
-                  width={118}
-                  height={129}
-                  alt="Client 3"
-                  className="mx-auto"
-                />
-              </motion.div>
-
-              <motion.div variants={logoItemVariants} className="w-full flex">
-                <Image
-                  src="/images/client-4.svg"
-                  width={118}
-                  height={129}
-                  alt="Client 4"
-                  className="mx-auto"
-                />
-              </motion.div>
-
-              <motion.div variants={logoItemVariants} className="w-full flex">
-                <Image
-                  src="/images/client-5.svg"
-                  width={118}
-                  height={129}
-                  alt="Client 5"
-                  className="mx-auto"
-                />
-              </motion.div>
-            </motion.div>
           </div>
 
           {/* mobile */}
@@ -464,6 +408,66 @@ export default function Home() {
               />
             </div>
           </div>
+        </div>
+        {/* desktop */}
+        <div className=" bg-white">
+          <motion.div
+            variants={logoWrapperVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="hidden md:flex w-full bg-white justify-between gap-6 py-5 px-5 rounded mt-0 max-w-[1120px] mx-auto "
+          >
+            <motion.div variants={logoItemVariants} className="w-full flex">
+              <Image
+                src="/images/client-1.svg"
+                width={118}
+                height={129}
+                alt="Client 1"
+                className="w-[90%] mx-auto"
+              />
+            </motion.div>
+
+            <motion.div variants={logoItemVariants} className="w-full flex">
+              <Image
+                src="/images/client-2.svg"
+                width={118}
+                height={129}
+                alt="Client 2"
+                className="w-[90%] mx-auto"
+              />
+            </motion.div>
+
+            <motion.div variants={logoItemVariants} className="w-full flex">
+              <Image
+                src="/images/client-3.svg"
+                width={118}
+                height={129}
+                alt="Client 3"
+                className="mx-auto"
+              />
+            </motion.div>
+
+            <motion.div variants={logoItemVariants} className="w-full flex">
+              <Image
+                src="/images/client-4.svg"
+                width={118}
+                height={129}
+                alt="Client 4"
+                className="mx-auto"
+              />
+            </motion.div>
+
+            <motion.div variants={logoItemVariants} className="w-full flex">
+              <Image
+                src="/images/client-5.svg"
+                width={118}
+                height={129}
+                alt="Client 5"
+                className="mx-auto"
+              />
+            </motion.div>
+          </motion.div>
         </div>
       </section>
       {/* OUR OFFERING */}

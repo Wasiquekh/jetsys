@@ -174,10 +174,10 @@ const CustomCarasoul: React.FC = () => {
 
     return (
       <div
-        className={`shrink-0 basis-[85%] md:basis-[45%] lg:basis-[40%] group ${extraClasses}`}
+        className={`shrink-0 basis-[85%] md:basis-[45%] lg:basis-[35%] group ${extraClasses}`}
       >
         <div
-          className="card relative w-full min-h-[380px] md:min-h-[440px] px-8 py-20 md:py-24 rounded-2xl text-center overflow-hidden transform-gpu"
+          className="card relative w-full min-h-[380px] md:min-h-[350px] px-8 py-20 md:py-24 rounded-2xl text-center overflow-hidden transform-gpu"
           style={style}
         >
           <div className="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100" />

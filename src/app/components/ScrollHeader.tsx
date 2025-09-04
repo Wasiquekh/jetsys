@@ -39,13 +39,13 @@ export default function TrustedByLeadersHeading() {
   return (
     <div className="banner-heading-wrapper py-0 w-full">
       {/* Top line → starts with left padding and moves to the left on scroll */}
-      <h1 className="banner-heading-top will-change-transform text-center mx-auto uppercase font-light text-[25px] md:text-[90px] text-black pl-10">
-        TRUSTED BY LEADERS
+      <h1 className="banner-heading-top will-change-transform text-center mx-auto  font-medium text-[25px] md:text-[90px] text-black pl-10">
+        Trusted by Leaders Trusted by Leaders
       </h1>
 
       {/* Bottom line → stays perfectly centered initially and moves to the right on scroll */}
-      <h1 className="banner-heading-bottom will-change-transform text-center mx-auto uppercase font-light text-[25px] md:text-[90px] text-black">
-        BUILT FOR EXCELLENCE
+      <h1 className="banner-heading-bottom will-change-transform text-center mx-auto  font-medium text-[25px] md:text-[90px] text-black">
+        Built for Excellence Built for Excellence
       </h1>
     </div>
   );

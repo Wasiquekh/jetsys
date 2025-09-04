@@ -4,6 +4,7 @@ import "./globals.css";
 import { Montserrat } from "next/font/google";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import StickyHeader from "./components/StickyHeader";
 
 // Montserrat (Google font)
 const montserrat = Montserrat({
