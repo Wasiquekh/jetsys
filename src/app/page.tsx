@@ -181,89 +181,89 @@ export default function Home() {
         <div className=" max-w-[1120px] px-5 mx-auto flex justify-between -z-10">
           <Image
             src="/images/ring.svg"
-            width={210}
-            height={210}
+            width={150}
+            height={150}
             alt="Picture of the author"
             className=" -z-10"
           />
           <Image
             src="/images/ring.svg"
-            width={210}
-            height={210}
+            width={150}
+            height={150}
             alt="Picture of the author"
             className=" -z-10"
           />
           <Image
             src="/images/ring.svg"
-            width={210}
-            height={210}
+            width={150}
+            height={150}
             alt="Picture of the author"
             className=" -z-10"
           />
           <Image
             src="/images/ring.svg"
-            width={210}
-            height={210}
+            width={150}
+            height={150}
             alt="Picture of the author"
             className=" -z-10"
           />
           <Image
             src="/images/ring.svg"
-            width={210}
-            height={210}
+            width={150}
+            height={150}
             alt="Picture of the author"
             className=" -z-10"
           />
         </div>
         {/* BACKGROUND THEME COLOR LINE */}
-        <div className=" bg-primary h-28 -mt-40 -mb-[147px] z-10"></div>
+        <div className=" bg-primary h-24 -mt-[120px] -mb-[116px] z-10"></div>
         {/* ICON IMAGES */}
         <div className=" max-w-[1120px] px-5 mx-auto flex justify-between">
           <Image
             src="/images/Expert-Engineers.gif"
-            width={182}
-            height={182}
+            width={135}
+            height={135}
             alt="Picture of the author"
-            className=" relative left-[14px]"
+            className=" relative left-[8px]"
           />
           <Image
             src="/images/Rapid-Deployment.gif"
-            width={182}
-            height={182}
+            width={135}
+            height={135}
             alt="Picture of the author"
-            className=" relative left-[7px]"
+            className=" relative left-[4px]"
           />
           <Image
             src="/images/Global-Reach.gif"
-            width={182}
-            height={182}
+            width={135}
+            height={135}
             alt="Picture of the author"
-            className=" relative left-[1px]"
+            className=" relative left-[0px]"
           />
           <Image
             src="/images/Indigenous-Capability.gif"
-            width={182}
-            height={182}
+            width={135}
+            height={135}
             alt="Picture of the author"
-            className=" relative -left-[6px]"
+            className=" relative -left-[4px]"
           />
           <Image
             src="/images/Precise-Production.gif"
-            width={182}
-            height={182}
+            width={135}
+            height={135}
             alt="Picture of the author"
-            className=" relative right-3"
+            className=" relative right-[6px]"
           />
         </div>
         {/* TEXT */}
         <div className="max-w-[1120px] px-5 mx-auto flex justify-between mt-10">
           <div className=" w-full">
-            <p className="text-center text-lg  relative -left-5 ">
+            <p className="text-center text-lg  relative right-10 ">
               Expert Engineers
             </p>
           </div>
           <div className=" w-full">
-            <p className="text-center text-lg relative -left-0">
+            <p className="text-center text-lg relative -left-2">
               Rapid Deployment
             </p>
           </div>
@@ -271,12 +271,12 @@ export default function Home() {
             <p className="text-center text-lg">Global Reach</p>
           </div>
           <div className=" w-full">
-            <p className="text-center text-lg relative left-0">
+            <p className="text-center text-lg relative left-6">
               Indigenous Capability
             </p>
           </div>
           <div className=" w-full">
-            <p className="text-center text-lg relative left-3 w-[98%]">
+            <p className="text-center text-lg relative left-10 w-[98%]">
               Precise Production
             </p>
           </div>
@@ -344,12 +344,12 @@ export default function Home() {
       </section>
       {/* TRUSTED */}
       <section className=" bg-[#EBE4CF] pb-[75px]">
-        <div className="container !max-w-full !mb-0">
+        <div className="container !max-w-full !pb-5">
           {/* ------------------ */}
           <div className="banner-heading-wrapper relative text-center ">
             <TrustedByLeadersHeading></TrustedByLeadersHeading>
           </div>
-          <div className=" mt-[75px]">
+          <div className=" mt-5">
             {/* ------------------ */}
             <p className=" text-base text-black font-medium text-center mb-5 ">
               Jetsys Defence is an agile, innovation-driven aerospace and
