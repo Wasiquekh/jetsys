@@ -1,33 +1,136 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 export default function OurOffering() {
   // Your original cards
   const cards = [
-    { img: "/images/offer-1.png", title: "Aviation Equipment" },
-    { img: "/images/offer-2.png", title: "Raw Materials" },
-    { img: "/images/offer-3.png", title: "Testing & Maintenance" },
-    { img: "/images/offer-4.png", title: "Indigenization" },
-    { img: "/images/offer-5.png", title: "Aircraft Spares" },
-    { img: "/images/offer-6.png", title: "Runway Spares" },
-    { img: "/images/offer-7.png", title: "Test Rigs & Test Chambers" },
+    {
+      img: "/images/offer-1.png",
+      title: "Aviation Equipment",
+      desc: "Jetsys’s aviation equipment is engineered for precision, reliability, and mission readiness delivering performance from ground support to onboard systems.",
+    },
+    {
+      img: "/images/offer-2.png",
+      title: "Raw Materials",
+      desc: "Jetsys’s raw materials are sourced and engineered for strength, durability, and consistency ensuring uncompromised quality in every aerospace and defence application.",
+    },
+    {
+      img: "/images/offer-3.png",
+      title: "Testing & Maintenance",
+      desc: "Jetsys’s testing and maintenance solutions ensure flawless aircraft performance through precision calibration, diagnostics, and portability enabling faster cycles and safer skies.",
+    },
+    {
+      img: "/images/offer-4.png",
+      title: "Indigenization",
+      desc: "Jetsys’s indigenization solutions replace legacy imports with homegrown excellence delivering faster, cost-efficient, and resilient systems that meet and exceed global standards.",
+    },
+    {
+      img: "/images/offer-5.png",
+      title: "Aircraft Spares",
+      desc: "Jetsys’s aircraft spares ensure seamless operations with reliable, high-quality components minimizing downtime and maximizing fleet readiness.",
+    },
+    {
+      img: "/images/offer-6.png",
+      title: "Runway Spares",
+      desc: "Jetsys’s runway spares are built for reliability and quick availability — ensuring uninterrupted operations and mission-ready performance.",
+    },
+    {
+      img: "/images/offer-7.png",
+      title: "Test Rigs & Test Chambers",
+      desc: "Jetsys’s test rigs and chambers deliver precision simulations and rigorous validation, ensuring aircraft systems perform flawlessly under real-world conditions.",
+    },
     {
       img: "/images/offer-8.png",
       title: "Ground Support & Handling Equipment",
+      desc: "ground support and handling equipment is engineered for durability and efficiency ensuring smooth operations, faster turnaround, and mission readiness.",
     },
-    { img: "/images/offer-9.png", title: "Others" },
+    {
+      img: "/images/offer-9.png",
+      title: "Others",
+      desc: "Jetsys’s unmanned solutions combine advanced engineering with intelligent systems delivering superior surveillance, precision operations, and adaptability across defence and aerospace missions.",
+    },
   ];
 
   const [flipped, setFlipped] = useState<Record<number, boolean>>({});
   const suppressClickUntil = useRef<number>(0);
   const toggle = (i: number) => setFlipped((s) => ({ ...s, [i]: !s[i] }));
 
+  // ===== ONLY for the <h1> animation =====
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const headingRef = useRef<HTMLHeadingElement | null>(null);
+  const rafRef = useRef<number | null>(null);
+
+  const [headingStyle, setHeadingStyle] = useState<React.CSSProperties>({
+    opacity: 1,
+    transform: "translateX(0px)",
+  });
+
+  useEffect(() => {
+    const reduce =
+      typeof window !== "undefined" &&
+      window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+
+    if (reduce) return;
+
+    const clamp = (v: number, min: number, max: number) =>
+      Math.min(max, Math.max(min, v));
+
+    const update = () => {
+      if (!sectionRef.current) return;
+      const rect = sectionRef.current.getBoundingClientRect();
+      const vh = window.innerHeight || 1;
+
+      // Start moving early (near bottom), finish before reaching the header.
+      const triggerStart = vh * 0.9; // begin around 90% down the viewport
+      const triggerEnd = vh * 0.25; // finish by ~25% from top
+
+      let progress: number;
+
+      if (rect.top >= triggerStart) {
+        // Section is still far below viewport — keep centered/visible
+        progress = 0;
+      } else if (rect.top <= 0) {
+        // Section's top has reached/passed the top — keep fully hidden (sticky hidden)
+        progress = 1;
+      } else {
+        // Map linearly between start and end
+        const t = (triggerStart - rect.top) / (triggerStart - triggerEnd);
+        progress = clamp(t, 0, 1);
+      }
+
+      const translateX = progress * 140; // move right up to 140px
+      const opacity = 1 - progress; // fade out while moving
+
+      setHeadingStyle({
+        opacity,
+        transform: `translateX(${translateX}px)`,
+        transition: "opacity 400ms ease-in-out, transform 400ms ease-in-out",
+        willChange: "opacity, transform",
+      });
+
+      rafRef.current = requestAnimationFrame(update);
+    };
+
+    rafRef.current = requestAnimationFrame(update);
+    window.addEventListener("resize", update, { passive: true });
+
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      window.removeEventListener("resize", update);
+    };
+  }, []);
+
   return (
-    <section className="">
+    <section ref={sectionRef} className="">
       <div className="container">
-        <h1 className="mx-auto text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text w-full md:w-[80%]">
+        {/* Animated Heading — ONLY this line is affected */}
+        <h1
+          ref={headingRef}
+          style={headingStyle}
+          className="mx-auto text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text w-full md:w-[80%]"
+        >
           Our Offerings
         </h1>
 
@@ -58,12 +161,10 @@ export default function OurOffering() {
                     transform: isFlipped ? "rotateY(180deg)" : undefined,
                     WebkitTransform: isFlipped ? "rotateY(180deg)" : undefined,
                   }}
-                  // Flip on real touch ASAP; then ignore the follow-up synthetic click
                   onTouchStartCapture={() => {
                     toggle(idx);
                     suppressClickUntil.current = Date.now() + 400;
                   }}
-                  // Flip on ANY click (so DevTools mobile preview also works)
                   onClickCapture={(e) => {
                     const t = e.target as HTMLElement;
                     if (t.closest("a")) return; // don't flip when tapping the link
@@ -94,17 +195,20 @@ export default function OurOffering() {
                   </div>
 
                   {/* Back Side */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center rounded border border-primary bg-primary text-white p-3 [transform:rotateY(180deg)] [-webkit-transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center rounded border border-primary bg-primary text-white p-5 [transform:rotateY(180deg)] [-webkit-transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
                     <p className="text-lg font-semibold mb-5 text-center">
                       {card.title}
                     </p>
-                    {/* Navigate to home ("/") */}
+                    <p className="text-sm font-normal  mb-5 text-center">
+                      {card.desc}
+                    </p>
+
                     <Link
                       href="/"
                       className="underline"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      Home
+                      Learn More
                     </Link>
                   </div>
                 </div>

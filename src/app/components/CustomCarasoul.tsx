@@ -1,8 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 
-const AMPLITUDE = 22; // px bounce (try 18–26)
-const FREQ = 0.3; // cycles per second (try 0.6–1.2)
+const FREQ = 0.3; // cycles per second
 const SMOOTHING = 0.12; // 0..1 (lower = floatier, higher = snappier)
 const IDLE_MS = 220; // stop oscillation after this many ms of no movement
 
@@ -20,6 +19,9 @@ const CustomCarasoul: React.FC = () => {
   const oscStart = useRef<number>(0);
   const stopTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  // responsive amplitude (px)
+  const amplitudeRef = useRef<number>(22); // default for non-desktop
+
   // smoothing state
   const cardsRef = useRef<HTMLDivElement[]>([]);
   const currentYRef = useRef<number[]>([]); // smoothed y per card
@@ -27,6 +29,13 @@ const CustomCarasoul: React.FC = () => {
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
+
+    // --- set amplitude by breakpoint (desktop smaller cards => smaller amplitude)
+    const setAmplitude = () => {
+      const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+      amplitudeRef.current = isDesktop ? 14 : 22;
+    };
+    setAmplitude();
 
     const queryCards = () =>
       Array.from(container.querySelectorAll<HTMLDivElement>(".card"));
@@ -63,7 +72,8 @@ const CustomCarasoul: React.FC = () => {
 
       for (let i = 0; i < cards.length; i++) {
         const phase = i % 2 === 0 ? 0 : Math.PI; // alternate up/down
-        const targetY = Math.sin(omega * elapsed + phase) * AMPLITUDE;
+        const targetY =
+          Math.sin(omega * elapsed + phase) * amplitudeRef.current;
 
         // LERP toward target for buttery motion
         const prev = currentYRef.current[i] ?? 0;
@@ -83,16 +93,13 @@ const CustomCarasoul: React.FC = () => {
       const max = Math.max(0, container.scrollWidth - container.clientWidth);
       targetScroll.current = x * max;
 
-      // start/keep oscillating as long as the mouse keeps moving
       if (!oscActive.current) {
         oscActive.current = true;
-        // don't reset oscStart if already ran before; but if first time, init:
         if (!oscStart.current) oscStart.current = performance.now();
         if (oscRafRef.current) cancelAnimationFrame(oscRafRef.current);
         oscRafRef.current = requestAnimationFrame(oscillate);
       }
 
-      // when movement stops, pause but keep cards at last positions
       if (stopTimerRef.current) clearTimeout(stopTimerRef.current);
       stopTimerRef.current = setTimeout(() => {
         oscActive.current = false;
@@ -100,12 +107,10 @@ const CustomCarasoul: React.FC = () => {
           cancelAnimationFrame(oscRafRef.current);
           oscRafRef.current = null;
         }
-        // leave transforms as-is (paused pose)
       }, IDLE_MS);
     };
 
     const onMouseLeave = () => {
-      // stop oscillation loop and reset
       oscActive.current = false;
       if (oscRafRef.current) {
         cancelAnimationFrame(oscRafRef.current);
@@ -136,6 +141,7 @@ const CustomCarasoul: React.FC = () => {
       const max = Math.max(0, container.scrollWidth - container.clientWidth);
       targetScroll.current = Math.min(targetScroll.current, max);
       currentScroll.current = Math.min(currentScroll.current, max);
+      setAmplitude(); // re-evaluate on breakpoint changes
       syncCardsArrays();
     };
     window.addEventListener("resize", onResize);
@@ -174,22 +180,31 @@ const CustomCarasoul: React.FC = () => {
 
     return (
       <div
-        className={`shrink-0 basis-[85%] md:basis-[45%] lg:basis-[35%] group ${extraClasses}`}
+        className={
+          // Desktop gets smaller basis; other breakpoints unchanged
+          `shrink-0 basis-[85%] md:basis-[45%] lg:basis-[26%] group ${extraClasses}`
+        }
       >
         <div
-          className="card relative w-full min-h-[380px] md:min-h-[350px] px-8 py-20 md:py-24 rounded-2xl text-center overflow-hidden transform-gpu"
+          className={
+            // Smaller desktop min-height & paddings; lighter text sizes
+            "card relative w-full " +
+            "min-h-[380px] md:min-h-[350px] lg:min-h-[260px] " +
+            "px-8 py-20 md:py-24 lg:px-6 lg:py-12 " +
+            "rounded-2xl text-center overflow-hidden transform-gpu"
+          }
           style={style}
         >
           <div className="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100" />
           <div className="relative z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <p className="text-2xl text-white font-bold mb-6 md:mb-8">
+            <p className="text-2xl md:text-2xl lg:text-xl text-white font-bold mb-6 md:mb-8 lg:mb-4">
               {title}
             </p>
-            <p className="text-base text-white/90 font-medium mb-6 md:mb-8">
+            <p className="text-base md:text-base lg:text-sm text-white/90 font-medium mb-6 md:mb-8 lg:mb-5">
               {desc}
             </p>
-            <button className="bg-primary text-base font-semibold py-2 px-6 rounded text-white border border-primary transition-colors duration-300 hover:bg-white hover:text-black">
-              Know More
+            <button className="bg-primary text-base md:text-base lg:text-sm font-semibold py-2 px-6 lg:px-5 rounded text-white border border-primary transition-colors duration-300 hover:bg-white hover:text-black">
+              Learn More
             </button>
           </div>
         </div>
@@ -204,13 +219,13 @@ const CustomCarasoul: React.FC = () => {
           ref={containerRef}
           className="relative overflow-x-scroll overflow-y-hidden pb-10 cs-scroll"
         >
-          <div className="flex gap-6 md:gap-8 lg:gap-10 justify-start py-6">
+          <div className="flex gap-6 md:gap-8 lg:gap-6 justify-start py-6">
             {/* 5 cards */}
             <Card
               bg="/images/landing-1.png"
               title="Expanding Horizons in Aerospace"
               desc="Driving innovation to redefine the possibilities in defence and aerospace industries."
-              extraClasses="ml-6 md:ml-8 lg:ml-12"
+              extraClasses="ml-6 md:ml-8 lg:ml-6"
             />
             <Card
               bg="/images/landing-3.png"
@@ -224,18 +239,17 @@ const CustomCarasoul: React.FC = () => {
             />
             <Card
               bg="/images/landing-2.png"
-              title="Operational Excellence"
-              desc="Maximizing uptime with reliable, cutting-edge support systems."
+              title="Trusted Spares, Seamless Systems"
+              desc="Aircraft spares and systems designed for flawless performance."
             />
-            {/* ✅ New 5th card */}
             <Card
               bg="/images/landing-2.png"
-              title="Next-Gen Technology"
-              desc="Harnessing futuristic innovations to empower tomorrow’s defence landscape."
+              title="Airborne Innovation at the Core"
+              desc="  High-grade airborne materials built for resilience and reliability."
             />
 
             {/* Right-side spacer */}
-            <div className="shrink-0 w-6 md:w-8 lg:w-12" aria-hidden="true" />
+            <div className="shrink-0 w-6 md:w-8 lg:w-6" aria-hidden="true" />
           </div>
         </div>
       </section>

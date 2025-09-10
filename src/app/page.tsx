@@ -72,9 +72,67 @@ const cards = [
 ];
 
 export default function Home() {
-  // CODE FOR SCROLL ANIMATION AFTER TOP SECTION
+  // CODE FOR SCROLL ANIMATION why choose us SECTION
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const headingRef = useRef<HTMLHeadingElement | null>(null);
+  const rafRef = useRef<number | null>(null);
 
-  // END CODE FOR SCROLL ANIMATION AFTER TOP SECTION
+  const [headingStyle, setHeadingStyle] = useState<React.CSSProperties>({
+    opacity: 1,
+    transform: "translateX(0px)",
+  });
+
+  useEffect(() => {
+    const reduce =
+      typeof window !== "undefined" &&
+      window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+
+    if (reduce) return;
+
+    const clamp = (v: number, min: number, max: number) =>
+      Math.min(max, Math.max(min, v));
+
+    const update = () => {
+      if (!sectionRef.current) return;
+      const rect = sectionRef.current.getBoundingClientRect();
+      const vh = window.innerHeight || 1;
+
+      const triggerStart = vh * 0.9; // start animating near bottom
+      const triggerEnd = vh * 0.25; // finish before hitting header
+
+      let progress: number;
+
+      if (rect.top >= triggerStart) {
+        progress = 0; // fully visible, centered
+      } else if (rect.top <= 0) {
+        progress = 1; // fully hidden once section top reaches header
+      } else {
+        const t = (triggerStart - rect.top) / (triggerStart - triggerEnd);
+        progress = clamp(t, 0, 1);
+      }
+
+      const translateX = progress * 140;
+      const opacity = 1 - progress;
+
+      setHeadingStyle({
+        opacity,
+        transform: `translateX(${translateX}px)`,
+        transition: "opacity 400ms ease-in-out, transform 400ms ease-in-out",
+        willChange: "opacity, transform",
+      });
+
+      rafRef.current = requestAnimationFrame(update);
+    };
+
+    rafRef.current = requestAnimationFrame(update);
+    window.addEventListener("resize", update, { passive: true });
+
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      window.removeEventListener("resize", update);
+    };
+  }, []);
+  // END CODE FOR SCROLL ANIMATION AFTER why chosse us SECTION
   return (
     <>
       <Header />
@@ -99,7 +157,7 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 container ">
-          <h1 className="text-4xl md:text-6xl  font-extrabold text-white  uppercase horizon-text w-full  md:w-3/4">
+          <h1 className="text-4xl md:text-6xl  font-extrabold text-white  uppercase horizon-text w-full  md:w-3/4 ">
             We Build,What Sky Demands
           </h1>
           <p className="mt-4 text-base font-semibold text-white md:text-xl  max-w-2xl capitalize">
@@ -144,11 +202,10 @@ export default function Home() {
                 Our Mission
               </h2>
               <p className=" text-base font-normal text-white text-justify ">
-                We envision a future where our advanced technology and
-                relentless pursuit of perfection redefine the standards of
-                safety, security, and efficiency in the industry. To accelerate
-                growth and redefine the future of defence and aerospace with
-                passion, precision, and purpose.
+                At the heart of our journey is a bold mission — to accelerate
+                growth and redefine the future of defence and aerospace. Through
+                unwavering passion, precision, and purpose, we strive to create
+                innovative, future-ready solutions.
               </p>
             </div>
             <div>
@@ -473,17 +530,23 @@ export default function Home() {
       {/* OUR OFFERING */}
       <OurOffering />
       {/* WHY CHOOSE US */}
-      <section className=" bg-[#EBE4CF]">
+      <section ref={sectionRef} className="bg-[#EBE4CF]">
         <div className="container">
-          <h1 className=" mx-auto text-center text-black text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text w-full md:w-[80%]">
+          <h1
+            ref={headingRef}
+            style={headingStyle}
+            className="mx-auto text-center text-black text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text w-full md:w-[80%]"
+          >
             Why Choose Us?
           </h1>
-          <p className=" text-base text-black font-medium text-center mb-5 ">
+
+          <p className="text-base text-black font-medium text-center mb-5">
             We deliver high-precision aerospace components through advanced
-            manufacturing and R&D-driven innovation. Backed by system
+            manufacturing and R&amp;D-driven innovation. Backed by system
             engineering and rigorous testing, our solutions ensure reliability
             in mission-critical environments.
           </p>
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-14 mt-12">
             {/* Card 1 */}
             <div className="transition duration-300 transform hover:scale-103 hover:shadow-xl rounded">
@@ -543,6 +606,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <Footer />
     </>
   );

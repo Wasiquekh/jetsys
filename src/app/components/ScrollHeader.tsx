@@ -43,14 +43,14 @@ export default function TrustedByLeadersHeading() {
         ref={topRef}
         className="banner-heading-top block mx-auto w-max whitespace-nowrap will-change-transform font-medium leading-[1.05] text-black text-[25px] md:text-[90px] text-center"
       >
-        Trusted by Leaders&nbsp;Trusted by Leaders
+        TRUSTED BY LEADERS, BUILT FOR EXCELLENCE
       </h1>
 
       <h1
         ref={bottomRef}
-        className="banner-heading-bottom block mx-auto w-max whitespace-nowrap will-change-transform font-medium leading-[1.05] text-black text-[25px] md:text-[90px] text-center"
+        className="banner-heading-bottom block mx-auto w-max whitespace-nowrap will-change-transform font-medium leading-[1.05] text-primary text-[25px] md:text-[90px] text-center"
       >
-        Built for Excellence&nbsp;Built for Excellence
+        TRUSTED BY LEADERS, BUILT FOR EXCELLENCE
       </h1>
     </div>
   );
