@@ -205,7 +205,7 @@ const CustomCarasoul: React.FC = () => {
           className="relative overflow-x-scroll overflow-y-hidden pb-10 cs-scroll"
         >
           <div className="flex gap-6 md:gap-8 lg:gap-10 justify-start py-6">
-            {/* 4 cards */}
+            {/* 5 cards */}
             <Card
               bg="/images/landing-1.png"
               title="Expanding Horizons in Aerospace"
@@ -226,6 +226,12 @@ const CustomCarasoul: React.FC = () => {
               bg="/images/landing-2.png"
               title="Operational Excellence"
               desc="Maximizing uptime with reliable, cutting-edge support systems."
+            />
+            {/* ✅ New 5th card */}
+            <Card
+              bg="/images/landing-2.png"
+              title="Next-Gen Technology"
+              desc="Harnessing futuristic innovations to empower tomorrow’s defence landscape."
             />
 
             {/* Right-side spacer */}

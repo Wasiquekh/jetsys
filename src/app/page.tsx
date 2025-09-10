@@ -99,7 +99,7 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 container ">
-          <h1 className="text-4xl md:text-6xl  font-extrabold text-white uppercase horizon-text w-full  md:w-3/4">
+          <h1 className="text-4xl md:text-6xl  font-extrabold text-white  uppercase horizon-text w-full  md:w-3/4">
             We Build,What Sky Demands
           </h1>
           <p className="mt-4 text-base font-semibold text-white md:text-xl  max-w-2xl capitalize">
