@@ -183,13 +183,13 @@ export default function Home() {
           <h1 className=" text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text">
             About our organization
           </h1>
-          <p className=" text-base text-primary font-medium text-center mb-0 ">
+          <p className=" text-base text-[#000] font-medium text-center mb-0 ">
             Jetsys Defence is an agile, innovation-driven aerospace and defence
             company based in India. We specialize in mission-critical
             technologies for airborne platforms, avionics, and tactical systems
             — engineered for performance, reliability, and national impact.
           </p>
-          <div className=" py-10 px-4 md:px-10 w-full bg-primary mt-30 mb-16   grid grid-cols-1 md:grid-cols-3 gap-10  items-center relative">
+          <div className=" py-10 px-4 md:px-10 w-full bg-[#5c5649] mt-30 mb-16   grid grid-cols-1 md:grid-cols-3 gap-10  items-center relative">
             <Image
               src="/images/mission.png"
               width={340}
@@ -408,7 +408,7 @@ export default function Home() {
           </div>
           <div className=" mt-5">
             {/* ------------------ */}
-            <p className=" text-base text-black font-medium text-center mb-5 ">
+            <p className=" text-lg text-black font-medium m-auto mb-5 w-full md:w-[85%] text-center ">
               Jetsys Defence is an agile, innovation-driven aerospace and
               defence company based in India. We specialize in mission-critical
               technologies for airborne platforms, avionics, and tactical
@@ -458,6 +458,15 @@ export default function Home() {
             <div className="w-full flex">
               <Image
                 src="/images/client-5.svg"
+                width={118}
+                height={129}
+                alt="Client 5"
+                className="mx-auto w-full"
+              />
+            </div>
+            <div className="w-full flex">
+              <Image
+                src="/images/client-6.jpeg"
                 width={118}
                 height={129}
                 alt="Client 5"
@@ -522,6 +531,15 @@ export default function Home() {
                 height={129}
                 alt="Client 5"
                 className="mx-auto"
+              />
+            </motion.div>
+            <motion.div variants={logoItemVariants} className="w-full flex">
+              <Image
+                src="/images/client-6.jpeg"
+                width={90}
+                height={90}
+                alt="Client 1"
+                className="w-[90%] mx-auto"
               />
             </motion.div>
           </motion.div>

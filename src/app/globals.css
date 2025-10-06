@@ -99,6 +99,24 @@ h1 {
 .bg-landing-2 { background-image: url('/images/landing-2.png'); }
 .bg-landing-3 { background-image: url('/images/landing-3.png'); }
 
+/* Add this CSS to your global stylesheet or as a module */
+@keyframes fadeUp {
+  0% {
+    transform: translateY(50px); /* Start below */
+    opacity: 0; /* Start invisible */
+  }
+  100% {
+    transform: translateY(0); /* End at original position */
+    opacity: 1; /* End fully visible */
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 600ms ease-out forwards;
+}
+
+
+
 
 
 

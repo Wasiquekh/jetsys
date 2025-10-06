@@ -41,16 +41,16 @@ export default function TrustedByLeadersHeading() {
       {/* Single-line, centered, no wrapping */}
       <h1
         ref={topRef}
-        className="banner-heading-top block mx-auto w-max whitespace-nowrap will-change-transform font-medium leading-[1.05] text-black text-[25px] md:text-[90px] text-center"
+        className="banner-heading-top block mx-auto w-max whitespace-nowrap will-change-transform font-medium leading-[1.05] text-black text-[25px] md:text-[95px] text-center"
       >
-        TRUSTED BY LEADERS, BUILT FOR EXCELLENCE
+        TRUSTED BY LEADERS,
       </h1>
 
       <h1
         ref={bottomRef}
-        className="banner-heading-bottom block mx-auto w-max whitespace-nowrap will-change-transform font-medium leading-[1.05] text-primary text-[25px] md:text-[90px] text-center"
+        className="banner-heading-bottom block mx-auto w-max whitespace-nowrap will-change-transform font-medium leading-[1.05] text-primary text-[25px] md:text-[95px] text-center"
       >
-        TRUSTED BY LEADERS, BUILT FOR EXCELLENCE
+        BUILT FOR EXCELLENCE.
       </h1>
     </div>
   );

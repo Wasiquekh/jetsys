@@ -44,7 +44,7 @@ export default function OurOffering() {
     {
       img: "/images/offer-8.png",
       title: "Ground Support & Handling Equipment",
-      desc: "ground support and handling equipment is engineered for durability and efficiency ensuring smooth operations, faster turnaround, and mission readiness.",
+      desc: "Ground support and handling equipment is engineered for durability and efficiency ensuring smooth operations, faster turnaround, and mission readiness.",
     },
     {
       img: "/images/offer-9.png",
@@ -60,76 +60,38 @@ export default function OurOffering() {
   // ===== ONLY for the <h1> animation =====
   const sectionRef = useRef<HTMLElement | null>(null);
   const headingRef = useRef<HTMLHeadingElement | null>(null);
-  const rafRef = useRef<number | null>(null);
 
-  const [headingStyle, setHeadingStyle] = useState<React.CSSProperties>({
-    opacity: 1,
-    transform: "translateX(0px)",
-  });
+  const [headingClass, setHeadingClass] = useState<string>("");
 
   useEffect(() => {
-    const reduce =
-      typeof window !== "undefined" &&
-      window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    // IntersectionObserver for detecting section visibility
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHeadingClass("animate-fade-up");
+        }
+      },
+      { threshold: 0.5 } // Trigger when the section is 50% visible
+    );
 
-    if (reduce) return;
-
-    const clamp = (v: number, min: number, max: number) =>
-      Math.min(max, Math.max(min, v));
-
-    const update = () => {
-      if (!sectionRef.current) return;
-      const rect = sectionRef.current.getBoundingClientRect();
-      const vh = window.innerHeight || 1;
-
-      // Start moving early (near bottom), finish before reaching the header.
-      const triggerStart = vh * 0.9; // begin around 90% down the viewport
-      const triggerEnd = vh * 0.25; // finish by ~25% from top
-
-      let progress: number;
-
-      if (rect.top >= triggerStart) {
-        // Section is still far below viewport — keep centered/visible
-        progress = 0;
-      } else if (rect.top <= 0) {
-        // Section's top has reached/passed the top — keep fully hidden (sticky hidden)
-        progress = 1;
-      } else {
-        // Map linearly between start and end
-        const t = (triggerStart - rect.top) / (triggerStart - triggerEnd);
-        progress = clamp(t, 0, 1);
-      }
-
-      const translateX = progress * 140; // move right up to 140px
-      const opacity = 1 - progress; // fade out while moving
-
-      setHeadingStyle({
-        opacity,
-        transform: `translateX(${translateX}px)`,
-        transition: "opacity 400ms ease-in-out, transform 400ms ease-in-out",
-        willChange: "opacity, transform",
-      });
-
-      rafRef.current = requestAnimationFrame(update);
-    };
-
-    rafRef.current = requestAnimationFrame(update);
-    window.addEventListener("resize", update, { passive: true });
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
 
     return () => {
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      window.removeEventListener("resize", update);
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
     };
   }, []);
 
   return (
     <section ref={sectionRef} className="">
       <div className="container">
-        {/* Animated Heading — ONLY this line is affected */}
+        {/* Animated Heading — Apply class when section enters viewport */}
         <h1
           ref={headingRef}
-          style={headingStyle}
-          className="mx-auto text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text w-full md:w-[80%]"
+          className={`mx-auto text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text w-full md:w-[80%] ${headingClass}`}
         >
           Our Offerings
         </h1>
