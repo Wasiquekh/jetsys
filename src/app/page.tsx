@@ -271,6 +271,27 @@ export default function Home() {
             alt="Picture of the author"
             className=" -z-10"
           />
+          <Image
+            src="/images/ring.svg"
+            width={150}
+            height={150}
+            alt="Picture of the author"
+            className=" -z-10"
+          />
+          <Image
+            src="/images/ring.svg"
+            width={150}
+            height={150}
+            alt="Picture of the author"
+            className=" -z-10"
+          />
+          <Image
+            src="/images/ring.svg"
+            width={150}
+            height={150}
+            alt="Picture of the author"
+            className=" -z-10"
+          />
         </div>
         {/* BACKGROUND THEME COLOR LINE */}
         <div className=" bg-primary h-24 -mt-[120px] -mb-[116px] z-10"></div>
@@ -311,6 +332,27 @@ export default function Home() {
             alt="Picture of the author"
             className=" relative right-[6px]"
           />
+          <Image
+            src="/images/Innovation-at-Core.gif"
+            width={135}
+            height={135}
+            alt="Picture of the author"
+            className=" relative right-[6px]"
+          />
+          <Image
+            src="/images/end-to-end-solutions.gif"
+            width={135}
+            height={135}
+            alt="Picture of the author"
+            className=" relative right-[6px]"
+          />
+          <Image
+            src="/images/Custom-Fit.gif"
+            width={135}
+            height={135}
+            alt="Picture of the author"
+            className=" relative right-[6px]"
+          />
         </div>
         {/* TEXT */}
         <div className="max-w-[1120px] px-5 mx-auto flex justify-between mt-10">
@@ -330,6 +372,21 @@ export default function Home() {
           <div className=" w-full">
             <p className="text-center text-lg relative left-6">
               Indigenous Capability
+            </p>
+          </div>
+          <div className=" w-full">
+            <p className="text-center text-lg relative left-10 w-[98%]">
+              Precise Production
+            </p>
+          </div>
+          <div className=" w-full">
+            <p className="text-center text-lg relative left-10 w-[98%]">
+              Precise Production
+            </p>
+          </div>
+          <div className=" w-full">
+            <p className="text-center text-lg relative left-10 w-[98%]">
+              Precise Production
             </p>
           </div>
           <div className=" w-full">
