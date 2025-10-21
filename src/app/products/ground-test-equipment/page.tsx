@@ -10,7 +10,7 @@ const page = () => {
       <section className=" relative">
         <div className="container  !py-30">
           <h1 className=" font-extrabold text-6xl text-center mb-5">
-            Ground Support Equipment 
+            Ground Test Equipment 
           </h1>
           <p className=" font-medium text-base text-center ">
             From concept to creation, we craft solutions that inspire trust,
@@ -41,6 +41,64 @@ const page = () => {
           <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
             <div>
               <Image
+                src="/images/Ground Power Unit.png"
+                width={1000}
+                height={1000}
+                alt="Picture of the author"
+              />
+            </div>
+            <div>
+              <h2 className=" font-extrabold text-3xl mb-4">
+                Brake Valve Test Rig
+              </h2>
+              <p className=" font-medium text-base mb-4">
+                <strong> Description</strong> <br />A precision test rig
+                designed to verify the performance and safety of aircraft brake
+                valves.
+              </p>
+              <p className="font-medium text-base mb-4">
+                <strong> Usage</strong> <br />
+                Used for engine starting, avionics testing, and powering onboard
+                systems without using the aircraft’s own engines or APU.
+              </p>
+              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                Know More
+              </button>
+            </div>
+          </div>
+          <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
+            <div>
+              <Image
+                src="/images/Pneumatic Control Panel.png"
+                width={1000}
+                height={1000}
+                alt="Picture of the author"
+              />
+            </div>
+            <div>
+              <h2 className=" font-extrabold text-3xl mb-4">
+                Automated Pitot Leak Tester
+              </h2>
+              <p className=" font-medium text-base mb-4">
+                <strong> Description </strong> <br />
+                Lightweight, high-accuracy tester for pitot-static systems,
+                validating air data instruments and autopilots.
+              </p>
+
+              <p className="font-medium text-base mb-4">
+                <strong>Usage </strong> <br />
+                Used for RVSM compliance testing with cockpit-ready remote
+                operation and built-in pumps.
+              </p>
+
+              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                Know More
+              </button>
+            </div>
+          </div>
+          <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
+            <div>
+              <Image
                 src="/images/Nitrogen Trolley.png"
                 width={1000}
                 height={1000}
@@ -49,47 +107,19 @@ const page = () => {
             </div>
             <div>
               <h2 className=" font-extrabold text-3xl mb-4">
-                Nitrogen Trolley
+                Air Data Test System
               </h2>
               <p className=" font-medium text-base mb-4">
-                <strong> Description</strong> <br /> A rugged, portable system
-                engineered for safe and efficient nitrogen charging in critical
-                aircraft systems
+                <strong> Description</strong> <br />A system for safety &
+                performance in military & commercial aircraft through simulation
+                and calibration.
               </p>
+
               <p className="font-medium text-base mb-4">
                 <strong> Usage</strong> <br />
-                Used to fil or top-up nitrogen in hydraulic accumulators, tires,
-                and landing gear struts
+                Used to test and simulate airspeed, altitude, and pressure
+                conditions during aircraft maintenance.
               </p>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
-            </div>
-          </div>
-          <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
-            <div>
-              <Image
-                src="/images/Nose Jack & Main Jack.png"
-                width={1000}
-                height={1000}
-                alt="Picture of the author"
-              />
-            </div>
-            <div>
-              <h2 className=" font-extrabold text-3xl mb-4">
-                Nose Jack & Main Jack
-              </h2>
-              <p className=" font-medium text-base mb-4">
-                <strong> Description </strong> <br /> Hydraulic jacks designed
-                to lift the nose gear (nose jack) or main landing gear (main
-                jack) of an aircraft.
-              </p>
-
-              <p className="font-medium text-base mb-4">
-                <strong>Usage </strong> <br /> They are used during maintenance,
-                wheel/brake replacement, and landing gear servicing
-              </p>
-
               <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
                 Know More
               </button>
@@ -106,18 +136,17 @@ const page = () => {
             </div>
             <div>
               <h2 className=" font-extrabold text-3xl mb-4">
-                Aircraft Tow Bar
+                Hydraulic Test Rig (HTR)
               </h2>
               <p className=" font-medium text-base mb-4">
-                <strong> Description</strong> <br />
-                Ground support equipment used to connect an aircraft’s nose
-                landing gear to a towing vehicle.
+                <strong> Description</strong> <br />A precision hydraulic rig
+                for functional and leak testing of aerospace-grade components.
               </p>
 
               <p className="font-medium text-base mb-4">
                 <strong> Usage</strong> <br />
-                It enables safe aircraft movement on the ground for parking,
-                repositioning, or maintenance.
+                Used for validating actuators, valves, and critical hydraulic
+                assemblies up to 5000 PSI.
               </p>
               <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
                 Know More
@@ -127,7 +156,7 @@ const page = () => {
           <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
             <div>
               <Image
-                src="/images/Protractor Unit for DAU Vane Angles.png"
+                src="/images/Portable Engine Starting Trolley.png"
                 width={1000}
                 height={1000}
                 alt="Picture of the author"
@@ -135,17 +164,17 @@ const page = () => {
             </div>
             <div>
               <h2 className=" font-extrabold text-3xl mb-4">
-                Protractor Unit for DAU Vane Angles
+                Glass Optical Properties Checker
               </h2>
               <p className=" font-medium text-base mb-4">
-                <strong> Description</strong> <br />A compact and accurate
-                measurement device designed to ensure the correct alignment of
-                DAU vanes.
+                <strong> Description</strong> <br />A equipment used to test and
+                verify the transparency, refractive index, and distortion levels
+                of aircraft canopy and windshield glass.
               </p>
               <p className="font-medium text-base mb-4">
                 <strong> Usage</strong> <br />
-                Used for measuring vane angles to optimize airflow control
-                systems in aircraft.
+                Ensures pilot visibility and safety by detecting defects, stress
+                patterns, or optical distortions in aviation grade glass.
               </p>
               <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
                 Know More
@@ -155,51 +184,23 @@ const page = () => {
           <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
             <div>
               <Image
-                src="/images/Nato Cable.png"
+                src="/images/Fuel Consumption Trolley.png"
                 width={1000}
                 height={1000}
                 alt="Picture of the author"
               />
             </div>
             <div>
-              <h2 className=" font-extrabold text-3xl mb-4">Nato Cable</h2>
-              <p className=" font-medium text-base mb-4">
-                <strong> Description</strong> <br />A standardized electrical
-                power cable designed as per NATO (North Atlantic Treaty
-                Organization) specifications.
-              </p>
-              <p className="font-medium text-base mb-4">
-                <strong> Usage</strong> <br />
-                used in military and aerospace applications for connecting
-                ground power units (GPU) to aircraft and vehicles.
-              </p>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
-            </div>
-          </div>
-          <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
-            <div>
-              <Image
-                src="/images/Aircraft Looms, Cables & Harnesses.png"
-                width={1000}
-                height={1000}
-                alt="Picture of the author"
-              />
-            </div>
-            <div>
-              <h2 className=" font-extrabold text-3xl mb-4">
-                Aircraft Looms, Cables & Harnesses
-              </h2>
+              <h2 className=" font-extrabold text-3xl mb-4">SASD Test Rig</h2>
               <p className=" font-medium text-base mb-4">
                 <strong> Description</strong> <br />
-                Bundled wires in protective sleeves for power, signal, and
-                system integration.
+                An advanced diagnostic rig simulating real-world actuation of
+                Safe and Arm Safety Devices.
               </p>
               <p className="font-medium text-base mb-4">
-                <strong> Usage</strong> <br /> Connects avionics, sensors,
-                communication, power circuits, flight control, navigation,
-                engine monitoring, and lighting systems.
+                <strong> Usage</strong> <br />
+                Used for defence validation of SASD components under rotational
+                thresholds with ful safety interlocks.
               </p>
               <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
                 Know More

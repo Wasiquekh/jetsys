@@ -11,16 +11,16 @@ const page = () => {
       <section>
         <div className="container">
           <h1 className=" text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text">
-            Our Products
+            Our Solutions
           </h1>
           <h2 className=" font-bold text-3xl text-[#5C5649] text-center mb-5">
-            Empowering the Future of Aerospace Engineering
+            End-to-end defence solutions for indigenization and self-reliance.
           </h2>
           <p className=" font-medium text-base text-center">
-            From concept to creation, we craft solutions that inspire trust,
-            ensure performance, and push boundaries. Built with precision, they
-            address the demands of modern aerospace technology while setting new
-            industry benchmarks.
+            We deliver intelligent, end-to-end defence and aerospace solutions —
+            from indigenization and advanced testing to maintenance support —
+            ensuring operational excellence, scalability, and strategic
+            self-reliance.
           </p>
         </div>
       </section>

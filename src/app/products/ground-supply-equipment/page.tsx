@@ -10,7 +10,7 @@ const page = () => {
       <section className=" relative">
         <div className="container  !py-30">
           <h1 className=" font-extrabold text-6xl text-center mb-5">
-            Ground Support Equipment 
+            Ground Supply Equipment 
           </h1>
           <p className=" font-medium text-base text-center ">
             From concept to creation, we craft solutions that inspire trust,
@@ -41,6 +41,63 @@ const page = () => {
           <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
             <div>
               <Image
+                src="/images/Ground Power Unit.png"
+                width={1000}
+                height={1000}
+                alt="Picture of the author"
+              />
+            </div>
+            <div>
+              <h2 className=" font-extrabold text-3xl mb-4">
+                Ground Power Unit
+              </h2>
+              <p className=" font-medium text-base mb-4">
+                <strong> Description</strong> <br />A mobile or fixed power
+                supply system that provides electrical power to aircraft while
+                on the ground.
+              </p>
+              <p className="font-medium text-base mb-4">
+                <strong> Usage</strong> <br />
+                Used for engine starting, avionics testing, and powering onboard
+                systems without using the aircraft’s own engines or APU.
+              </p>
+              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                Know More
+              </button>
+            </div>
+          </div>
+          <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
+            <div>
+              <Image
+                src="/images/Pneumatic Control Panel.png"
+                width={1000}
+                height={1000}
+                alt="Picture of the author"
+              />
+            </div>
+            <div>
+              <h2 className=" font-extrabold text-3xl mb-4">
+                Pneumatic Control Panel
+              </h2>
+              <p className=" font-medium text-base mb-4">
+                <strong> Description </strong> <br /> A robust ground panel for
+                precision pneumatic regulation and aircraft system testing.
+              </p>
+
+              <p className="font-medium text-base mb-4">
+                <strong>Usage </strong> <br />
+                Used to charge and test pneumatic subsystems like brakes,
+                actuators, and landing gear.
+              </p>
+
+              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                Know More
+              </button>
+            </div>
+          </div>
+          <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
+            <div>
+              <Image
                 src="/images/Nitrogen Trolley.png"
                 width={1000}
                 height={1000}
@@ -49,17 +106,18 @@ const page = () => {
             </div>
             <div>
               <h2 className=" font-extrabold text-3xl mb-4">
-                Nitrogen Trolley
+                Hydraullic Servicing Trolley
               </h2>
               <p className=" font-medium text-base mb-4">
-                <strong> Description</strong> <br /> A rugged, portable system
-                engineered for safe and efficient nitrogen charging in critical
-                aircraft systems
+                <strong> Description</strong> <br />A ground support equipment
+                used to store, filter, and supply hydraulic fluid to an
+                aircraft’s hydraulic system.
               </p>
+
               <p className="font-medium text-base mb-4">
                 <strong> Usage</strong> <br />
-                Used to fil or top-up nitrogen in hydraulic accumulators, tires,
-                and landing gear struts
+                Essential for topping up, flushing, and maintaining aircraft
+                hydraulics during ground servicing.
               </p>
               <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
                 Know More
@@ -69,7 +127,7 @@ const page = () => {
           <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
             <div>
               <Image
-                src="/images/Nose Jack & Main Jack.png"
+                src="/images/Portable Engine Starting Trolley.png"
                 width={1000}
                 height={1000}
                 alt="Picture of the author"
@@ -77,47 +135,17 @@ const page = () => {
             </div>
             <div>
               <h2 className=" font-extrabold text-3xl mb-4">
-                Nose Jack & Main Jack
-              </h2>
-              <p className=" font-medium text-base mb-4">
-                <strong> Description </strong> <br /> Hydraulic jacks designed
-                to lift the nose gear (nose jack) or main landing gear (main
-                jack) of an aircraft.
-              </p>
-
-              <p className="font-medium text-base mb-4">
-                <strong>Usage </strong> <br /> They are used during maintenance,
-                wheel/brake replacement, and landing gear servicing
-              </p>
-
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
-            </div>
-          </div>
-          <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
-            <div>
-              <Image
-                src="/images/Nitrogen Trolley.png"
-                width={1000}
-                height={1000}
-                alt="Picture of the author"
-              />
-            </div>
-            <div>
-              <h2 className=" font-extrabold text-3xl mb-4">
-                Aircraft Tow Bar
+                Portable Engine Starting Trolley
               </h2>
               <p className=" font-medium text-base mb-4">
                 <strong> Description</strong> <br />
-                Ground support equipment used to connect an aircraft’s nose
-                landing gear to a towing vehicle.
+                Rugged, portable GSE delivering high electrical power for smooth
+                aircraft engine starts.
               </p>
-
               <p className="font-medium text-base mb-4">
                 <strong> Usage</strong> <br />
-                It enables safe aircraft movement on the ground for parking,
-                repositioning, or maintenance.
+                Used in military and civil aviation for safe, efficient starts
+                at hangars, tarmacs, and remote bases.
               </p>
               <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
                 Know More
@@ -127,7 +155,7 @@ const page = () => {
           <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
             <div>
               <Image
-                src="/images/Protractor Unit for DAU Vane Angles.png"
+                src="/images/Fuel Consumption Trolley.png"
                 width={1000}
                 height={1000}
                 alt="Picture of the author"
@@ -135,71 +163,17 @@ const page = () => {
             </div>
             <div>
               <h2 className=" font-extrabold text-3xl mb-4">
-                Protractor Unit for DAU Vane Angles
+                Fuel Consumption Trolley
               </h2>
               <p className=" font-medium text-base mb-4">
-                <strong> Description</strong> <br />A compact and accurate
-                measurement device designed to ensure the correct alignment of
-                DAU vanes.
+                <strong> Description</strong> <br />A ground support equipment
+                used to measure and monitor the fuel consumed by an aircraft
+                during ground runs or testing.
               </p>
               <p className="font-medium text-base mb-4">
                 <strong> Usage</strong> <br />
-                Used for measuring vane angles to optimize airflow control
-                systems in aircraft.
-              </p>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
-            </div>
-          </div>
-          <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
-            <div>
-              <Image
-                src="/images/Nato Cable.png"
-                width={1000}
-                height={1000}
-                alt="Picture of the author"
-              />
-            </div>
-            <div>
-              <h2 className=" font-extrabold text-3xl mb-4">Nato Cable</h2>
-              <p className=" font-medium text-base mb-4">
-                <strong> Description</strong> <br />A standardized electrical
-                power cable designed as per NATO (North Atlantic Treaty
-                Organization) specifications.
-              </p>
-              <p className="font-medium text-base mb-4">
-                <strong> Usage</strong> <br />
-                used in military and aerospace applications for connecting
-                ground power units (GPU) to aircraft and vehicles.
-              </p>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
-            </div>
-          </div>
-          <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
-            <div>
-              <Image
-                src="/images/Aircraft Looms, Cables & Harnesses.png"
-                width={1000}
-                height={1000}
-                alt="Picture of the author"
-              />
-            </div>
-            <div>
-              <h2 className=" font-extrabold text-3xl mb-4">
-                Aircraft Looms, Cables & Harnesses
-              </h2>
-              <p className=" font-medium text-base mb-4">
-                <strong> Description</strong> <br />
-                Bundled wires in protective sleeves for power, signal, and
-                system integration.
-              </p>
-              <p className="font-medium text-base mb-4">
-                <strong> Usage</strong> <br /> Connects avionics, sensors,
-                communication, power circuits, flight control, navigation,
-                engine monitoring, and lighting systems.
+                Helps ensure accurate fuel system calibration, leak checks, and
+                performance validation.
               </p>
               <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
                 Know More

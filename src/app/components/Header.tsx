@@ -23,13 +23,13 @@ const Header = () => {
           </div>
 
           <nav className=" hidden  md:ml-auto md:flex flex-wrap items-center text-base font-medium justify-center pr-0  ">
-            <Link href="/" className="mr-5 hover:text-secondary">
+            <Link href="/about-us" className="mr-5 hover:text-secondary">
               ABOUT US
             </Link>
-            <Link href="/" className="mr-5 hover:text-secondary">
+            <Link href="/products" className="mr-5 hover:text-secondary">
               PRODUCTS
             </Link>
-            <Link href="/" className="mr-5 hover:text-secondary">
+            <Link href="/solutions" className="mr-5 hover:text-secondary">
               SOLUTIONS
             </Link>
             <Link href="/" className="mr-10 hover:text-secondary">
