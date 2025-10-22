@@ -66,6 +66,20 @@ const page = () => {
                 perseverance.
               </p>
             </div>
+            <svg
+              className="signature-stroke"
+              width="147"
+              height="139"
+              viewBox="0 0 147 139"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.0189209 0.999817C86.1113 2.62944 60.9018 136.865 146.519 137.191"
+                stroke="#0B0B0B"
+                strokeWidth="2"
+              />
+            </svg>
             <div className=" bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18 relative top-20">
               <IoSquareSharp className=" ml-auto text-2xl rounded mb-12" />
 
@@ -75,6 +89,20 @@ const page = () => {
                 are the foundation of every system we build.
               </p>
             </div>
+            <svg
+              className="signature-stroke"
+              width="147"
+              height="139"
+              viewBox="0 0 147 139"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M146.504 0.999817C60.4114 2.62944 85.6209 136.865 0.00378437 137.191"
+                stroke="#0B0B0B"
+                strokeWidth="2"
+              />
+            </svg>
             <div className=" bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18">
               <IoSquareSharp className=" ml-auto text-2xl rounded mb-12" />
 
@@ -84,23 +112,6 @@ const page = () => {
                 systems that meet the evolving needs of our partners.
               </p>
             </div>
-          </div>
-          <div className=" w-34">
-            <svg
-              className="signature-stroke"
-              width="100%"
-              height="100%"
-              xmlns="http://www.w3.org/2000/svg"
-              version="1.1"
-              viewBox="0 0 222.07 302.25"
-            >
-              <path
-                stroke="currentColor"
-                strokeWidth="1"
-                fill="none "
-                d="M0,.5h0c34.39,0,65.01,21.75,76.34,54.22l67.29,192.82c11.33,32.47,41.96,54.22,76.34,54.22h2.1"
-              ></path>
-            </svg>
           </div>
         </div>
       </section>
