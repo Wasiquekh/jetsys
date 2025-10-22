@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import StickyHeader from "./components/StickyHeader";
 
 
+
 // Montserrat (Google font)
 const montserrat = Montserrat({
   subsets: ["latin"],
