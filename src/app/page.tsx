@@ -157,7 +157,7 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 container ">
-          <h1 className="text-4xl md:text-6xl  font-extrabold text-white  uppercase horizon-text w-full  md:w-3/4 ">
+          <h1 className="text-4xl md:text-6xl  font-extrabold text-white  uppercase Horizon w-full  md:w-3/4 ">
             We Build,What Sky Demands
           </h1>
           <p className="mt-4 text-base font-semibold text-white md:text-xl  max-w-2xl capitalize">
@@ -238,131 +238,131 @@ export default function Home() {
         <div className=" max-w-[1120px] px-5 mx-auto flex justify-between -z-10">
           <Image
             src="/images/ring.svg"
-            width={150}
-            height={150}
+            width={100}
+            height={100}
             alt="Picture of the author"
             className=" -z-10"
           />
           <Image
             src="/images/ring.svg"
-            width={150}
-            height={150}
+            width={100}
+            height={100}
             alt="Picture of the author"
             className=" -z-10"
           />
           <Image
             src="/images/ring.svg"
-            width={150}
-            height={150}
+            width={100}
+            height={100}
             alt="Picture of the author"
             className=" -z-10"
           />
           <Image
             src="/images/ring.svg"
-            width={150}
-            height={150}
+            width={100}
+            height={100}
             alt="Picture of the author"
             className=" -z-10"
           />
           <Image
             src="/images/ring.svg"
-            width={150}
-            height={150}
+            width={100}
+            height={100}
             alt="Picture of the author"
             className=" -z-10"
           />
           <Image
             src="/images/ring.svg"
-            width={150}
-            height={150}
+            width={100}
+            height={100}
             alt="Picture of the author"
             className=" -z-10"
           />
           <Image
             src="/images/ring.svg"
-            width={150}
-            height={150}
+            width={100}
+            height={100}
             alt="Picture of the author"
             className=" -z-10"
           />
           <Image
             src="/images/ring.svg"
-            width={150}
-            height={150}
+            width={100}
+            height={100}
             alt="Picture of the author"
             className=" -z-10"
           />
         </div>
         {/* BACKGROUND THEME COLOR LINE */}
-        <div className=" bg-primary h-24 -mt-[120px] -mb-[116px] z-10"></div>
+        <div className=" bg-primary h-14 -mt-[76px] -mb-[70px] z-10"></div>
         {/* ICON IMAGES */}
-        <div className=" max-w-[1120px] px-5 mx-auto flex justify-between">
+        <div className=" max-w-[1120px] px-5 mx-auto  flex justify-between">
           <Image
             src="/images/Expert-Engineers.gif"
-            width={135}
-            height={135}
+            width={80}
+            height={80}
             alt="Picture of the author"
-            className=" relative left-[8px]"
+            className=" relative left-[10px]"
           />
           <Image
             src="/images/Rapid-Deployment.gif"
-            width={135}
-            height={135}
+            width={80}
+            height={80}
             alt="Picture of the author"
-            className=" relative left-[4px]"
+            className=" relative left-[7px]"
           />
           <Image
             src="/images/Global-Reach.gif"
-            width={135}
-            height={135}
+            width={80}
+            height={80}
             alt="Picture of the author"
-            className=" relative left-[0px]"
+            className=" relative left-[5.5px]"
           />
           <Image
             src="/images/Indigenous-Capability.gif"
-            width={135}
-            height={135}
+            width={80}
+            height={80}
             alt="Picture of the author"
-            className=" relative -left-[4px]"
+            className=" relative left-[2px]"
           />
           <Image
             src="/images/Precise-Production.gif"
-            width={135}
-            height={135}
+            width={80}
+            height={80}
             alt="Picture of the author"
-            className=" relative right-[6px]"
+            className=" relative right-[1px]"
           />
           <Image
             src="/images/Innovation-at-Core.gif"
-            width={135}
-            height={135}
+            width={80}
+            height={80}
             alt="Picture of the author"
-            className=" relative right-[6px]"
+            className=" relative right-[4.5px]"
           />
           <Image
             src="/images/end-to-end-solutions.gif"
-            width={135}
-            height={135}
+            width={80}
+            height={80}
             alt="Picture of the author"
-            className=" relative right-[6px]"
+            className=" relative right-[7px]"
           />
           <Image
             src="/images/Custom-Fit.gif"
-            width={135}
-            height={135}
+            width={80}
+            height={80}
             alt="Picture of the author"
-            className=" relative right-[6px]"
+            className=" relative right-[10px]"
           />
         </div>
         {/* TEXT */}
         <div className="max-w-[1120px] px-5 mx-auto flex justify-between mt-10">
           <div className=" w-full">
-            <p className="text-center text-lg  relative right-10 ">
+            <p className="text-center text-lg  relative right-6 ">
               Expert Engineers
             </p>
           </div>
           <div className=" w-full">
-            <p className="text-center text-lg relative -left-2">
+            <p className="text-center text-lg relative right-3">
               Rapid Deployment
             </p>
           </div>
@@ -370,28 +370,28 @@ export default function Home() {
             <p className="text-center text-lg">Global Reach</p>
           </div>
           <div className=" w-full">
-            <p className="text-center text-lg relative left-6">
+            <p className="text-center text-lg relative left-1">
               Indigenous Capability
             </p>
           </div>
           <div className=" w-full">
-            <p className="text-center text-lg relative left-10 w-[98%]">
+            <p className="text-center text-lg relative left-2 w-[98%]">
               Precise Production
             </p>
           </div>
           <div className=" w-full">
-            <p className="text-center text-lg relative left-10 w-[98%]">
-              Precise Production
+            <p className="text-center text-lg relative left-4 w-[98%]">
+              Innovation at Core
             </p>
           </div>
           <div className=" w-full">
-            <p className="text-center text-lg relative left-10 w-[98%]">
-              Precise Production
+            <p className="text-center text-lg relative left-6 w-[98%]">
+              End to end solutions
             </p>
           </div>
           <div className=" w-full">
-            <p className="text-center text-lg relative left-10 w-[98%]">
-              Precise Production
+            <p className="text-center text-lg relative left-6 w-[98%]">
+              Custom-Fit
             </p>
           </div>
         </div>
