@@ -38,7 +38,7 @@ const page = () => {
       </section>
       <section>
         <div className="container">
-          <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
+          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
             <div>
               <Image
                 src="/images/Ground Power Unit.png"
@@ -66,7 +66,7 @@ const page = () => {
               </button>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
+          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
             <div>
               <Image
                 src="/images/Pneumatic Control Panel.png"
@@ -96,7 +96,7 @@ const page = () => {
               </button>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
+          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
             <div>
               <Image
                 src="/images/Nitrogen Trolley.png"
@@ -125,7 +125,7 @@ const page = () => {
               </button>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
+          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
             <div>
               <Image
                 src="/images/Nitrogen Trolley.png"
@@ -153,7 +153,7 @@ const page = () => {
               </button>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
+          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
             <div>
               <Image
                 src="/images/Portable Engine Starting Trolley.png"
@@ -181,7 +181,7 @@ const page = () => {
               </button>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
+          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
             <div>
               <Image
                 src="/images/Fuel Consumption Trolley.png"

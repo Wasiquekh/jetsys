@@ -38,7 +38,7 @@ const page = () => {
       </section>
       <section>
         <div className="container">
-          <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
+          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
             <div>
               <Image
                 src="/images/Nitrogen Trolley.png"
@@ -66,7 +66,7 @@ const page = () => {
               </button>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
+          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
             <div>
               <Image
                 src="/images/Nose Jack & Main Jack.png"
@@ -95,7 +95,7 @@ const page = () => {
               </button>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
+          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
             <div>
               <Image
                 src="/images/Nitrogen Trolley.png"
@@ -124,7 +124,7 @@ const page = () => {
               </button>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
+          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
             <div>
               <Image
                 src="/images/Protractor Unit for DAU Vane Angles.png"
@@ -152,7 +152,7 @@ const page = () => {
               </button>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
+          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
             <div>
               <Image
                 src="/images/Nato Cable.png"
@@ -178,7 +178,7 @@ const page = () => {
               </button>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl flex items-center gap-16 p-9 mb-16">
+          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
             <div>
               <Image
                 src="/images/Aircraft Looms, Cables & Harnesses.png"

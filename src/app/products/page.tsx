@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Image from "next/image";
 import Link from "next/link";
+import ProductAnimate from "../components/ProductAnimate";
 
 const page = () => {
   return (
@@ -60,95 +61,7 @@ const page = () => {
           </div>
         </div>
       </section>
-
-      <section>
-        <div className="container !pb-0">
-          <div className="shadow-[0px_4px_11.1px_0px_#00000040] rounded-2xl  flex justify-between p-5">
-            <div className="   flex flex-col w-[30%]">
-              <Image
-                src="/images/Aviation Equipment.png"
-                width={500}
-                height={500}
-                alt="Picture of the author"
-                className="mb-5"
-              />
-              <h2 className="font-bold text-2xl mb-5">Aviation Equipment</h2>
-              <p className="font-bold text-sm mb-5">
-                Precision Beyond Expectations
-              </p>
-              <p className="font-normal text-sm mb-5">
-                Our aviation equipment portfolio is engineered to deliver high
-                performance, meeting rigorous industry standards. Explore how
-                our products optimize operational excellence in aviation.
-              </p>
-
-              <button className="bg-primary px-8 py-3 rounded mb-0 hover:bg-[#5f5b00] text-[#E9DCB4] font-semibold text-base  transition ">
-                Explore Now
-              </button>
-            </div>
-            <div className="w-[50%]">
-              <div className=" grid grid-cols-3 gap-5">
-                <Link href="/products/ground-support-equipment">
-                  <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4">
-                    <Image
-                      src="/images/Ground Support Equipment.svg"
-                      width={44}
-                      height={45}
-                      alt="Picture of the author"
-                      className=" bg-[#E9DCB4] p-2 rounded mb-4"
-                    />
-                    <p className=" font-medium text-xl mb-4">
-                      Ground Support Equipment
-                    </p>
-                  </div>
-                </Link>
-                <Link href="/products/ground-supply-equipment">
-                  <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4">
-                    <Image
-                      src="/images/Ground Supply Equipment .svg"
-                      width={44}
-                      height={45}
-                      alt="Picture of the author"
-                      className=" bg-[#E9DCB4] p-2 rounded mb-4"
-                    />
-                    <p className=" font-medium text-xl mb-4">
-                      Ground Supply Equipment 
-                    </p>
-                  </div>
-                </Link>
-                <Link href="/products/ground-test-equipment">
-                  <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer  border border-primary rounded-[8px] overflow-hidden p-4">
-                    <Image
-                      src="/images/Ground Test Equipment .svg"
-                      width={44}
-                      height={45}
-                      alt="Picture of the author"
-                      className=" bg-[#E9DCB4] p-2 rounded mb-4"
-                    />
-                    <p className=" font-medium text-xl mb-4">
-                      Ground Test Equipment 
-                    </p>
-                  </div>
-                </Link>
-                <Link href="/products/ground-handling-equipment">
-                  <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4">
-                    <Image
-                      src="/images/Ground Handling Equipment.svg"
-                      width={44}
-                      height={45}
-                      alt="Picture of the author"
-                      className=" bg-[#E9DCB4] p-2 rounded mb-4"
-                    />
-                    <p className=" font-medium text-xl mb-4">
-                      Ground Handling Equipment 
-                    </p>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ProductAnimate />
       <section>
         <div className="container">
           {/* ⬇️ Added `items-stretch` to make all cards equal height */}

@@ -47,8 +47,8 @@ const page = () => {
         </div>
         <Image
           src="/images/about-us.png"
-          width={500}
-          height={500}
+          width={450}
+          height={450}
           alt="Picture of the author"
           className=" absolute right-0 top-10 -z-10"
         />
