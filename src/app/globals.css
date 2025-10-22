@@ -133,7 +133,18 @@ h1 {
   animation: fadeUp 600ms ease-out forwards;
 }
 
+/* line animation about us */
+.signature-stroke {
+  stroke-dasharray: 1000; /* Adjust based on your path length */
+  stroke-dashoffset: 1000; /* Same as stroke-dasharray */
+  animation: write-signature 2s linear forwards;
+}
 
+@keyframes write-signature {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 
 
 

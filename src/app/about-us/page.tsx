@@ -85,6 +85,23 @@ const page = () => {
               </p>
             </div>
           </div>
+          <div className=" w-34">
+            <svg
+              className="signature-stroke"
+              width="100%"
+              height="100%"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              viewBox="0 0 222.07 302.25"
+            >
+              <path
+                stroke="currentColor"
+                strokeWidth="1"
+                fill="none "
+                d="M0,.5h0c34.39,0,65.01,21.75,76.34,54.22l67.29,192.82c11.33,32.47,41.96,54.22,76.34,54.22h2.1"
+              ></path>
+            </svg>
+          </div>
         </div>
       </section>
       <section>
