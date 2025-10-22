@@ -15,23 +15,6 @@ const montserrat = Montserrat({
 });
 
 // 1. Define the font object
-const horizonFont = localFont({
-  src: [
-    {
-      path: "/fonts/Horizon-Regular.woff2", // Adjust the path to your file
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "/fonts/Horizon-Bold.woff2", // Add other weights as needed
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-horizon", // This creates the CSS variable
-  display: "swap",
-});
-
 export const metadata: Metadata = {
   title: "JETSYS DEFENCE",
   description: "",
@@ -44,11 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${montserrat.variable} ${horizonFont.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${montserrat.variable}  antialiased`}>{children}</body>
     </html>
   );
 }

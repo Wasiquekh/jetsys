@@ -159,7 +159,7 @@ return (
       {/* Content */}
       <div className="container !p-0">
         <div className="relative z-10 flex flex-col w-1/2 justify-center h-full text-center px-4 container !ml-0 ">
-          <h1 className="text-4xl md:text-6xl  font-extrabold text-white  uppercase Horizon w-full text-left ">
+          <h1 className="text-4xl md:text-6xl  font-extrabold text-white  uppercase w-full text-left font-horizon">
             We Build,What Sky Demands
           </h1>
           <p className="mt-4 text-base font-semibold text-white md:text-xl  capitalize text-left">

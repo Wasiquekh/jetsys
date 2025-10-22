@@ -1,22 +1,15 @@
 @import "tailwindcss";
 
-/* Define the font family, linking to your hosted files */
+/* globals.css */
 @font-face {
   font-family: 'Horizon';
-  src: url('/fonts/Horizon-Regular.woff2') format('woff2'),
-       url('/fonts/Horizon-Regular.woff') format('woff');
-  font-weight: 400; /* Regular weight */
+  src: url('/fonts/Horizon.woff2') format('woff2');
+  font-weight: normal;
   font-style: normal;
-  font-display: swap; /* Tells the browser how to load the font */
 }
 
-@font-face {
-  font-family: 'Horizon';
-  src: url('/fonts/Horizon-Bold.woff2') format('woff2'),
-       url('/fonts/Horizon-Bold.woff') format('woff');
-  font-weight: 700; /* Bold weight */
-  font-style: normal;
-  font-display: swap;
+.font-horizon {
+  font-family: 'Horizon', sans-serif;
 }
 
 :root {

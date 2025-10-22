@@ -53,61 +53,72 @@ const page = () => {
           className=" absolute right-0 top-10 -z-10"
         />
       </section>
-      <section className=" bg-[#5C5649]">
-        <div className="container !pb-40 ">
-          <div className=" grid grid-cols-3  gap-20">
-            <div className=" bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18">
-              <IoSquareSharp className=" ml-auto text-2xl rounded mb-12" />
-
-              <p className=" font-bold text-2xl mb-8">Who Are We?</p>
-              <p className=" font-medium text-base">
+      <section className="bg-[#5C5649]">
+        <div className="container !pb-40">
+          {/* Grid container with card layout */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-20 items-center">
+            {/* First Card (Who Are We?) */}
+            <div className="bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18 relative">
+              <IoSquareSharp className="ml-auto text-2xl rounded mb-12" />
+              <p className="font-bold text-2xl mb-8">Who Are We?</p>
+              <p className="font-medium text-base">
                 We are an emerging force in the aerospace and defence industry,
                 committed to delivering excellence through innovation and
                 perseverance.
               </p>
             </div>
-            <svg
-              className="signature-stroke"
-              width="147"
-              height="139"
-              viewBox="0 0 147 139"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.0189209 0.999817C86.1113 2.62944 60.9018 136.865 146.519 137.191"
-                stroke="#0B0B0B"
-                strokeWidth="2"
-              />
-            </svg>
-            <div className=" bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18 relative top-20">
-              <IoSquareSharp className=" ml-auto text-2xl rounded mb-12" />
 
-              <p className=" font-bold text-2xl mb-8">Our Values</p>
-              <p className=" font-medium text-base">
+            {/* Connecting Line */}
+            <div className="relative">
+              <svg
+                className="signature-stroke absolute top-1/2 left-1/2 transform -translate-x-1/2"
+                width="147"
+                height="139"
+                viewBox="0 0 147 139"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.0189209 0.999817C86.1113 2.62944 60.9018 136.865 146.519 137.191"
+                  stroke="#0B0B0B"
+                  strokeWidth="2"
+                />
+              </svg>
+            </div>
+
+            {/* Second Card (Our Values) */}
+            <div className="bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18 relative">
+              <IoSquareSharp className="ml-auto text-2xl rounded mb-12" />
+              <p className="font-bold text-2xl mb-8">Our Values</p>
+              <p className="font-medium text-base">
                 Excellence, trust, and resilience are not just principles — they
                 are the foundation of every system we build.
               </p>
             </div>
-            <svg
-              className="signature-stroke"
-              width="147"
-              height="139"
-              viewBox="0 0 147 139"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M146.504 0.999817C60.4114 2.62944 85.6209 136.865 0.00378437 137.191"
-                stroke="#0B0B0B"
-                strokeWidth="2"
-              />
-            </svg>
-            <div className=" bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18">
-              <IoSquareSharp className=" ml-auto text-2xl rounded mb-12" />
 
-              <p className=" font-bold text-2xl mb-8">What Do We Do?</p>
-              <p className=" font-medium text-base">
+            {/* Connecting Line */}
+            <div className="relative">
+              <svg
+                className="signature-stroke absolute top-1/2 left-1/2 transform -translate-x-1/2"
+                width="147"
+                height="139"
+                viewBox="0 0 147 139"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M146.504 0.999817C60.4114 2.62944 85.6209 136.865 0.00378437 137.191"
+                  stroke="#0B0B0B"
+                  strokeWidth="2"
+                />
+              </svg>
+            </div>
+
+            {/* Third Card (What Do We Do?) */}
+            <div className="bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18 relative">
+              <IoSquareSharp className="ml-auto text-2xl rounded mb-12" />
+              <p className="font-bold text-2xl mb-8">What Do We Do?</p>
+              <p className="font-medium text-base">
                 We specialize in designing, developing, and scaling advanced
                 systems that meet the evolving needs of our partners.
               </p>
@@ -115,6 +126,7 @@ const page = () => {
           </div>
         </div>
       </section>
+
       <section>
         <div className=" container">
           <div className=" w-full grid grid-cols-4 gap-5">
