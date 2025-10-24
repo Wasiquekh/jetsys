@@ -56,9 +56,9 @@ const page = () => {
       <section className="bg-[#5C5649]">
         <div className="container !pb-40">
           {/* Grid container with card layout */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-20 items-center">
+          <div className="flex justify-between items-center">
             {/* First Card (Who Are We?) */}
-            <div className="bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18 relative">
+            <div className="bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18 w-[450px] h-[350px] ">
               <IoSquareSharp className="ml-auto text-2xl rounded mb-12" />
               <p className="font-bold text-2xl mb-8">Who Are We?</p>
               <p className="font-medium text-base">
@@ -68,11 +68,11 @@ const page = () => {
               </p>
             </div>
 
-            {/* Connecting Line */}
-            <div className="relative">
+            {/* Connecting Line left */}
+            <div className="">
               <svg
-                className="signature-stroke absolute top-1/2 left-1/2 transform -translate-x-1/2"
-                width="147"
+                className="signature-stroke"
+                width="100"
                 height="139"
                 viewBox="0 0 147 139"
                 fill="none"
@@ -87,7 +87,7 @@ const page = () => {
             </div>
 
             {/* Second Card (Our Values) */}
-            <div className="bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18 relative">
+            <div className="bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18  w-[450px] h-[350px]">
               <IoSquareSharp className="ml-auto text-2xl rounded mb-12" />
               <p className="font-bold text-2xl mb-8">Our Values</p>
               <p className="font-medium text-base">
@@ -96,11 +96,11 @@ const page = () => {
               </p>
             </div>
 
-            {/* Connecting Line */}
-            <div className="relative">
+            {/* Connecting Line right */}
+            <div className="">
               <svg
-                className="signature-stroke absolute top-1/2 left-1/2 transform -translate-x-1/2"
-                width="147"
+                className="signature-stroke"
+                width="100"
                 height="139"
                 viewBox="0 0 147 139"
                 fill="none"
@@ -115,7 +115,7 @@ const page = () => {
             </div>
 
             {/* Third Card (What Do We Do?) */}
-            <div className="bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18 relative">
+            <div className="bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18  w-[450px] h-[350px]">
               <IoSquareSharp className="ml-auto text-2xl rounded mb-12" />
               <p className="font-bold text-2xl mb-8">What Do We Do?</p>
               <p className="font-medium text-base">

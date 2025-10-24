@@ -14,7 +14,7 @@ const ProductAnimate = () => {
                 width={500}
                 height={500}
                 alt="Picture of the author"
-                className="mb-5"
+                className="mb-5 rounded-2xl"
               />
               <h2 className="font-bold text-2xl mb-5">Aviation Equipment</h2>
               <p className="font-bold text-sm mb-5">
@@ -165,14 +165,14 @@ const ProductAnimate = () => {
           <div className="shadow-[0px_4px_11.1px_0px_#00000040] rounded-2xl  flex justify-between p-5">
             <div className="   flex flex-col w-[30%]">
               <Image
-                src="/images/Aircraft Spares & System .png"
+                src="/images/Aircraft Spares & System.png"
                 width={500}
                 height={500}
                 alt="Picture of the author"
-                className="mb-5"
+                className="mb-5 rounded-2xl"
               />
               <h2 className="font-bold text-2xl mb-5">
-                Aircraft Spares & System 
+                Aircraft Spares & System
               </h2>
               <p className="font-bold text-sm mb-5">
                 Keeping Fleets Mission-Ready

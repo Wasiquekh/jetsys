@@ -183,7 +183,7 @@ return (
     {/* ABOUT SECTION */}
     <section>
       <div className="container ">
-        <h1 className=" text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text">
+        <h1 className=" text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 font-horizon">
           About our organization
         </h1>
         <p className=" text-base text-[#000] font-medium text-center mb-0 ">

@@ -74,7 +74,7 @@ const page = () => {
                 width={500}
                 height={500}
                 alt="Picture of the author"
-                className="mb-5"
+                className="mb-5 rounded-2xl"
               />
               <h2 className="font-bold text-2xl mb-5">Aviation Equipment</h2>
               <p className="font-bold text-sm mb-5">
@@ -120,7 +120,7 @@ const page = () => {
             {/* Card 3 */}
             <div className="shadow-[0px_4px_11.1px_0px_#00000040] rounded-2xl p-5 h-full flex flex-col">
               <Image
-                src="/images/Aircraft Spares & System .png"
+                src="/images/Aircraft Spares & System.png"
                 width={500}
                 height={500}
                 alt="Picture of the author"
