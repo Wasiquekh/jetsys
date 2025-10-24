@@ -41,10 +41,11 @@ const page = () => {
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
             <div>
               <Image
-                src="/images/Ground Power Unit.png"
+                src="/images/Brake Valve Test Rig.png"
                 width={1000}
                 height={1000}
                 alt="Picture of the author"
+                className=" "
               />
             </div>
             <div>
@@ -69,7 +70,7 @@ const page = () => {
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
             <div>
               <Image
-                src="/images/Pneumatic Control Panel.png"
+                src="/images/Automated Pitot Leak Tester.png"
                 width={1000}
                 height={1000}
                 alt="Picture of the author"
@@ -99,7 +100,7 @@ const page = () => {
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
             <div>
               <Image
-                src="/images/Nitrogen Trolley.png"
+                src="/images/Air Data Test System.png"
                 width={1000}
                 height={1000}
                 alt="Picture of the author"
@@ -128,7 +129,7 @@ const page = () => {
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
             <div>
               <Image
-                src="/images/Nitrogen Trolley.png"
+                src="/images/Hydraulic Test Rig (HTR).png"
                 width={1000}
                 height={1000}
                 alt="Picture of the author"
@@ -156,7 +157,7 @@ const page = () => {
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
             <div>
               <Image
-                src="/images/Portable Engine Starting Trolley.png"
+                src="/images/Glass Optical Properties Checker.png"
                 width={1000}
                 height={1000}
                 alt="Picture of the author"
@@ -184,7 +185,7 @@ const page = () => {
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
             <div>
               <Image
-                src="/images/Fuel Consumption Trolley.png"
+                src="/images/SASD Test Rig.png"
                 width={1000}
                 height={1000}
                 alt="Picture of the author"

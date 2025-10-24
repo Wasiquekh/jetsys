@@ -98,10 +98,11 @@ const page = () => {
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
             <div>
               <Image
-                src="/images/Nitrogen Trolley.png"
+                src="/images/Aircraft Tow Bar.png"
                 width={1000}
                 height={1000}
                 alt="Picture of the author"
+                className=" rounded-2xl"
               />
             </div>
             <div>

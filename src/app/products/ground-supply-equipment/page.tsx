@@ -10,7 +10,7 @@ const page = () => {
       <section className=" relative">
         <div className="container  !py-30">
           <h1 className=" font-extrabold text-6xl text-center mb-5">
-            Ground Supply Equipment 
+            Ground Supply Equipment
           </h1>
           <p className=" font-medium text-base text-center ">
             From concept to creation, we craft solutions that inspire trust,
@@ -98,7 +98,7 @@ const page = () => {
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
             <div>
               <Image
-                src="/images/Nitrogen Trolley.png"
+                src="/images/Hydraullic Servicing Trolley.png"
                 width={1000}
                 height={1000}
                 alt="Picture of the author"

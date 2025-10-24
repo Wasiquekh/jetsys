@@ -7,6 +7,7 @@ import { IoSquareSharp } from "react-icons/io5";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useMemo } from "react";
+import { useEffect, useRef } from "react";
 
 const page = () => {
   // Put your image paths here
@@ -14,10 +15,58 @@ const page = () => {
     () => ["/images/furqaan.png", "/images/furqaan-2.png"],
     []
   );
-
+  const sectionRef = useRef<HTMLElement | null>(null);
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 2500, stopOnInteraction: false }),
   ]);
+  useEffect(() => {
+    const sectionEl = sectionRef.current;
+    if (!sectionEl) return;
+
+    // Target the SVGs that currently have class "signature-stroke"
+    const strokeEls = Array.from(
+      sectionEl.querySelectorAll<SVGElement>(".signature-stroke")
+    );
+
+    // 1) Make sure animation is OFF initially (overrides any CSS that auto-starts)
+    const prime = () => {
+      strokeEls.forEach((el) => {
+        // Ensure starting dash values (you can keep your CSS as-is; this just guarantees)
+        el.style.strokeDasharray = "1000";
+        el.style.strokeDashoffset = "1000";
+        el.style.animation = "none";
+      });
+    };
+
+    // 2) Start the signature animation once section is visible
+    const play = () => {
+      strokeEls.forEach((el) => {
+        // Re-trigger animation from the beginning
+        el.style.animation = "none";
+        // Force reflow so the browser acknowledges the reset
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+        el.getBoundingClientRect();
+        el.style.animation = "write-signature 2s linear forwards";
+      });
+    };
+
+    prime();
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          play();
+          io.disconnect(); // run only once
+        }
+      },
+      { threshold: 0.25 } // start when at least 25% of the section is visible
+    );
+
+    io.observe(sectionEl);
+    return () => io.disconnect();
+  }, []);
+
   return (
     <div>
       <Header />
@@ -54,7 +103,7 @@ const page = () => {
         />
       </section>
 
-      <section className="bg-[#5C5649]">
+      <section ref={sectionRef} className="bg-[#5C5649]">
         <div className="container">
           {/* Grid container with card layout */}
           <div className="flex justify-between items-center pb-26">
@@ -70,7 +119,7 @@ const page = () => {
             </div>
 
             {/* Connecting Line left */}
-            <div className=" relative top-12">
+            <div className="relative top-12">
               <svg
                 className="signature-stroke"
                 width="120"
@@ -96,7 +145,7 @@ const page = () => {
             </div>
 
             {/* Second Card (Our Values) */}
-            <div className="bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18  w-[450px] h-[350px] relative top-26">
+            <div className="bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18 w-[450px] h-[350px] relative top-26">
               <IoSquareSharp className="ml-auto text-2xl rounded mb-12" />
               <p className="font-bold text-2xl mb-8">Our Values</p>
               <p className="font-medium text-base">
@@ -106,7 +155,7 @@ const page = () => {
             </div>
 
             {/* Connecting Line right */}
-            <div className=" relative top-12">
+            <div className="relative top-12">
               <svg
                 className="signature-stroke"
                 width="120"
