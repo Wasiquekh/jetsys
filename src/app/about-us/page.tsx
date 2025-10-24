@@ -53,10 +53,11 @@ const page = () => {
           className=" absolute right-0 top-10 -z-10"
         />
       </section>
+
       <section className="bg-[#5C5649]">
-        <div className="container !pb-40">
+        <div className="container">
           {/* Grid container with card layout */}
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center pb-26">
             {/* First Card (Who Are We?) */}
             <div className="bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18 w-[450px] h-[350px] ">
               <IoSquareSharp className="ml-auto text-2xl rounded mb-12" />
@@ -69,25 +70,33 @@ const page = () => {
             </div>
 
             {/* Connecting Line left */}
-            <div className="">
+            <div className=" relative top-12">
               <svg
                 className="signature-stroke"
-                width="100"
-                height="139"
-                viewBox="0 0 147 139"
+                width="120"
+                height="201"
+                viewBox="0 0 151 201"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M0.0189209 0.999817C86.1113 2.62944 60.9018 136.865 146.519 137.191"
+                  d="M2.60742 30.5801C88.6998 32.2097 63.4903 166.445 149.107 166.771"
                   stroke="#0B0B0B"
                   strokeWidth="2"
+                />
+                <rect width="2.6" height="66.9863" fill="black" />
+                <rect
+                  x="147.756"
+                  y="133.277"
+                  width="2.6"
+                  height="66.9863"
+                  fill="black"
                 />
               </svg>
             </div>
 
             {/* Second Card (Our Values) */}
-            <div className="bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18  w-[450px] h-[350px]">
+            <div className="bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18  w-[450px] h-[350px] relative top-26">
               <IoSquareSharp className="ml-auto text-2xl rounded mb-12" />
               <p className="font-bold text-2xl mb-8">Our Values</p>
               <p className="font-medium text-base">
@@ -97,20 +106,22 @@ const page = () => {
             </div>
 
             {/* Connecting Line right */}
-            <div className="">
+            <div className=" relative top-12">
               <svg
                 className="signature-stroke"
-                width="100"
-                height="139"
-                viewBox="0 0 147 139"
+                width="120"
+                height="200"
+                viewBox="0 0 150 200"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M146.504 0.999817C60.4114 2.62944 85.6209 136.865 0.00378437 137.191"
+                  d="M146.949 30.0195C60.8569 31.6492 86.0663 165.884 0.449219 166.211"
                   stroke="#0B0B0B"
                   strokeWidth="2"
                 />
+                <rect y="132.717" width="2.6" height="66.9863" fill="black" />
+                <rect x="146.949" width="2.6" height="66.9863" fill="black" />
               </svg>
             </div>
 

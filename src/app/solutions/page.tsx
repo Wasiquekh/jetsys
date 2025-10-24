@@ -29,31 +29,31 @@ const page = () => {
         <div className=" container !pt-0">
           <div className=" w-full flex justify-between">
             <Image
-              src="/images/Tactical Engineering.svg"
+              src="/images/Local  Sourcing.svg"
               width={160}
               height={234}
               alt="Picture of the author"
             />
             <Image
-              src="/images/System Integration.svg"
+              src="/images/Import  Substitution.svg"
               width={160}
               height={234}
               alt="Picture of the author"
             />
             <Image
-              src="/images/Built for Endurance.svg"
+              src="/images/Custom  Adaptation.svg"
               width={160}
               height={234}
               alt="Picture of the author"
             />
             <Image
-              src="/images/Modular Flexibility.svg"
+              src="/images/Multiple Application.svg"
               width={160}
               height={234}
               alt="Picture of the author"
             />
             <Image
-              src="/images/Laser Precision.svg"
+              src="/images/Design Ownership.svg"
               width={160}
               height={234}
               alt="Picture of the author"
