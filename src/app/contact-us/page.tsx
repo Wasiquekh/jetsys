@@ -1,9 +1,34 @@
+"use client";
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Image from "next/image";
+import { Formik, Field, Form, ErrorMessage } from "formik";
+import * as Yup from "yup";
 
 const page = () => {
+  const validationSchema = Yup.object({
+    name: Yup.string().required("Name is required"),
+    companyName: Yup.string().required("Company Name is required"),
+    designation: Yup.string().required("Designation is required"),
+    contactNumber: Yup.string()
+      .matches(
+        /^(?:\+91[\s]?)?[789]\d{9}$/,
+        "Enter a valid contact number starting with +91 or without it"
+      )
+      .required("Contact Number is required"),
+    email: Yup.string()
+      .email("Invalid email format")
+      .required("Email Address is required"),
+    city: Yup.string().required("City is required"),
+    message: Yup.string().required("Your Message is required"),
+  });
+
+  // Handle form submission
+  const handleSubmit = (values: any) => {
+    console.log(values);
+  };
+
   return (
     <div>
       <Header />
@@ -23,40 +48,135 @@ const page = () => {
                 </button>
               </div>
             </div>
-            <div className=" bg-[#F0EFE9] p-8">
-              <div className="mb-4">
-                <p className=" font-medium text-sm mb-1">Name</p>
-                <input className="bg-white w-full h-8 rounded " type="text" />
-              </div>
-              <div className="mb-4">
-                <p className=" font-medium text-sm mb-1">Company Name</p>
-                <input className="bg-white w-full h-8 rounded " type="text" />
-              </div>
-              <div className="mb-4">
-                <p className=" font-medium text-sm mb-1">Designation</p>
-                <input className="bg-white w-full h-8 rounded " type="text" />
-              </div>
+            <Formik
+              initialValues={{
+                name: "",
+                companyName: "",
+                designation: "",
+                contactNumber: "",
+                email: "",
+                city: "",
+                message: "",
+              }}
+              validationSchema={validationSchema}
+              onSubmit={handleSubmit}
+            >
+              {({ setFieldValue, values }) => (
+                <Form className="bg-[#F0EFE9] p-8">
+                  <div className="mb-4 relative">
+                    <p className="font-medium text-sm mb-1">Name</p>
+                    <Field
+                      className="bg-white w-full h-8 rounded outline-none px-2"
+                      type="text"
+                      name="name"
+                    />
+                    <ErrorMessage
+                      name="name"
+                      component="div"
+                      className="text-red-600 text-[12px] absolute top-14"
+                    />
+                  </div>
 
-              <div className="mb-4">
-                <p className=" font-medium text-sm mb-1">Contact Number</p>
-                <input className="bg-white w-full h-8 rounded " type="text" />
-              </div>
-              <div className="mb-4">
-                <p className=" font-medium text-sm mb-1">Email Address</p>
-                <input className="bg-white w-full h-8 rounded " type="text" />
-              </div>
-              <div className="mb-4">
-                <p className=" font-medium text-sm mb-1">City</p>
-                <input className="bg-white w-full h-8 rounded " type="text" />
-              </div>
-              <div className="mb-4">
-                <p className=" font-medium text-sm mb-1">Your Message</p>
-                <input className="bg-white w-full h-8 rounded " type="text" />
-              </div>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded w-full ">
-                SUBMIT
-              </button>
-            </div>
+                  <div className="mb-4 relative">
+                    <p className="font-medium text-sm mb-1">Company Name</p>
+                    <Field
+                      className="bg-white w-full h-8 rounded outline-none px-2"
+                      type="text"
+                      name="companyName"
+                    />
+                    <ErrorMessage
+                      name="companyName"
+                      component="div"
+                      className="text-red-600 text-[12px] absolute top-14"
+                    />
+                  </div>
+
+                  <div className="mb-4 relative">
+                    <p className="font-medium text-sm mb-1">Designation</p>
+                    <Field
+                      className="bg-white w-full h-8 rounded outline-none px-2"
+                      type="text"
+                      name="designation"
+                    />
+                    <ErrorMessage
+                      name="designation"
+                      component="div"
+                      className="text-red-600 text-[12px] absolute top-14"
+                    />
+                  </div>
+
+                  <div className="mb-4 relative">
+                    <p className="font-medium text-sm mb-1">Contact Number</p>
+                    <Field
+                      className="bg-white w-full h-8 rounded outline-none px-2"
+                      type="text"
+                      name="contactNumber"
+                      onChange={(e: React.ChangeEvent<any>) => {
+                        // Remove spaces from the contact number
+                        setFieldValue(
+                          "contactNumber",
+                          e.target.value.replace(/\s+/g, "")
+                        );
+                      }}
+                    />
+                    <ErrorMessage
+                      name="contactNumber"
+                      component="div"
+                      className="text-red-600 text-[12px] absolute top-14"
+                    />
+                  </div>
+
+                  <div className="mb-4 relative">
+                    <p className="font-medium text-sm mb-1">Email Address</p>
+                    <Field
+                      className="bg-white w-full h-8 rounded outline-none px-2"
+                      type="text"
+                      name="email"
+                    />
+                    <ErrorMessage
+                      name="email"
+                      component="div"
+                      className="text-red-600 text-[12px] absolute top-14"
+                    />
+                  </div>
+
+                  <div className="mb-4 relative">
+                    <p className="font-medium text-sm mb-1">City</p>
+                    <Field
+                      className="bg-white w-full h-8 rounded outline-none px-2"
+                      type="text"
+                      name="city"
+                    />
+                    <ErrorMessage
+                      name="city"
+                      component="div"
+                      className="text-red-600 text-[12px] absolute top-14"
+                    />
+                  </div>
+
+                  <div className="mb-4 relative">
+                    <p className="font-medium text-sm mb-1">Your Message</p>
+                    <Field
+                      as="textarea"
+                      className="bg-white w-full h-16 rounded outline-none px-2 py-2 resize-none align-top"
+                      name="message"
+                    />
+                    <ErrorMessage
+                      name="message"
+                      component="div"
+                      className="text-red-600 text-[12px] absolute top-22"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded w-full"
+                  >
+                    SUBMIT
+                  </button>
+                </Form>
+              )}
+            </Formik>
           </div>
         </div>
 
