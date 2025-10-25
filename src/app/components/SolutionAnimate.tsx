@@ -103,7 +103,7 @@ const SolutionAnimate = () => {
             </div>
             <div className="w-[50%]">
               <div className=" grid grid-cols-3 gap-5 items-stretch">
-                <Link href="/products/ground-support-equipment">
+                <Link href="#">
                   <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                     <Image
                       src="/images/Aircraft Testers.svg"
@@ -118,7 +118,7 @@ const SolutionAnimate = () => {
                     </p>
                   </div>
                 </Link>
-                <Link href="/products/ground-supply-equipment">
+                <Link href="#">
                   <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                     <Image
                       src="/images/Test Stands & Test Rigs.svg"
@@ -132,7 +132,7 @@ const SolutionAnimate = () => {
                     </p>
                   </div>
                 </Link>
-                <Link href="/products/ground-supply-equipment">
+                <Link href="#">
                   <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                     <Image
                       src="/images/Aircraft Fixtures.svg"

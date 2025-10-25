@@ -32,7 +32,7 @@ const ProductAnimate = () => {
             </div>
             <div className="w-[50%]">
               <div className=" grid grid-cols-3 gap-5 items-stretch">
-                <Link href="/products/ground-support-equipment">
+                <Link href="/products/aviation-equipment/ground-support-equipment">
                   <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                     <Image
                       src="/images/Ground Support Equipment.svg"
@@ -46,7 +46,7 @@ const ProductAnimate = () => {
                     </p>
                   </div>
                 </Link>
-                <Link href="/products/ground-supply-equipment">
+                <Link href="/products/aviation-equipment/ground-supply-equipment">
                   <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                     <Image
                       src="/images/Ground Supply Equipment .svg"
@@ -60,7 +60,7 @@ const ProductAnimate = () => {
                     </p>
                   </div>
                 </Link>
-                <Link href="/products/ground-test-equipment">
+                <Link href="/products/aviation-equipment/ground-test-equipment">
                   <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer  border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                     <Image
                       src="/images/Ground Test Equipment .svg"
@@ -74,7 +74,7 @@ const ProductAnimate = () => {
                     </p>
                   </div>
                 </Link>
-                <Link href="/products/ground-handling-equipment">
+                <Link href="/products/aviation-equipment/ground-handling-equipment">
                   <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                     <Image
                       src="/images/Ground Handling Equipment.svg"
@@ -189,7 +189,7 @@ const ProductAnimate = () => {
             </div>
             <div className="w-[50%]">
               <div className=" grid grid-cols-3 gap-5 items-stretch">
-                <Link href="/products/ground-support-equipment">
+                <Link href="#">
                   <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                     <Image
                       src="/images/Aircraft Spares.svg"
@@ -198,12 +198,10 @@ const ProductAnimate = () => {
                       alt="Picture of the author"
                       className=" bg-[#E9DCB4] p-2 rounded mb-4 w-[50px] h-[50px]"
                     />
-                    <p className=" font-medium text-xl mb-4">
-                      Ground Support Equipment
-                    </p>
+                    <p className=" font-medium text-xl mb-4">Aircraft Spares</p>
                   </div>
                 </Link>
-                <Link href="/products/ground-supply-equipment">
+                <Link href="#">
                   <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                     <Image
                       src="/images/Aircraft Systems.svg"
@@ -213,11 +211,11 @@ const ProductAnimate = () => {
                       className=" bg-[#E9DCB4] p-2 rounded mb-4 w-[50px] h-[50px]"
                     />
                     <p className=" font-medium text-xl mb-4">
-                      Ground Supply Equipment 
+                      Aircraft Systems
                     </p>
                   </div>
                 </Link>
-                <Link href="/products/ground-test-equipment">
+                <Link href="#">
                   <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer  border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                     <Image
                       src="/images/Navy Spares.svg"
@@ -226,12 +224,10 @@ const ProductAnimate = () => {
                       alt="Picture of the author"
                       className=" bg-[#E9DCB4] p-2 rounded mb-4 w-[50px] h-[50px]"
                     />
-                    <p className=" font-medium text-xl mb-4">
-                      Ground Test Equipment 
-                    </p>
+                    <p className=" font-medium text-xl mb-4">Navy Spares</p>
                   </div>
                 </Link>
-                <Link href="/products/ground-handling-equipment">
+                <Link href="#">
                   <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                     <Image
                       src="/images/Aircraft Hoses.svg"
@@ -240,12 +236,10 @@ const ProductAnimate = () => {
                       alt="Picture of the author"
                       className=" bg-[#E9DCB4] p-2 rounded mb-4 w-[50px] h-[50px]"
                     />
-                    <p className=" font-medium text-xl mb-4">
-                      Ground Handling Equipment 
-                    </p>
+                    <p className=" font-medium text-xl mb-4">Aircraft Hoses</p>
                   </div>
                 </Link>
-                <Link href="/products/ground-handling-equipment">
+                <Link href="#">
                   <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                     <Image
                       src="/images/engine parts.svg"
@@ -254,12 +248,10 @@ const ProductAnimate = () => {
                       alt="Picture of the author"
                       className=" bg-[#E9DCB4] p-2 rounded mb-4 w-[50px] h-[50px]"
                     />
-                    <p className=" font-medium text-xl mb-4">
-                      Ground Handling Equipment 
-                    </p>
+                    <p className=" font-medium text-xl mb-4">Engine Parts</p>
                   </div>
                 </Link>
-                <Link href="/products/ground-handling-equipment">
+                <Link href="#">
                   <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                     <Image
                       src="/images/Fuel System Parts.svg"
@@ -269,7 +261,7 @@ const ProductAnimate = () => {
                       className=" bg-[#E9DCB4] p-2 rounded mb-4 w-[50px] h-[50px]"
                     />
                     <p className=" font-medium text-xl mb-4">
-                      Ground Handling Equipment 
+                      Fuel System Parts
                     </p>
                   </div>
                 </Link>
@@ -306,8 +298,8 @@ const ProductAnimate = () => {
               </button>
             </div>
             <div className="w-[50%]">
-              <div className=" grid grid-cols-3 gap-5 items-start">
-                <Link href="/products/ground-support-equipment">
+              <div className=" grid grid-cols-3 gap-5 items-stretch">
+                <Link href="#">
                   <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                     <Image
                       src="/images/Steel (Carbon).svg"
@@ -317,11 +309,11 @@ const ProductAnimate = () => {
                       className=" bg-[#E9DCB4] p-2 rounded mb-4 w-[50px] h-[50px]"
                     />
                     <p className=" font-medium text-xl mb-4">
-                      Ground Support Equipment
+                      Steel (low Carbon)
                     </p>
                   </div>
                 </Link>
-                <Link href="/products/ground-supply-equipment">
+                <Link href="#">
                   <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                     <Image
                       src="/images/Steel (Carbon).svg"
@@ -330,12 +322,10 @@ const ProductAnimate = () => {
                       alt="Picture of the author"
                       className=" bg-[#E9DCB4] p-2 rounded mb-4 w-[50px] h-[50px]"
                     />
-                    <p className=" font-medium text-xl mb-4">
-                      Ground Supply Equipment 
-                    </p>
+                    <p className=" font-medium text-xl mb-4">Steel (Carbon)</p>
                   </div>
                 </Link>
-                <Link href="/products/ground-test-equipment">
+                <Link href="#">
                   <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer  border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                     <Image
                       src="/images/Fasteners.svg"
@@ -344,12 +334,10 @@ const ProductAnimate = () => {
                       alt="Picture of the author"
                       className=" bg-[#E9DCB4] p-2 rounded mb-4 w-[50px] h-[50px]"
                     />
-                    <p className=" font-medium text-xl mb-4">
-                      Ground Test Equipment 
-                    </p>
+                    <p className=" font-medium text-xl mb-4">Fasteners</p>
                   </div>
                 </Link>
-                <Link href="/products/ground-handling-equipment">
+                <Link href="#">
                   <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                     <Image
                       src="/images/Airborne Glues.svg"
@@ -358,9 +346,7 @@ const ProductAnimate = () => {
                       alt="Picture of the author"
                       className=" bg-[#E9DCB4] p-2 rounded mb-4 w-[50px] h-[50px]"
                     />
-                    <p className=" font-medium text-xl mb-4">
-                      Ground Handling Equipment 
-                    </p>
+                    <p className=" font-medium text-xl mb-4">Airborne Glues</p>
                   </div>
                 </Link>
               </div>
