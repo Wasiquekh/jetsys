@@ -33,30 +33,35 @@ const page = () => {
               width={160}
               height={234}
               alt="Picture of the author"
+              className=" w-[120px]"
             />
             <Image
               src="/images/Import  Substitution.svg"
               width={160}
               height={234}
               alt="Picture of the author"
+              className=" w-[120px]"
             />
             <Image
               src="/images/Custom  Adaptation.svg"
               width={160}
               height={234}
               alt="Picture of the author"
+              className=" w-[120px]"
             />
             <Image
               src="/images/Multiple Application.svg"
               width={160}
               height={234}
               alt="Picture of the author"
+              className=" w-[120px]"
             />
             <Image
               src="/images/Design Ownership.svg"
               width={160}
               height={234}
               alt="Picture of the author"
+              className=" w-[120px]"
             />
           </div>
         </div>
