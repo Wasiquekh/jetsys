@@ -1,15 +1,13 @@
 "use client";
-import React from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Image from "next/image";
 import { IoSquareSharp } from "react-icons/io5";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { useMemo } from "react";
-import { useEffect, useRef } from "react";
 
-const page = () => {
+const Page = () => {
   // Put your image paths here
   const slides = useMemo(
     () => ["/images/furqaan.png", "/images/furqaan-2.png"],
@@ -44,8 +42,7 @@ const page = () => {
         // Re-trigger animation from the beginning
         el.style.animation = "none";
         // Force reflow so the browser acknowledges the reset
-        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-        el.getBoundingClientRect();
+        el.getBoundingClientRect(); // no need for eslint-disable
         el.style.animation = "write-signature 2s linear forwards";
       });
     };
@@ -284,4 +281,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

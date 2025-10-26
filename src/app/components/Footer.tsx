@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { FaLinkedin, FaStopwatch, FaXTwitter } from "react-icons/fa6";
 import { GrInstagram } from "react-icons/gr";
-import { IoLogoFacebook, IoMdMail, IoMdStopwatch } from "react-icons/io";
+import { IoLogoFacebook, IoMdMail } from "react-icons/io";
 import { ImLinkedin } from "react-icons/im";
 import Link from "next/link";
 import { IoCallSharp } from "react-icons/io5";

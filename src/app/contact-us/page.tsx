@@ -6,6 +6,16 @@ import Image from "next/image";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
+export interface ContactFormData {
+  name: string;
+  companyName: string;
+  designation: string;
+  contactNumber: string;
+  email: string;
+  city: string;
+  message: string;
+}
+
 const page = () => {
   const validationSchema = Yup.object({
     name: Yup.string().required("Name is required"),
@@ -25,8 +35,9 @@ const page = () => {
   });
 
   // Handle form submission
-  const handleSubmit = (values: any) => {
-    console.log(values);
+  const handleSubmit = (values: ContactFormData) => {
+    //// console.log(values);
+    //const formData = values;
   };
 
   return (

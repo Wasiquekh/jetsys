@@ -2,13 +2,9 @@
 import Image from "next/image";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { motion, type Variants } from "framer-motion";
-import BannerHeading from "./components/ScrollHeader";
 import TrustedByLeadersHeading from "./components/ScrollHeader";
-import ScalableImage from "./components/test";
-import Carousel from "./components/test";
 import CustomCarasoul from "./components/CustomCarasoul";
 import OurOffering from "./components/OurOfferings";
 import MobileLandingCards from "./components/MobileLandingCards";
@@ -36,40 +32,40 @@ const logoItemVariants: Variants = {
   },
 };
 
-const container: Variants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { staggerChildren: 0.25 },
-  },
-};
+// const container: Variants = {
+//   hidden: { opacity: 0 },
+//   show: {
+//     opacity: 1,
+//     transition: { staggerChildren: 0.25 },
+//   },
+// };
 
-const item: Variants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  show: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] },
-  },
-};
+// const item: Variants = {
+//   hidden: { opacity: 0, scale: 0.8 },
+//   show: {
+//     opacity: 1,
+//     scale: 1,
+//     transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] },
+//   },
+// };
 
-const chooseCards = [
-  { img: "/images/choose-1.png", title: "Advanced <br /> Manufacturing" },
-  { img: "/images/choose-2.png", title: "Partner <br /> Focused" },
-  { img: "/images/choose-3.png", title: "System <br /> Integration" },
-  { img: "/images/choose-4.png", title: "Timely <br /> Delivery" },
-];
-const cards = [
-  { img: "/images/offer-1.png", title: "Aviation Equipment" },
-  { img: "/images/offer-2.png", title: "Raw Materials" },
-  { img: "/images/offer-3.png", title: "Testing & Maintenance" },
-  { img: "/images/offer-4.png", title: "Indigenization" },
-  { img: "/images/offer-5.png", title: "Aircraft Spares" },
-  { img: "/images/offer-6.png", title: "Runway Spares" },
-  { img: "/images/offer-7.png", title: "Test Rigs & Test Chambers" },
-  { img: "/images/offer-8.png", title: "Ground Support & Handling Equipment" },
-  { img: "/images/offer-9.png", title: "Others" },
-];
+// const chooseCards = [
+//   { img: "/images/choose-1.png", title: "Advanced <br /> Manufacturing" },
+//   { img: "/images/choose-2.png", title: "Partner <br /> Focused" },
+//   { img: "/images/choose-3.png", title: "System <br /> Integration" },
+//   { img: "/images/choose-4.png", title: "Timely <br /> Delivery" },
+// ];
+// const cards = [
+//   { img: "/images/offer-1.png", title: "Aviation Equipment" },
+//   { img: "/images/offer-2.png", title: "Raw Materials" },
+//   { img: "/images/offer-3.png", title: "Testing & Maintenance" },
+//   { img: "/images/offer-4.png", title: "Indigenization" },
+//   { img: "/images/offer-5.png", title: "Aircraft Spares" },
+//   { img: "/images/offer-6.png", title: "Runway Spares" },
+//   { img: "/images/offer-7.png", title: "Test Rigs & Test Chambers" },
+//   { img: "/images/offer-8.png", title: "Ground Support & Handling Equipment" },
+//   { img: "/images/offer-9.png", title: "Others" },
+// ];
 
 export default function Home() {
   // CODE FOR SCROLL ANIMATION why choose us SECTION
