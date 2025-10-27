@@ -3,8 +3,8 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Image from "next/image";
-import { Formik, Field, Form, ErrorMessage } from "formik";
-import * as Yup from "yup";
+//import { Formik, Field, Form, ErrorMessage } from "formik";
+//import * as Yup from "yup";
 
 export interface ContactFormData {
   name: string;
@@ -17,28 +17,28 @@ export interface ContactFormData {
 }
 
 const page = () => {
-  const validationSchema = Yup.object({
-    name: Yup.string().required("Name is required"),
-    companyName: Yup.string().required("Company Name is required"),
-    designation: Yup.string().required("Designation is required"),
-    contactNumber: Yup.string()
-      .matches(
-        /^(?:\+91[\s]?)?[789]\d{9}$/,
-        "Enter a valid contact number starting with +91 or without it"
-      )
-      .required("Contact Number is required"),
-    email: Yup.string()
-      .email("Invalid email format")
-      .required("Email Address is required"),
-    city: Yup.string().required("City is required"),
-    message: Yup.string().required("Your Message is required"),
-  });
+  // const validationSchema = Yup.object({
+  //   name: Yup.string().required("Name is required"),
+  //   companyName: Yup.string().required("Company Name is required"),
+  //   designation: Yup.string().required("Designation is required"),
+  //   contactNumber: Yup.string()
+  //     .matches(
+  //       /^(?:\+91[\s]?)?[789]\d{9}$/,
+  //       "Enter a valid contact number starting with +91 or without it"
+  //     )
+  //     .required("Contact Number is required"),
+  //   email: Yup.string()
+  //     .email("Invalid email format")
+  //     .required("Email Address is required"),
+  //   city: Yup.string().required("City is required"),
+  //   message: Yup.string().required("Your Message is required"),
+  // });
 
   // Handle form submission
-  const handleSubmit = (values: ContactFormData) => {
-    //// console.log(values);
-    //const formData = values;
-  };
+  // const handleSubmit = (values: ContactFormData) => {
+  //    console.log(values);
+  //   const formData = values;
+  // };
 
   return (
     <div>
@@ -59,7 +59,7 @@ const page = () => {
                 </button>
               </div>
             </div>
-            <Formik
+            {/* <Formik
               initialValues={{
                 name: "",
                 companyName: "",
@@ -187,7 +187,7 @@ const page = () => {
                   </button>
                 </Form>
               )}
-            </Formik>
+            </Formik> */}
           </div>
         </div>
 
