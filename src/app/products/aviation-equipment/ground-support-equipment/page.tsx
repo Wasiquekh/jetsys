@@ -2,11 +2,13 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
+import StickyHeader from "@/app/components/StickyHeader";
 
 const page = () => {
   return (
     <div>
       <Header />
+      <StickyHeader />
       <section className=" relative">
         <div className="container  !py-30">
           <h1 className=" font-extrabold text-6xl text-center mb-5">

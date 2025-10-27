@@ -3,11 +3,13 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Image from "next/image";
 import ProductAnimate from "../components/ProductAnimate";
+import StickyHeader from "../components/StickyHeader";
 
 const page = () => {
   return (
     <div>
       <Header />
+      <StickyHeader />
       <section>
         <div className="container">
           <h1 className=" text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text">
