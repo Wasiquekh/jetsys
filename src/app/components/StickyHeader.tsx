@@ -55,9 +55,11 @@ const StickyHeader: React.FC = () => {
             <Link href="/" className="mr-10 hover:text-secondary">
               COMPANY
             </Link>
-            <button className="hidden md:inline-flex items-center bg-primary border border-primary py-2 px-6 rounded text-base font-medium hover:bg-white text-white hover:text-black transition">
-              Get In Touch
-            </button>
+            <Link href="/contact-us">
+              <button className="hidden md:inline-flex items-center bg-primary border border-primary py-2 px-6 rounded text-base font-medium hover:bg-white text-white hover:text-black transition">
+                Get In Touch
+              </button>
+            </Link>
           </nav>
 
           <button
