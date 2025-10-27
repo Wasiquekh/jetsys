@@ -107,7 +107,7 @@ const page = () => {
                 </button>
               </div>
             </div>
-            <ToastContainer />
+
             <Formik
               initialValues={{
                 name: "",
@@ -181,7 +181,7 @@ const page = () => {
                         setFieldValue("contactNumber", cleaned);
                       }}
                       maxLength={13} // +911234567890
-                      placeholder="+911234567890 or 9123456789"
+                      //placeholder="+911234567890 or 9123456789"
                     />
                     <ErrorMessage
                       name="contactNumber"
@@ -245,6 +245,7 @@ const page = () => {
               )}
             </Formik>
           </div>
+          <ToastContainer />
         </div>
 
         <Image
