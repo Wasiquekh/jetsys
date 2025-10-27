@@ -3,10 +3,11 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Image from "next/image";
-import { Formik, Field, Form, ErrorMessage } from "formik";
+import { Formik, Field, Form, ErrorMessage, FormikHelpers } from "formik";
 import * as Yup from "yup";
+import { toast, ToastContainer } from "react-toastify";
 
-export interface ContactFormData {
+type ContactFormData = {
   name: string;
   companyName: string;
   designation: string;
@@ -14,29 +15,77 @@ export interface ContactFormData {
   email: string;
   city: string;
   message: string;
-}
+};
 
 const page = () => {
   const validationSchema = Yup.object({
-    name: Yup.string().required("Name is required"),
-    companyName: Yup.string().required("Company Name is required"),
-    designation: Yup.string().required("Designation is required"),
+    name: Yup.string().trim().required("Name is required"),
+    companyName: Yup.string().trim().required("Company Name is required"),
+    designation: Yup.string().trim().required("Designation is required"),
+    // Accepts "+91XXXXXXXXXX" or "XXXXXXXXXX" (10 digits starting 6–9)
     contactNumber: Yup.string()
+      .trim()
       .matches(
-        /^(?:\+91[\s]?)?[789]\d{9}$/,
-        "Enter a valid contact number starting with +91 or without it"
+        /^(?:\+91)?[6-9]\d{9}$/,
+        "Enter a valid Indian number (10 digits, optionally prefixed with +91)"
       )
       .required("Contact Number is required"),
     email: Yup.string()
+      .trim()
       .email("Invalid email format")
       .required("Email Address is required"),
-    city: Yup.string().required("City is required"),
-    message: Yup.string().required("Your Message is required"),
+    city: Yup.string().trim().required("City is required"),
+    message: Yup.string().trim().required("Your Message is required"),
   });
 
   // Handle form submission
-  const handleSubmit = (values: ContactFormData) => {
-    console.log("form values", values);
+  const handleSubmit = async (
+    values: ContactFormData,
+    { resetForm, setSubmitting }: FormikHelpers<ContactFormData>
+  ) => {
+    try {
+      const payload = {
+        // required
+        name: values.name.trim(),
+        email: values.email.trim(),
+        phone: values.contactNumber.trim(), // backend also accepts `phone`
+        // optional but useful for email body
+        contactNumber: values.contactNumber.trim(),
+        companyName: values.companyName.trim(),
+        designation: values.designation.trim(),
+        city: values.city.trim(),
+        message: values.message.trim(),
+      };
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        const err = await response.json().catch(() => ({}));
+        throw new Error(err.message || "Failed to send message");
+      }
+
+      toast.success("Message sent successfully!", {
+        position: "top-right",
+        autoClose: 3000,
+        className: "bg-green-500 text-white",
+      });
+
+      resetForm();
+    } catch (error) {
+      const msg =
+        error instanceof Error ? error.message : "Something went wrong";
+      toast.error(msg, {
+        position: "top-right",
+        autoClose: 3000,
+        className: "bg-red-500 text-white",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -58,6 +107,7 @@ const page = () => {
                 </button>
               </div>
             </div>
+            <ToastContainer />
             <Formik
               initialValues={{
                 name: "",
@@ -71,7 +121,7 @@ const page = () => {
               validationSchema={validationSchema}
               onSubmit={handleSubmit}
             >
-              {({ setFieldValue, values }) => (
+              {({ setFieldValue, isSubmitting }) => (
                 <Form className="bg-[#F0EFE9] p-8">
                   <div className="mb-4 relative">
                     <p className="font-medium text-sm mb-1">Name</p>
@@ -83,7 +133,7 @@ const page = () => {
                     <ErrorMessage
                       name="name"
                       component="div"
-                      className="text-red-600 text-[12px] absolute top-14"
+                      className="text-red-600 text-[12px] mt-1"
                     />
                   </div>
 
@@ -97,7 +147,7 @@ const page = () => {
                     <ErrorMessage
                       name="companyName"
                       component="div"
-                      className="text-red-600 text-[12px] absolute top-14"
+                      className="text-red-600 text-[12px] mt-1"
                     />
                   </div>
 
@@ -111,7 +161,7 @@ const page = () => {
                     <ErrorMessage
                       name="designation"
                       component="div"
-                      className="text-red-600 text-[12px] absolute top-14"
+                      className="text-red-600 text-[12px] mt-1"
                     />
                   </div>
 
@@ -119,20 +169,24 @@ const page = () => {
                     <p className="font-medium text-sm mb-1">Contact Number</p>
                     <Field
                       className="bg-white w-full h-8 rounded outline-none px-2"
-                      type="text"
+                      type="tel"
+                      inputMode="tel"
                       name="contactNumber"
-                      onChange={(e: React.ChangeEvent<any>) => {
-                        // Remove spaces from the contact number
-                        setFieldValue(
-                          "contactNumber",
-                          e.target.value.replace(/\s+/g, "")
+                      onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                        // keep + and digits; remove spaces, -, (), etc.
+                        const cleaned = e.target.value.replace(
+                          /(?!^\+)\D/g,
+                          ""
                         );
+                        setFieldValue("contactNumber", cleaned);
                       }}
+                      maxLength={13} // +911234567890
+                      placeholder="+911234567890 or 9123456789"
                     />
                     <ErrorMessage
                       name="contactNumber"
                       component="div"
-                      className="text-red-600 text-[12px] absolute top-14"
+                      className="text-red-600 text-[12px] mt-1"
                     />
                   </div>
 
@@ -140,13 +194,13 @@ const page = () => {
                     <p className="font-medium text-sm mb-1">Email Address</p>
                     <Field
                       className="bg-white w-full h-8 rounded outline-none px-2"
-                      type="text"
+                      type="email"
                       name="email"
                     />
                     <ErrorMessage
                       name="email"
                       component="div"
-                      className="text-red-600 text-[12px] absolute top-14"
+                      className="text-red-600 text-[12px] mt-1"
                     />
                   </div>
 
@@ -160,7 +214,7 @@ const page = () => {
                     <ErrorMessage
                       name="city"
                       component="div"
-                      className="text-red-600 text-[12px] absolute top-14"
+                      className="text-red-600 text-[12px] mt-1"
                     />
                   </div>
 
@@ -168,21 +222,24 @@ const page = () => {
                     <p className="font-medium text-sm mb-1">Your Message</p>
                     <Field
                       as="textarea"
-                      className="bg-white w-full h-16 rounded outline-none px-2 py-2 resize-none align-top"
+                      className="bg-white w-full h-24 rounded outline-none px-2 py-2 resize-none align-top"
                       name="message"
                     />
                     <ErrorMessage
                       name="message"
                       component="div"
-                      className="text-red-600 text-[12px] absolute top-22"
+                      className="text-red-600 text-[12px] mt-1"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded w-full"
+                    disabled={isSubmitting}
+                    className={`bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded w-full ${
+                      isSubmitting ? "opacity-60 cursor-not-allowed" : ""
+                    }`}
                   >
-                    SUBMIT
+                    {isSubmitting ? "Sending..." : "SUBMIT"}
                   </button>
                 </Form>
               )}
