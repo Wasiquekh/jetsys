@@ -47,7 +47,7 @@ const ProductAnimate = () => {
             {/* ---- 1: Aviation Equipment ---- */}
             {activeIndex === 0 && (
               <section>
-                <div className="container !pb-0">
+                <div className="container !pb-4">
                   <div className="shadow-[0px_4px_11.1px_0px_#00000040] rounded-2xl  flex justify-between p-5">
                     <div className="   flex flex-col w-[30%]">
                       <Image
@@ -141,7 +141,7 @@ const ProductAnimate = () => {
             {/* ---- 2: Runway Spares ---- */}
             {activeIndex === 1 && (
               <section>
-                <div className="container !pb-0">
+                <div className="container !pb-4">
                   <div className="shadow-[0px_4px_11.1px_0px_#00000040] rounded-2xl  flex justify-between p-5">
                     <div className="   flex flex-col w-[30%]">
                       <Image
@@ -218,7 +218,7 @@ const ProductAnimate = () => {
             {/* ---- 3: Aircraft Spares & System ---- */}
             {activeIndex === 2 && (
               <section>
-                <div className="container !pb-0">
+                <div className="container !pb-4">
                   <div className="shadow-[0px_4px_11.1px_0px_#00000040] rounded-2xl  flex justify-between p-5">
                     <div className="   flex flex-col w-[30%]">
                       <Image
@@ -339,7 +339,7 @@ const ProductAnimate = () => {
             {/* ---- 4: Airborne Raw Materials ---- */}
             {activeIndex === 3 && (
               <section>
-                <div className="container !pb-0">
+                <div className="container !pb-4">
                   <div className="shadow-[0px_4px_11.1px_0px_#00000040] rounded-2xl  flex justify-between p-5">
                     <div className="   flex flex-col w-[30%]">
                       <Image
