@@ -92,7 +92,7 @@ const ProductAnimate = () => {
                         <Link href="/products/aviation-equipment/ground-supply-equipment">
                           <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                             <Image
-                              src="/images/Ground Supply Equipment .svg"
+                              src="/images/Ground Supply Equipment.svg"
                               width={44}
                               height={45}
                               alt="Picture of the author"
@@ -106,7 +106,7 @@ const ProductAnimate = () => {
                         <Link href="/products/aviation-equipment/ground-test-equipment">
                           <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer  border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                             <Image
-                              src="/images/Ground Test Equipment .svg"
+                              src="/images/Ground Test Equipment.svg"
                               width={44}
                               height={45}
                               alt="Picture of the author"
