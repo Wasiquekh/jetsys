@@ -4,6 +4,17 @@ export const dynamic = "force-dynamic";
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
+type ContactBody = {
+  name: string;
+  email: string;
+  companyName?: string;
+  designation?: string;
+  contactNumber?: string;
+  city?: string;
+  message: string;
+  phone?: string; // legacy
+};
+
 function esc(s: string) {
   return s.replace(
     /[&<>"']/g,
@@ -22,7 +33,7 @@ export async function POST(request: Request) {
       "CPANEL_EMAIL_USER",
       "CPANEL_EMAIL_PASSWORD",
       "EMAIL_RECEIVER",
-    ];
+    ] as const;
     const missing = requiredEnvVars.filter((v) => !process.env[v]);
     if (missing.length) {
       console.error("Missing env:", missing);
@@ -36,8 +47,8 @@ export async function POST(request: Request) {
       );
     }
 
-    // ✅ Read body (new keys) + fallback for old 'phone'
-    const body = await request.json();
+    // ✅ Read body (typed) + fallback for old 'phone'
+    const body = (await request.json()) as ContactBody;
     const {
       name,
       email,
@@ -47,7 +58,6 @@ export async function POST(request: Request) {
       city,
       message,
     } = body;
-
     const phone = body.phone ?? contactNumber;
 
     // ✅ Basic validation
@@ -61,10 +71,6 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
-
-    // (Optional) India style phone check; keep loose to avoid false negatives
-    // const phoneRx = /^(?:\+?\d{1,3})?\s?\d{10}$/;
-    // if (!phoneRx.test(String(phone))) { ... }
 
     // ✅ Transporter
     const transporter = nodemailer.createTransport({
@@ -81,7 +87,6 @@ export async function POST(request: Request) {
 
     const cleanMsg = String(message).replace(/\s+/g, " ").trim();
 
-    // ✅ Email
     const mailOptions = {
       from: `"${process.env.NEXT_PUBLIC_SITE_NAME || "Website"} Contact" <${
         process.env.CPANEL_EMAIL_USER
@@ -149,14 +154,37 @@ export async function POST(request: Request) {
       { status: 200, message: "Message sent successfully" },
       { status: 200 }
     );
-  } catch (error: any) {
-    const errCode: string | undefined = error?.code;
-    const errMessage: string = error?.message || "Unknown error";
+  } catch (err: unknown) {
+    // 🔒 Type-safe narrowing (no 'any')
+    let errMessage = "Unknown error";
+    let errCode: string | undefined;
+    let stack: string | undefined;
+
+    if (typeof err === "object" && err !== null) {
+      if (
+        "message" in err &&
+        typeof (err as { message?: unknown }).message === "string"
+      ) {
+        errMessage = (err as { message: string }).message;
+      }
+      if (
+        "code" in err &&
+        typeof (err as { code?: unknown }).code === "string"
+      ) {
+        errCode = (err as { code?: string }).code;
+      }
+      if (
+        "stack" in err &&
+        typeof (err as { stack?: unknown }).stack === "string"
+      ) {
+        stack = (err as { stack?: string }).stack;
+      }
+    }
 
     console.error("Email Error:", {
       message: errMessage,
       code: errCode,
-      stack: error?.stack,
+      stack,
     });
 
     let userMessage = "An error occurred while sending the email.";
