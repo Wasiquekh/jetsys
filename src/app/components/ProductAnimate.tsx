@@ -355,7 +355,7 @@ const ProductAnimate = () => {
         </div>
       </section>
 
-      {/* -------------------------------------- */}
+      {/* -------------------------------------- CARDS */}
       <section>
         <div className="container">
           {/* ⬇️ Added `items-stretch` to make all cards equal height */}
