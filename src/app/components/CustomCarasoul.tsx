@@ -1,46 +1,50 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 
-const FREQ = 0.3; // cycles per second
-const SMOOTHING = 0.12; // 0..1 (lower = floatier, higher = snappier)
-const IDLE_MS = 220; // stop oscillation after this many ms of no movement
+const FREQ = 0.3;
+const SMOOTHING = 0.12;
+const IDLE_MS = 220;
 
 const CustomCarasoul: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  // smooth scroll loop refs
   const scrollRafRef = useRef<number | null>(null);
+  const oscRafRef = useRef<number | null>(null);
+
+  const didInit = useRef(false);
+  const visibleRef = useRef(true);
+  const pageVisibleRef = useRef(true);
+
   const targetScroll = useRef(0);
   const currentScroll = useRef(0);
 
-  // oscillation loop refs (active only while mouse is moving)
-  const oscRafRef = useRef<number | null>(null);
   const oscActive = useRef(false);
   const oscStart = useRef<number>(0);
   const stopTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // responsive amplitude (px)
-  const amplitudeRef = useRef<number>(22); // default for non-desktop
+  const amplitudeRef = useRef<number>(22);
 
-  // smoothing state
   const cardsRef = useRef<HTMLDivElement[]>([]);
-  const currentYRef = useRef<number[]>([]); // smoothed y per card
+  const currentYRef = useRef<number[]>([]);
 
   useEffect(() => {
+    if (didInit.current) return;
+    didInit.current = true;
+
     const container = containerRef.current;
     if (!container) return;
 
-    // --- set amplitude by breakpoint (desktop smaller cards => smaller amplitude)
     const setAmplitude = () => {
-      const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
-      amplitudeRef.current = isDesktop ? 14 : 22;
+      amplitudeRef.current = window.matchMedia("(min-width:1024px)").matches
+        ? 14
+        : 22;
     };
     setAmplitude();
 
     const queryCards = () =>
-      Array.from(container.querySelectorAll<HTMLDivElement>(".card"));
+      Array.from(container.querySelectorAll<HTMLDivElement>(".jc-card"));
 
-    const syncCardsArrays = () => {
+    const syncCards = () => {
       const els = queryCards();
       cardsRef.current = els;
       if (currentYRef.current.length !== els.length) {
@@ -49,53 +53,52 @@ const CustomCarasoul: React.FC = () => {
     };
 
     const resetCardTransforms = () => {
-      syncCardsArrays();
+      syncCards();
       cardsRef.current.forEach((c, i) => {
         currentYRef.current[i] = 0;
         c.style.transform = "translate3d(0,0,0)";
       });
     };
 
-    // rAF oscillation — runs only while oscActive === true
     const oscillate = (t: number) => {
-      if (!oscActive.current) return;
-
-      syncCardsArrays();
-      const cards = cardsRef.current;
-      if (cards.length === 0) {
-        oscRafRef.current = requestAnimationFrame(oscillate);
+      if (!oscActive.current || !visibleRef.current || !pageVisibleRef.current)
         return;
-      }
-
-      const elapsed = (t - oscStart.current) / 1000;
+      syncCards();
       const omega = 2 * Math.PI * FREQ;
+      const elapsed = (t - oscStart.current) / 1000;
 
-      for (let i = 0; i < cards.length; i++) {
-        const phase = i % 2 === 0 ? 0 : Math.PI; // alternate up/down
+      for (let i = 0; i < cardsRef.current.length; i++) {
+        const phase = i % 2 === 0 ? 0 : Math.PI;
         const targetY =
           Math.sin(omega * elapsed + phase) * amplitudeRef.current;
-
-        // LERP toward target for buttery motion
         const prev = currentYRef.current[i] ?? 0;
         const next = prev + (targetY - prev) * SMOOTHING;
         currentYRef.current[i] = next;
-
-        cards[i].style.transform = `translate3d(0, ${next}px, 0)`;
+        cardsRef.current[i].style.transform = `translate3d(0, ${next}px, 0)`;
       }
-
       oscRafRef.current = requestAnimationFrame(oscillate);
     };
 
-    // pointer-driven smooth scroll + oscillation trigger
-    const onMouseMove = (e: MouseEvent) => {
+    const tick = () => {
+      if (visibleRef.current && pageVisibleRef.current) {
+        const ease = 0.08;
+        currentScroll.current +=
+          (targetScroll.current - currentScroll.current) * ease;
+        container.scrollLeft = currentScroll.current;
+      }
+      scrollRafRef.current = requestAnimationFrame(tick);
+    };
+    scrollRafRef.current = requestAnimationFrame(tick);
+
+    const onPointerMove = (e: PointerEvent) => {
       const rect = container.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width; // 0..1
+      const x = (e.clientX - rect.left) / rect.width;
       const max = Math.max(0, container.scrollWidth - container.clientWidth);
-      targetScroll.current = x * max;
+      targetScroll.current = Math.max(0, Math.min(1, x)) * max;
 
       if (!oscActive.current) {
         oscActive.current = true;
-        if (!oscStart.current) oscStart.current = performance.now();
+        oscStart.current = performance.now();
         if (oscRafRef.current) cancelAnimationFrame(oscRafRef.current);
         oscRafRef.current = requestAnimationFrame(oscillate);
       }
@@ -110,7 +113,13 @@ const CustomCarasoul: React.FC = () => {
       }, IDLE_MS);
     };
 
-    const onMouseLeave = () => {
+    const onPointerEnter = () => {
+      if (visibleRef.current) {
+        oscStart.current = performance.now();
+      }
+    };
+
+    const onPointerLeave = () => {
       oscActive.current = false;
       if (oscRafRef.current) {
         cancelAnimationFrame(oscRafRef.current);
@@ -121,46 +130,58 @@ const CustomCarasoul: React.FC = () => {
         stopTimerRef.current = null;
       }
       resetCardTransforms();
-      targetScroll.current = (container as HTMLDivElement).scrollLeft;
+      targetScroll.current = container.scrollLeft;
     };
 
-    container.addEventListener("mousemove", onMouseMove);
-    container.addEventListener("mouseleave", onMouseLeave);
-
-    // smooth easing loop (always running) for scroll
-    const tick = () => {
-      const ease = 0.08; // smaller = smoother
-      currentScroll.current +=
-        (targetScroll.current - currentScroll.current) * ease;
-      container.scrollLeft = currentScroll.current;
-      scrollRafRef.current = requestAnimationFrame(tick);
+    const onNativeScroll = () => {
+      currentScroll.current = container.scrollLeft;
+      targetScroll.current = container.scrollLeft;
     };
-    scrollRafRef.current = requestAnimationFrame(tick);
+
+    container.addEventListener("pointermove", onPointerMove, { passive: true });
+    container.addEventListener("pointerenter", onPointerEnter, {
+      passive: true,
+    });
+    container.addEventListener("pointerleave", onPointerLeave, {
+      passive: true,
+    });
+    container.addEventListener("scroll", onNativeScroll, { passive: true });
+
+    const io = new IntersectionObserver(
+      (entries) => (visibleRef.current = entries[0]?.isIntersecting ?? true),
+      { threshold: 0.05 }
+    );
+    io.observe(container);
+
+    const onVis = () =>
+      (pageVisibleRef.current = document.visibilityState !== "hidden");
+    document.addEventListener("visibilitychange", onVis);
 
     const onResize = () => {
       const max = Math.max(0, container.scrollWidth - container.clientWidth);
       targetScroll.current = Math.min(targetScroll.current, max);
       currentScroll.current = Math.min(currentScroll.current, max);
-      setAmplitude(); // re-evaluate on breakpoint changes
-      syncCardsArrays();
+      setAmplitude();
+      syncCards();
     };
     window.addEventListener("resize", onResize);
 
-    // initial sync
-    syncCardsArrays();
+    syncCards();
 
     return () => {
-      container.removeEventListener("mousemove", onMouseMove);
-      container.removeEventListener("mouseleave", onMouseLeave);
+      container.removeEventListener("pointermove", onPointerMove);
+      container.removeEventListener("pointerenter", onPointerEnter);
+      container.removeEventListener("pointerleave", onPointerLeave);
+      container.removeEventListener("scroll", onNativeScroll);
       window.removeEventListener("resize", onResize);
-
+      document.removeEventListener("visibilitychange", onVis);
+      io.disconnect();
       if (scrollRafRef.current) cancelAnimationFrame(scrollRafRef.current);
       if (oscRafRef.current) cancelAnimationFrame(oscRafRef.current);
       if (stopTimerRef.current) clearTimeout(stopTimerRef.current);
     };
   }, []);
 
-  // Card helper — inner panel must have class "card"
   const Card = ({
     bg,
     title,
@@ -180,23 +201,19 @@ const CustomCarasoul: React.FC = () => {
 
     return (
       <div
-        className={
-          // Desktop gets smaller basis; other breakpoints unchanged
-          `shrink-0 basis-[85%] md:basis-[45%] lg:basis-[26%] group ${extraClasses}`
-        }
+        className={`shrink-0 basis-[85%] md:basis-[45%] lg:basis-[26%] group ${extraClasses}`}
       >
         <div
           className={
-            // Smaller desktop min-height & paddings; lighter text sizes
-            "card relative w-full " +
-            "min-h-[380px] md:min-h-[350px] lg:min-h-[260px] " +
+            "jc-card relative w-full " +
+            "h-[380px] md:h-[350px] lg:h-[260px] " + // Set a fixed height to ensure all cards are the same size
             "px-8 py-20 md:py-24 lg:px-6 lg:py-12 " +
-            "rounded-2xl text-center overflow-hidden transform-gpu"
+            "rounded-2xl text-center overflow-hidden transform-gpu will-change-transform"
           }
           style={style}
         >
-          <div className="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100" />
-          <div className="relative z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <div className="pointer-events-none absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100" />
+          <div className="relative z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100 select-none">
             <p className="text-2xl md:text-2xl lg:text-xl text-white font-bold mb-6 md:mb-8 lg:mb-4">
               {title}
             </p>
@@ -217,15 +234,14 @@ const CustomCarasoul: React.FC = () => {
       <section className="py-[75px] md:pt-[75px] md:pb-0 max-w-[1540px] mx-auto">
         <div
           ref={containerRef}
-          className="relative overflow-x-scroll overflow-y-hidden pb-10 cs-scroll"
+          className="relative overflow-x-scroll overflow-y-hidden pb-10 cs-scroll touch-pan-x pointer-events-auto"
+          style={{ overscrollBehaviorX: "contain" }}
         >
           <div className="flex gap-6 md:gap-8 lg:gap-6 justify-start py-6">
-            {/* 5 cards */}
             <Card
               bg="/images/landing-1.png"
               title="Expanding Horizons in Aerospace"
               desc="Driving innovation to redefine the possibilities in defence and aerospace industries."
-              extraClasses="ml-6 md:ml-8 lg:ml-6"
             />
             <Card
               bg="/images/landing-3.png"
@@ -245,16 +261,13 @@ const CustomCarasoul: React.FC = () => {
             <Card
               bg="/images/landing-2.png"
               title="Airborne Innovation at the Core"
-              desc="  High-grade airborne materials built for resilience and reliability."
+              desc="High-grade airborne materials built for resilience and reliability."
             />
-
-            {/* Right-side spacer */}
             <div className="shrink-0 w-6 md:w-8 lg:w-6" aria-hidden="true" />
           </div>
         </div>
       </section>
 
-      {/* component-scoped CSS */}
       <style jsx>{`
         .cs-scroll {
           -ms-overflow-style: none;
@@ -263,8 +276,8 @@ const CustomCarasoul: React.FC = () => {
         .cs-scroll::-webkit-scrollbar {
           display: none;
         }
-        .card {
-          /* GPU-friendly hints */
+        /* Ensuring all cards are same size */
+        .jc-card {
           transform: translate3d(0, 0, 0);
           backface-visibility: hidden;
           contain: paint;
