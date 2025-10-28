@@ -182,109 +182,111 @@ const CustomCarasoul: React.FC = () => {
     };
   }, []);
 
-  const Card = ({
-    bg,
-    title,
-    desc,
-    extraClasses = "",
-  }: {
-    bg: string;
-    title: string;
-    desc: string;
-    extraClasses?: string;
-  }) => {
-    const style = {
-      backgroundImage: `url(${bg})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-    } as React.CSSProperties;
-
-    return (
-      <div
-        className={`shrink-0 basis-[85%] md:basis-[45%] lg:basis-[26%] group ${extraClasses}`}
-      >
-        <div
-          className={
-            "jc-card relative w-full " +
-            "h-[380px] md:h-[350px] lg:h-[260px] " + // Set a fixed height to ensure all cards are the same size
-            "px-8 py-20 md:py-24 lg:px-6 lg:py-12 " +
-            "rounded-2xl text-center overflow-hidden transform-gpu will-change-transform"
-          }
-          style={style}
-        >
-          <div className="pointer-events-none absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100" />
-          <div className="relative z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100 select-none">
-            <p className="text-2xl md:text-2xl lg:text-xl text-white font-bold mb-6 md:mb-8 lg:mb-4">
-              {title}
-            </p>
-            <p className="text-base md:text-base lg:text-sm text-white/90 font-medium mb-6 md:mb-8 lg:mb-5">
-              {desc}
-            </p>
-            <button className="bg-primary text-base md:text-base lg:text-sm font-semibold py-2 px-6 lg:px-5 rounded text-white border border-primary transition-colors duration-300 hover:bg-white hover:text-black">
-              Learn More
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  };
+const Card = ({
+  bg,
+  title,
+  desc,
+  extraClasses = "",
+}: {
+  bg: string;
+  title: string;
+  desc: string;
+  extraClasses?: string;
+}) => {
+  const style = {
+    backgroundImage: `url(${bg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  } as React.CSSProperties;
 
   return (
-    <div>
-      <section className="py-[75px] md:pt-[75px] md:pb-0 max-w-[1540px] mx-auto">
-        <div
-          ref={containerRef}
-          className="relative overflow-x-scroll overflow-y-hidden pb-10 cs-scroll touch-pan-x pointer-events-auto"
-          style={{ overscrollBehaviorX: "contain" }}
-        >
-          <div className="flex gap-6 md:gap-8 lg:gap-6 justify-start py-6">
-            <Card
-              bg="/images/landing-1.png"
-              title="Expanding Horizons in Aerospace"
-              desc="Driving innovation to redefine the possibilities in defence and aerospace industries."
-            />
-            <Card
-              bg="/images/landing-3.png"
-              title="Indigenous Innovations"
-              desc="Proudly delivering homegrown solutions for a self-reliant defence ecosystem."
-            />
-            <Card
-              bg="/images/landing-2.png"
-              title="Precision Maintenance Systems"
-              desc="Ensuring operational superiority with advanced maintenance technologies."
-            />
-            <Card
-              bg="/images/landing-2.png"
-              title="Trusted Spares, Seamless Systems"
-              desc="Aircraft spares and systems designed for flawless performance."
-            />
-            <Card
-              bg="/images/landing-2.png"
-              title="Airborne Innovation at the Core"
-              desc="High-grade airborne materials built for resilience and reliability."
-            />
-            <div className="shrink-0 w-6 md:w-8 lg:w-6" aria-hidden="true" />
-          </div>
-        </div>
-      </section>
+    <div
+      className={`shrink-0 basis-[85%] md:basis-[45%] lg:basis-[26%] group ${extraClasses}`}
+    >
+      <div
+        className={
+          "jc-card relative w-full " +
+          "h-[380px] md:h-[350px] lg:h-[260px] " + // Set a fixed height to ensure all cards are the same size
+          "px-8 py-20 md:py-24 lg:px-6 lg:py-12 " +
+          "rounded-2xl text-center overflow-hidden transform-gpu will-change-transform"
+        }
+        style={style}
+      >
+        {/* Dark overlay */}
+        <div className="pointer-events-none absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100" />
 
-      <style jsx>{`
-        .cs-scroll {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-        .cs-scroll::-webkit-scrollbar {
-          display: none;
-        }
-        /* Ensuring all cards are same size */
-        .jc-card {
-          transform: translate3d(0, 0, 0);
-          backface-visibility: hidden;
-          contain: paint;
-        }
-      `}</style>
+        <div className="relative z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100 select-none">
+          <p className="text-2xl md:text-2xl lg:text-xl text-white font-bold mb-6 md:mb-8 lg:mb-4">
+            {title}
+          </p>
+          <p className="text-base md:text-base lg:text-sm text-white/90 font-medium mb-6 md:mb-8 lg:mb-5">
+            {desc}
+          </p>
+          <button className="bg-primary text-base md:text-base lg:text-sm font-semibold py-2 px-6 lg:px-5 rounded text-white border border-primary transition-colors duration-300 hover:bg-white hover:text-black">
+            Learn More
+          </button>
+        </div>
+      </div>
     </div>
   );
+};
+
+return (
+  <div>
+    <section className="py-[75px] md:pt-[75px] md:pb-0 max-w-[1540px] mx-auto">
+      <div
+        ref={containerRef}
+        className="relative overflow-x-scroll overflow-y-hidden pb-10 cs-scroll touch-pan-x pointer-events-auto"
+        style={{ overscrollBehaviorX: "contain" }}
+      >
+        <div className="flex gap-6 md:gap-8 lg:gap-6 justify-start py-6">
+          <Card
+            bg="/images/landing-1.png"
+            title="Expanding Horizons in Aerospace"
+            desc="Driving innovation to redefine the possibilities in defence and aerospace industries."
+          />
+          <Card
+            bg="/images/landing-3.png"
+            title="Indigenous Innovations"
+            desc="Proudly delivering homegrown solutions for a self-reliant defence ecosystem."
+          />
+          <Card
+            bg="/images/maintenance.png"
+            title="Precision Maintenance Systems"
+            desc="Ensuring operational superiority with advanced maintenance technologies."
+          />
+          <Card
+            bg="/images/trusted-spares.png"
+            title="Trusted Spares, Seamless Systems"
+            desc="Aircraft spares and systems designed for flawless performance."
+          />
+          <Card
+            bg="/images/landing-2.png"
+            title="Airborne Innovation at the Core"
+            desc="High-grade airborne materials built for resilience and reliability."
+          />
+          <div className="shrink-0 w-6 md:w-8 lg:w-6" aria-hidden="true" />
+        </div>
+      </div>
+    </section>
+
+    <style jsx>{`
+      .cs-scroll {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .cs-scroll::-webkit-scrollbar {
+        display: none;
+      }
+      /* Ensuring all cards are same size */
+      .jc-card {
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        contain: paint;
+      }
+    `}</style>
+  </div>
+);
 };
 
 export default CustomCarasoul;
