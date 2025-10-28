@@ -3,6 +3,7 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
 import StickyHeader from "@/app/components/StickyHeader";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -61,9 +62,11 @@ const page = () => {
                 Provides a stable, sealed mounting base while alowing easy
                 access for maintenance and cabling.
               </p>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
+              <Link href="/products/runway-spares/mafi-spares/shallow-base">
+                <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                  Know More
+                </button>
+              </Link>
             </div>
           </div>
         </div>

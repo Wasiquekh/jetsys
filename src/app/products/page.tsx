@@ -5,6 +5,7 @@ import Image from "next/image";
 import ProductAnimate from "../components/ProductAnimate";
 import StickyHeader from "../components/StickyHeader";
 
+
 const page = () => {
   return (
     <div>

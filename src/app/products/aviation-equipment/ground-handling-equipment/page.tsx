@@ -3,6 +3,7 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
 import StickyHeader from "@/app/components/StickyHeader";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -63,9 +64,11 @@ const page = () => {
                 Widely used in aircraft crash rescue operations to cut fuselage
                 structures and spread openings for evacuation.
               </p>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
+              <Link href="/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine">
+                <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                  Know More
+                </button>
+              </Link>
             </div>
           </div>
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
@@ -92,10 +95,11 @@ const page = () => {
                 Used to load/unload armament onto aircraft with precision and
                 minimal manual handling.
               </p>
-
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
+              <Link href="/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley">
+                <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                  Know More
+                </button>
+              </Link>
             </div>
           </div>
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
@@ -121,9 +125,11 @@ const page = () => {
                 Ensures safe movement and efficient mounting of load-carrying
                 equipment onto aircraft.
               </p>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
+              <Link href="/products/aviation-equipment/ground-handling-equipment/ldp-trolley">
+                <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                  Know More
+                </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -61,9 +62,11 @@ const page = () => {
                 Used to align optical devices, weapons, and sensors with the
                 aircraft’s line of sight.
               </p>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
+              <Link href="/solutions/indegenization/indegenization-equipments/totem-tray-harmonization-tool">
+                <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                  Know More
+                </button>
+              </Link>
             </div>
           </div>
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
@@ -87,9 +90,11 @@ const page = () => {
                 Ensures reliability of systems like ejection seats, fire
                 extinguishers, and emergency release mechanisms.
               </p>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
+              <Link href="/solutions/indegenization/indegenization-equipments/squib-tester">
+                <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                  Know More
+                </button>
+              </Link>
             </div>
           </div>
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
@@ -114,9 +119,11 @@ const page = () => {
                 Used in aerospace oil feed circuits for high-speed rotating
                 assemblies.
               </p>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
+              <Link href="/solutions/indegenization/indegenization-equipments/ring-oil-feed">
+                <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                  Know More
+                </button>
+              </Link>
             </div>
           </div>
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
@@ -141,9 +148,11 @@ const page = () => {
                 Used in defence and aerospace electronics repair, failure
                 analysis, and rework with ful ESD protection
               </p>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
+              <Link href="/solutions/indegenization/indegenization-equipments/conformal-coating-removal-machine">
+                <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                  Know More
+                </button>
+              </Link>
             </div>
           </div>
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
@@ -169,9 +178,11 @@ const page = () => {
                 Used for space, defence, and electronics reliability testing
                 with PLC-controled automation.
               </p>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
+              <Link href="/solutions/indegenization/indegenization-equipments/thermal-vacuum-chamber">
+                <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                  Know More
+                </button>
+              </Link>
             </div>
           </div>
         </div>

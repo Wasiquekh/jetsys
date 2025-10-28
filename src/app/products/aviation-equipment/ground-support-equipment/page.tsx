@@ -3,6 +3,7 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
 import StickyHeader from "@/app/components/StickyHeader";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -63,9 +64,11 @@ const page = () => {
                 Used to fil or top-up nitrogen in hydraulic accumulators, tires,
                 and landing gear struts
               </p>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
+              <Link href="/products/aviation-equipment/ground-support-equipment/nitrogen-trolley">
+                <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                  Know More
+                </button>
+              </Link>
             </div>
           </div>
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
@@ -91,10 +94,11 @@ const page = () => {
                 <strong>Usage </strong> <br /> They are used during maintenance,
                 wheel/brake replacement, and landing gear servicing
               </p>
-
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
+              <Link href="/products/aviation-equipment/ground-support-equipment/nose-jack">
+                <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                  Know More
+                </button>
+              </Link>
             </div>
           </div>
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
@@ -122,9 +126,11 @@ const page = () => {
                 It enables safe aircraft movement on the ground for parking,
                 repositioning, or maintenance.
               </p>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
+              <Link href="/products/aviation-equipment/ground-support-equipment/aircraft-tow-bar">
+                <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                  Know More
+                </button>
+              </Link>
             </div>
           </div>
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
@@ -150,9 +156,11 @@ const page = () => {
                 Used for measuring vane angles to optimize airflow control
                 systems in aircraft.
               </p>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
+              <Link href="/products/aviation-equipment/ground-support-equipment/protractor-unit-for-dau-vane-angles">
+                <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                  Know More
+                </button>
+              </Link>
             </div>
           </div>
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
@@ -176,9 +184,11 @@ const page = () => {
                 used in military and aerospace applications for connecting
                 ground power units (GPU) to aircraft and vehicles.
               </p>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
+              <Link href="/products/aviation-equipment/ground-support-equipment/nato-cable">
+                <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                  Know More
+                </button>
+              </Link>
             </div>
           </div>
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
@@ -204,9 +214,11 @@ const page = () => {
                 communication, power circuits, flight control, navigation,
                 engine monitoring, and lighting systems.
               </p>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
+              <Link href="/products/aviation-equipment/ground-support-equipment/aircraft-looms-cables-harnesses">
+                <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                  Know More
+                </button>
+              </Link>
             </div>
           </div>
         </div>

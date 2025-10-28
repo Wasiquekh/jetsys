@@ -3,6 +3,7 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
 import StickyHeader from "@/app/components/StickyHeader";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -63,9 +64,11 @@ const page = () => {
                 Used for engine starting, avionics testing, and powering onboard
                 systems without using the aircraft’s own engines or APU.
               </p>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
+              <Link href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit">
+                <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                  Know More
+                </button>
+              </Link>
             </div>
           </div>
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
@@ -91,10 +94,11 @@ const page = () => {
                 Used to charge and test pneumatic subsystems like brakes,
                 actuators, and landing gear.
               </p>
-
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
+              <Link href="/products/aviation-equipment/ground-supply-equipment/pneumatic-control-panel">
+                <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                  Know More
+                </button>
+              </Link>
             </div>
           </div>
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
@@ -121,9 +125,11 @@ const page = () => {
                 Essential for topping up, flushing, and maintaining aircraft
                 hydraulics during ground servicing.
               </p>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
+              <Link href="/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley">
+                <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                  Know More
+                </button>
+              </Link>
             </div>
           </div>
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
@@ -149,9 +155,11 @@ const page = () => {
                 Used in military and civil aviation for safe, efficient starts
                 at hangars, tarmacs, and remote bases.
               </p>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
+              <Link href="/products/aviation-equipment/ground-supply-equipment/portable-engine-starting-trolley">
+                <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                  Know More
+                </button>
+              </Link>
             </div>
           </div>
           <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
@@ -177,9 +185,11 @@ const page = () => {
                 Helps ensure accurate fuel system calibration, leak checks, and
                 performance validation.
               </p>
-              <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
-                Know More
-              </button>
+              <Link href="/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley">
+                <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition ">
+                  Know More
+                </button>
+              </Link>
             </div>
           </div>
         </div>
