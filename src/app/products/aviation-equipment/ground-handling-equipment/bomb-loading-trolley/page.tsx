@@ -9,7 +9,8 @@ const page = () => {
       <Header />
       <StickyHeader />
       <section>
-        <div className="container"></div>
+        <div className="container">
+        hkhjdskifjoiaj</div>
       </section>
       <Footer />
     </div>

@@ -9,7 +9,7 @@ import CustomCarasoul from "./components/CustomCarasoul";
 import OurOffering from "./components/OurOfferings";
 import MobileLandingCards from "./components/MobileLandingCards";
 import StickyHeader from "./components/StickyHeader";
-
+import SEO from "../../src/app/common/seo"
 // CODE FOR CLIENT LOGO FADE BOTTOM
 const logoWrapperVariants: Variants = {
   hidden: { opacity: 1 },
@@ -132,6 +132,14 @@ useEffect(() => {
 // END CODE FOR SCROLL ANIMATION AFTER why chosse us SECTION
 return (
   <>
+<SEO
+        pageTitle=  {
+         "Aerospace Innovation & Defence R&D in India | Jetsys Defence"
+            }
+        description= {
+            "Pioneering R&D in aerospace and defence, Jetsys Defence develops indigenous technologies for avionics, AI-based control, and tactical applications."
+            }
+        />
     <Header />
     <StickyHeader />
     {/* HOME TOP */}

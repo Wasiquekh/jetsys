@@ -7,7 +7,6 @@ import { IoSquareSharp } from "react-icons/io5";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import StickyHeader from "../components/StickyHeader";
-
 const Page = () => {
   // Put your image paths here
   const slides = useMemo(
