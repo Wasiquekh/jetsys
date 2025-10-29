@@ -29,7 +29,7 @@ const Page = () => {
       <section className=" relative">
         <div className=" container">
           <div className=" w-3/4">
-            <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text">
+            <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
               About our organization
             </h1>
             <p className=" font-medium text-base">
@@ -126,7 +126,7 @@ const Page = () => {
 
       <section className="bg-[#F0EFE9]">
         <div className="container !pb-0">
-          <h1 className="text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-7 horizon-text">
+          <h1 className="text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-7 horizon">
             Our team
           </h1>
           <div className="w-full  mx-auto">
