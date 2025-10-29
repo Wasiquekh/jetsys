@@ -201,12 +201,12 @@ const Card = ({
 
   return (
     <div
-      className={`shrink-0 basis-[85%] md:basis-[45%] lg:basis-[26%] group ${extraClasses}`}
+      className={`shrink-0 basis-[85%] md:basis-[45%] lg:basis-[30%] group ${extraClasses}`}
     >
       <div
         className={
           "jc-card relative w-full " +
-          "h-[380px] md:h-[350px] lg:h-[260px] " + // Set a fixed height to ensure all cards are the same size
+          "h-[440px] md:h-[390px] lg:h-[320px] " + // Set a fixed height to ensure all cards are the same size
           "px-8 py-20 md:py-24 lg:px-6 lg:py-12 " +
           "rounded-2xl text-center overflow-hidden transform-gpu will-change-transform"
         }
@@ -233,10 +233,10 @@ const Card = ({
 
 return (
   <div>
-    <section className="py-[75px] md:pt-[75px] md:pb-0 max-w-[1540px] mx-auto">
+    <section className="py-[75px] md:pt-[75px] md:pb-0 max-w-[1280px] mx-auto">
       <div
         ref={containerRef}
-        className="relative overflow-x-scroll overflow-y-hidden pb-10 cs-scroll touch-pan-x pointer-events-auto"
+        className="relative overflow-x-scroll overflow-y-hidden pb-10 cs-scroll touch-pan-x pointer-events-auto px-6"
         style={{ overscrollBehaviorX: "contain" }}
       >
         <div className="flex gap-6 md:gap-8 lg:gap-6 justify-start py-6">

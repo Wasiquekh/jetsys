@@ -9,6 +9,7 @@ import OurOffering from "./components/OurOfferings";
 import MobileLandingCards from "./components/MobileLandingCards";
 import StickyHeader from "./components/StickyHeader";
 import WhyChoose from "./components/WhyChoose";
+import ScrollUpText from "./components/ScrollUpText";
 
 // CODE FOR CLIENT LOGO FADE BOTTOM
 const logoWrapperVariants: Variants = {
@@ -31,41 +32,6 @@ const logoItemVariants: Variants = {
     transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] },
   },
 };
-
-// const container: Variants = {
-//   hidden: { opacity: 0 },
-//   show: {
-//     opacity: 1,
-//     transition: { staggerChildren: 0.25 },
-//   },
-// };
-
-// const item: Variants = {
-//   hidden: { opacity: 0, scale: 0.8 },
-//   show: {
-//     opacity: 1,
-//     scale: 1,
-//     transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] },
-//   },
-// };
-
-// const chooseCards = [
-//   { img: "/images/choose-1.png", title: "Advanced <br /> Manufacturing" },
-//   { img: "/images/choose-2.png", title: "Partner <br /> Focused" },
-//   { img: "/images/choose-3.png", title: "System <br /> Integration" },
-//   { img: "/images/choose-4.png", title: "Timely <br /> Delivery" },
-// ];
-// const cards = [
-//   { img: "/images/offer-1.png", title: "Aviation Equipment" },
-//   { img: "/images/offer-2.png", title: "Raw Materials" },
-//   { img: "/images/offer-3.png", title: "Testing & Maintenance" },
-//   { img: "/images/offer-4.png", title: "Indigenization" },
-//   { img: "/images/offer-5.png", title: "Aircraft Spares" },
-//   { img: "/images/offer-6.png", title: "Runway Spares" },
-//   { img: "/images/offer-7.png", title: "Test Rigs & Test Chambers" },
-//   { img: "/images/offer-8.png", title: "Ground Support & Handling Equipment" },
-//   { img: "/images/offer-9.png", title: "Others" },
-// ];
 
 export default function Home() {
   return (
@@ -92,16 +58,16 @@ export default function Home() {
 
         {/* Content */}
         <div className="container !p-0">
-          <div className="relative z-10 flex flex-col w-1/2 justify-center h-full text-center px-4 container !ml-0 ">
-            <h1 className="text-4xl md:text-6xl  font-extrabold text-white  uppercase w-full text-left horizon">
+          <div className="relative z-10 flex flex-col w-full md:w-1/2 justify-center h-full text-center px-4 container !ml-0 ">
+            <ScrollUpText className="text-4xl md:text-6xl  font-extrabold text-white  uppercase w-full text-center md:text-left horizon">
               We Build,
               <br />
               What Sky Demands
-            </h1>
-            <p className="mt-4 text-base font-semibold text-white md:text-xl  capitalize text-left">
+            </ScrollUpText>
+            <ScrollUpText className="mt-4 text-base font-semibold text-white md:text-xl  capitalize text-center md:text-left">
               Leading aerospace with bold innovation
-            </p>
-            <button className="mt-16 px-10 py-3 bg-white text-base text-primary font-bold rounded shadow-lg hover:bg-primary transition border border-primary hover:text-white w-1/2">
+            </ScrollUpText>
+            <button className="mt-16 px-10 py-3 bg-white text-base text-primary font-bold rounded shadow-lg hover:bg-primary transition border border-primary hover:text-white w-full  md:w-1/2">
               Get Started
             </button>
           </div>
@@ -119,9 +85,9 @@ export default function Home() {
       {/* ABOUT SECTION */}
       <section>
         <div className="container ">
-          <h1 className=" text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
+          <ScrollUpText className=" text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
             About our organization
-          </h1>
+          </ScrollUpText>
           <p className=" text-base text-[#000] font-medium text-center mb-0 ">
             Jetsys Defence is an agile, innovation-driven aerospace and defence
             company based in India. We specialize in mission-critical
@@ -547,6 +513,7 @@ export default function Home() {
       <OurOffering />
       {/* WHY CHOOSE US */}
       <WhyChoose />
+
       <Footer />
     </>
   );
