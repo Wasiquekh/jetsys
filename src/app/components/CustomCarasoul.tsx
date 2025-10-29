@@ -261,7 +261,7 @@ return (
             desc="Aircraft spares and systems designed for flawless performance."
           />
           <Card
-            bg="/images/landing-2.png"
+            bg="/images/airborne.png"
             title="Airborne Innovation at the Core"
             desc="High-grade airborne materials built for resilience and reliability."
           />

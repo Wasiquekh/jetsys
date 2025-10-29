@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
-/* globals.css */
 @font-face {
-  font-family: 'Horizon';
-  src: url('/fonts/Horizon.woff2') format('woff2');
+  font-family: "Horizon";
+  src: url("/fonts/horizon.otf") format("opentype"); /* or format("truetype") */
   font-weight: normal;
   font-style: normal;
 }
 
-.font-horizon {
-  font-family: 'Horizon', sans-serif;
+/* Utility class so you can use font anywhere */
+.horizon {
+  font-family: "Horizon", sans-serif;
 }
 
 :root {
@@ -31,10 +31,8 @@
 body {
    font-family: var(--font-montserrat), sans-serif; /* default body font */
 }
-/* ANIMATION  */
-.horizon-text {
-  font-family: var(--font-horizon), sans-serif; /* optional Horizon font */
-}
+
+
 
 @keyframes floatY {
   0%   { transform: translateY(0); }

@@ -69,7 +69,7 @@ const WhyChoose = () => {
           <h1
             ref={headingRef}
             style={headingStyle}
-            className="mx-auto text-center text-black text-[30px] md:text-[40px] font-extrabold uppercase mb-16 -mt-16 horizon-text w-full md:w-[80%]"
+            className="mx-auto text-center text-black text-[30px] md:text-[40px] font-extrabold uppercase mb-16 -mt-16  w-full md:w-[80%] horizon"
           >
             Why Choose Us?
           </h1>

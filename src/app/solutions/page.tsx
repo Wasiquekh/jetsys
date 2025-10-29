@@ -10,7 +10,7 @@ const page = () => {
       <Header />
       <section>
         <div className="container">
-          <h1 className=" text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text">
+          <h1 className=" text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
             Our Solutions
           </h1>
           <h2 className=" font-bold text-3xl text-[#5C5649] text-center mb-5">

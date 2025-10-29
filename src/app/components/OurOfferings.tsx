@@ -128,7 +128,7 @@ export default function OurOffering() {
         <h1
           ref={headingRef}
           style={headingStyle}
-          className="mx-auto text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase  horizon-text w-full md:w-[80%] mb-16 -mt-16"
+          className="mx-auto text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase  horizon-text w-full md:w-[80%] mb-16 -mt-16 horizon"
         >
           Our Offerings
         </h1>
