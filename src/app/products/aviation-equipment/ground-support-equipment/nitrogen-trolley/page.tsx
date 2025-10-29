@@ -20,13 +20,13 @@ const page = () => {
       <StickyHeader />
       <section>
         <div className="container ">
-          <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon-text">Nitrogen Trolley for Aircraft Ground Support | Jetsys Defence</h1>
+          <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Nitrogen Trolley for Aircraft Ground Support | Jetsys Defence</h1>
           <p className=" font-medium text-base">At Jetsys Defence, our Nitrogen Trolley is engineered to deliver unmatched precision and safety in aviation ground support operations. Built to meet international aviation standards, this robust trolley ensures efficient nitrogen charging for aircraft tires, landing-gear struts, and accumulator systems.
           </p><br></br><br></br>
           <Image
            src="/images/Nitrogen Trolley.png"
             width={500}
-            height={650}
+            height={1000}
             alt="Picture of the author"
                         />
           <br></br><br></br>     
@@ -220,6 +220,7 @@ const page = () => {
                 <li><h4 className="font-bold text-[#5C5649]">On-site Service and Support Availability</h4>Jetsys Defence offers comprehensive on-site service and support, ensuring that your equipment operates at peak efficiency. Our team of experts is always available to assist with installation, maintenance, and troubleshooting.</li>
                 <li><h4 className="font-bold text-[#5C5649]">ISO-certified Production Standards</h4>Our manufacturing process adheres to ISO-certified standards, guaranteeing that each product is produced with the utmost precision and reliability, and meets all relevant international quality benchmarks.</li>
               </ul>
+
             </div>
           </div>
         </div>

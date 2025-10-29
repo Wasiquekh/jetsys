@@ -3,8 +3,18 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
 import Image from "next/image";
+import SEO from "@/app/common/seo";
 const page = () => {
   return (
+    <>
+    <SEO
+        pageTitle=  {
+        "Aircraft Jacks – Nose Jack & Main Jack for Defence Aircraft | Jetsys Defence"
+            }
+        description= {
+            "Looking for a nose jack & main jack? Jetsys Defence offers rugged aircraft jacks for defence use, engineered for performance and safety. Request a quote and pricing now."
+            }
+        /> 
     <div>
       <Header />
       <StickyHeader />
@@ -14,12 +24,14 @@ const page = () => {
                   <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Nose Jack & Main Jack – Precision Aircraft Jacks by Jetsys Defence</h1>
                   <p className=" font-medium text-base">At Jetsys Defence, we engineer world-class Nose Jacks and Main Jacks designed for the maintenance and lifting of both defence and commercial aircraft. Our jacks are known for their superior stability, precision hydraulics, and safety-first design, making them ideal for military bases, MRO facilities, and aviation service workshops.
                   </p><br></br><br></br>
-                  <Image
-                   src="/images/Nitrogen Trolley.png"
-                    width={500}
-                    height={650}
-                    alt="Picture of the author"
+                  <div>
+                                <Image
+                                  src="/images/Nose Jack & Main Jack.png"
+                                  width={500}
+                                  height={1000}
+                                  alt="Picture of the author"
                                 />
+                              </div>
                   <br></br><br></br>     
                 <h2 className=" font-bold text-3xl text-[#5C5649] mb-5">Overview of Our Aircraft Jacks</h2>
                 <p className=" font-medium text-base">Our Aircraft Nose & Main Jacks are developed with advanced hydraulic technology to ensure maximum reliability during critical operations. Each unit is manufactured under stringent quality control, combining strength, accuracy, and durability to support all aircraft maintenance requirements.</p>
@@ -227,12 +239,12 @@ const page = () => {
                 </div>
               </div>
             </section>
-
-              </div>
+    </div>
         </div>
       </section>
       <Footer />
     </div>
+    </>
   );
 };
 
