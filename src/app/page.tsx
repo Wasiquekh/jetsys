@@ -93,7 +93,7 @@ export default function Home() {
         {/* Content */}
         <div className="container !p-0">
           <div className="relative z-10 flex flex-col w-1/2 justify-center h-full text-center px-4 container !ml-0 ">
-            <h1 className="text-4xl md:text-6xl  font-extrabold text-white  uppercase w-full text-left font-horizon">
+            <h1 className="text-4xl md:text-6xl  font-extrabold text-white  uppercase w-full text-left horizon">
               We Build,
               <br />
               What Sky Demands
@@ -119,7 +119,7 @@ export default function Home() {
       {/* ABOUT SECTION */}
       <section>
         <div className="container ">
-          <h1 className=" text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 font-horizon">
+          <h1 className=" text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
             About our organization
           </h1>
           <p className=" text-base text-[#000] font-medium text-center mb-0 ">
