@@ -513,6 +513,7 @@ export default function Home() {
       <OurOffering />
       {/* WHY CHOOSE US */}
       <WhyChoose />
+
       <Footer />
     </>
   );

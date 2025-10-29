@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-
+import { useRef, useState } from "react";
+import ScrollUpText from "./ScrollUpText";
 
 export default function OurOffering() {
   const cards = [
@@ -57,81 +57,13 @@ export default function OurOffering() {
   const suppressClickUntil = useRef<number>(0);
   const toggle = (i: number) => setFlipped((s) => ({ ...s, [i]: !s[i] }));
 
-  // CODE FOR SCROLL ANIMATION OUR OFFERING SECTION
-  const sectionRef = useRef<HTMLElement | null>(null);
-  const headingRef = useRef<HTMLHeadingElement | null>(null);
-  const rafRef = useRef<number | null>(null);
-
-  const [headingStyle, setHeadingStyle] = useState<React.CSSProperties>({
-    opacity: 0,
-    transform: "translateY(0px)", // Initial position off-screen
-  });
-
-  useEffect(() => {
-    const reduce =
-      typeof window !== "undefined" &&
-      window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
-
-    if (reduce) return;
-
-    const clamp = (v: number, min: number, max: number) =>
-      Math.min(max, Math.max(min, v));
-
-    const update = () => {
-      if (!sectionRef.current) return;
-      const rect = sectionRef.current.getBoundingClientRect();
-      const vh = window.innerHeight || 1;
-
-      const triggerStart = vh * 0.9; // start animating near bottom
-      const triggerEnd = vh * 0.25; // finish before hitting header
-
-      let progress: number;
-
-      if (rect.top >= triggerStart) {
-        progress = 0; // fully visible, centered
-      } else if (rect.top <= 0) {
-        progress = 1; // fully hidden once section top reaches header
-      } else {
-        const t = (triggerStart - rect.top) / (triggerStart - triggerEnd);
-        progress = clamp(t, 0, 1);
-      }
-
-      const translateY = progress * 40; // Adjust this value for the "up" movement
-      const opacity = progress;
-
-      setHeadingStyle({
-        opacity,
-        transform: `translateY(${translateY}px)`,
-        transition: "opacity 400ms ease-in-out, transform 400ms ease-in-out",
-        willChange: "opacity, transform",
-      });
-
-      rafRef.current = requestAnimationFrame(update);
-    };
-
-    rafRef.current = requestAnimationFrame(update);
-    window.addEventListener("resize", update, { passive: true });
-
-    return () => {
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      window.removeEventListener("resize", update);
-    };
-  }, []);
-
-  // END CODE FOR SCROLL ANIMATION AFTER OUR OFFERING  SECTION
-
   return (
-    <section ref={sectionRef}>
+    <section>
       <div className="container">
-        {/* Static Heading */}
-        {/* Static Heading */}
-        <h1
-          ref={headingRef}
-          style={headingStyle}
-          className="mx-auto text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase  horizon-text w-full md:w-[80%] mb-16 -mt-16 horizon"
-        >
+        {/* Static Heading (no animation) */}
+        <ScrollUpText className="mx-auto text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase horizon-text w-full md:w-[80%] mb-5 horizon">
           Our Offerings
-        </h1>
+        </ScrollUpText>
 
         <p className="text-base text-black font-medium text-center mb-5">
           Jetsys Defence is an agile, innovation-driven aerospace and defence
@@ -153,7 +85,7 @@ export default function OurOffering() {
                     "transition-transform duration-500",
                     "[transform-style:preserve-3d] [-webkit-transform-style:preserve-3d]",
                     "[touch-action:manipulation] select-none [-webkit-tap-highlight-color:transparent]",
-                    "group-hover:[transform:rotateY(180deg)]", // desktop hover
+                    "group-hover:[transform:rotateY(180deg)]",
                   ].join(" ")}
                   style={{
                     transform: isFlipped ? "rotateY(180deg)" : undefined,
@@ -165,8 +97,8 @@ export default function OurOffering() {
                   }}
                   onClickCapture={(e) => {
                     const t = e.target as HTMLElement;
-                    if (t.closest("a")) return; // don't flip when tapping the link
-                    if (Date.now() < suppressClickUntil.current) return; // skip synthetic click after touch
+                    if (t.closest("a")) return;
+                    if (Date.now() < suppressClickUntil.current) return;
                     toggle(idx);
                   }}
                   onKeyDown={(e) => {
@@ -178,7 +110,7 @@ export default function OurOffering() {
                   aria-pressed={isFlipped}
                   aria-label={`${card.title} card; tap to flip`}
                 >
-                  {/* Front Side */}
+                  {/* Front */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center rounded border border-primary bg-white p-2 [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
                     <Image
                       src={card.img}
@@ -192,15 +124,14 @@ export default function OurOffering() {
                     </p>
                   </div>
 
-                  {/* Back Side */}
+                  {/* Back */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center rounded border border-primary bg-primary text-white p-5 [transform:rotateY(180deg)] [-webkit-transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
                     <p className="text-lg font-semibold mb-5 text-center">
                       {card.title}
                     </p>
-                    <p className="text-sm font-normal  mb-5 text-center">
+                    <p className="text-sm font-normal mb-5 text-center">
                       {card.desc}
                     </p>
-
                     <Link
                       href="/"
                       className="underline"
