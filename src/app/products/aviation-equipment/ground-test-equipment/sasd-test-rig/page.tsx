@@ -289,6 +289,50 @@ const page = () => {
 </section>
 <section><br></br><br></br>
   <div>
+    <h3 className="font-bold text-3xl text-[#5C5649] mb-5">
+      How SASD Testing Improves Aircraft Reliability
+    </h3>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+
+      {/* LEFT COLUMN */}
+      <div className="text-black space-y-4">
+        <ul className="list-disc pl-5 space-y-4">
+
+          <li>
+            <h4 className="font-bold text-[#5C5649]">Ensures Safety Compliance</h4>
+            By exposing components to extreme pressure, temperature, and load conditions, SASD testing confirms 
+            that aircraft parts remain safe and functional under real-world flight demands.
+          </li>
+
+          <li>
+            <h4 className="font-bold text-[#5C5649]">Reduces Maintenance Downtime</h4>
+            Early detection of weak seals, fatigue failures, leaks, and material degradation prevents unexpected 
+            in-service issues and reduces aircraft grounding time.
+          </li>
+
+        </ul>
+      </div>
+
+      {/* RIGHT COLUMN */}
+      <div className="text-black space-y-4">
+        <ul className="list-disc pl-5 space-y-4">
+
+          <li>
+            <h4 className="font-bold text-[#5C5649]">Better Product Certification</h4>
+            Standardized test sequences produce audit-ready data that supports aviation certification, acceptance 
+            testing, and compliance documentation.
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section><br></br><br></br>
+  <div>
     <p className="text-black mb-6">
       Standardized test sequences produce data suitable for audit and aviation certification requirements.
     </p>
