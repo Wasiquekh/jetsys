@@ -10,46 +10,55 @@ export default function OurOffering() {
       img: "/images/offer-1.png",
       title: "Aviation Equipment",
       desc: "Jetsys’s aviation equipment is engineered for precision, reliability, and mission readiness delivering performance from ground support to onboard systems.",
+      link: "/products/aviation-equipment",
     },
     {
       img: "/images/offer-2.png",
       title: "Raw Materials",
       desc: "Jetsys’s raw materials are sourced and engineered for strength, durability, and consistency ensuring uncompromised quality in every aerospace and defence application.",
+      link: "/raw-materials",
     },
     {
       img: "/images/offer-3.png",
       title: "Testing & Maintenance",
       desc: "Jetsys’s testing and maintenance solutions ensure flawless aircraft performance through precision calibration, diagnostics, and portability enabling faster cycles and safer skies.",
+      link: "/testing-and-maintenance",
     },
     {
       img: "/images/offer-4.png",
       title: "Indigenization",
       desc: "Jetsys’s indigenization solutions replace legacy imports with homegrown excellence delivering faster, cost-efficient, and resilient systems that meet and exceed global standards.",
+      link: "/indigenization",
     },
     {
       img: "/images/offer-5.png",
       title: "Aircraft Spares",
       desc: "Jetsys’s aircraft spares ensure seamless operations with reliable, high-quality components minimizing downtime and maximizing fleet readiness.",
+      link: "/aircraft-spares",
     },
     {
       img: "/images/offer-6.png",
       title: "Runway Spares",
       desc: "Jetsys’s runway spares are built for reliability and quick availability — ensuring uninterrupted operations and mission-ready performance.",
+      link: "/runway-spares",
     },
     {
       img: "/images/offer-7.png",
       title: "Test Rigs & Test Chambers",
       desc: "Jetsys’s test rigs and chambers deliver precision simulations and rigorous validation, ensuring aircraft systems perform flawlessly under real-world conditions.",
+      link: "/test-rigs-and-chambers",
     },
     {
       img: "/images/offer-8.png",
       title: "Ground Support & Handling Equipment",
       desc: "Ground support and handling equipment is engineered for durability and efficiency ensuring smooth operations, faster turnaround, and mission readiness.",
+      link: "/ground-support-equipment",
     },
     {
       img: "/images/offer-9.png",
       title: "Others",
       desc: "Jetsys’s unmanned solutions combine advanced engineering with intelligent systems delivering superior surveillance, precision operations, and adaptability across defence and aerospace missions.",
+      link: "/others",
     },
   ];
 
@@ -60,7 +69,6 @@ export default function OurOffering() {
   return (
     <section>
       <div className="container">
-        {/* Static Heading (no animation) */}
         <ScrollUpText className="mx-auto text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase horizon-text w-full md:w-[80%] mb-5 horizon">
           Our Offerings
         </ScrollUpText>
@@ -133,7 +141,7 @@ export default function OurOffering() {
                       {card.desc}
                     </p>
                     <Link
-                      href="/"
+                      href={card.link}
                       className="underline"
                       onClick={(e) => e.stopPropagation()}
                     >

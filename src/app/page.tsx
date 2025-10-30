@@ -70,7 +70,7 @@ export default function Home() {
               Leading aerospace with bold innovation
             </ScrollUpText>
             <Link
-              className="w-full  md:w-1/2 flex justify-self-start"
+              className="w-full  md:w-auto flex justify-center md:justify-start"
               href="/about-us"
             >
               <button className="mt-16 px-10 py-3 bg-white text-base text-primary font-bold rounded shadow-lg hover:bg-primary transition border border-primary hover:text-white ">
@@ -319,56 +319,86 @@ export default function Home() {
       </div>
       {/* DESIGN MOBILE */}
       <section className=" block md:hidden">
-        <div className="container  grid grid-cols-2 gap-4">
+        <div className="container !pt-0 grid grid-cols-2 gap-4">
           <div className=" w-full">
             <Image
-              src="/images/Expert.gif"
-              width={500}
-              height={500}
+              src="/images/Expert-Engineers.gif"
+              width={300}
+              height={300}
               alt="Picture of the author"
-              className=" w-full mb-2"
+              className=" w-3/4 mb-2 m-auto"
             />
             <p className=" text-center">Expert Engineers</p>
           </div>
           <div className=" w-full">
             <Image
-              src="/images/Rapid.gif"
-              width={500}
-              height={500}
+              src="/images/Rapid-Deployment.gif"
+              width={300}
+              height={300}
               alt="Picture of the author"
-              className=" w-full mb-2"
+              className=" w-3/4 mb-2 m-auto"
             />
             <p className=" text-center">Rapid Deployment </p>
           </div>
           <div className=" w-full">
             <Image
-              src="/images/Global.gif"
-              width={500}
-              height={500}
+              src="/images/Global-Reach.gif"
+              width={300}
+              height={300}
               alt="Picture of the author"
-              className=" w-full mb-2"
+              className=" w-3/4 mb-2 m-auto"
             />
             <p className=" text-center">Global Reach</p>
           </div>
           <div className=" w-full">
             <Image
-              src="/images/Indigenous.gif"
-              width={500}
-              height={500}
+              src="/images/Indigenous-Capability.gif"
+              width={300}
+              height={300}
               alt="Picture of the author"
-              className=" w-full mb-2"
+              className=" w-3/4 mb-2 m-auto"
             />
             <p className=" text-center">Indigenous Capability</p>
           </div>
           <div className=" w-full">
             <Image
-              src="/images/Precise.gif"
-              width={500}
-              height={500}
+              src="/images/Precise-Production.gif"
+              width={300}
+              height={300}
               alt="Picture of the author"
-              className=" w-full mb-2"
+              className=" w-3/4 mb-2 m-auto"
             />
             <p className=" text-center">Precise Production</p>
+          </div>
+                    <div className=" w-full">
+            <Image
+              src="/images/Innovation-at-Core.gif"
+              width={300}
+              height={300}
+              alt="Picture of the author"
+              className=" w-3/4 mb-2 m-auto"
+            />
+            <p className=" text-center">Innovation at Core</p>
+          </div>
+                    <div className=" w-full">
+            <Image
+              src="/images/end-to-end-solutions.gif"
+              width={300}
+              height={300}
+              alt="Picture of the author"
+              className=" w-3/4 mb-2 m-auto"
+            />
+            <p className=" text-center">End to end solutions</p>
+          </div>
+                    <div className=" w-full">
+            <Image
+              src="/images/Custom-Fit.gif"
+              width={300}
+              height={300}
+              alt="Picture of the author"
+              className=" w-3/4 mb-2 m-auto"
+            />
+            <p className=" text-center">Custom-Fit</p>
           </div>
         </div>
       </section>

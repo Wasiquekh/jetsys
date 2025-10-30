@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -10,6 +11,7 @@ type Card = {
   title: string;
   desc: string;
   cta?: string;
+  link: string;
 };
 
 const CARDS: Card[] = [
@@ -18,18 +20,35 @@ const CARDS: Card[] = [
     title: "Expanding Horizons in Aerospace",
     desc: "Driving innovation to redefine the possibilities in defence and aerospace industries.",
     cta: "Know More",
+    link: "/products/aviation-equipment",
   },
   {
     img: "/images/landing-2.png",
     title: "Indigenous Innovations",
     desc: "Proudly delivering homegrown solutions for a self-reliant defence ecosystem.",
     cta: "Know More",
+    link: "/solutions/indegenization",
   },
   {
     img: "/images/landing-3.png",
     title: "Precision Maintenance Systems",
     desc: "Ensuring operational superiority with advanced maintenance technologies.",
     cta: "Know More",
+    link: "/solutions/testing-maintenance",
+  },
+  {
+    img: "/images/landing-4.png",
+    title: "Trusted Spares, Seamless Systems",
+    desc: "Aircraft spares and systems designed for flawless performance.",
+    cta: "Know More",
+    link: "/products/aircraft-spares-system",
+  },
+  {
+    img: "/images/landing-5.png",
+    title: "Airborne Innovation at the Core",
+    desc: "High-grade airborne materials built for resilience and reliability.",
+    cta: "Know More",
+    link: "/products/airborne-raw-materials",
   },
 ];
 
@@ -43,13 +62,13 @@ export default function MobileLandingCards() {
           spaceBetween={16}
           loop={true}
           grabCursor
-          speed={3000} // faster smooth scroll (3s)
+          speed={3000}
           autoplay={{
-            delay: 0, // continuous flow
+            delay: 0,
             disableOnInteraction: false,
           }}
           onSwiper={(swiper) => {
-            swiper.slideToLoop(0, 0); // always start at first slide
+            swiper.slideToLoop(0, 0);
           }}
         >
           {CARDS.map((card, i) => (
@@ -68,12 +87,12 @@ export default function MobileLandingCards() {
                   </h2>
                   <p className="max-w-[22rem] text-base">{card.desc}</p>
                   {card.cta && (
-                    <button
-                      type="button"
-                      className="mt-2 rounded bg-primary px-6 py-3 text-base font-semibold text-white shadow-lg hover:bg-primary/90 active:scale-[0.98]"
+                    <Link
+                      href={card.link}
+                      className="mt-2 inline-block rounded bg-primary px-6 py-3 text-base font-semibold text-white shadow-lg hover:bg-primary/90 active:scale-[0.98]"
                     >
                       {card.cta}
-                    </button>
+                    </Link>
                   )}
                 </div>
               </div>

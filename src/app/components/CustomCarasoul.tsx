@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
+import Link from "next/link";
 
 const FREQ = 0.3;
 const SMOOTHING = 0.12;
@@ -186,11 +187,13 @@ const Card = ({
   bg,
   title,
   desc,
+  link,
   extraClasses = "",
 }: {
   bg: string;
   title: string;
   desc: string;
+  link: string;
   extraClasses?: string;
 }) => {
   const style = {
@@ -222,9 +225,11 @@ const Card = ({
           <p className="text-base md:text-base lg:text-sm text-white/90 font-medium mb-6 md:mb-8 lg:mb-5">
             {desc}
           </p>
+          <Link href={link}>
           <button className="bg-primary text-base md:text-base lg:text-sm font-semibold py-2 px-6 lg:px-5 rounded text-white border border-primary transition-colors duration-300 hover:bg-white hover:text-black">
             Learn More
           </button>
+          </Link>
         </div>
       </div>
     </div>
@@ -244,26 +249,31 @@ return (
             bg="/images/landing-1.png"
             title="Expanding Horizons in Aerospace"
             desc="Driving innovation to redefine the possibilities in defence and aerospace industries."
+            link="/products/aviation-equipment"
           />
           <Card
             bg="/images/landing-2.png"
             title="Indigenous Innovations"
             desc="Proudly delivering homegrown solutions for a self-reliant defence ecosystem."
+            link="/solutions/indegenization"
           />
           <Card
             bg="/images/landing-3.png"
             title="Precision Maintenance Systems"
             desc="Ensuring operational superiority with advanced maintenance technologies."
+            link="/solutions/testing-maintenance"
           />
           <Card
             bg="/images/landing-4.png"
             title="Trusted Spares, Seamless Systems"
             desc="Aircraft spares and systems designed for flawless performance."
+            link="/products/aircraft-spares-system"
           />
           <Card
             bg="/images/landing-5.png"
             title="Airborne Innovation at the Core"
             desc="High-grade airborne materials built for resilience and reliability."
+            link="/products/airborne-raw-materials"
           />
           <div className="shrink-0 w-6 md:w-8 lg:w-6" aria-hidden="true" />
         </div>
