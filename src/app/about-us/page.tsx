@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import StickyHeader from "../components/StickyHeader";
@@ -21,7 +21,7 @@ const Page = () => {
     "/images/abubakar.png",
   ];
 
-  const sectionRef = useRef<HTMLElement | null>(null);
+ // const sectionRef = useRef<HTMLElement | null>(null);
 
   return (
     <div>
