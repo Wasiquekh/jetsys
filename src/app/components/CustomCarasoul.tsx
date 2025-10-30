@@ -246,22 +246,22 @@ return (
             desc="Driving innovation to redefine the possibilities in defence and aerospace industries."
           />
           <Card
-            bg="/images/landing-3.png"
+            bg="/images/landing-2.png"
             title="Indigenous Innovations"
             desc="Proudly delivering homegrown solutions for a self-reliant defence ecosystem."
           />
           <Card
-            bg="/images/maintenance.png"
+            bg="/images/landing-3.png"
             title="Precision Maintenance Systems"
             desc="Ensuring operational superiority with advanced maintenance technologies."
           />
           <Card
-            bg="/images/trusted-spares.png"
+            bg="/images/landing-4.png"
             title="Trusted Spares, Seamless Systems"
             desc="Aircraft spares and systems designed for flawless performance."
           />
           <Card
-            bg="/images/airborne.png"
+            bg="/images/landing-5.png"
             title="Airborne Innovation at the Core"
             desc="High-grade airborne materials built for resilience and reliability."
           />

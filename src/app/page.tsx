@@ -10,6 +10,8 @@ import MobileLandingCards from "./components/MobileLandingCards";
 import StickyHeader from "./components/StickyHeader";
 import WhyChoose from "./components/WhyChoose";
 import ScrollUpText from "./components/ScrollUpText";
+import MissionVisionAnimate from "./components/MissionVisionAnimate";
+import Link from "next/link";
 
 // CODE FOR CLIENT LOGO FADE BOTTOM
 const logoWrapperVariants: Variants = {
@@ -67,9 +69,14 @@ export default function Home() {
             <ScrollUpText className="mt-4 text-base font-semibold text-white md:text-xl  capitalize text-center md:text-left">
               Leading aerospace with bold innovation
             </ScrollUpText>
-            <button className="mt-16 px-10 py-3 bg-white text-base text-primary font-bold rounded shadow-lg hover:bg-primary transition border border-primary hover:text-white w-full  md:w-1/2">
-              Get Started
-            </button>
+            <Link
+              className="w-full  md:w-1/2 flex justify-self-start"
+              href="/about-us"
+            >
+              <button className="mt-16 px-10 py-3 bg-white text-base text-primary font-bold rounded shadow-lg hover:bg-primary transition border border-primary hover:text-white ">
+                Get Started
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -94,7 +101,13 @@ export default function Home() {
             technologies for airborne platforms, avionics, and tactical systems
             — engineered for performance, reliability, and national impact.
           </p>
-          <div className=" py-10 px-4 md:px-10 w-full bg-[#5c5649] mt-30 mb-16   grid grid-cols-1 md:grid-cols-3 gap-10  items-center relative">
+          <div className=" hidden md:block">
+            {" "}
+            <MissionVisionAnimate />
+          </div>
+
+          {/* MISSION VISION SECTION STATIC for mobile*/}
+          <div className=" py-10 px-4 md:px-10 w-full bg-[#5c5649] mt-30 mb-16   grid grid-cols-1 md:grid-cols-3 gap-10  items-center relative md:hidden">
             <Image
               src="/images/mission.png"
               width={340}
@@ -135,6 +148,7 @@ export default function Home() {
               </p>
             </div>
           </div>
+          {/* END MISSION VISION SECTION STATIC */}
         </div>
       </section>
       {/* ICON DESIGN DESKTOP */}
