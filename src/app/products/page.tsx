@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import ProductAnimate from "../components/ProductAnimate";
 import StickyHeader from "../components/StickyHeader";
+import ScrollUpText from "../components/ScrollUpText";
 
 
 const page = () => {
@@ -13,9 +14,9 @@ const page = () => {
       <StickyHeader />
       <section>
         <div className="container">
-          <h1 className=" text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
+          <ScrollUpText className=" text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
             Our Products
-          </h1>
+               </ScrollUpText>
           <h2 className=" font-bold text-3xl text-[#5C5649] text-center mb-5">
             Empowering the Future of Aerospace Engineering
           </h2>

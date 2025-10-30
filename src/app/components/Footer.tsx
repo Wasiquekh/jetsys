@@ -76,21 +76,23 @@ const Footer = () => {
           <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt:10 md:text-left text-center">
             {/* Column 1 */}
             <div className="lg:w-1/2 md:w-1/2 w-full px-4">
+           
               <h2 className="font-bold text-white text-xl tracking-widest mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
                 Aviation Equipment
               </h2>
+              
               <ul className="list-none mb-5 text-base font-medium text-white space-y-1">
                 <li className=" hover:text-secondary">
-                  <Link href="/">Ground Support Equipment</Link>
+                  <Link href="/products/aviation-equipment/ground-support-equipment">Ground Support Equipment</Link>
                 </li>
                 <li className=" hover:text-secondary">
-                  <Link href="/">Ground Supply Equipment</Link>
+                  <Link href="/products/aviation-equipment/ground-supply-equipment">Ground Supply Equipment</Link>
                 </li>
                 <li className=" hover:text-secondary">
-                  <Link href="/">Ground Handling Equipment</Link>
+                  <Link href="/products/aviation-equipment/ground-handling-equipment">Ground Handling Equipment</Link>
                 </li>
                 <li className=" hover:text-secondary">
-                  <Link href="/">Ground Test Equipment</Link>
+                  <Link href="/products/aviation-equipment/ground-test-equipment">Ground Test Equipment</Link>
                 </li>
               </ul>
 
@@ -99,13 +101,13 @@ const Footer = () => {
               </h2>
               <ul className="list-none mb-5 text-base font-medium text-white space-y-1">
                 <li className=" hover:text-secondary">
-                  <Link href="/">Mafi Spares</Link>
+                  <Link href="/products/runway-spares/mafi-spares">Mafi Spares</Link>
                 </li>
                 <li className=" hover:text-secondary">
-                  <Link href="/">Runway Lights</Link>
+                  <Link href="/products/runway-spares/runway-lights">Runway Lights</Link>
                 </li>
                 <li className=" hover:text-secondary">
-                  <Link href="/">Others</Link>
+                  <Link href="/products/runway-spares/signbords">Signbords</Link>
                 </li>
               </ul>
 
@@ -114,12 +116,12 @@ const Footer = () => {
               </h2>
               <ul className="list-none mb-5 text-base font-medium text-white space-y-1">
                 <li>
-                  <Link className=" hover:text-secondary" href="/">
+                  <Link className=" hover:text-secondary" href="/solutions/indegenization">
                     Indigenization
                   </Link>
                 </li>
                 <li>
-                  <Link className=" hover:text-secondary" href="/">
+                  <Link className=" hover:text-secondary" href="/solutions/testing-maintenance">
                     Testing &amp; Maintenance
                   </Link>
                 </li>

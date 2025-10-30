@@ -9,6 +9,7 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/autoplay";
 import AboutLineAnimation from "../components/AboutLineAnimation";
+import ScrollUpText from "../components/ScrollUpText";
 
 const Page = () => {
   // Put your image paths here
@@ -29,9 +30,9 @@ const Page = () => {
       <section className=" relative">
         <div className=" container">
           <div className=" w-3/4">
-            <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
+            <ScrollUpText className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
               About our organization
-            </h1>
+                   </ScrollUpText>
             <p className=" font-medium text-base">
               Jetsys Defence is a dynamic and innovation-driven aerospace and
               defence company headquartered in India. Focused on
@@ -72,9 +73,9 @@ const Page = () => {
               />
               <div className=" bg-[#EDEBD2] border border-primary rounded-2xl flex flex-col items-center py-8">
                 <p className=" font-bold text-[40px] mb-2">1000+</p>
-                <p className=" font-medium text-base">
+                <ScrollUpText className=" font-medium text-base">
                   Precision Parts <br /> Manufactured
-                </p>
+                       </ScrollUpText>
               </div>
             </div>
             <div className=" flex flex-col-reverse gap-5">
@@ -86,9 +87,9 @@ const Page = () => {
               />
               <div className=" bg-[#EDEBD2] border border-primary rounded-2xl flex flex-col items-center py-8">
                 <p className=" font-bold text-[40px] mb-2">99%</p>
-                <p className=" font-medium text-base text-center">
+                <ScrollUpText className=" font-medium text-base text-center">
                   Quality <br /> Assurance Rate
-                </p>
+                       </ScrollUpText>
               </div>
             </div>
             <div className=" flex flex-col gap-5">
@@ -100,9 +101,9 @@ const Page = () => {
               />
               <div className=" bg-[#EDEBD2] border border-primary rounded-2xl flex flex-col items-center py-8">
                 <p className=" font-bold text-[40px] mb-2">300+</p>
-                <p className=" font-medium text-base text-center">
+                <ScrollUpText className=" font-medium text-base text-center">
                   Precision Tests <br /> Conducted
-                </p>
+                       </ScrollUpText>
               </div>
             </div>
             <div className=" flex flex-col-reverse gap-5">
@@ -114,9 +115,9 @@ const Page = () => {
               />
               <div className=" bg-[#EDEBD2] border border-primary rounded-2xl flex flex-col items-center py-8">
                 <p className=" font-bold text-[40px] mb-2">18+</p>
-                <p className=" font-medium text-base text-center">
+                <ScrollUpText className=" font-medium text-base text-center">
                   Testing & Validation <br /> Processes
-                </p>
+                       </ScrollUpText>
               </div>
             </div>
           </div>
