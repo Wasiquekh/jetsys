@@ -62,6 +62,13 @@ const Header = () => {
             >
               HOME
             </Link>
+                        <Link
+              href="/about-us"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className=" text-xl font-medium text-black"
+            >
+              ABOUT US
+            </Link>
             <Link
               href="/"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

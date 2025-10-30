@@ -30,7 +30,7 @@ const Page = () => {
       <section className=" relative">
         <div className=" container">
           <div className=" w-3/4">
-            <ScrollUpText className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
+            <ScrollUpText className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon text-center md:text-start">
               About our organization
                    </ScrollUpText>
             <p className=" font-medium text-base">
@@ -56,7 +56,7 @@ const Page = () => {
           width={450}
           height={450}
           alt="Picture of the author"
-          className=" absolute right-0 top-10 -z-10"
+          className=" absolute right-0 top-10 -z-10 hidden md:block"
         />
       </section>
       <AboutLineAnimation />
