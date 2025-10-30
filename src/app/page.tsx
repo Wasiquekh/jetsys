@@ -92,7 +92,7 @@ export default function Home() {
       {/* ABOUT SECTION */}
       <section>
         <div className="container ">
-          <ScrollUpText className=" text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
+          <ScrollUpText className=" text-center text-[#5c5649] text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
             About our organization
           </ScrollUpText>
           <p className=" text-base text-[#000] font-medium text-center mb-0 ">

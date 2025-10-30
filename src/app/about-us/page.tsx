@@ -127,7 +127,7 @@ const Page = () => {
 
       <section className="bg-[#F0EFE9]">
         <div className="container !pb-0">
-          <h1 className="text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-7 horizon">
+          <h1 className="text-center text-[#5c5649] text-[30px] md:text-[40px] font-extrabold uppercase mb-7 horizon">
             Our team
           </h1>
           <div className="w-full  mx-auto">
