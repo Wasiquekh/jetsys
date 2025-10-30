@@ -4,9 +4,18 @@ import Footer from "@/app/components/Footer";
 import Image from "next/image";
 import StickyHeader from "@/app/components/StickyHeader";
 import Link from "next/link";
+import SEO from "@/app/common/seo";
 
 const page = () => {
   return (
+    <>
+    <SEO
+        pageTitle=  {
+         "Jetsys Defence | Shallow Base – Premium Runway Spares & Units"
+            }
+        description= {
+            "Explore Jetsys Defence’s high-quality Shallow Base units for airport runway spares. Get competitive Shallow Base price quotes, reliable supply and efficient logistics for defence & aviation infrastructure."}
+        />
     <div>
       <Header />
       <StickyHeader />
@@ -73,6 +82,7 @@ const page = () => {
       </section>
       <Footer />
     </div>
+    </>
   );
 };
 
