@@ -19,7 +19,7 @@ const page = () => {
       <StickyHeader />
       <section>
                <div className="container ">
-                  <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Ground Power Unit – Reliable Aircraft GPU Solutions by Jetsys Defence</h1>
+                  <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Ground Power Unit – Reliable Aircraft GPU Solutions by Jetsys Defence</h1>
                   <p className=" font-medium text-base">The Jetsys Defence Ground Power Unit delivers stable 400 Hz AC and 28.5 V DC power for parked aircraft. Built for tough flight-line conditions and continuous ramp duty, our GPUs help operators cut APU runtime, reduce emissions, and improve turnaround efficiency—setting a benchmark among Ground Power Unit manufacturers.</p><br></br><br></br>
                   <Image
                                   src="/images/Ground Power Unit.png"

@@ -20,7 +20,7 @@ const page = () => {
       <section>
         <div className="container">
   <div>
-            <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Advanced Hydraulic Test Rig (HTR) for Aviation | Jetsys Defence</h1>
+            <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Advanced Hydraulic Test Rig (HTR) for Aviation | Jetsys Defence</h1>
              <p className=" font-medium text-base">The Hydraulic Test Rig (HTR) from Jetsys Defence is a precision-engineered system built for aircraft hydraulic testing, component validation, and maintenance operations. Designed to simulate real-world pressures, temperatures and dynamic load conditions, it ensures every hydraulic component meets aviation-grade safety and reliability standards before entering active service.</p><br></br>
              <p className=" font-medium text-base">Whether required for commercial aircraft, defence platforms, MRO facilities, or aviation manufacturing, Jetsys Defence offers both standard and custom HTR models to match your hydraulic testing needs.</p>
 

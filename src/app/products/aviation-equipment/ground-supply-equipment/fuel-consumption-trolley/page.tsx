@@ -20,7 +20,7 @@ const page = () => {
       <section>
         <div className="container">
   <div>
-          <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Fuel Consumption Trolley – Precision Aviation Fuel Testing by Jetsys Defence</h1>
+          <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Fuel Consumption Trolley – Precision Aviation Fuel Testing by Jetsys Defence</h1>
            <p className=" font-medium text-base">Built for flight-line reliability, the Fuel Consumption Trolley from Jetsys Defence enables accurate fuel transfer, defuel/flush operations, and real-time consumption measurement during ground tests. Designed for multi-aircraft compatibility, it delivers stable flow/pressure control, digital metering, and contamination monitoring to keep your fleet mission-ready.
 
          </p><br></br><br></br>

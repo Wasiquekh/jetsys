@@ -20,7 +20,7 @@ const page = () => {
       <section>
         <div className="container">
     <div>
-                <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">LDP Trolley for Aircraft – Precision Aviation Equipment by Jetsys Defence</h1>
+                <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">LDP Trolley for Aircraft – Precision Aviation Equipment by Jetsys Defence</h1>
                  <p className=" font-medium text-base">Jetsys Defence designs and manufactures advanced LDP Trolley systems engineered for secure, smooth, and precise loading of aircraft equipment. Built with rugged materials, high-strength fabrication, and aviation-grade safety controls, our LDP Trolley supports ground crews with reliable, precise handling on the airfield.
                </p>
                <p className=" font-medium text-base">Whether for aircraft loading, transportation, or secure pod movement, Jetsys Defence delivers unmatched quality, durability, and value.</p><br></br><br></br>

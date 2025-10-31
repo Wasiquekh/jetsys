@@ -20,7 +20,7 @@ const page = () => {
       <section>
         <div className="container">
   <div>
-          <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Spreader & Cutter With Petrol Engine – Jetsys Defence Aviation Tools</h1>
+          <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Spreader & Cutter With Petrol Engine – Jetsys Defence Aviation Tools</h1>
            <p className=" font-medium text-base">The Spreader & Cutter With Petrol Engine from Jetsys Defence is a compact, high-performance rescue tool designed for aircraft maintenance teams, airport safety departments, and emergency response units. Built to operate without external power sources, it combines spreading, cutting, tearing, and prying functions in one rugged aviation-grade tool. Its engine-driven hydraulic system ensures fast deployment in situations where electricity or vehicle hydraulics are not available.
          </p>
          <p className=" font-medium text-base">Whether you want a reliable tool for aviation rescue, need replacement Spreader & Cutter With Petrol Engine parts, or want the latest Spreader & Cutter With Petrol Engine price, Jetsys Defence provides fully supported solutions.</p><br></br><br></br>

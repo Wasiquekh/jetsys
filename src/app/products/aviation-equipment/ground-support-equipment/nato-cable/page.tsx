@@ -21,7 +21,7 @@ const page = () => {
       <section>
         <div className="container">
       <div>
-                        <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Nato Cable – Military-Grade Power & Signal Solutions by Jetsys Defence</h1>
+                        <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Nato Cable – Military-Grade Power & Signal Solutions by Jetsys Defence</h1>
                         <p className=" font-medium text-base">The Jetsys Defence Nato Cable range is engineered for reliable aircraft power transfer and ground operations. Built for harsh environments, our Cables with Nato slave connectors deliver consistent performance for flight line starts, ground power interfacing, and critical defence applications
                         </p><br></br><br></br>
                         <div>

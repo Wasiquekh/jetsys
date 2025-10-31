@@ -20,7 +20,7 @@ const page = () => {
       <StickyHeader />
       <section>
         <div className="container ">
-          <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Nitrogen Trolley for Aircraft Ground Support | Jetsys Defence</h1>
+          <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Nitrogen Trolley for Aircraft Ground Support | Jetsys Defence</h1>
           <p className=" font-medium text-base">At Jetsys Defence, our Nitrogen Trolley is engineered to deliver unmatched precision and safety in aviation ground support operations. Built to meet international aviation standards, this robust trolley ensures efficient nitrogen charging for aircraft tires, landing-gear struts, and accumulator systems.
           </p><br></br><br></br>
           <Image

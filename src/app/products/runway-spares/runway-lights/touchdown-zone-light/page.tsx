@@ -20,7 +20,7 @@ const page = () => {
       <section>
         <div className="container">
   <div>
-                      <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Touchdown Zone Light – High-Intensity Runway Lighting by Jetsys Defence</h1>
+                      <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Touchdown Zone Light – High-Intensity Runway Lighting by Jetsys Defence</h1>
                        <p className=" font-medium text-base">For airfields requiring dependable precision lighting, Jetsys Defence offers advanced Touchdown Zone Light (TDZL) systems engineered to enhance landing accuracy under all visibility conditions. As a trusted manufacturer of runway spares, we provide robust illumination solutions that perform flawlessly in fog, rain, night operations, and adverse weather.
                      </p><br></br><br></br>
                     <div>
@@ -66,43 +66,7 @@ const page = () => {
 
   
                                         <br></br><br></br>
-                                               <div className=" w-full flex  justify-between">
-                                                          <Image
-                                                            src="/images/Tactical Engineering.svg"
-                                                            width={160}
-                                                            height={234}
-                                                            alt="Picture of the author"
-                                                            className=" w-[120px]"
-                                                          />
-                                                          <Image
-                                                            src="/images/System Integration.svg"
-                                                            width={160}
-                                                            height={234}
-                                                            alt="Picture of the author"
-                                                            className=" w-[120px]"
-                                                          />
-                                                          <Image
-                                                            src="/images/Built for Endurance.svg"
-                                                            width={160}
-                                                            height={234}
-                                                            alt="Picture of the author"
-                                                            className=" w-[120px]"
-                                                          />
-                                                          <Image
-                                                            src="/images/Modular Flexibility.svg"
-                                                            width={160}
-                                                            height={234}
-                                                            alt="Picture of the author"
-                                                            className=" w-[120px]"
-                                                          />
-                                                          <Image
-                                                            src="/images/Laser Precision.svg"
-                                                            width={160}
-                                                            height={234}
-                                                            alt="Picture of the author"
-                                                            className=" w-[120px]"
-                                                          />
-                                                        </div><br></br><br></br><br></br>
+                                      
 <section>
   <div>
     <h2 className="font-bold text-3xl text-[#5C5649] mb-5">

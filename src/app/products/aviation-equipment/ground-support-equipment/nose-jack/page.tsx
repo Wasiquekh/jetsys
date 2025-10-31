@@ -21,7 +21,7 @@ const page = () => {
       <section>
         <div className="container">
         <div>
-                  <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Nose Jack & Main Jack – Precision Aircraft Jacks by Jetsys Defence</h1>
+                  <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Nose Jack & Main Jack – Precision Aircraft Jacks by Jetsys Defence</h1>
                   <p className=" font-medium text-base">At Jetsys Defence, we engineer world-class Nose Jacks and Main Jacks designed for the maintenance and lifting of both defence and commercial aircraft. Our jacks are known for their superior stability, precision hydraulics, and safety-first design, making them ideal for military bases, MRO facilities, and aviation service workshops.
                   </p><br></br><br></br>
                   <div>

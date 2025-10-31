@@ -20,7 +20,7 @@ const page = () => {
       <section>
         <div className="container">
       <div>
-                        <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Aircraft Looms, Cables & Harnesses by Jetsys Defence</h1>
+                        <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Aircraft Looms, Cables & Harnesses by Jetsys Defence</h1>
                         <p className=" font-medium text-base">Jetsys Defence designs and manufactures Aircraft Looms, Cables & Harnesses for defence and commercial aviation. Engineered for harsh flight-line and in-service environments, our aviation-grade cables & harnesses deliver reliable power, signal integrity, and long service life across airframe, engine, avionics, and landing-gear systems.
                         </p><br></br><br></br>
                        <div>

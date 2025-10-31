@@ -20,7 +20,7 @@ const page = () => {
       <section>
         <div className="container">
       <div>
-        <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Portable Engine Starting Trolley – High-Performance Aircraft Start-Up by Jetsys Defence</h1>
+        <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Portable Engine Starting Trolley – High-Performance Aircraft Start-Up by Jetsys Defence</h1>
          <p className=" font-medium text-base">Engineered for ramp reliability, the Portable Engine Starting Trolley from Jetsys Defence delivers safe, high-current DC starts for helicopters, turboprops, and small jets. Compact, field-ready, and serviceable across India, it’s the ideal choice when you need dependable starts, rapid recharge, and robust after-sales support.
        </p><br></br><br></br>
        <div>
