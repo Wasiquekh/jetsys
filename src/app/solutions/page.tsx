@@ -13,7 +13,7 @@ const page = () => {
       <StickyHeader />
       <section>
         <div className="container">
-          <ScrollUpText className=" text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
+          <ScrollUpText className=" text-center text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
             Our Solutions
                  </ScrollUpText>
           <h2 className=" font-bold text-3xl text-[#5C5649] text-center mb-5">
@@ -29,41 +29,41 @@ const page = () => {
       </section>
       <section>
         <div className=" container !pt-0">
-          <div className=" w-full flex justify-between">
+          <div className=" w-full grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-0 justify-center items-center">
             <Image
               src="/images/Local  Sourcing.svg"
               width={160}
               height={234}
               alt="Picture of the author"
-              className=" w-[120px]"
+              className=" w-[120px] m-auto"
             />
             <Image
               src="/images/Import  Substitution.svg"
               width={160}
               height={234}
               alt="Picture of the author"
-              className=" w-[120px]"
+              className=" w-[120px] m-auto"
             />
             <Image
               src="/images/Custom  Adaptation.svg"
               width={160}
               height={234}
               alt="Picture of the author"
-              className=" w-[120px]"
+              className=" w-[120px] m-auto"
             />
             <Image
               src="/images/Multiple Application.svg"
               width={160}
               height={234}
               alt="Picture of the author"
-              className=" w-[120px]"
+              className=" w-[120px] m-auto"
             />
             <Image
               src="/images/Design Ownership.svg"
               width={160}
               height={234}
               alt="Picture of the author"
-              className=" w-[120px]"
+              className=" w-[120px] m-auto" 
             />
           </div>
         </div>

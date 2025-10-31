@@ -70,7 +70,7 @@ const Header = () => {
               ABOUT US
             </Link>
             <Link
-              href="/"
+              href="/products"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className=" text-xl font-medium text-black"
             >
@@ -89,6 +89,13 @@ const Header = () => {
               className=" text-xl font-medium text-black"
             >
               COMPANY
+            </Link>
+                        <Link
+              href="/contact-us"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className=" text-xl font-medium text-black"
+            >
+              GET IN TOUCH
             </Link>
           </div>
         )}

@@ -56,9 +56,9 @@ const AboutLineAnimation = () => {
       <section ref={sectionRef} className="bg-[#5C5649]">
         <div className="container">
           {/* Grid container with card layout */}
-          <div className="flex justify-between items-center pb-26">
+          <div className="flex flex-col gap-6 md:gap-0 md:flex-row justify-between items-center pb-0 md:pb-26">
             {/* First Card (Who Are We?) */}
-            <div className="bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18 w-[450px] h-[350px] ">
+            <div className="bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18 w-full md:w-[450px] h-[350px] ">
               <IoSquareSharp className="ml-auto text-2xl rounded mb-12" />
               <p className="font-bold text-2xl mb-8">Who Are We?</p>
               <p className="font-medium text-base">
@@ -69,7 +69,7 @@ const AboutLineAnimation = () => {
             </div>
 
             {/* Connecting Line left */}
-            <div className="relative top-12">
+            <div className="relative top-12 hidden md:block">
               <svg
                 className="signature-stroke"
                 width="120"
@@ -95,7 +95,7 @@ const AboutLineAnimation = () => {
             </div>
 
             {/* Second Card (Our Values) */}
-            <div className="bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18 w-[450px] h-[350px] relative top-26">
+            <div className="bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18 w-full md:w-[450px] h-[350px] relative top-0 md:top-26">
               <IoSquareSharp className="ml-auto text-2xl rounded mb-12" />
               <p className="font-bold text-2xl mb-8">Our Values</p>
               <p className="font-medium text-base">
@@ -105,7 +105,7 @@ const AboutLineAnimation = () => {
             </div>
 
             {/* Connecting Line right */}
-            <div className="relative top-12">
+            <div className="relative top-12 hidden md:block">
               <svg
                 className="signature-stroke"
                 width="120"
@@ -125,7 +125,7 @@ const AboutLineAnimation = () => {
             </div>
 
             {/* Third Card (What Do We Do?) */}
-            <div className="bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18  w-[450px] h-[350px]">
+            <div className="bg-[#F0EFE9] rounded-2xl px-6 pt-4 pb-18  w-full md:w-[450px] h-[350px]">
               <IoSquareSharp className="ml-auto text-2xl rounded mb-12" />
               <p className="font-bold text-2xl mb-8">What Do We Do?</p>
               <p className="font-medium text-base">

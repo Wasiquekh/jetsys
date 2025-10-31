@@ -12,7 +12,7 @@ const page = () => {
       <StickyHeader />
       <section className=" relative">
         <div className="container  !py-30">
-          <h1 className=" font-extrabold text-6xl text-center mb-5">
+          <h1 className=" font-extrabold text-3xl md:text-6xl text-center mb-5">
             Ground Supply Equipment
           </h1>
           <p className=" font-medium text-base text-center ">
@@ -41,7 +41,7 @@ const page = () => {
       </section>
       <section>
         <div className="container">
-          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
+          <div className="border border-primary rounded-3xl grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-16 p-4 md:p-9 mb-16">
             <div>
               <Image
                 src="/images/Ground Power Unit.png"
@@ -71,7 +71,7 @@ const page = () => {
               </Link>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
+          <div className="border border-primary rounded-3xl grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-16 p-4 md:p-9 mb-16">
             <div>
               <Image
                 src="/images/Pneumatic Control Panel.png"
@@ -101,7 +101,7 @@ const page = () => {
               </Link>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
+          <div className="border border-primary rounded-3xl grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-16 p-4 md:p-9 mb-16">
             <div>
               <Image
                 src="/images/Hydraullic Servicing Trolley.png"
@@ -132,7 +132,7 @@ const page = () => {
               </Link>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
+          <div className="border border-primary rounded-3xl grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-16 p-4 md:p-9 mb-16">
             <div>
               <Image
                 src="/images/Portable Engine Starting Trolley.png"
@@ -162,7 +162,7 @@ const page = () => {
               </Link>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
+          <div className="border border-primary rounded-3xl grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-16 p-4 md:p-9 mb-16">
             <div>
               <Image
                 src="/images/Fuel Consumption Trolley.png"

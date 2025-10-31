@@ -69,7 +69,7 @@ export default function OurOffering() {
   return (
     <section>
       <div className="container">
-        <ScrollUpText className="mx-auto text-center text-[#5c5649] text-[30px] md:text-[40px] font-extrabold uppercase horizon-text w-full md:w-[80%] mb-5 horizon">
+        <ScrollUpText className="mx-auto text-center text-[#5c5649] text-[26px] md:text-[40px] font-extrabold uppercase horizon-text w-full md:w-[80%] mb-5 horizon">
           Our Offerings
         </ScrollUpText>
 

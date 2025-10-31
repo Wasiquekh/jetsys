@@ -10,7 +10,7 @@ const page = () => {
       <Header />
       <section className=" relative">
         <div className="container  !py-30">
-          <h1 className=" font-extrabold text-6xl text-center mb-5">
+          <h1 className=" font-extrabold text-3xl md:text-6xl text-center mb-5">
             Indegenization Equipments
           </h1>
           <p className=" font-medium text-base text-center ">
@@ -39,7 +39,7 @@ const page = () => {
       </section>
       <section>
         <div className="container">
-          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
+          <div className="border border-primary rounded-3xl grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-16 p-4 md:p-9 mb-16">
             <div>
               <Image
                 src="/images/Totem Tray Harmonization Tool.png"
@@ -69,7 +69,7 @@ const page = () => {
               </Link>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
+          <div className="border border-primary rounded-3xl grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-16 p-4 md:p-9 mb-16">
             <div>
               <Image
                 src="/images/Squib Tester.png"
@@ -97,7 +97,7 @@ const page = () => {
               </Link>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
+          <div className="border border-primary rounded-3xl grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-16 p-4 md:p-9 mb-16">
             <div>
               <Image
                 src="/images/Ring – Oil Feed.png"
@@ -126,7 +126,7 @@ const page = () => {
               </Link>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
+          <div className="border border-primary rounded-3xl grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-16 p-4 md:p-9 mb-16">
             <div>
               <Image
                 src="/images/Conformal Coating Removal Machine.png"
@@ -155,7 +155,7 @@ const page = () => {
               </Link>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
+          <div className="border border-primary rounded-3xl grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-16 p-4 md:p-9 mb-16">
             <div>
               <Image
                 src="/images/Thermal Vacuum Chamber.png"
