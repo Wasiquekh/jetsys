@@ -41,44 +41,8 @@ const page = () => {
                         <li className="font-bold text-[#5C5649]">Heavy-duty MRO (Maintenance, Repair & Overhaul) facilities</li>
                         <li className="font-bold text-[#5C5649]">Hangar and flight-line maintenance</li>
                       </ul>
-                <br></br><br></br>
-             <div className=" w-full flex  justify-between">
-                        <Image
-                          src="/images/Tactical Engineering.svg"
-                          width={160}
-                          height={234}
-                          alt="Picture of the author"
-                          className=" w-[120px]"
-                        />
-                        <Image
-                          src="/images/System Integration.svg"
-                          width={160}
-                          height={234}
-                          alt="Picture of the author"
-                          className=" w-[120px]"
-                        />
-                        <Image
-                          src="/images/Built for Endurance.svg"
-                          width={160}
-                          height={234}
-                          alt="Picture of the author"
-                          className=" w-[120px]"
-                        />
-                        <Image
-                          src="/images/Modular Flexibility.svg"
-                          width={160}
-                          height={234}
-                          alt="Picture of the author"
-                          className=" w-[120px]"
-                        />
-                        <Image
-                          src="/images/Laser Precision.svg"
-                          width={160}
-                          height={234}
-                          alt="Picture of the author"
-                          className=" w-[120px]"
-                        />
-                      </div>           
+
+     
               <section><br></br><br></br>
             
                 <div >

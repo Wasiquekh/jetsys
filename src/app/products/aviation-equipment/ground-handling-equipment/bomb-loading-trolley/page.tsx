@@ -105,45 +105,7 @@ const page = () => {
     Works in tight bays, on uneven aprons, and in expeditionary conditions.
   </li>
 </ul>
-
-                              <br></br><br></br>
-                                     <div className=" w-full flex  justify-between">
-                                                <Image
-                                                  src="/images/Tactical Engineering.svg"
-                                                  width={160}
-                                                  height={234}
-                                                  alt="Picture of the author"
-                                                  className=" w-[120px]"
-                                                />
-                                                <Image
-                                                  src="/images/System Integration.svg"
-                                                  width={160}
-                                                  height={234}
-                                                  alt="Picture of the author"
-                                                  className=" w-[120px]"
-                                                />
-                                                <Image
-                                                  src="/images/Built for Endurance.svg"
-                                                  width={160}
-                                                  height={234}
-                                                  alt="Picture of the author"
-                                                  className=" w-[120px]"
-                                                />
-                                                <Image
-                                                  src="/images/Modular Flexibility.svg"
-                                                  width={160}
-                                                  height={234}
-                                                  alt="Picture of the author"
-                                                  className=" w-[120px]"
-                                                />
-                                                <Image
-                                                  src="/images/Laser Precision.svg"
-                                                  width={160}
-                                                  height={234}
-                                                  alt="Picture of the author"
-                                                  className=" w-[120px]"
-                                                />
-                                              </div><br></br><br></br><br></br>
+<br></br><br></br>
 <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
   Bomb Loading Trolley Manufacturer
 </h2>
