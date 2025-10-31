@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import AboutLineAnimation from "../components/AboutLineAnimation";
 import ScrollUpText from "../components/ScrollUpText";
-
+import SEO from "../common/seo";
 const Page = () => {
   // Put your image paths here
   const slides = [
@@ -24,6 +24,14 @@ const Page = () => {
  // const sectionRef = useRef<HTMLElement | null>(null);
 
   return (
+  <>
+  <SEO
+        pageTitle=  {
+         "About Jetsys Defence | India’s Innovation-Driven Aerospace Company"
+            }
+        description= {
+            "Jetsys Defence is an agile, innovation-led aerospace and defence company in India specializing in mission-critical avionics, airborne platforms, and tactical systems."}
+        />
     <div>
       <Header />
       <StickyHeader />
@@ -161,6 +169,7 @@ const Page = () => {
 
       <Footer />
     </div>
+  </>
   );
 };
 

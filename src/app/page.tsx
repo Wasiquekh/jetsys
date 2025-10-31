@@ -12,6 +12,7 @@ import WhyChoose from "./components/WhyChoose";
 import ScrollUpText from "./components/ScrollUpText";
 import MissionVisionAnimate from "./components/MissionVisionAnimate";
 import Link from "next/link";
+import SEO from "./common/seo";
 
 // CODE FOR CLIENT LOGO FADE BOTTOM
 const logoWrapperVariants: Variants = {
@@ -38,6 +39,14 @@ const logoItemVariants: Variants = {
 export default function Home() {
   return (
     <>
+    <SEO
+        pageTitle=  {
+         "Aerospace Innovation & Defence R&D in India | Jetsys Defence"
+            }
+        description= {
+            "Pioneering R&D in aerospace and defence, Jetsys Defence develops indigenous technologies for avionics, AI-based control, and tactical applications."}
+        />
+
       <Header />
       <StickyHeader />
       {/* HOME TOP */}
