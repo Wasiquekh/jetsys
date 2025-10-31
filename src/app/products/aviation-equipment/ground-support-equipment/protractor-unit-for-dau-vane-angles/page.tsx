@@ -21,7 +21,7 @@ const page = () => {
       <section>
         <div className="container">
       <div>
-                        <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Protractor Unit for DAU Vane Angles – Precision Aircraft Tooling by Jetsys Defence</h1>
+                        <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Protractor Unit for DAU Vane Angles – Precision Aircraft Tooling by Jetsys Defence</h1>
                         <p className=" font-medium text-base">The Jetsys Defence Protractor Unit for DAU Vane Angles is a high-accuracy measuring tool engineered for vane rigging, alignment, and calibration tasks. Built for MRO, line maintenance, and defence applications, this vane protractor aviation tooling provides repeatable, traceable measurements that help technicians meet strict aircraft OEM tolerances.
                         </p><br></br><br></br>
                        <div>

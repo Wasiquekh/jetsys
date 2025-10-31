@@ -20,7 +20,7 @@ const page = () => {
       <section>
         <div className="container">
   <div>
-            <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Bomb Loading Trolley – Jetsys Defence Aviation Equipment</h1>
+            <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Bomb Loading Trolley – Jetsys Defence Aviation Equipment</h1>
              <p className=" font-medium text-base">The Bomb Loading Trolley (also searched as Bomb Loading Trolley) by Jetsys Defence is a rugged, precision-lift ground support solution for safe, efficient handling of aircraft bombs, missiles, and stores. Engineered for true vertical lift and fine positioning at the pylon/hardpoint, it shortens turnaround time while maximizing crew safety and reliability.
            </p>
            <p className=" font-medium text-base">Target queries covered: Bomb Loading Trolley manufacturer, Bomb Loading Trolley price, Bomb Loading Trolley for aircraft.</p><br></br><br></br>

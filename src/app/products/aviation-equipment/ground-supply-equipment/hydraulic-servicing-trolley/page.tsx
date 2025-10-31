@@ -20,7 +20,7 @@ const page = () => {
       <section>
         <div className="container">
       <div>
-                                      <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Hydraullic Servicing Trolley – Aviation-Grade Ground Support by Jetsys Defence</h1>
+                                      <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Hydraullic Servicing Trolley – Aviation-Grade Ground Support by Jetsys Defence</h1>
                                       <p className=" font-medium text-base">The Hydraullic Servicing Trolley from Jetsys Defence delivers clean, stable, high-pressure hydraulic power for aircraft maintenance, testing, and flushing. Designed for fighter jets, transport aircraft, and helicopters, it supports continuous servicing, precise flow/pressure control, and rapid de-aeration—optimised for MROs, depots, and flight-line operations.
                                       </p><br></br><br></br>
                                      <div>

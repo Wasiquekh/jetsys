@@ -20,7 +20,7 @@ const page = () => {
       <section>
         <div className="container">
         <div>
-                        <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Aircraft Tow Bar – Robust Towbar Solutions by Jetsys Defence</h1>
+                        <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Aircraft Tow Bar – Robust Towbar Solutions by Jetsys Defence</h1>
                         <p className=" font-medium text-base">Engineered for ground support equipment (GSE) operations, the Jetsys Defence Aircraft Tow Bar delivers safe, efficient towing for defence and commercial fleets. Built with high-strength alloys, precision towbar heads, and ground handling wheels, it ensures smooth pushback and towing with reduced nose-gear stress.
                         </p><br></br><br></br>
                        <div>

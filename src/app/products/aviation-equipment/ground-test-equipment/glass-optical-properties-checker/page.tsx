@@ -20,7 +20,7 @@ const page = () => {
       <section>
         <div className="container">
   <div>
-              <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Glass Optical Properties Checker — Precision Optical Testing for Aviation & Defence</h1>
+              <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Glass Optical Properties Checker — Precision Optical Testing for Aviation & Defence</h1>
                <p className=" font-medium text-base">Jetsys Defence’s Glass Optical Properties Checker verifies optical clarity and structural reliability of aircraft windows, canopies, windshields and sensor covers. It measures spectral transmittance, reflectance, haze, clarity, refractive index, birefringence, wavefront error, striae, and wedge—giving maintenance teams and QA labs rapid, traceable results. An optional Glass Optical Properties Checker online reporting module turns lab data into shareable, audit-ready certificates.</p><br></br>
              <br></br>
              <div>

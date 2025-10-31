@@ -20,7 +20,7 @@ const page = () => {
       <section>
         <div className="container">
 <div>
-        <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Automated Pitot Leak Tester — Precision Air Data Integrity by Jetsys Defence</h1>
+        <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Automated Pitot Leak Tester — Precision Air Data Integrity by Jetsys Defence</h1>
          <p className=" font-medium text-base">The Automated Pitot Leak Tester from Jetsys Defence is a compact, aviation-grade solution engineered to verify pitot and static system integrity with fast, automated leak checks and RVSM-ready accuracy. Built for MROs, line maintenance, and flight test teams, it delivers reliable results with minimal operator input—reducing turnaround time while elevating safety and compliance
        </p><br></br><br></br>
        <div>

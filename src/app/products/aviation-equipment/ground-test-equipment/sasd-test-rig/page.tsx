@@ -20,7 +20,7 @@ const page = () => {
       <section>
         <div className="container">
   <div>
-                <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">SASD Test Rig for Aircraft – Precision Testing by Jetsys Defence</h1>
+                <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">SASD Test Rig for Aircraft – Precision Testing by Jetsys Defence</h1>
                  <p className=" font-medium text-base">The SASD Test Rig by Jetsys Defence is engineered for dependable testing of aircraft hydraulic and pneumatic systems. Built with aerospace-grade components and smart automation, it helps maintenance facilities, research labs, and MRO centers ensure aircraft system performance under real operational loads. Whether an organization needs a new SASD Test Rig, wants to find a nearest SASD Test Rig branch, or is evaluating SASD Test Rig price options, Jetsys Defence offers a complete, scalable solution.
                   </p><br></br>
                <br></br>

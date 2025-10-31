@@ -20,7 +20,7 @@ const page = () => {
       <section>
         <div className="container">
   <div>
-          <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Air Data Test System — Advanced Calibration for Aircraft Systems by Jetsys Defence</h1>
+          <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Air Data Test System — Advanced Calibration for Aircraft Systems by Jetsys Defence</h1>
            <p className=" font-medium text-base">The Air Data Test System (ADTS) from Jetsys Defence is a state-of-the-art solution for precise calibration and testing of aircraft pressure, pitot-static, and altitude systems. Essential for MROs, OEMs, and aviation technicians, our system ensures peak accuracy in airspeed, altitude, and other atmospheric measurements for all aircraft types
          </p>
          

@@ -20,7 +20,7 @@ const page = () => {
       <section>
         <div className="container">
     <div>
-                            <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Totem Tray Harmonization Tool – Indigenized Runway Alignment System</h1>
+                            <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Totem Tray Harmonization Tool – Indigenized Runway Alignment System</h1>
                              <p className=" font-medium text-base">Jetsys Defence introduces a fully indigenized Totem Tray Harmonization Tool, engineered for precise runway light alignment and optical harmonization.
                            Designed for defence and commercial aviation, it enables technicians to accurately align runway approach lights, PAPI, VASI, touchdown lighting, and other AGL systems without heavy setup, external targets, or weather dependencies.
                            </p>
@@ -57,47 +57,10 @@ const page = () => {
     <li>Helps airports maintain international compliance</li>
   </ul>
 
-</section>
-
-        
-                                              <br></br><br></br>
-                                                     <div className=" w-full flex  justify-between">
-                                                                <Image
-                                                                  src="/images/Tactical Engineering.svg"
-                                                                  width={160}
-                                                                  height={234}
-                                                                  alt="Picture of the author"
-                                                                  className=" w-[120px]"
-                                                                />
-                                                                <Image
-                                                                  src="/images/System Integration.svg"
-                                                                  width={160}
-                                                                  height={234}
-                                                                  alt="Picture of the author"
-                                                                  className=" w-[120px]"
-                                                                />
-                                                                <Image
-                                                                  src="/images/Built for Endurance.svg"
-                                                                  width={160}
-                                                                  height={234}
-                                                                  alt="Picture of the author"
-                                                                  className=" w-[120px]"
-                                                                />
-                                                                <Image
-                                                                  src="/images/Modular Flexibility.svg"
-                                                                  width={160}
-                                                                  height={234}
-                                                                  alt="Picture of the author"
-                                                                  className=" w-[120px]"
-                                                                />
-                                                                <Image
-                                                                  src="/images/Laser Precision.svg"
-                                                                  width={160}
-                                                                  height={234}
-                                                                  alt="Picture of the author"
-                                                                  className=" w-[120px]"
-                                                                />
-                                                              </div><br></br><br></br><br></br>
+</section>        
+      <div className=" w-full flex  justify-between">
+                                                              
+       </div><br></br><br></br>
 <section className="w-full bg-white">
 
   <h2 className="text-2xl sm:text-3xl font-bold text-[#5C5649] mb-8">

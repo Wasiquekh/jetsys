@@ -20,7 +20,7 @@ const page = () => {
       <section>
         <div className="container">
  <div>
-        <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Brake Valve Test Rig for Aircraft – Precision Hydraulic Testing by Jetsys Defence</h1>
+        <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Brake Valve Test Rig for Aircraft – Precision Hydraulic Testing by Jetsys Defence</h1>
          <p className=" font-medium text-base">The Brake Valve Test Rig by Jetsys Defence is a cutting-edge aviation equipment solution engineered to test, calibrate, and validate aircraft brake valves with unmatched accuracy. Designed for aerospace maintenance facilities, MROs, and aircraft manufacturers, this system ensures peak performance and safety of hydraulic braking components under real-world pressure and temperature conditions.
        </p><br></br><br></br>
        <div>

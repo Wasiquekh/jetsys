@@ -20,7 +20,7 @@ const page = () => {
       <section>
         <div className="container">
 <div>
-                        <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Taxiway Guidance Sign – Clear, Durable Airfield Signage by Jetsys Defence</h1>
+                        <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Taxiway Guidance Sign – Clear, Durable Airfield Signage by Jetsys Defence</h1>
                          <p className=" font-medium text-base">Jetsys Defence supplies high-visibility Taxiway Guidance Sign units engineered for continuous airside use. Our signs deliver crisp legends in all weather, support day/night and low-visibility operations, and minimise lifecycle cost with LED technology and rugged housings
                        </p><br></br><br></br>
                       <div>
@@ -57,43 +57,7 @@ const page = () => {
 </section>
     
                                           <br></br><br></br>
-                                                 <div className=" w-full flex  justify-between">
-                                                            <Image
-                                                              src="/images/Tactical Engineering.svg"
-                                                              width={160}
-                                                              height={234}
-                                                              alt="Picture of the author"
-                                                              className=" w-[120px]"
-                                                            />
-                                                            <Image
-                                                              src="/images/System Integration.svg"
-                                                              width={160}
-                                                              height={234}
-                                                              alt="Picture of the author"
-                                                              className=" w-[120px]"
-                                                            />
-                                                            <Image
-                                                              src="/images/Built for Endurance.svg"
-                                                              width={160}
-                                                              height={234}
-                                                              alt="Picture of the author"
-                                                              className=" w-[120px]"
-                                                            />
-                                                            <Image
-                                                              src="/images/Modular Flexibility.svg"
-                                                              width={160}
-                                                              height={234}
-                                                              alt="Picture of the author"
-                                                              className=" w-[120px]"
-                                                            />
-                                                            <Image
-                                                              src="/images/Laser Precision.svg"
-                                                              width={160}
-                                                              height={234}
-                                                              alt="Picture of the author"
-                                                              className=" w-[120px]"
-                                                            />
-                                                          </div><br></br><br></br><br></br>
+                                        
     <section className="w-full bg-white">
 
   <h2 className="text-2xl sm:text-3xl font-bold text-[#5C5649] mb-8">

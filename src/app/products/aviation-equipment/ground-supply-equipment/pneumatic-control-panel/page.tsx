@@ -20,7 +20,7 @@ const page = () => {
       <section>
         <div className="container">
         <div>
-                                <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Pneumatic Control Panel – Precision Aircraft & Defence Solutions by Jetsys Defence</h1>
+                                <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Pneumatic Control Panel – Precision Aircraft & Defence Solutions by Jetsys Defence</h1>
                                 <p className=" font-medium text-base">The Jetsys Defence Pneumatic Control Panel is engineered for mission-critical control of actuators, valves, and sequencing logic on aircraft and defence test systems. As a specialist Pneumatic Control Panel manufacturer, we combine aerospace-grade components with robust Pneumatic Control Panel design practices to deliver accuracy, uptime, and easy service on the flight line and in the hangar.
                                 </p><br></br><br></br>
                                <div>

@@ -20,7 +20,7 @@ const page = () => {
       <section>
         <div className="container">
     <div>
-                    <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Shallow Base – Runway Spares by Jetsys Defence</h1>
+                    <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Shallow Base – Runway Spares by Jetsys Defence</h1>
                      <p className=" font-medium text-base">The Shallow Base from Jetsys Defence is a robust mounting solution for inset airfield lights on runways, taxiways, and aprons. Engineered for fast installation and long service life, our Shallow Base units support flexible or rigid pavements, streamline cable management, and improve thermal dissipation to help extend fixture life.
                    </p><br></br><br></br>
                   <div>
@@ -63,45 +63,7 @@ const page = () => {
     </div>
   </div>
 </section>
-
-                                      <br></br><br></br>
-                                             <div className=" w-full flex  justify-between">
-                                                        <Image
-                                                          src="/images/Tactical Engineering.svg"
-                                                          width={160}
-                                                          height={234}
-                                                          alt="Picture of the author"
-                                                          className=" w-[120px]"
-                                                        />
-                                                        <Image
-                                                          src="/images/System Integration.svg"
-                                                          width={160}
-                                                          height={234}
-                                                          alt="Picture of the author"
-                                                          className=" w-[120px]"
-                                                        />
-                                                        <Image
-                                                          src="/images/Built for Endurance.svg"
-                                                          width={160}
-                                                          height={234}
-                                                          alt="Picture of the author"
-                                                          className=" w-[120px]"
-                                                        />
-                                                        <Image
-                                                          src="/images/Modular Flexibility.svg"
-                                                          width={160}
-                                                          height={234}
-                                                          alt="Picture of the author"
-                                                          className=" w-[120px]"
-                                                        />
-                                                        <Image
-                                                          src="/images/Laser Precision.svg"
-                                                          width={160}
-                                                          height={234}
-                                                          alt="Picture of the author"
-                                                          className=" w-[120px]"
-                                                        />
-                                                      </div><br></br><br></br><br></br>
+ <br></br><br></br>
 <section>
   <div>
     <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
