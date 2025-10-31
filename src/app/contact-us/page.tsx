@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Formik, Field, Form, ErrorMessage, FormikHelpers } from "formik";
 import * as Yup from "yup";
 import { toast, ToastContainer } from "react-toastify";
+import StickyHeader from "../components/StickyHeader";
 
 type ContactFormData = {
   name: string;
@@ -91,6 +92,7 @@ const page = () => {
   return (
     <div>
       <Header />
+      <StickyHeader />
       <section className=" relative">
         <div className="container">
           <div className=" grid grid-cols-2 gap-30 items-center">
@@ -235,7 +237,7 @@ const page = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded w-full ${
+                    className={`bg-primary hover:bg-[#5f5a00] text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded w-full ${
                       isSubmitting ? "opacity-60 cursor-not-allowed" : ""
                     }`}
                   >

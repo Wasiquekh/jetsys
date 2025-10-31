@@ -182,7 +182,7 @@ const page = () => {
 
           <tr>
             <td className="px-4 py-2 border-b">Control System</td>
-            <td className="px-4 py-2 border-b">Siemens / Allen-Bradley PLC with 15" HMI</td>
+            <td className="px-4 py-2 border-b">Siemens / Allen-Bradley PLC with 15&quot; HMI</td>
           </tr>
 
           <tr>

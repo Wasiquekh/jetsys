@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import StickyHeader from "../components/StickyHeader";
@@ -9,6 +9,7 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/autoplay";
 import AboutLineAnimation from "../components/AboutLineAnimation";
+import ScrollUpText from "../components/ScrollUpText";
 
 const Page = () => {
   // Put your image paths here
@@ -20,7 +21,7 @@ const Page = () => {
     "/images/abubakar.png",
   ];
 
-  const sectionRef = useRef<HTMLElement | null>(null);
+ // const sectionRef = useRef<HTMLElement | null>(null);
 
   return (
     <div>
@@ -29,9 +30,9 @@ const Page = () => {
       <section className=" relative">
         <div className=" container">
           <div className=" w-3/4">
-            <h1 className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
+            <ScrollUpText className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon text-center md:text-start">
               About our organization
-            </h1>
+                   </ScrollUpText>
             <p className=" font-medium text-base">
               Jetsys Defence is a dynamic and innovation-driven aerospace and
               defence company headquartered in India. Focused on
@@ -55,7 +56,7 @@ const Page = () => {
           width={450}
           height={450}
           alt="Picture of the author"
-          className=" absolute right-0 top-10 -z-10"
+          className=" absolute right-0 top-10 -z-10 hidden md:block"
         />
       </section>
       <AboutLineAnimation />
@@ -72,9 +73,9 @@ const Page = () => {
               />
               <div className=" bg-[#EDEBD2] border border-primary rounded-2xl flex flex-col items-center py-8">
                 <p className=" font-bold text-[40px] mb-2">1000+</p>
-                <p className=" font-medium text-base">
+                <ScrollUpText className=" font-medium text-base">
                   Precision Parts <br /> Manufactured
-                </p>
+                       </ScrollUpText>
               </div>
             </div>
             <div className=" flex flex-col-reverse gap-5">
@@ -86,9 +87,9 @@ const Page = () => {
               />
               <div className=" bg-[#EDEBD2] border border-primary rounded-2xl flex flex-col items-center py-8">
                 <p className=" font-bold text-[40px] mb-2">99%</p>
-                <p className=" font-medium text-base text-center">
+                <ScrollUpText className=" font-medium text-base text-center">
                   Quality <br /> Assurance Rate
-                </p>
+                       </ScrollUpText>
               </div>
             </div>
             <div className=" flex flex-col gap-5">
@@ -100,9 +101,9 @@ const Page = () => {
               />
               <div className=" bg-[#EDEBD2] border border-primary rounded-2xl flex flex-col items-center py-8">
                 <p className=" font-bold text-[40px] mb-2">300+</p>
-                <p className=" font-medium text-base text-center">
+                <ScrollUpText className=" font-medium text-base text-center">
                   Precision Tests <br /> Conducted
-                </p>
+                       </ScrollUpText>
               </div>
             </div>
             <div className=" flex flex-col-reverse gap-5">
@@ -114,9 +115,9 @@ const Page = () => {
               />
               <div className=" bg-[#EDEBD2] border border-primary rounded-2xl flex flex-col items-center py-8">
                 <p className=" font-bold text-[40px] mb-2">18+</p>
-                <p className=" font-medium text-base text-center">
+                <ScrollUpText className=" font-medium text-base text-center">
                   Testing & Validation <br /> Processes
-                </p>
+                       </ScrollUpText>
               </div>
             </div>
           </div>
@@ -126,7 +127,7 @@ const Page = () => {
 
       <section className="bg-[#F0EFE9]">
         <div className="container !pb-0">
-          <h1 className="text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-7 horizon">
+          <h1 className="text-center text-[#5c5649] text-[30px] md:text-[40px] font-extrabold uppercase mb-7 horizon">
             Our team
           </h1>
           <div className="w-full  mx-auto">
