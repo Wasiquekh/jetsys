@@ -12,7 +12,7 @@ const page = () => {
       <StickyHeader />
       <section className=" relative">
         <div className="container  !py-30">
-          <h1 className=" font-extrabold text-6xl text-center mb-5">
+          <h1 className=" font-extrabold text-3xl md:text-6xl text-center mb-5">
             Ground Test Equipment 
           </h1>
           <p className=" font-medium text-base text-center ">
@@ -41,7 +41,7 @@ const page = () => {
       </section>
       <section>
         <div className="container">
-          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
+          <div className="border border-primary rounded-3xl grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-16 p-4 md:p-9 mb-16">
             <div>
               <Image
                 src="/images/Brake Valve Test Rig.png"
@@ -72,7 +72,7 @@ const page = () => {
               </Link>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
+          <div className="border border-primary rounded-3xl grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-16 p-4 md:p-9 mb-16">
             <div>
               <Image
                 src="/images/Automated Pitot Leak Tester.png"
@@ -104,7 +104,7 @@ const page = () => {
               </Link>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
+          <div className="border border-primary rounded-3xl grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-16 p-4 md:p-9 mb-16">
             <div>
               <Image
                 src="/images/Air Data Test System.png"
@@ -135,7 +135,7 @@ const page = () => {
               </Link>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
+          <div className="border border-primary rounded-3xl grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-16 p-4 md:p-9 mb-16">
             <div>
               <Image
                 src="/images/Hydraulic Test Rig (HTR).png"
@@ -165,7 +165,7 @@ const page = () => {
               </Link>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
+          <div className="border border-primary rounded-3xl grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-16 p-4 md:p-9 mb-16">
             <div>
               <Image
                 src="/images/Glass Optical Properties Checker.png"
@@ -195,7 +195,7 @@ const page = () => {
               </Link>
             </div>
           </div>
-          <div className=" border border-primary rounded-3xl grid grid-cols-2 items-center gap-16 p-9 mb-16">
+          <div className="border border-primary rounded-3xl grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-16 p-4 md:p-9 mb-16">
             <div>
               <Image
                 src="/images/SASD Test Rig.png"
