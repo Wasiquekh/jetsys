@@ -29,8 +29,8 @@ const Page = () => {
       <StickyHeader />
       <section className=" relative">
         <div className=" container">
-          <div className=" w-3/4">
-            <ScrollUpText className=" text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon text-center md:text-start">
+          <div className=" w-full md:w-3/4">
+            <ScrollUpText className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon text-center md:text-start">
               About our organization
                    </ScrollUpText>
             <p className=" font-medium text-base">
@@ -63,7 +63,7 @@ const Page = () => {
 
       <section>
         <div className=" container">
-          <div className=" w-full grid grid-cols-4 gap-5">
+          <div className=" w-full grid grid-cols-1 md:grid-cols-4 gap-5">
             <div className=" flex flex-col gap-5">
               <Image
                 src="/images/aboutPlane.png"
@@ -78,7 +78,7 @@ const Page = () => {
                        </ScrollUpText>
               </div>
             </div>
-            <div className=" flex flex-col-reverse gap-5">
+            <div className=" flex flex-col  md:flex-col-reverse gap-5">
               <Image
                 src="/images/aboutHelicopter.png"
                 width={1000}
@@ -106,7 +106,7 @@ const Page = () => {
                        </ScrollUpText>
               </div>
             </div>
-            <div className=" flex flex-col-reverse gap-5">
+            <div className=" flex flex-col md:flex-col-reverse gap-5">
               <Image
                 src="/images/aboutShip.png"
                 width={1000}
@@ -127,7 +127,7 @@ const Page = () => {
 
       <section className="bg-[#F0EFE9]">
         <div className="container !pb-0">
-          <h1 className="text-center text-[#5c5649] text-[30px] md:text-[40px] font-extrabold uppercase mb-7 horizon">
+          <h1 className="text-center text-[#5c5649] text-[26px] md:text-[40px] font-extrabold uppercase mb-7 horizon">
             Our team
           </h1>
           <div className="w-full  mx-auto">
@@ -149,7 +149,7 @@ const Page = () => {
                       width={1000}
                       height={1000}
                       alt={`Team member ${index + 1}`}
-                      className="ml-48 -mb-8"
+                      className="ml-0 md:ml-48 -mb-8"
                     />
                   </div>
                 </SwiperSlide>

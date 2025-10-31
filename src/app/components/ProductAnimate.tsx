@@ -48,8 +48,8 @@ const ProductAnimate = () => {
             {activeIndex === 0 && (
               <section>
                 <div className="container !pb-4">
-                  <div className="shadow-[0px_4px_11.1px_0px_#00000040] rounded-2xl  flex justify-between p-5">
-                    <div className="   flex flex-col w-[30%]">
+                  <div className="shadow-[0px_4px_11.1px_0px_#00000040] rounded-2xl  flex flex-col md:flex-row justify-between p-5">
+                    <div className="   flex flex-col w-full md:w-[30%]">
                       <Image
                         src="/images/Aviation Equipment.png"
                         width={500}
@@ -73,8 +73,8 @@ const ProductAnimate = () => {
                         Explore Now
                       </button>
                     </div>
-                    <div className="w-[50%]">
-                      <div className=" grid grid-cols-3 gap-5 items-stretch">
+                    <div className="w-full md:w-[50%]">
+                      <div className=" grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch mt-4 md:mt-0">
                         <Link href="/products/aviation-equipment/ground-support-equipment">
                           <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                             <Image
@@ -142,8 +142,8 @@ const ProductAnimate = () => {
             {activeIndex === 1 && (
               <section>
                 <div className="container !pb-4">
-                  <div className="shadow-[0px_4px_11.1px_0px_#00000040] rounded-2xl  flex justify-between p-5">
-                    <div className="   flex flex-col w-[30%]">
+                  <div className="shadow-[0px_4px_11.1px_0px_#00000040] rounded-2xl  flex flex-col md:flex-row justify-between p-5">
+                    <div className="  flex flex-col w-full md:w-[30%]">
                       <Image
                         src="/images/Runway Spares.png"
                         width={500}
@@ -164,8 +164,8 @@ const ProductAnimate = () => {
                         Explore Now
                       </button>
                     </div>
-                    <div className="w-[50%]">
-                      <div className=" grid grid-cols-3 gap-5 items-stretch">
+                    <div className="w-full md:w-[50%]">
+                      <div className=" grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch mt-4 md:mt-0">
                         <Link href="/products/runway-spares/mafi-spares">
                           <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                             <Image
@@ -219,8 +219,8 @@ const ProductAnimate = () => {
             {activeIndex === 2 && (
               <section>
                 <div className="container !pb-4">
-                  <div className="shadow-[0px_4px_11.1px_0px_#00000040] rounded-2xl  flex justify-between p-5">
-                    <div className="   flex flex-col w-[30%]">
+                  <div className="shadow-[0px_4px_11.1px_0px_#00000040] rounded-2xl  flex flex-col md:flex-row justify-between p-5">
+                    <div className="  flex flex-col w-full md:w-[30%]">
                       <Image
                         src="/images/Aircraft Spares & System.png"
                         width={500}
@@ -243,8 +243,8 @@ const ProductAnimate = () => {
                         Explore Now
                       </button>
                     </div>
-                    <div className="w-[50%]">
-                      <div className=" grid grid-cols-3 gap-5 items-stretch">
+                    <div className="w-full md:w-[50%]">
+                      <div className=" grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch mt-4 md:mt-0">
                         <Link href="#">
                           <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                             <Image
@@ -340,8 +340,8 @@ const ProductAnimate = () => {
             {activeIndex === 3 && (
               <section>
                 <div className="container !pb-4">
-                  <div className="shadow-[0px_4px_11.1px_0px_#00000040] rounded-2xl  flex justify-between p-5">
-                    <div className="   flex flex-col w-[30%]">
+                  <div className="shadow-[0px_4px_11.1px_0px_#00000040] rounded-2xl  flex flex-col md:flex-row justify-between p-5">
+                    <div className="   flex flex-col w-full md:w-[30%]">
                       <Image
                         src="/images/Airborne Raw Materials.png"
                         width={500}
@@ -364,8 +364,8 @@ const ProductAnimate = () => {
                         Explore Now
                       </button>
                     </div>
-                    <div className="w-[50%]">
-                      <div className=" grid grid-cols-3 gap-5 items-stretch">
+                    <div className="w-full md:w-[50%]">
+                      <div className=" grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch mt-4 md:mt-0">
                         <Link href="#">
                           <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                             <Image
@@ -435,7 +435,7 @@ const ProductAnimate = () => {
       {/* ---------- CARDS GRID (clicked card removed from grid while expanded) ---------- */}
       <section>
         <div className="container">
-          <div className="grid grid-cols-3 gap-5 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
             {/* Card 1 */}
             {activeIndex !== 0 && (
               <div

@@ -6,7 +6,7 @@ const WhyChoose = () => {
   return (
     <section className="bg-[#EBE4CF]">
       <div className="container">
-        <ScrollUpText className="mx-auto text-center text-[#5c5649] text-[30px] md:text-[40px] font-extrabold uppercase mb-5 w-full md:w-[80%] horizon">
+        <ScrollUpText className="mx-auto text-center text-[#5c5649] text-[26px] md:text-[40px] font-extrabold uppercase mb-5 w-full md:w-[80%] horizon">
           Why Choose Us?
         </ScrollUpText>
 

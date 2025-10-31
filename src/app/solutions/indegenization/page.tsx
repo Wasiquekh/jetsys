@@ -5,75 +5,76 @@ import Link from "next/link";
 import Header  from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
+import ScrollUpText from "@/app/components/ScrollUpText";
 
 export default function Page() {
   return (
     <div>
         <Header />
         <StickyHeader />
-              <section>
-                <div className="container">
-                  <h1 className=" text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
-                    Our Solutions
-                  </h1>
-                  <h2 className=" font-bold text-3xl text-[#5C5649] text-center mb-5">
-                    End-to-end defence solutions for indigenization and self-reliance.
-                  </h2>
-                  <p className=" font-medium text-base text-center">
-                    We deliver intelligent, end-to-end defence and aerospace solutions —
-                    from indigenization and advanced testing to maintenance support —
-                    ensuring operational excellence, scalability, and strategic
-                    self-reliance.
-                  </p>
-                </div>
-              </section>
-              <section>
-                <div className=" container !pt-0">
-                  <div className=" w-full flex justify-between">
-                    <Image
-                      src="/images/Local  Sourcing.svg"
-                      width={160}
-                      height={234}
-                      alt="Picture of the author"
-                      className=" w-[120px]"
-                    />
-                    <Image
-                      src="/images/Import  Substitution.svg"
-                      width={160}
-                      height={234}
-                      alt="Picture of the author"
-                      className=" w-[120px]"
-                    />
-                    <Image
-                      src="/images/Custom  Adaptation.svg"
-                      width={160}
-                      height={234}
-                      alt="Picture of the author"
-                      className=" w-[120px]"
-                    />
-                    <Image
-                      src="/images/Multiple Application.svg"
-                      width={160}
-                      height={234}
-                      alt="Picture of the author"
-                      className=" w-[120px]"
-                    />
-                    <Image
-                      src="/images/Design Ownership.svg"
-                      width={160}
-                      height={234}
-                      alt="Picture of the author"
-                      className=" w-[120px]"
-                    />
-                  </div>
-                </div>
-              </section>
+             <section>
+               <div className="container">
+                 <ScrollUpText className=" text-center text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
+                   Our Solutions
+                        </ScrollUpText>
+                 <h2 className=" font-bold text-3xl text-[#5C5649] text-center mb-5">
+                   End-to-end defence solutions for indigenization and self-reliance.
+                 </h2>
+                 <p className=" font-medium text-base text-center">
+                   We deliver intelligent, end-to-end defence and aerospace solutions —
+                   from indigenization and advanced testing to maintenance support —
+                   ensuring operational excellence, scalability, and strategic
+                   self-reliance.
+                 </p>
+               </div>
+             </section>
+             <section>
+               <div className=" container !pt-0">
+                 <div className=" w-full grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-0 justify-center items-center">
+                   <Image
+                     src="/images/Local  Sourcing.svg"
+                     width={160}
+                     height={234}
+                     alt="Picture of the author"
+                     className=" w-[120px] m-auto"
+                   />
+                   <Image
+                     src="/images/Import  Substitution.svg"
+                     width={160}
+                     height={234}
+                     alt="Picture of the author"
+                     className=" w-[120px] m-auto"
+                   />
+                   <Image
+                     src="/images/Custom  Adaptation.svg"
+                     width={160}
+                     height={234}
+                     alt="Picture of the author"
+                     className=" w-[120px] m-auto"
+                   />
+                   <Image
+                     src="/images/Multiple Application.svg"
+                     width={160}
+                     height={234}
+                     alt="Picture of the author"
+                     className=" w-[120px] m-auto"
+                   />
+                   <Image
+                     src="/images/Design Ownership.svg"
+                     width={160}
+                     height={234}
+                     alt="Picture of the author"
+                     className=" w-[120px] m-auto" 
+                   />
+                 </div>
+               </div>
+             </section>
       {/* ---------- STATIC: Indegenization ---------- */}
       <section>
         <div className="container">
-          <div className=" rounded-2xl flex justify-between p-5">
+          <div className=" rounded-2xl  flex flex-col md:flex-row justify-between p-5">
             {/* Left column */}
-            <div className="flex flex-col w-[30%]">
+            <div className="flex flex-col w-full md:w-[30%]">
               <Image
                 src="/images/Indegenization.png"
                 width={500}
@@ -94,8 +95,8 @@ export default function Page() {
             </div>
 
             {/* Right column */}
-            <div className="w-[50%]">
-              <div className="grid grid-cols-3 gap-5 items-stretch">
+            <div className="w-full md:w-[50%]">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch mt-4 md:mt-0">
                 <Link href="/solutions/indegenization/indegenization-equipments">
                   <div className="bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                     <Image

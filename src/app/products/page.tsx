@@ -14,10 +14,10 @@ const page = () => {
       <StickyHeader />
       <section>
         <div className="container">
-          <ScrollUpText className=" text-center text-primary text-[30px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
+          <ScrollUpText className=" text-center text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
             Our Products
                </ScrollUpText>
-          <h2 className=" font-bold text-3xl text-[#5C5649] text-center mb-5">
+          <h2 className=" font-bold text-2xl md:text-3xl text-[#5C5649] text-center mb-5">
             Empowering the Future of Aerospace Engineering
           </h2>
           <p className=" font-medium text-base text-center">
@@ -30,41 +30,41 @@ const page = () => {
       </section>
       <section>
         <div className=" container !pt-0">
-          <div className=" w-full flex  justify-between">
+          <div className=" w-full grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-0 justify-center items-center">
             <Image
               src="/images/Tactical Engineering.svg"
               width={160}
               height={234}
               alt="Picture of the author"
-              className=" w-[120px]"
+              className=" w-[120px] m-auto"
             />
             <Image
               src="/images/System Integration.svg"
               width={160}
               height={234}
               alt="Picture of the author"
-              className=" w-[120px]"
+              className=" w-[120px] m-auto"
             />
             <Image
               src="/images/Built for Endurance.svg"
               width={160}
               height={234}
               alt="Picture of the author"
-              className=" w-[120px]"
+              className=" w-[120px] m-auto"
             />
             <Image
               src="/images/Modular Flexibility.svg"
               width={160}
               height={234}
               alt="Picture of the author"
-              className=" w-[120px]"
+              className=" w-[120px] m-auto"
             />
             <Image
               src="/images/Laser Precision.svg"
               width={160}
               height={234}
               alt="Picture of the author"
-              className=" w-[120px]"
+              className=" w-[120px] m-auto"
             />
           </div>
         </div>

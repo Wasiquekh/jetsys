@@ -90,6 +90,13 @@ const Header = () => {
             >
               COMPANY
             </Link>
+                        <Link
+              href="/contact-us"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className=" text-xl font-medium text-black"
+            >
+              GET IN TOUCH
+            </Link>
           </div>
         )}
       </header>

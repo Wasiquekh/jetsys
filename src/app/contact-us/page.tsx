@@ -7,6 +7,7 @@ import { Formik, Field, Form, ErrorMessage, FormikHelpers } from "formik";
 import * as Yup from "yup";
 import { toast, ToastContainer } from "react-toastify";
 import StickyHeader from "../components/StickyHeader";
+import Link from "next/link";
 
 type ContactFormData = {
   name: string;
@@ -95,18 +96,20 @@ const page = () => {
       <StickyHeader />
       <section className=" relative">
         <div className="container">
-          <div className=" grid grid-cols-2 gap-30 items-center">
-            <div>
-              <h1 className=" text-6xl font-bold text-[#5C5649]">
+          <div className=" grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-30 items-center">
+            <div className=" mt-32 md:mt-0">
+              <h1 className=" text-2xl md:text-6xl font-bold text-[#5C5649]">
                 Take the First Step Toward Innovation with Jetsys Defence.
               </h1>
               <div className=" bg-[#E9DCB4] mt-10 p-7">
                 <p className=" text-2xl font-medium mb-5">
                   Want to join our Team?
                 </p>
+                <Link href="/">
                 <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded ">
                   Know More
                 </button>
+                </Link>
               </div>
             </div>
 
