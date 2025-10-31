@@ -76,47 +76,7 @@ const page = () => {
     </div>
   </div>
 </section>
-
-            
-                          
-                          <br></br><br></br>
-                                 <div className=" w-full flex  justify-between">
-                                            <Image
-                                              src="/images/Tactical Engineering.svg"
-                                              width={160}
-                                              height={234}
-                                              alt="Picture of the author"
-                                              className=" w-[120px]"
-                                            />
-                                            <Image
-                                              src="/images/System Integration.svg"
-                                              width={160}
-                                              height={234}
-                                              alt="Picture of the author"
-                                              className=" w-[120px]"
-                                            />
-                                            <Image
-                                              src="/images/Built for Endurance.svg"
-                                              width={160}
-                                              height={234}
-                                              alt="Picture of the author"
-                                              className=" w-[120px]"
-                                            />
-                                            <Image
-                                              src="/images/Modular Flexibility.svg"
-                                              width={160}
-                                              height={234}
-                                              alt="Picture of the author"
-                                              className=" w-[120px]"
-                                            />
-                                            <Image
-                                              src="/images/Laser Precision.svg"
-                                              width={160}
-                                              height={234}
-                                              alt="Picture of the author"
-                                              className=" w-[120px]"
-                                            />
-                                          </div><br></br>   
+  
       <section><br></br><br></br>
   <div className="mx-auto">
     <h2 className="text-3xl font-bold text-[#5C5649] mb-2">Technical Specifications of Hydraulic Servicing Trolley</h2>

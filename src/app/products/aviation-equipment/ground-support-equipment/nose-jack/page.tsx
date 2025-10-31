@@ -41,7 +41,7 @@ const page = () => {
                         <li className="font-bold text-[#5C5649]">Heavy-duty MRO (Maintenance, Repair & Overhaul) facilities</li>
                         <li className="font-bold text-[#5C5649]">Hangar and flight-line maintenance</li>
                       </ul>
-                <br></br><br></br>
+
      
               <section><br></br><br></br>
             

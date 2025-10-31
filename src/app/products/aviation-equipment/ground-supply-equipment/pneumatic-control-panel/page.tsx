@@ -39,46 +39,7 @@ const page = () => {
     The Jetsys Defence Pneumatic Control Panel is engineered for mission-critical control of actuators, valves, and sequencing logic on aircraft and defence test systems. As a specialist Pneumatic Control Panel manufacturer, it combines aerospace-grade components with robust design practices to deliver accuracy, uptime, and easy service on the flight line and in the hangar.
   </p>
 </section>
-      
-                    
-                    <br></br><br></br>
-                           <div className=" w-full flex  justify-between">
-                                      <Image
-                                        src="/images/Tactical Engineering.svg"
-                                        width={160}
-                                        height={234}
-                                        alt="Picture of the author"
-                                        className=" w-[120px]"
-                                      />
-                                      <Image
-                                        src="/images/System Integration.svg"
-                                        width={160}
-                                        height={234}
-                                        alt="Picture of the author"
-                                        className=" w-[120px]"
-                                      />
-                                      <Image
-                                        src="/images/Built for Endurance.svg"
-                                        width={160}
-                                        height={234}
-                                        alt="Picture of the author"
-                                        className=" w-[120px]"
-                                      />
-                                      <Image
-                                        src="/images/Modular Flexibility.svg"
-                                        width={160}
-                                        height={234}
-                                        alt="Picture of the author"
-                                        className=" w-[120px]"
-                                      />
-                                      <Image
-                                        src="/images/Laser Precision.svg"
-                                        width={160}
-                                        height={234}
-                                        alt="Picture of the author"
-                                        className=" w-[120px]"
-                                      />
-                                    </div>           
+              
                               <section>
                 
             <section><br></br><br></br>

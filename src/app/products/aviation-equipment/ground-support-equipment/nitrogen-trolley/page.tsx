@@ -33,43 +33,6 @@ const page = () => {
         <h2 className=" font-bold text-3xl text-[#5C5649] mb-5">High-Performance Aircraft Nitrogen Trolley</h2>
         <p className=" font-medium text-base">Designed for reliability and durability, the Jetsys Defence Aircraft Nitrogen Trolley allows safe handling and transfer of high-pressure nitrogen gas across airbases, maintenance hangars, and flightlines. Each unit is fitted with pressure-regulated valves, precision gauges, and reinforced cylinders to guarantee smooth operation under demanding conditions.</p>
         <br></br><br></br>
-    <div className=" w-full flex  justify-between">
-                <Image
-                  src="/images/Tactical Engineering.svg"
-                  width={160}
-                  height={234}
-                  alt="Picture of the author"
-                  className=" w-[120px]"
-                />
-                <Image
-                  src="/images/System Integration.svg"
-                  width={160}
-                  height={234}
-                  alt="Picture of the author"
-                  className=" w-[120px]"
-                />
-                <Image
-                  src="/images/Built for Endurance.svg"
-                  width={160}
-                  height={234}
-                  alt="Picture of the author"
-                  className=" w-[120px]"
-                />
-                <Image
-                  src="/images/Modular Flexibility.svg"
-                  width={160}
-                  height={234}
-                  alt="Picture of the author"
-                  className=" w-[120px]"
-                />
-                <Image
-                  src="/images/Laser Precision.svg"
-                  width={160}
-                  height={234}
-                  alt="Picture of the author"
-                  className=" w-[120px]"
-                />
-              </div><br></br><br></br>
         <h3 className=" font-bold text-3xl text-[#5C5649] mb-5">Precision and Safety</h3>
         <ul className="list-disc pl-5 space-y-2 text-gray-800">
           <li className="flex items-start">

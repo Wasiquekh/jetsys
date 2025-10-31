@@ -79,44 +79,7 @@ const page = () => {
 
                       </div>
                     </div>
-                  </section><br></br><br></br>
-                   <div className=" w-full flex  justify-between">
-                              <Image
-                                src="/images/Tactical Engineering.svg"
-                                width={160}
-                                height={234}
-                                alt="Picture of the author"
-                                className=" w-[120px]"
-                              />
-                              <Image
-                                src="/images/System Integration.svg"
-                                width={160}
-                                height={234}
-                                alt="Picture of the author"
-                                className=" w-[120px]"
-                              />
-                              <Image
-                                src="/images/Built for Endurance.svg"
-                                width={160}
-                                height={234}
-                                alt="Picture of the author"
-                                className=" w-[120px]"
-                              />
-                              <Image
-                                src="/images/Modular Flexibility.svg"
-                                width={160}
-                                height={234}
-                                alt="Picture of the author"
-                                className=" w-[120px]"
-                              />
-                              <Image
-                                src="/images/Laser Precision.svg"
-                                width={160}
-                                height={234}
-                                alt="Picture of the author"
-                                className=" w-[120px]"
-                              />
-                            </div>           
+                  </section>      
                       <section><br></br><br></br>
         <div >
           <h3 className=" font-bold text-3xl text-[#5C5649] mb-5">Key Features of Nitrogen Trolley</h3>
