@@ -75,7 +75,7 @@ const CATEGORIES = [
       },
       {
         title: "Engine Parts",
-        image: "/images/Engine Parts.svg",
+        image: "/images/engine parts.svg",
         link: "/products/aviation-equipment/ground-handling-equipment",
       },
       {
