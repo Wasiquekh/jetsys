@@ -4,6 +4,7 @@ import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
 import Image from "next/image";
 import SEO from "@/app/common/seo";
+import OrderNowContactButton from "@/app/components/ContactUsModalButton";
 const page = () => {
   return (
     <>
@@ -29,7 +30,9 @@ const page = () => {
                              width={500}
                            height={1000}
                            alt="Picture of the author"
+                           className=" m-auto mb-6"
                           />
+                          <OrderNowContactButton />
                                   </div>
                     <section>
   <br /><br />
