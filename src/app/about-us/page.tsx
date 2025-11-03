@@ -32,7 +32,7 @@ const Page = () => {
           <div className=" w-full md:w-3/4">
             <ScrollUpText className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon text-center md:text-start">
               About our organization
-                   </ScrollUpText>
+            </ScrollUpText>
             <p className=" font-medium text-base">
               Jetsys Defence is a dynamic and innovation-driven aerospace and
               defence company headquartered in India. Focused on
@@ -75,7 +75,7 @@ const Page = () => {
                 <p className=" font-bold text-[40px] mb-2">1000+</p>
                 <ScrollUpText className=" font-medium text-base">
                   Precision Parts <br /> Manufactured
-                       </ScrollUpText>
+                </ScrollUpText>
               </div>
             </div>
             <div className=" flex flex-col  md:flex-col-reverse gap-5">
@@ -89,7 +89,7 @@ const Page = () => {
                 <p className=" font-bold text-[40px] mb-2">99%</p>
                 <ScrollUpText className=" font-medium text-base text-center">
                   Quality <br /> Assurance Rate
-                       </ScrollUpText>
+                </ScrollUpText>
               </div>
             </div>
             <div className=" flex flex-col gap-5">
@@ -103,7 +103,7 @@ const Page = () => {
                 <p className=" font-bold text-[40px] mb-2">300+</p>
                 <ScrollUpText className=" font-medium text-base text-center">
                   Precision Tests <br /> Conducted
-                       </ScrollUpText>
+                </ScrollUpText>
               </div>
             </div>
             <div className=" flex flex-col md:flex-col-reverse gap-5">
@@ -117,7 +117,7 @@ const Page = () => {
                 <p className=" font-bold text-[40px] mb-2">18+</p>
                 <ScrollUpText className=" font-medium text-base text-center">
                   Testing & Validation <br /> Processes
-                       </ScrollUpText>
+                </ScrollUpText>
               </div>
             </div>
           </div>

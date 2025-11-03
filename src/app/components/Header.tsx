@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
+import ProductMegaMenu from "./nav/ProductMegaMenu";
+import SolutionsMegaMenu from "./nav/SolutionsMegaMenu";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -26,12 +28,13 @@ const Header = () => {
             <Link href="/about-us" className="mr-5 hover:text-secondary">
               ABOUT US
             </Link>
-            <Link href="/products" className="mr-5 hover:text-secondary">
+            {/* <Link href="/products" className="mr-5 hover:text-secondary">
               PRODUCTS
-            </Link>
-            <Link href="/solutions" className="mr-5 hover:text-secondary">
-              SOLUTIONS
-            </Link>
+            </Link> */}
+            {/* ✅ PRODUCTS with submenu */}
+            <ProductMegaMenu />
+            {/* SOLUTIONS WITH SUBMENU */}
+            <SolutionsMegaMenu />
             <Link href="/" className="mr-10 hover:text-secondary">
               COMPANY
             </Link>
@@ -62,7 +65,7 @@ const Header = () => {
             >
               HOME
             </Link>
-                        <Link
+            <Link
               href="/about-us"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className=" text-xl font-medium text-black"
@@ -90,7 +93,7 @@ const Header = () => {
             >
               COMPANY
             </Link>
-                        <Link
+            <Link
               href="/contact-us"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className=" text-xl font-medium text-black"
