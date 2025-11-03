@@ -154,7 +154,7 @@ const Page = () => {
               >
                 {slides.map((img, index) => (
                   <SwiperSlide key={index}>
-                    <div className="relative left-0  md:left-[93px] w-full h-[150px] sm:h-[260px] md:h-[420px] lg:h-[520px] flex items-center justify-center">
+                    <div className="relative left-0  md:left-[63px] w-full h-[150px] md:h-[380px]  flex items-center justify-center -mb-4">
                       <Image
                         src={img}
                         alt={`Team member ${index + 1}`}
