@@ -4,6 +4,8 @@ import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
 import SEO from "../../../../common/seo"
 import Image from "next/image";
+import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+
 const page = () => {
   return (
     <>
@@ -39,9 +41,7 @@ const page = () => {
               alt="Picture of the author"
               className=" m-auto mb-6"
             />
-            <button className=" bg-primary text-[#E9DCB4] py-3 px-8 text-base font-semibold rounded hover:bg-[#5f5b00] transition block m-auto">
-              Order Now
-            </button>
+            <OrderNowContactButton />
             <br></br>
             <br></br>
             <h2 className=" font-bold text-3xl text-[#5C5649] mb-5">
