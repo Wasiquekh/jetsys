@@ -76,23 +76,30 @@ const Footer = () => {
           <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt:10 md:text-left text-center">
             {/* Column 1 */}
             <div className="lg:w-1/2 md:w-1/2 w-full px-4">
-           
               <h2 className="font-bold text-white text-xl tracking-widest mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
                 Aviation Equipment
               </h2>
-              
+
               <ul className="list-none mb-5 text-base font-medium text-white space-y-1">
                 <li className=" hover:text-secondary">
-                  <Link href="/products/aviation-equipment/ground-support-equipment">Ground Support Equipment</Link>
+                  <Link href="/products/aviation-equipment/ground-support-equipment">
+                    Ground Support Equipment
+                  </Link>
                 </li>
                 <li className=" hover:text-secondary">
-                  <Link href="/products/aviation-equipment/ground-supply-equipment">Ground Supply Equipment</Link>
+                  <Link href="/products/aviation-equipment/ground-supply-equipment">
+                    Ground Supply Equipment
+                  </Link>
                 </li>
                 <li className=" hover:text-secondary">
-                  <Link href="/products/aviation-equipment/ground-handling-equipment">Ground Handling Equipment</Link>
+                  <Link href="/products/aviation-equipment/ground-handling-equipment">
+                    Ground Handling Equipment
+                  </Link>
                 </li>
                 <li className=" hover:text-secondary">
-                  <Link href="/products/aviation-equipment/ground-test-equipment">Ground Test Equipment</Link>
+                  <Link href="/products/aviation-equipment/ground-test-equipment">
+                    Ground Test Equipment
+                  </Link>
                 </li>
               </ul>
 
@@ -101,13 +108,19 @@ const Footer = () => {
               </h2>
               <ul className="list-none mb-5 text-base font-medium text-white space-y-1">
                 <li className=" hover:text-secondary">
-                  <Link href="/products/runway-spares/mafi-spares">Mafi Spares</Link>
+                  <Link href="/products/runway-spares/mafi-spares">
+                    Mafi Spares
+                  </Link>
                 </li>
                 <li className=" hover:text-secondary">
-                  <Link href="/products/runway-spares/runway-lights">Runway Lights</Link>
+                  <Link href="/products/runway-spares/runway-lights">
+                    Runway Lights
+                  </Link>
                 </li>
                 <li className=" hover:text-secondary">
-                  <Link href="/products/runway-spares/signbords">Signbords</Link>
+                  <Link href="/products/runway-spares/signbords">
+                    Signbords
+                  </Link>
                 </li>
               </ul>
 
@@ -116,12 +129,18 @@ const Footer = () => {
               </h2>
               <ul className="list-none mb-5 text-base font-medium text-white space-y-1">
                 <li>
-                  <Link className=" hover:text-secondary" href="/solutions/indegenization">
+                  <Link
+                    className=" hover:text-secondary"
+                    href="/solutions/indegenization"
+                  >
                     Indigenization
                   </Link>
                 </li>
                 <li>
-                  <Link className=" hover:text-secondary" href="/solutions/testing-maintenance">
+                  <Link
+                    className=" hover:text-secondary"
+                    href="/solutions/testing-maintenance"
+                  >
                     Testing &amp; Maintenance
                   </Link>
                 </li>
@@ -186,7 +205,12 @@ const Footer = () => {
                     <div>
                       <IoCallSharp className=" text-primary text-2xl" />
                     </div>
-                    <div className=" hover:text-secondary">+91 90046 45224</div>
+                    <Link
+                      href="tel:+919004645224"
+                      className="hover:text-secondary cursor-pointer"
+                    >
+                      +91 90046 45224
+                    </Link>
                   </div>
                 </li>
                 <li>
@@ -194,9 +218,12 @@ const Footer = () => {
                     <div>
                       <IoMdMail className=" text-primary text-2xl" />
                     </div>
-                    <div className=" hover:text-secondary">
+                    <Link
+                      href="mailto:info@jetsys.co.in"
+                      className="hover:text-secondary cursor-pointer"
+                    >
                       info@jetsys.co.in
-                    </div>
+                    </Link>
                   </div>
                 </li>
                 <li>
