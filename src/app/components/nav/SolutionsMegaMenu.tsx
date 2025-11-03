@@ -11,6 +11,7 @@ const SOLUTIONS = [
       {
         title: "Equipments",
         image: "/images/Equipments.svg",
+        link: "/solutions/indegenization/indegenization-equipments",
       },
       {
         title: "Airbourne Spares",
@@ -112,8 +113,9 @@ export default function SolutionsMegaMenu() {
             <div className="p-3 text-black overflow-y-auto">
               <div className="flex flex-col gap-2">
                 {items.map((item, i) => (
-                  <div
+                  <Link
                     key={i}
+                    href={item.link || "/solutions"} // if link is missing, it won't break
                     className="flex items-center gap-3 border border-primary rounded-lg bg-white px-2 py-2 hover:shadow-md transition cursor-pointer"
                   >
                     <div className="relative w-10 h-10 shrink-0">
@@ -125,7 +127,7 @@ export default function SolutionsMegaMenu() {
                       />
                     </div>
                     <div className="font-semibold">{item.title}</div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>

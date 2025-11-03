@@ -11,6 +11,7 @@ const CATEGORIES = [
       {
         title: "Ground Support Equipment",
         image: "/images/Ground Support Equipment.svg",
+        link: "/products/aviation-equipment/ground-support-equipment",
       },
       {
         title: "Ground Supply Equipment",
@@ -135,8 +136,9 @@ export default function ProductMegaMenu() {
             <div className="p-3 text-black h-full overflow-y-auto">
               <div className="flex flex-col gap-2">
                 {items.map((item, i) => (
-                  <div
+                  <Link
                     key={i}
+                    href={item.link || "/products"} // fallback if no link
                     className="flex items-center gap-3 border border-primary rounded-lg bg-white px-2 py-2 hover:shadow-md transition cursor-pointer"
                   >
                     <div className="relative w-10 h-10 shrink-0">
@@ -148,7 +150,7 @@ export default function ProductMegaMenu() {
                       />
                     </div>
                     <div className="font-semibold">{item.title}</div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
