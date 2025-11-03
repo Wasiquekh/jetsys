@@ -16,11 +16,12 @@ const SOLUTIONS = [
       {
         title: "Airbourne Spares",
         image: "/images/Airbourne Spares.svg",
-        
+        link: "/solutions",
       },
       {
         title: "Non-airbourne Spares",
         image: "/images/Non-airbourne Spares.svg",
+        link: "/solutions",
       },
     ],
   },
@@ -30,12 +31,18 @@ const SOLUTIONS = [
       {
         title: "Aircraft Testers",
         image: "/images/Aircraft Testers.svg",
+        link: "/solutions",
       },
       {
         title: "Test Stands & Test Rigs",
         image: "/images/Test Stands & Test Rigs.svg",
+        link: "/solutions",
       },
-      { title: "Aircraft Fixtures", image: "/images/Aircraft Fixtures.svg" },
+      {
+        title: "Aircraft Fixtures",
+        image: "/images/Aircraft Fixtures.svg",
+        link: "/solutions",
+      },
     ],
   },
 ];
@@ -62,7 +69,6 @@ export default function SolutionsMegaMenu() {
   }, []);
 
   return (
-    
     <div
       className="relative mr-5 inline-block"
       onMouseLeave={() => setOpen(false)}
@@ -115,8 +121,9 @@ export default function SolutionsMegaMenu() {
             <div className="p-3 text-black overflow-y-auto">
               <div className="flex flex-col gap-2">
                 {items.map((item, i) => (
-                  <div
+                  <Link
                     key={i}
+                    href={item.link} // ✅ add link here
                     className="flex items-center gap-3 border border-primary rounded-lg bg-white px-2 py-2 hover:shadow-md transition cursor-pointer"
                   >
                     <div className="relative w-10 h-10 shrink-0">
@@ -128,7 +135,7 @@ export default function SolutionsMegaMenu() {
                       />
                     </div>
                     <div className="font-semibold">{item.title}</div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>

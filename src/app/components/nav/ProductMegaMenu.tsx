@@ -33,30 +33,77 @@ const CATEGORIES = [
   {
     name: "Runway Spares",
     items: [
-      { title: "Mafi Spares", image: "/images/Mafi Spares.svg", link: "/products/runway-spares/mafi-spares"},
-      { title: "Runway Lights", image: "/images/Runway Lights.svg", link: "/products/runway-spares/runway-lights"},
-      { title: "Signboards", image: "/images/Signboards.svg", link: "/products/runway-spares/signbords"},
-      
+      {
+        title: "Mafi Spares",
+        image: "/images/Mafi Spares.svg",
+        link: "/products/runway-spares/mafi-spares",
+      },
+      {
+        title: "Runway Lights",
+        image: "/images/Runway Lights.svg",
+        link: "/products/runway-spares/runway-lights",
+      },
+      {
+        title: "Signboards",
+        image: "/images/Signboards.svg",
+        link: "/products/runway-spares/signbords",
+      },
     ],
   },
   {
     name: "Aircraft Spares & System",
     items: [
-      { title: "Aircraft Spares", image: "/images/Aircraft Spares.svg", link: "/products/aviation-equipment/ground-handling-equipment"},
-      { title: "Aircraft Systems", image: "/images/Aircraft Systems.svg", link: "/products/aviation-equipment/ground-handling-equipment"},
-      { title: "Navy Spares", image: "/images/Navy Spares.svg", link: "/products/aviation-equipment/ground-handling-equipment"},
-      { title: "Aircraft Hoses", image: "/images/Aircraft Hoses.svg",link: "/products/aviation-equipment/ground-handling-equipment" },
-      { title: "Engine Parts", image: "/images/Engine Parts.svg", link: "/products/aviation-equipment/ground-handling-equipment"},
-      { title: "Fuel System Parts", image: "/images/Fuel System Parts.svg",link: "/products/aviation-equipment/ground-handling-equipment" },
+      {
+        title: "Aircraft Spares",
+        image: "/images/Aircraft Spares.svg",
+        link: "/products/aviation-equipment/ground-handling-equipment",
+      },
+      {
+        title: "Aircraft Systems",
+        image: "/images/Aircraft Systems.svg",
+        link: "/products/aviation-equipment/ground-handling-equipment",
+      },
+      {
+        title: "Navy Spares",
+        image: "/images/Navy Spares.svg",
+        link: "/products/aviation-equipment/ground-handling-equipment",
+      },
+      {
+        title: "Aircraft Hoses",
+        image: "/images/Aircraft Hoses.svg",
+        link: "/products/aviation-equipment/ground-handling-equipment",
+      },
+      {
+        title: "Engine Parts",
+        image: "/images/Engine Parts.svg",
+        link: "/products/aviation-equipment/ground-handling-equipment",
+      },
+      {
+        title: "Fuel System Parts",
+        image: "/images/Fuel System Parts.svg",
+        link: "/products/aviation-equipment/ground-handling-equipment",
+      },
     ],
   },
   {
     name: "Airborne Raw Materials",
     items: [
-      { title: "Steel (low Carbon)", image: "/images/Steel (Carbon).svg" },
-      { title: "Steel (Carbon)", image: "/images/Steel (Carbon).svg" },
-      { title: "Fasteners", image: "/images/Fasteners.svg" },
-      { title: "Airborne Glues", image: "/images/Airborne Glues.svg" },
+      {
+        title: "Steel (low Carbon)",
+        image: "/images/Steel (Carbon).svg",
+        link: "/products",
+      },
+      {
+        title: "Steel (Carbon)",
+        image: "/images/Steel (Carbon).svg",
+        link: "/products",
+      },
+      { title: "Fasteners", image: "/images/Fasteners.svg", link: "/products" },
+      {
+        title: "Airborne Glues",
+        image: "/images/Airborne Glues.svg",
+        link: "/products",
+      },
     ],
   },
 ];
