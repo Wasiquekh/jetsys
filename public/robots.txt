@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.jetsys.co.in
+
+# Sitemaps
+Sitemap: https://www.jetsys.co.in/sitemap.xml
