@@ -2,7 +2,6 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
-import SEO from "@/app/common/seo";
 import Image from "next/image";
 import { Metadata } from "next";
 
