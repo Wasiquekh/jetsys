@@ -2,19 +2,23 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "Totem Tray Harmonization Tool | Runway Alignment – Jetsys Defence",
+  description:
+    "Jetsys Defence Totem Tray Harmonization Tool ensures precise runway beam alignment for safer aircraft landings. Ideal airfield lighting harmonization with ICAO compliance.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/solutions/indegenization/indegenization-equipments/totem-tray-harmonization-tool",
+  },
+};
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "Totem Tray Harmonization Tool | Runway Alignment – Jetsys Defence"
-            }
-        description= {
-            "Jetsys Defence Totem Tray Harmonization Tool ensures precise runway beam alignment for safer aircraft landings. Ideal airfield lighting harmonization with ICAO compliance."}
-        />
+ 
     <div>
       <Header />
       <StickyHeader />

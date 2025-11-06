@@ -2,19 +2,22 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "Touchdown Zone Light by Jetsys Defence – Reliable Runway Spares & Price List",
+  description:
+    "Explore high-intensity Touchdown Zone Light systems from Jetsys Defence. Built for extreme performance and durability. Check updated Touchdown Zone Light price and request a quote now.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/runway-spares/runway-lights/touchdown-zone-light",
+  },
+};
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "Touchdown Zone Light by Jetsys Defence – Reliable Runway Spares & Price List"
-            }
-        description= {
-            "Explore high-intensity Touchdown Zone Light systems from Jetsys Defence. Built for extreme performance and durability. Check updated Touchdown Zone Light price and request a quote now."}
-        />
+
     <div>
       <Header />
       <StickyHeader />

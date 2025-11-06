@@ -3,19 +3,23 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
 import Image from "next/image";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
+
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "Protractor Unit for DAU Vane Angles – Aircraft Tooling Protractors | Jetsys Defence",
+  description:
+    "Explore the precision-engineered Protractor Unit for DAU Vane Angles by Jetsys Defence. Designed for aviation tooling accuracy, our vane protractor aviation tooling ensures reliable measurement and alignment.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/protractor-unit-for-dau-vane-angles",
+  },
+};
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "Protractor Unit for DAU Vane Angles – Aircraft Tooling Protractors | Jetsys Defence"
-            }
-        description= {
-            "Explore the precision-engineered Protractor Unit for DAU Vane Angles by Jetsys Defence. Designed for aviation tooling accuracy, our vane protractor aviation tooling ensures reliable measurement and alignment."
-            }
-        />
+  
     <div>
       <Header />
       <StickyHeader />

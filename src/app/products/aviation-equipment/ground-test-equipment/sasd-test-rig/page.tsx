@@ -2,19 +2,23 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "SASD Test Rig for Aircraft | Jetsys Defence Aviation Equipment",
+  description:
+    "Explore Jetsys Defence SASD Test Rig designed for aircraft system testing. Find your nearest branch and check the latest SASD Test Rig price today.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-test-equipment/sasd-test-rig",
+  },
+};
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "SASD Test Rig for Aircraft | Jetsys Defence Aviation Equipment"
-            }
-        description= {
-            "Explore Jetsys Defence SASD Test Rig designed for aircraft system testing. Find your nearest branch and check the latest SASD Test Rig price today."}
-        />
+
     <div>
       <Header />
       <StickyHeader />

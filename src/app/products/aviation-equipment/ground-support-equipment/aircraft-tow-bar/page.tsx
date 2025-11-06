@@ -3,18 +3,22 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
 import Image from "next/image";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "Aircraft Tow Bar – Ground Support Equipment & Towbar Solutions | Jetsys Defence",
+  description:
+    "Discover the high-performance Aircraft Tow Bar by Jetsys Defence. Engineered for reliable aircraft towing and ground handling, our towbar and wheel systems deliver superior efficiency and durability.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/aircraft-tow-bar",
+  },
+};
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "Aircraft Tow Bar – Ground Support Equipment & Towbar Solutions | Jetsys Defence"
-            }
-        description= {
-            "Discover the high-performance Aircraft Tow Bar by Jetsys Defence. Engineered for reliable aircraft towing and ground handling, our towbar and wheel systems deliver superior efficiency and durability."}
-        />
+    
     <div>
       <Header />
       <StickyHeader />

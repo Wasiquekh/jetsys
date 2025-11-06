@@ -3,19 +3,22 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
 import Image from "next/image";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "NATO Cable – Military-Grade Cables & NATO Slave Connectors | Jetsys Defence",
+  description:
+    "Discover high-performance NATO Cable solutions by Jetsys Defence. Our durable cables and NATO slave connectors ensure reliable aircraft power transfer and defence-grade performance.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/nato-cable",
+  },
+};
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-        "NATO Cable – Military-Grade Cables & NATO Slave Connectors | Jetsys Defence"
-            }
-        description= {
-            "Discover high-performance NATO Cable solutions by Jetsys Defence. Our durable cables and NATO slave connectors ensure reliable aircraft power transfer and defence-grade performance."
-            }
-        /> 
+  
     <div>
       <Header />
       <StickyHeader />

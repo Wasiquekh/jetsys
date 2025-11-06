@@ -3,19 +3,23 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
 import Image from "next/image";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "Aircraft Jacks – Nose Jack & Main Jack for Defence Aircraft | Jetsys Defence",
+  description:
+    "Looking for a nose jack & main jack? Jetsys Defence offers rugged aircraft jacks for defence use, engineered for performance and safety. Request a quote and pricing now.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/nose-jack",
+  },
+};
+
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-        "Aircraft Jacks – Nose Jack & Main Jack for Defence Aircraft | Jetsys Defence"
-            }
-        description= {
-            "Looking for a nose jack & main jack? Jetsys Defence offers rugged aircraft jacks for defence use, engineered for performance and safety. Request a quote and pricing now."
-            }
-        /> 
+   
     <div>
       <Header />
       <StickyHeader />

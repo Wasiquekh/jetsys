@@ -3,18 +3,22 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
 import Image from "next/image";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "Ground Power Unit – Aircraft GPU Systems & Manufacturers | Jetsys Defence",
+  description:
+    "Discover advanced Ground Power Unit solutions by Jetsys Defence. Our aircraft Ground Power Unit ensures reliable performance, efficiency, and durability—trusted by leading GPU manufacturers.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/ground-power-unit",
+  },
+};
 const page = () => {
   return (
     <>
-     <SEO
-        pageTitle=  {
-         "Ground Power Unit – Aircraft GPU Systems & Manufacturers | Jetsys Defence"
-            }
-        description= {
-            "Discover advanced Ground Power Unit solutions by Jetsys Defence. Our aircraft Ground Power Unit ensures reliable performance, efficiency, and durability—trusted by leading GPU manufacturers."}
-        />
+     
     <div>
       <Header />
       <StickyHeader />

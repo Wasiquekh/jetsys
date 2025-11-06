@@ -2,19 +2,23 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "Taxiway Guidance Sign by Jetsys Defence – Quality Runway Spares & Price List",
+  description:
+    "Upgrade your airport with reliable Taxiway Guidance Sign units from Jetsys Defence. Built for clarity and longevity. Request your Taxiway Guidance Sign price and specifications today.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/runway-spares/runway-lights/taxiway-edge-inset-light",
+  },
+};
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "Taxiway Edge Inset Light by Jetsys Defence – Colour Options & Price Info"
-            }
-        description= {
-            "Need a reliable Taxiway Edge Inset Light? Jetsys Defence offers multiple colour/ color variants and expert support for taxiway lighting systems. Ask now for specifications and pricing details."}
-        />
+   
     <div></div>
     <div>
       <Header />

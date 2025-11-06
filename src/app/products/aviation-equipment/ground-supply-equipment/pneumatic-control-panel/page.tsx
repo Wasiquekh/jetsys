@@ -2,19 +2,23 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "Pneumatic Control Panel – Precision Design & Manufacturers | Jetsys Defence",
+  description:
+    "Explore high-quality Pneumatic Control Panels by Jetsys Defence. As a leading Pneumatic Control Panel manufacturer, we deliver advanced design solutions for reliable aircraft and defence systems.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/pneumatic-control-panel",
+  },
+};
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "Pneumatic Control Panel – Precision Design & Manufacturers | Jetsys Defence"
-            }
-        description= {
-            "Explore high-quality Pneumatic Control Panels by Jetsys Defence. As a leading Pneumatic Control Panel manufacturer, we deliver advanced design solutions for reliable aircraft and defence systems."}
-        />
+    
     <div>
       <Header />
       <StickyHeader />

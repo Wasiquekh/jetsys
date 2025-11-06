@@ -4,17 +4,22 @@ import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
 import SEO from "@/app/common/seo";
 import Image from "next/image";
+import { Metadata } from "next";
+
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "Fuel Consumption Trolley in India – Aviation Testing Equipment | Jetsys Defence",
+  description:
+    "Buy Fuel Consumption Trolley in India from Jetsys Defence. Precision-built for aviation fuel analysis and testing, with superior quality and the best price guarantee.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley",
+  },
+};
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "Fuel Consumption Trolley in India – Aviation Testing Equipment | Jetsys Defence"
-            }
-        description= {
-            "Buy Fuel Consumption Trolley in India from Jetsys Defence. Precision-built for aviation fuel analysis and testing, with superior quality and the best price guarantee."}
-        />
+    
     <div>
       <Header />
       <StickyHeader />

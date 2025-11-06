@@ -2,19 +2,23 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "Ring – Oil Feed for Jet Engines | Oil Distributor Ring – Jetsys Defence",
+  description:
+    "Jetsys Defence Ring – Oil Feed systems ensure precise lubrication flow in jet engines. High-temperature durability, leak-proof sealing & long-life performance.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/solutions/indegenization/indegenization-equipments/ring-oil-feed",
+  },
+};
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "Ring – Oil Feed for Jet Engines | Oil Distributor Ring – Jetsys Defence"
-            }
-        description= {
-            "Jetsys Defence Ring – Oil Feed systems ensure precise lubrication flow in jet engines. High-temperature durability, leak-proof sealing & long-life performance."}
-        />
+  
     <div>
       <Header />
       <StickyHeader />

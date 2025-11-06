@@ -6,10 +6,20 @@ import StickyHeader from "../components/StickyHeader";
 import Image from "next/image";
 import AboutLineAnimation from "../components/AboutLineAnimation";
 import ScrollUpText from "../components/ScrollUpText";
-import SEO from "../common/seo";
+import { Metadata } from "next";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+export const metadata: Metadata = {
+  title:
+    "About Jetsys Defence | India’s Innovation-Driven Aerospace Company",
+  description:
+    "Jetsys Defence is an agile, innovation-led aerospace and defence company in India specializing in mission-critical avionics, airborne platforms, and tactical systems.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/about-us",
+  },
+};
 
 const Page = () => {
   // Put your image paths here
@@ -25,14 +35,7 @@ const Page = () => {
 
   return (
     <>
-      <SEO
-        pageTitle={
-          "About Jetsys Defence | India’s Innovation-Driven Aerospace Company"
-        }
-        description={
-          "Jetsys Defence is an agile, innovation-led aerospace and defence company in India specializing in mission-critical avionics, airborne platforms, and tactical systems."
-        }
-      />
+ 
       <div>
         <Header />
         <StickyHeader />

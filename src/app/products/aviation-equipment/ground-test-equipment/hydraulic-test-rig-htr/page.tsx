@@ -2,19 +2,23 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "Advanced Hydraulic Test Rig (HTR) | Jetsys Defence Aviation Systems",
+  description:
+    "Enhance your aviation workshop with Jetsys Defence Advanced Hydraulic Test Rig (HTR). Get full equipment sets & pricing for aircraft hydraulic testing.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr",
+  },
+};
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "Advanced Hydraulic Test Rig (HTR) | Jetsys Defence Aviation Systems"
-            }
-        description= {
-            "Enhance your aviation workshop with Jetsys Defence Advanced Hydraulic Test Rig (HTR). Get full equipment sets & pricing for aircraft hydraulic testing."}
-        />
+ 
     <div>
       <Header />
       <StickyHeader />

@@ -2,21 +2,24 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
-import SEO from "../../../../common/seo"
+import { Metadata } from "next";
+
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
-
+export const metadata: Metadata = {
+  title:
+    "Nitrogen Trolley – Aircraft Nitrogen Trolley Solutions | Jetsys Defence",
+  description:
+    "Discover the Jetsys Defence Nitrogen Trolley engineered for aviation ground support. Explore aircraft nitrogen trolley features, competitive nitrogen trolley price & request a quote now.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/nitrogen-trolley",
+  },
+};
 const page = () => {
   return (
     <>
-      <SEO
-        pageTitle={
-          "Nitrogen Trolley – Aircraft Nitrogen Trolley Solutions | Jetsys Defence"
-        }
-        description={
-          "Discover the Jetsys Defence Nitrogen Trolley engineered for aviation ground support. Explore aircraft nitrogen trolley features, competitive nitrogen trolley price & request a quote now."
-        }
-      />
+
+    
       <div>
         <Header />
         <StickyHeader />

@@ -2,19 +2,23 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "Spreader & Cutter With Petrol Engine | Jetsys Defence Aviation Tools",
+  description:
+    "Explore Jetsys Defence Spreader & Cutter With Petrol Engine for aviation rescue operations. Check price, replacement parts, and detailed specifications today.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine",
+  },
+};
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "Spreader & Cutter With Petrol Engine | Jetsys Defence Aviation Tools"
-            }
-        description= {
-            "Explore Jetsys Defence Spreader & Cutter With Petrol Engine for aviation rescue operations. Check price, replacement parts, and detailed specifications today."}
-        />
+  
     <div>
       <Header />
       <StickyHeader />

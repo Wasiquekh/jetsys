@@ -2,19 +2,23 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "LDP Trolley for Aircraft | Jetsys Defence Aviation Equipment",
+  description:
+    "Explore Jetsys Defence LDP Trolley built for precision aircraft loading. Check LDP Trolley dimensions, price, and expert customer service support today.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-handling-equipment/ldp-trolley",
+  },
+};
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "LDP Trolley for Aircraft | Jetsys Defence Aviation Equipment"
-            }
-        description= {
-            "Explore Jetsys Defence LDP Trolley built for precision aircraft loading. Check LDP Trolley dimensions, price, and expert customer service support today."}
-        />
+ 
     <div>
       <Header />
       <StickyHeader />

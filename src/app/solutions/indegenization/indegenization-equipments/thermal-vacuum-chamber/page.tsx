@@ -2,19 +2,23 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "Thermal Vacuum Chamber | Space Simulation System – Jetsys Defence",
+  description:
+    "Jetsys Defence Thermal Vacuum Chamber simulates extreme space temperature & pressure for satellite, component & payload testing. Ideal for thermal vacuum qualification.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/solutions/indegenization/indegenization-equipments/thermal-vacuum-chamber",
+  },
+};
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "Thermal Vacuum Chamber | Space Simulation System – Jetsys Defence"
-            }
-        description= {
-            "Jetsys Defence Thermal Vacuum Chamber simulates extreme space temperature & pressure for satellite, component & payload testing. Ideal for thermal vacuum qualification."}
-        />
+   
     <div>
       <Header />
       <StickyHeader />

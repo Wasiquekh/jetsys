@@ -2,19 +2,23 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "Squib Tester for Aircraft Systems | Jetsys Defence Igniter Tester",
+  description:
+    "Jetsys Defence Squib Tester ensures safe squib igniter testing without firing. Ideal for aircraft squib firing circuit checks, continuity testing, and maintenance safety.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/solutions/indegenization/indegenization-equipments/squib-tester",
+  },
+};
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "Squib Tester for Aircraft Systems | Jetsys Defence Igniter Tester"
-            }
-        description= {
-            "Jetsys Defence Squib Tester ensures safe squib igniter testing without firing. Ideal for aircraft squib firing circuit checks, continuity testing, and maintenance safety."}
-        />
+    
     <div>
       <Header />
       <StickyHeader />

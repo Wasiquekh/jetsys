@@ -2,19 +2,23 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "Conformal Coating Removal Machine | Automated System – Jetsys Defence",
+  description:
+    "Jetsys Defence Conformal Coating Removal Machine delivers precise, non-destructive coating stripping. Ideal for PCBs, avionics repair & laser-based removal.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/solutions/indegenization/indegenization-equipments/conformal-coating-removal-machine",
+  },
+};
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "Conformal Coating Removal Machine | Automated System – Jetsys Defence"
-            }
-        description= {
-            "Jetsys Defence Conformal Coating Removal Machine delivers precise, non-destructive coating stripping. Ideal for PCBs, avionics repair & laser-based removal."}
-        />
+
     <div>
       <Header />
       <StickyHeader />

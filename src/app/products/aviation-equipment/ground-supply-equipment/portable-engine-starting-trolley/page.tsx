@@ -2,19 +2,23 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "Portable Engine Starting Trolley in India – Aircraft Start-Up System | Jetsys Defence",
+  description:
+    "Buy Portable Engine Starting Trolley in India from Jetsys Defence. Our aircraft start-up trolleys deliver high performance with affordable price and nationwide after-sales support.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/portable-engine-starting-trolley",
+  },
+};
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "Portable Engine Starting Trolley in India – Aircraft Start-Up System | Jetsys Defence"
-            }
-        description= {
-            "Buy Portable Engine Starting Trolley in India from Jetsys Defence. Our aircraft start-up trolleys deliver high performance with affordable price and nationwide after-sales support."}
-        />
+    
     <div>
       <Header />
       <StickyHeader />

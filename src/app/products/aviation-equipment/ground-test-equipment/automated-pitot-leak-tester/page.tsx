@@ -2,19 +2,23 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "Automated Pitot Leak Tester for Aircraft | Jetsys Defence Aviation Tools",
+  description:
+    "Discover Jetsys Defence Automated Pitot Leak Tester for precise aircraft pressure testing. Explore complete kits, best prices, and reliable aviation performance.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-test-equipment/automated-pitot-leak-tester",
+  },
+};
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "Automated Pitot Leak Tester for Aircraft | Jetsys Defence Aviation Tools"
-            }
-        description= {
-            "Discover Jetsys Defence Automated Pitot Leak Tester for precise aircraft pressure testing. Explore complete kits, best prices, and reliable aviation performance."}
-        />
+  
     <div>
       <Header />
       <StickyHeader />

@@ -2,19 +2,23 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "Air Data Test System for Aircraft | Jetsys Defence Aviation Equipment",
+  description:
+    "Discover Jetsys Defence Air Data Test System engineered for aircraft pressure & pitot-static calibration. View full Air Data Test System set & best price today.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-test-equipment/air-data-test-system",
+  },
+};
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "Air Data Test System for Aircraft | Jetsys Defence Aviation Equipment"
-            }
-        description= {
-            "Discover Jetsys Defence Air Data Test System engineered for aircraft pressure & pitot-static calibration. View full Air Data Test System set & best price today."}
-        />
+  
     <div>
       <Header />
       <StickyHeader />

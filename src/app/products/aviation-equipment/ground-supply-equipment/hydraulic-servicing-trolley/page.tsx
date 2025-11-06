@@ -2,19 +2,23 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "Hydraulic Servicing Trolley | Jetsys Defence Aviation Equipment",
+  description:
+    "Explore premium Hydraulic Servicing Trolley solutions from Jetsys Defence for aviation equipment. Reliable servicing & maintenance support, find a trolley near me today.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley",
+  },
+};
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "Hydraulic Servicing Trolley | Jetsys Defence Aviation Equipment"
-            }
-        description= {
-            "Explore premium Hydraulic Servicing Trolley solutions from Jetsys Defence for aviation equipment. Reliable servicing & maintenance support, find a trolley near me today."}
-        />
+   
     <div>
       <Header />
       <StickyHeader />

@@ -2,19 +2,23 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "Taxiway Guidance Sign by Jetsys Defence – Quality Runway Spares & Price List",
+  description:
+    "Upgrade your airport with reliable Taxiway Guidance Sign units from Jetsys Defence. Built for clarity and longevity. Request your Taxiway Guidance Sign price and specifications today.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/runway-spares/signbords/taxiway-guidance-sign",
+  },
+};
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "Taxiway Guidance Sign by Jetsys Defence – Quality Runway Spares & Price List"
-            }
-        description= {
-            "Upgrade your airport with reliable Taxiway Guidance Sign units from Jetsys Defence. Built for clarity and longevity. Request your Taxiway Guidance Sign price and specifications today."}
-        />
+    
     <div>
       <Header />
       <StickyHeader />
