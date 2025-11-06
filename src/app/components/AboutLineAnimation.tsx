@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useRef } from "react";
 import { IoSquareSharp } from "react-icons/io5";
 

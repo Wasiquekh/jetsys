@@ -1,4 +1,5 @@
-"use client";
+//"use client";
+import { Metadata } from "next";
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -6,19 +7,17 @@ import StickyHeader from "../components/StickyHeader";
 import Image from "next/image";
 import AboutLineAnimation from "../components/AboutLineAnimation";
 import ScrollUpText from "../components/ScrollUpText";
-import { Metadata } from "next";
+import TeamSlider from "../components/TeamSlider";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
 import "swiper/css";
+
 export const metadata: Metadata = {
-  title:
-    "About Jetsys Defence | India’s Innovation-Driven Aerospace Company",
+  title: "About Jetsys Defence | India’s Innovation-Driven Aerospace Company",
   description:
     "Jetsys Defence is an agile, innovation-led aerospace and defence company in India specializing in mission-critical avionics, airborne platforms, and tactical systems.",
   alternates: {
     canonical: "https://www.jetsys.co.in/about-us",
-  },
+  },
 };
 
 const Page = () => {
@@ -35,7 +34,6 @@ const Page = () => {
 
   return (
     <>
- 
       <div>
         <Header />
         <StickyHeader />
@@ -138,40 +136,8 @@ const Page = () => {
         </section>
         {/* OUR TEAM SECTION */}
 
-        <section className="bg-[#F0EFE9]">
-          <div className="container !pb-0">
-            <h1 className="text-center text-[#5c5649] text-[26px] md:text-[40px] font-extrabold uppercase mb-7 horizon">
-              Our team
-            </h1>
-            <div className="w-full mx-auto">
-              <Swiper
-                modules={[Autoplay]}
-                loop
-                autoplay={{
-                  delay: 2500,
-                  disableOnInteraction: false,
-                  pauseOnMouseEnter: true,
-                }}
-                slidesPerView={1}
-                spaceBetween={30}
-              >
-                {slides.map((img, index) => (
-                  <SwiperSlide key={index}>
-                    <div className="relative left-0  md:left-[63px] w-full h-[150px] md:h-[380px]  flex items-center justify-center -mb-4">
-                      <Image
-                        src={img}
-                        alt={`Team member ${index + 1}`}
-                        fill
-                        className="object-contain"
-                        sizes="(max-width: 768px) 100vw, 100vw"
-                      />
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-          </div>
-        </section>
+        {/* ✅ Add slider exactly here */}
+        <TeamSlider slides={slides} />
 
         <Footer />
       </div>

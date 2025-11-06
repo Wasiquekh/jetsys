@@ -93,6 +93,7 @@ export default function OrderNowContactButton() {
         autoClose: 3000,
         className: "bg-red-500 text-white",
       });
+      console.log(e);
     } finally {
       setSubmitting(false);
     }

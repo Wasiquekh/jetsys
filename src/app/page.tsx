@@ -12,7 +12,6 @@ import WhyChoose from "./components/WhyChoose";
 import ScrollUpText from "./components/ScrollUpText";
 import MissionVisionAnimate from "./components/MissionVisionAnimate";
 import Link from "next/link";
-import { Metadata } from "next";
 
 
 // CODE FOR CLIENT LOGO FADE BOTTOM
