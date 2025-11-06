@@ -2,19 +2,24 @@ import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
-import SEO from "@/app/common/seo";
+import { Metadata } from "next";
+
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+export const metadata: Metadata = {
+  title:
+    "Bomb Loading Trolley for Aircraft | Jetsys Defence Aviation Equipment",
+  description:
+    "Discover Jetsys Defence Bomb Loading Trolley for safe and efficient aircraft munition handling. Trusted manufacturer offering quality and competitive price in India.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley",
+  },
+};
+
 const page = () => {
+
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "Bomb Loading Trolley for Aircraft | Jetsys Defence Aviation Equipment"
-            }
-        description= {
-            "Discover Jetsys Defence Bomb Loading Trolley for safe and efficient aircraft munition handling. Trusted manufacturer offering quality and competitive price in India."}
-        />
     <div>
       <Header />
       <StickyHeader />
