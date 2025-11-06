@@ -39,13 +39,14 @@ const logoItemVariants: Variants = {
 export default function Home() {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "Aerospace Innovation & Defence R&D in India | Jetsys Defence"
-            }
-        description= {
-            "Pioneering R&D in aerospace and defence, Jetsys Defence develops indigenous technologies for avionics, AI-based control, and tactical applications."}
-        />
+      <SEO
+        pageTitle={
+          "Aerospace Innovation & Defence R&D in India | Jetsys Defence"
+        }
+        description={
+          "Pioneering R&D in aerospace and defence, Jetsys Defence develops indigenous technologies for avionics, AI-based control, and tactical applications."
+        }
+      />
 
       <Header />
       <StickyHeader />
@@ -225,61 +226,90 @@ export default function Home() {
         <div className=" bg-primary h-14 -mt-[76px] -mb-[70px] z-10"></div>
         {/* ICON IMAGES */}
         <div className=" max-w-[1120px] px-5 mx-auto  flex justify-between">
-          <Image
-            src="/images/Expert-Engineers.gif"
+          <video
+            src="/images/Expert-Engineers.webm"
             width={80}
             height={80}
-            alt="Picture of the author"
-            className=" relative left-[10px]"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="relative left-[10px]"
           />
-          <Image
-            src="/images/Rapid-Deployment.gif"
+          <video
+            src="/images/Rapid-Deployment.webm"
             width={80}
             height={80}
-            alt="Picture of the author"
-            className=" relative left-[7px]"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="relative left-[7px]"
           />
-          <Image
-            src="/images/Global-Reach.gif"
+
+          <video
+            src="/images/Global-Reach.webm"
             width={80}
             height={80}
-            alt="Picture of the author"
-            className=" relative left-[5.5px]"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="relative left-[5.5px]"
           />
-          <Image
-            src="/images/Indigenous-Capability.gif"
+
+          <video
+            src="/images/Indigenous-Capability.webm"
             width={80}
             height={80}
-            alt="Picture of the author"
-            className=" relative left-[2px]"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="relative left-[2px]"
           />
-          <Image
-            src="/images/Precise-Production.gif"
+
+          <video
+            src="/images/Precise-Production.webm"
             width={80}
             height={80}
-            alt="Picture of the author"
-            className=" relative right-[1px]"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="relative right-[1px]"
           />
-          <Image
-            src="/images/Innovation-at-Core.gif"
+          <video
+            src="/images/Innovation-at-Core.webm"
             width={80}
             height={80}
-            alt="Picture of the author"
-            className=" relative right-[4.5px]"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="relative right-[4.5px]"
           />
-          <Image
-            src="/images/end-to-end-solutions.gif"
+
+          <video
+            src="/images/end-to-end-solutions.webm"
             width={80}
             height={80}
-            alt="Picture of the author"
-            className=" relative right-[7px]"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="relative right-[7px]"
           />
-          <Image
-            src="/images/Custom-Fit.gif"
+
+          <video
+            src="/images/Custom-Fit.webm"
             width={80}
             height={80}
-            alt="Picture of the author"
-            className=" relative right-[10px]"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="relative right-[10px]"
           />
         </div>
         {/* TEXT */}
@@ -330,87 +360,119 @@ export default function Home() {
       <section className=" block md:hidden">
         <div className="container !pt-0 grid grid-cols-2 gap-4">
           <div className=" w-full">
-            <Image
-              src="/images/Expert-Engineers.gif"
+            <video
+              src="/images/Expert-Engineers.webm"
               width={300}
               height={300}
-              alt="Picture of the author"
+              autoPlay
+              loop
+              muted
+              playsInline
               className=" w-3/4 mb-2 m-auto"
             />
             <p className=" text-center">Expert Engineers</p>
           </div>
+
           <div className=" w-full">
-            <Image
-              src="/images/Rapid-Deployment.gif"
+            <video
+              src="/images/Rapid-Deployment.webm"
               width={300}
               height={300}
-              alt="Picture of the author"
+              autoPlay
+              loop
+              muted
+              playsInline
               className=" w-3/4 mb-2 m-auto"
             />
             <p className=" text-center">Rapid Deployment </p>
           </div>
+
           <div className=" w-full">
-            <Image
-              src="/images/Global-Reach.gif"
+            <video
+              src="/images/Global-Reach.webm"
               width={300}
               height={300}
-              alt="Picture of the author"
+              autoPlay
+              loop
+              muted
+              playsInline
               className=" w-3/4 mb-2 m-auto"
             />
             <p className=" text-center">Global Reach</p>
           </div>
+
           <div className=" w-full">
-            <Image
-              src="/images/Indigenous-Capability.gif"
+            <video
+              src="/images/Indigenous-Capability.webm"
               width={300}
               height={300}
-              alt="Picture of the author"
+              autoPlay
+              loop
+              muted
+              playsInline
               className=" w-3/4 mb-2 m-auto"
             />
             <p className=" text-center">Indigenous Capability</p>
           </div>
+
           <div className=" w-full">
-            <Image
-              src="/images/Precise-Production.gif"
+            <video
+              src="/images/Precise-Production.webm"
               width={300}
               height={300}
-              alt="Picture of the author"
+              autoPlay
+              loop
+              muted
+              playsInline
               className=" w-3/4 mb-2 m-auto"
             />
             <p className=" text-center">Precise Production</p>
           </div>
-                    <div className=" w-full">
-            <Image
-              src="/images/Innovation-at-Core.gif"
+
+          <div className=" w-full">
+            <video
+              src="/images/Innovation-at-Core.webm"
               width={300}
               height={300}
-              alt="Picture of the author"
+              autoPlay
+              loop
+              muted
+              playsInline
               className=" w-3/4 mb-2 m-auto"
             />
             <p className=" text-center">Innovation at Core</p>
           </div>
-                    <div className=" w-full">
-            <Image
-              src="/images/end-to-end-solutions.gif"
+
+          <div className=" w-full">
+            <video
+              src="/images/end-to-end-solutions.webm"
               width={300}
               height={300}
-              alt="Picture of the author"
+              autoPlay
+              loop
+              muted
+              playsInline
               className=" w-3/4 mb-2 m-auto"
             />
             <p className=" text-center">End to end solutions</p>
           </div>
-                    <div className=" w-full">
-            <Image
-              src="/images/Custom-Fit.gif"
+
+          <div className=" w-full">
+            <video
+              src="/images/Custom-Fit.webm"
               width={300}
               height={300}
-              alt="Picture of the author"
+              autoPlay
+              loop
+              muted
+              playsInline
               className=" w-3/4 mb-2 m-auto"
             />
             <p className=" text-center">Custom-Fit</p>
           </div>
         </div>
       </section>
+
       {/* END MOBILE DESIGN */}
       {/* OPTIONAL  SPACE FOR DESKTOP */}
       <section className=" hidden md:block">
