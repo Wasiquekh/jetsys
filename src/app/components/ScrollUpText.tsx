@@ -36,8 +36,8 @@ export default function ScrollUpText({
   }, [inView, controls]);
 
   return (
-    <motion.h2 ref={ref} className={className} animate={controls}>
+    <motion.h1 ref={ref} className={className} animate={controls}>
       {children}
-    </motion.h2>
+    </motion.h1>
   );
 }
