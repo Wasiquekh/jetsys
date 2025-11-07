@@ -37,15 +37,15 @@ const MissionVisionAnimate: React.FC = () => {
         {/* Center image wrapper (fade-in from bottom) */}
         <div
           ref={centerImg.ref}
-          className={`absolute left-1/2 -translate-x-1/2 hidden md:block
-            ${centerImg.inView ? "anim-fade-in-up" : "prefade-up"}`}
+          className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform-gpu hidden md:block
+    ${centerImg.inView ? "anim-fade-in-up" : "prefade-up"}`}
         >
           <Image
             src="/images/mission.png"
             width={340}
             height={340}
-            alt="Picture of the author"
-            className=""
+            alt="Mission & Vision"
+            className="block object-contain"
             priority
           />
         </div>
