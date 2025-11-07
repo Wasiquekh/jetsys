@@ -33,23 +33,7 @@ const MissionVisionAnimate: React.FC = () => {
 
   return (
     <div>
-      <div className="py-10 px-4 md:px-10 w-full mt-30 mb-16 grid grid-cols-1 md:grid-cols-3 items-center relative">
-        {/* Center image wrapper (fade-in from bottom) */}
-        <div
-          ref={centerImg.ref}
-          className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform-gpu hidden md:block
-    ${centerImg.inView ? "anim-fade-in-up" : "prefade-up"}`}
-        >
-          <Image
-            src="/images/mission.png"
-            width={340}
-            height={340}
-            alt="Mission & Vision"
-            className="block object-contain"
-            priority
-          />
-        </div>
-
+      <div className="py-10 px-4 md:px-10 w-full mt-[30px] mb-16 grid grid-cols-1 md:grid-cols-3 items-center relative">
         {/* Our Mission (fade-in left) */}
         <div
           ref={mission.ref}
@@ -68,7 +52,22 @@ const MissionVisionAnimate: React.FC = () => {
           </p>
         </div>
 
-        <div></div>
+        {/* Middle column with image (reliable on Mac/Windows) */}
+        <div className="hidden md:flex items-center justify-center">
+          <div
+            ref={centerImg.ref}
+            className={`${centerImg.inView ? "anim-fade-in-up" : "prefade-up"}`}
+          >
+            <Image
+              src="/images/mission.png"
+              width={340}
+              height={340}
+              alt="Mission & Vision"
+              className="block object-contain"
+              priority
+            />
+          </div>
+        </div>
 
         {/* Our Vision (fade-in right) */}
         <div
