@@ -101,7 +101,7 @@ export default function Page() {
 
             {/* Right column */}
             <div className="w-full md:w-[50%]">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch mt-4 md:mt-0">
+              <div className=" grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch mt-4 md:mt-0">
                 <Link href="#">
                   <div className="bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                     <Image
