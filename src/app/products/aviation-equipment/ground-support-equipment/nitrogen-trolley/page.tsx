@@ -298,29 +298,36 @@ const page = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   <div className="text-black space-y-4">
                     <ul className="list-disc pl-5">
+                     <li>
+  <strong className="text-[#5C5649]">
+    <a href="/products/aviation-equipment/ground-support-equipment/nitrogen-trolley/tire_inflation" className="hover:underline">
+      Tire Inflation
+    </a>
+  </strong>{" "}
+  for aircraft, helicopters, and UAVs.
+</li>
                       <li>
                         <strong className="text-[#5C5649]">
-                          Tire Inflation
-                        </strong>{" "}
-                        for aircraft, helicopters, and UAVs.
-                      </li>
-                      <li>
-                        <strong className="text-[#5C5649]">
-                          Shock Strut Servicing
+                          Shock Strut Servicing 
                         </strong>{" "}
                         to maintain landing gear performance
                       </li>
                       <li>
-                        <strong className="text-[#5C5649]">
-                          Hydraulic Accumulator Charging
-                        </strong>
-                        ensuring stable system pressure.
-                      </li>
+  <strong className="text-[#5C5649]">
+     <a href="/products/aviation-equipment/ground-support-equipment/nitrogen-trolley/hydraulic_accumulator_charging" className="hover:underline">
+      Hydraulic Accumulator Charging
+     </a>
+  </strong>{" "}
+  ensuring stable system pressure.
+</li>
                       <li>
                         <strong className="text-[#5C5649]">
-                          Nitrogen purging
-                        </strong>
+                          <a href="/products/aviation-equipment/ground-support-equipment/nitrogen-trolley/nitrogen_purging" className="hover:underline">
+                            Nitrogen purging
+                          </a>
+                        </strong>{" "}
                         for fuel and oxygen systems.
+                       
                       </li>
                     </ul>
                   </div>
