@@ -237,7 +237,11 @@ const page = () => {
           <li><strong className="text-[#5C5649]">Flight controls & sensors –</strong> Includes feedback, health-monitoring, and stability systems.</li>
           <li><strong className="text-[#5C5649]">Avionics networks –</strong> Data bus, Ethernet, RF, and coax infrastructure.</li>
           <li><strong className="text-[#5C5649]">Engine systems –</strong> Controls, ignition, and FADEC interfaces.</li>
-          <li><strong className="text-[#5C5649]">Landing gear –</strong> Instrumentation, brake systems, and actuator wiring.</li>
+          <li><strong className="text-[#5C5649] hover:underline">
+  <a href="/products/aviation-equipment/ground-support-equipment/nato-cable/landing_gear">
+    Landing gear –
+  </a>
+</strong> Instrumentation, brake systems, and actuator wiring.</li>
         </ul>
       </div>
     </div>

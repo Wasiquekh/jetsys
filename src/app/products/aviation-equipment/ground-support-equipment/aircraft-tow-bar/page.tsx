@@ -74,14 +74,16 @@ const page = () => {
                           </p>
                         </div>
 
-                        <div>
-                          <h3 className="font-bold text-[#5C5649]">
-                            Custom Towbar
-                          </h3>
-                          <p className="mt-1 text-gray-700">
-                            Project-specific geometry, material, paint code, and ground handling wheel package.
-                          </p>
-                        </div>
+                     <div>
+  <h3 className="font-bold text-[#5C5649]">
+    <a href="/products/aviation-equipment/ground-support-equipment/aircraft-tow-bar/custom_towbar" className="hover:underline">
+      Custom Towbar
+    </a>
+  </h3>
+  <p className="mt-1 text-gray-700">
+    Project-specific geometry, material, paint code, and ground handling wheel package.
+  </p>
+</div>
 
                       </div>
                     </div>

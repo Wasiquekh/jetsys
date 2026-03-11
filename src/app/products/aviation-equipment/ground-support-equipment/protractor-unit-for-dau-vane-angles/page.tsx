@@ -233,7 +233,14 @@ const page = () => {
         <ul className="list-disc pl-5 space-y-2">
           <li><strong className="text-[#5C5649]">Protractor unit –</strong> Available in digital or analog variants.</li>
           <li><strong className="text-[#5C5649]">DAU vane adapter set –</strong> Shoes, pins, and shims for multiple vane models.</li>
-          <li><strong className="text-[#5C5649]">Mounting system –</strong> Non-marring clamp plus optional suction/magnetic base.</li>
+         <li>
+  <strong className="text-[#5C5649]">
+    <a href="/products/aviation-equipment/ground-support-equipment/protractor-unit-for-dau-vane-angles/mounting_system" className="hover:underline">
+      Mounting system –
+    </a>
+  </strong>
+  Non-marring clamp plus optional suction/magnetic base.
+</li>
           <li><strong className="text-[#5C5649]">Verification plate –</strong> Allows quick field reference checks.</li>
           <li><strong className="text-[#5C5649]">Transit case & docs –</strong> User guide and calibration certificate (if ordered).</li>
         </ul>

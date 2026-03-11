@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+import { Link } from "lucide-react";
 export const metadata: Metadata = {
   title:
     "NATO Cable – Military-Grade Cables & NATO Slave Connectors | Jetsys Defence",
@@ -216,7 +217,7 @@ const page = () => {
           </li>
           <li>
             <strong className="text-[#5C5649]">Accessories –</strong>
-            Protective caps, strain-relief boots, Y-splitters, trolleys, and rugged storage reels.
+            <Link href="/products/aviation-equipment/ground-support-equipment/nato-cable/protective_caps">Protective Caps</Link>, strain-relief boots, Y-splitters, trolleys, and rugged storage reels.
           </li>
         </ul>
       </div>
@@ -249,7 +250,11 @@ const page = () => {
         <ul className="list-disc pl-5 space-y-2">
           <li><strong className="text-[#5C5649]">Aircraft starts –</strong> Ideal for ramp power transfer and engine starts.</li>
           <li><strong className="text-[#5C5649]">Ground support carts –</strong> Works with GPUs and auxiliary power systems.</li>
-          <li><strong className="text-[#5C5649]">Defence vehicles –</strong> Supports jump/aux power for tactical and armored vehicles.</li>
+          <li><strong className="text-[#5C5649] hover:underline">
+  <a href="/products/aviation-equipment/ground-support-equipment/nato-cable/defence_vehicle">
+    Defence vehicles –
+  </a>
+</strong> Supports jump/aux power for tactical and armored vehicles.</li>
           <li><strong className="text-[#5C5649]">Avionics & diagnostics –</strong> Useful for control, testing, and interconnect circuits.</li>
         </ul>
       </div>
