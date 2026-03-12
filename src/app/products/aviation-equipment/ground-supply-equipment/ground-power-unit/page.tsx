@@ -200,7 +200,11 @@ const page = () => {
       <div className="text-black space-y-4">
         <ul className="list-disc pl-5">
           <li>
-            <h4 className="font-bold text-[#5C5649]">Solid-State Rectifier (SSR) – 28.5 V DC</h4>
+           <h4 className="font-bold text-[#5C5649]">
+  <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/solid_state_rectifier" className="hover:underline">
+    Solid-State Rectifier (SSR) – 28.5 V DC
+  </a>
+</h4>
             Compact, low-maintenance power source for shop use and line-station servicing of Ground Power Unit aircraft.
           </li>
 

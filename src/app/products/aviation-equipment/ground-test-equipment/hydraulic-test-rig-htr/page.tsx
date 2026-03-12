@@ -61,25 +61,47 @@ const page = () => {
 
       <ul className="list-disc pl-5 text-black space-y-3">
         <li>
-          <span className="font-bold text-[#5C5649]">Landing gear deployment and retraction</span>
+          <a href="/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr/landing_gear" className="font-bold text-[#5C5649] hover:underline">
+  Landing gear deployment and retraction
+</a>
         </li>
         <li>
-          <span className="font-bold text-[#5C5649]">Primary and secondary flight controls</span>
+         <a href="/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr/primary_and_secondary_flight_controls">
+  <span className="font-bold text-[#5C5649] hover:underline">
+    Primary and secondary flight controls
+  </span>
+</a>
         </li>
         <li>
-          <span className="font-bold text-[#5C5649]">Braking and steering assemblies</span>
+          <a href="/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr/cargo_door_actuation_systems">
+  <span className="font-bold text-[#5C5649] hover:underline">
+    Braking and steering assemblies
+  </span>
+</a>
         </li>
       </ul>
 
       <ul className="list-disc pl-5 text-black space-y-3">
         <li>
-          <span className="font-bold text-[#5C5649]">Flap and slat mechanisms</span>
+          <a href="/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr/flap_and_slat_mechanisms">
+  <span className="font-bold text-[#5C5649] hover:underline">
+    Flap and slat mechanisms
+  </span>
+</a>
         </li>
         <li>
-          <span className="font-bold text-[#5C5649]">Cargo door actuation systems</span>
+         <a href="/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr/cargo_door_actuation_systems">
+  <span className="font-bold text-[#5C5649] hover:underline">
+    Cargo door actuation systems
+  </span>
+</a>
         </li>
         <li>
-          <span className="font-bold text-[#5C5649]">Rotor blade and pitch control in helicopters</span>
+          <a href="/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr/rotor_blade_and_pitch_control_in_helicopters">
+  <span className="font-bold text-[#5C5649] hover:underline">
+    Rotor blade and pitch control in helicopters
+  </span>
+</a>
         </li>
       </ul>
 

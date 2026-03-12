@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Strain-Relief Boots for RJ45 Connectors | Jetsys Defence",
   description: "Jetsys Defence manufactures durable strain-relief boots including RJ45 boots, RJ45 strain relief boots, and rubber strain relief solutions designed to protect connectors and improve cable durability.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/networking/cable-accessories/strain-relief-boots-rj45",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/nato-cable/strain-relief_boots",
   },
   openGraph: {
     title: "Strain-Relief Boots for RJ45 Connectors | Jetsys Defence",
     description: "Jetsys Defence manufactures durable strain-relief boots including RJ45 boots, RJ45 strain relief boots, and rubber strain relief solutions designed to protect connectors and improve cable durability.",
-    url: "https://www.jetsys.co.in/products/networking/cable-accessories/strain-relief-boots-rj45",
+    url: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/nato-cable/strain-relief_boots",
     siteName: "Jetsys Defence",
     images: [
       {

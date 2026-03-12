@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Protective Caps for Industrial & Safety Use | Jetsys Defence",
   description: "Jetsys Defence manufactures durable protective caps including rebar safety caps, silicone caps, chair leg protector caps, and furniture leg caps designed for safety, durability, and long-term protection.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/safety-equipment/protective-caps/industrial-safety-caps",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/nato-cable/protective_caps",
   },
   openGraph: {
     title: "Protective Caps for Industrial & Safety Use | Jetsys Defence",
     description: "Jetsys Defence manufactures durable protective caps including rebar safety caps, silicone caps, chair leg protector caps, and furniture leg caps designed for safety, durability, and long-term protection.",
-    url: "https://www.jetsys.co.in/products/safety-equipment/protective-caps/industrial-safety-caps",
+    url: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/nato-cable/protective_caps",
     siteName: "Jetsys Defence",
     images: [
       {

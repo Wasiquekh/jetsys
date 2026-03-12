@@ -219,14 +219,14 @@ const page = () => {
           <li><strong className="text-[#5C5649]">Reliability –</strong> Stable electrical performance across thermal cycling, vibration, and ageing.</li>
           <li><strong className="text-[#5C5649]">Service efficiency –</strong> Clear IDs and documentation reduce troubleshooting time and MTTR.</li>
           <li><strong className="text-[#5C5649]">Weight optimization –</strong> Smart material and conductor selection lowers mass without compromising durability.</li>
-          <li><strong className="text-[#5C5649]">Lifecycle value –</strong> Rugged construction and maintainable architecture reduce total cost of ownership.</li>
+          <li><strong className="text-[#5C5649]">Lifecycle value –</strong>                                              Rugged construction and maintainable architecture reduce total cost of ownership.</li>
           <li><strong className="text-[#5C5649]">Rapid induction –</strong> Build-to-print capability accelerates retrofit and replacement programs.</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
-<section>
+<section>                                                                                     
   <br /><br />
   <div>
     <h2 className="font-bold text-3xl text-[#5C5649] mb-5">Applications of Aircraft Looms, Cables & Harnesses</h2>

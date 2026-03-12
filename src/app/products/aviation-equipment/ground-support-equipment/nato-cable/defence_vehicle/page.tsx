@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Defence Vehicle Solutions for Military Operations | Jetsys Defence",
   description: "Jetsys Defence manufactures advanced defence vehicle systems including military vehicles, armored defence vehicles, tactical support vehicles, and specialized combat transport solutions.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/defence-systems/vehicles/military-transport-solutions",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/nato-cable/defence_vehicle",
   },
   openGraph: {
     title: "Defence Vehicle Solutions for Military Operations | Jetsys Defence",
     description: "Jetsys Defence manufactures advanced defence vehicle systems including military vehicles, armored defence vehicles, tactical support vehicles, and specialized combat transport solutions.",
-    url: "https://www.jetsys.co.in/products/defence-systems/vehicles/military-transport-solutions",
+    url: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/nato-cable/defence_vehicle",
     siteName: "Jetsys Defence",
     images: [
       {

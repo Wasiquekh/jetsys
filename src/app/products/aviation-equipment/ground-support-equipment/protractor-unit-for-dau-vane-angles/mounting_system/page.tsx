@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Mounting System for Solar Panels | Solar Structures – Jetsys Defence",
   description: "Jetsys Defence provides durable mounting system solutions including solar panel structure, ground mount solar structure, roof mounting, and solar panel mounting brackets for reliable installations.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/solar-energy/mounting-systems/solar-panel-mounting-structure",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/protractor-unit-for-dau-vane-angles/mounting_system",
   },
   openGraph: {
     title: "Mounting System for Solar Panels | Solar Structures – Jetsys Defence",
     description: "Jetsys Defence provides durable mounting system solutions including solar panel structure, ground mount solar structure, roof mounting, and solar panel mounting brackets for reliable installations.",
-    url: "https://www.jetsys.co.in/products/solar-energy/mounting-systems/solar-panel-mounting-structure",
+    url: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/protractor-unit-for-dau-vane-angles/mounting_system",
     siteName: "Jetsys Defence",
     images: [
       {

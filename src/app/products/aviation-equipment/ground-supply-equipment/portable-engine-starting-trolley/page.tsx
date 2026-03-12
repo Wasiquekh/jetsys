@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Buy Portable Engine Starting Trolley in India from Jetsys Defence. Our aircraft start-up trolleys deliver high performance with affordable price and nationwide after-sales support.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/portable-engine-starting-trolley",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/pneumatic-control-panel/portable-engine-starting-trolley",
   },
 };
 const page = () => {

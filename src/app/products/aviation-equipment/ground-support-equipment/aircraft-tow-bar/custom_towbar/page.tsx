@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Custom Towbar for Ford Transit Custom | Heavy Duty Towbars – Jetsys Defence",
   description: "Jetsys Defence manufactures durable Custom Towbar solutions including Ford Transit Custom towbar, detachable towbars, and transit tow bars engineered for secure and reliable towing performance.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/automotive/towbars/custom-towbar-ford-transit-custom",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/aircraft-tow-bar/custom_towbar",
   },
   openGraph: {
     title: "Custom Towbar for Ford Transit Custom | Heavy Duty Towbars – Jetsys Defence",
     description: "Jetsys Defence manufactures durable Custom Towbar solutions including Ford Transit Custom towbar, detachable towbars, and transit tow bars engineered for secure and reliable towing performance.",
-    url: "https://www.jetsys.co.in/products/automotive/towbars/custom-towbar-ford-transit-custom",
+    url: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/aircraft-tow-bar/custom-towbar-ford-transit-custom",
     siteName: "Jetsys Defence",
     images: [
       {

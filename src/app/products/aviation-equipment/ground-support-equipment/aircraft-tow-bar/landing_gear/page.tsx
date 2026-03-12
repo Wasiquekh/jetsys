@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Landing Gear Systems for Aircraft | Jetsys Defence Aviation Solutions",
   description: "Jetsys Defence provides high-performance landing gear solutions including retractable landing gear, aircraft nose gear, airplane undercarriage, and A380 landing gear systems.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/aviation-equipment/aircraft-systems/landing-gear-solutions",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/aircraft-tow-bar/landing_gear",
   },
   openGraph: {
     title: "Landing Gear Systems for Aircraft | Jetsys Defence Aviation Solutions",
     description: "Jetsys Defence provides high-performance landing gear solutions including retractable landing gear, aircraft nose gear, airplane undercarriage, and A380 landing gear systems.",
-    url: "https://www.jetsys.co.in/products/aviation-equipment/aircraft-systems/landing-gear-solutions",
+    url: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/aircraft-tow-bar/landing-gear-solutions",
     siteName: "Jetsys Defence",
     images: [
       {
