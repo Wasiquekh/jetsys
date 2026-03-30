@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "Explore Jetsys Defence Spreader & Cutter With Petrol Engine for aviation rescue operations. Check price, replacement parts, and detailed specifications today.",
   alternates: {
     canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine",
-  },
+  },
 };
 const page = () => {
   return (
@@ -26,7 +26,7 @@ const page = () => {
         <div className="container">
   <div>
           <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Spreader & Cutter With Petrol Engine – Jetsys Defence Aviation Tools</h1>
-           <p className=" font-medium text-base">The Spreader & Cutter With Petrol Engine from Jetsys Defence is a compact, high-performance rescue tool designed for aircraft maintenance teams, airport safety departments, and emergency response units. Built to operate without external power sources, it combines spreading, cutting, tearing, and prying functions in one rugged aviation-grade tool. Its engine-driven hydraulic system ensures fast deployment in situations where electricity or vehicle hydraulics are not available.
+           <p className=" font-medium text-base">The <a href="/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/aviation_tool" className="hover:underline">Spreader & Cutter With Petrol Engine</a> from Jetsys Defence is a compact, high-performance rescue tool designed for aircraft maintenance teams, airport safety departments, and emergency response units. Built to operate without external power sources, it combines spreading, cutting, tearing, and prying functions in one rugged aviation-grade tool. Its engine-driven hydraulic system ensures fast deployment in situations where electricity or vehicle hydraulics are not available.
          </p>
          <p className=" font-medium text-base">Whether you want a reliable tool for aviation rescue, need replacement Spreader & Cutter With Petrol Engine parts, or want the latest Spreader & Cutter With Petrol Engine price, Jetsys Defence provides fully supported solutions.</p><br></br><br></br>
          <div>
@@ -46,14 +46,14 @@ const page = () => {
     </h3>
 
     <p className="text-black mb-4">
-      A Spreader & Cutter with Petrol Engine is a dual-action rescue tool used for emergency aircraft
+      A <a href="/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/hydraulic_spreader" className="hover:underline">Spreader & Cutter with Petrol Engine</a> is a dual-action rescue tool used for emergency aircraft
       access and crash-response. The petrol-driven power pack allows fast deployment without reliance 
       on electricity or compressed air.
     </p>
 
     <ul className="list-disc pl-5 text-black space-y-2">
       <li>Spreading damaged structures</li>
-      <li>Cutting metal sheets, pipes, and bars</li>
+      <li><a href="/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/metal_cutting_tool" className="hover:underline">Cutting metal sheets</a>, pipes, and bars</li>
       <li>Prying open jammed aircraft doors</li>
       <li>Accessing accident-damaged zones and confined areas</li>
     </ul>
@@ -85,7 +85,7 @@ const page = () => {
 
           <li>
             <h4 className="font-bold text-[#5C5649]">Multi-Function Rescue Tool</h4>
-            Provides spreading force to open gaps, cutting force for metal parts, and controlled prying/tearing 
+            Provides <a href="/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/hydraulic_spreader" className="hover:underline">spreading force</a> to open gaps, <a href="/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/hydraulic_cutter" className="hover:underline">cutting force for metal parts</a>, and controlled prying/tearing 
             operations. Suitable for aircraft structures, airport ground vehicles, and hangar equipment.
           </li>
 
@@ -216,7 +216,7 @@ const page = () => {
 
           <li>
             <h4 className="font-bold text-[#5C5649]">Airport Rescue Operations</h4>
-            Used to free trapped personnel, open jammed aircraft cabins, cut metal obstructions, and remove 
+            Used to free trapped personnel, open jammed aircraft cabins, <a href="/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/metal_cutting_tool" className="hover:underline">cut metal obstructions</a>, and remove 
             damaged structural areas during crash-response and fire-rescue missions.
           </li>
 
@@ -235,7 +235,7 @@ const page = () => {
 
           <li>
             <h4 className="font-bold text-[#5C5649]">Remote & Field Use</h4>
-            Since the petrol engine is fully self-powered, the tool can be deployed at forward bases, training grounds, 
+            Since the petrol engine is fully self-powered, the <a href="/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/aviation_tool" className="hover:underline">aviation tool</a> can be deployed at forward bases, training grounds, 
             and remote airstrips where electrical or hydraulic infrastructure is unavailable.
           </li>
 
@@ -263,8 +263,8 @@ const page = () => {
 
       <div className="text-black">
         <ul className="list-disc pl-5 space-y-4">
-          <li>Cuts through metal sheets, locks, frames, and bars</li>
-          <li>Wide arm opening for aircraft doors and panels</li>
+          <li><a href="/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/metal_cutting_tool" className="hover:underline">Cuts through metal sheets</a>, locks, frames, and bars</li>
+          <li>Wide arm opening for <a href="/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/aircraft_door_opening_tool" className="hover:underline">aircraft doors and panels</a></li>
           <li>Engine runs even in low-temperature or rugged field environments</li>
         </ul>
       </div>
@@ -289,7 +289,7 @@ const page = () => {
 
     <ul className="list-disc pl-5 space-y-2 text-black">
       <li>Power rating</li>
-      <li>Blade type</li>
+      <li><a href="/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/replacement_blades" className="hover:underline">Blade type</a></li>
       <li>Hose and coupling options</li>
       <li>Starter type</li>
       <li>Additional aviation tooling kits</li>
@@ -311,7 +311,7 @@ const page = () => {
     </p>
 
     <ul className="list-disc pl-5 space-y-2 text-black">
-      <li>Replacement blades</li>
+      <li><a href="/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/replacement_blades" className="hover:underline">Replacement blades</a></li>
       <li>Seal kits</li>
       <li>Hydraulic hoses</li>
       <li>Engine service parts</li>
@@ -337,14 +337,14 @@ const page = () => {
             <h4 className="font-bold text-[#5C5649]">
               Engineered for Rapid Rescue & Field Deployment
             </h4>
-            Jetsys Defence supplies petrol-engine operated spreaders & cutters designed for emergency response, crash recovery, battlefield rescue, and aviation ground safety operations with no dependency on external power sources.
+            Jetsys Defence supplies <a href="/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/aviation_tool" className="hover:underline">petrol-engine operated spreaders & cutters</a> designed for emergency response, crash recovery, battlefield rescue, and aviation ground safety operations with no dependency on external power sources.
           </li>
 
           <li>
             <h4 className="font-bold text-[#5C5649]">
               High-Strength Cutting & Spreading Performance
             </h4>
-            Hardened alloy tool-steel blades and high-torque hydraulic mechanisms provide powerful cutting and spreading for aircraft skins, vehicle frames, metallic structures, and reinforced materials.
+            Hardened alloy tool-steel blades and high-torque hydraulic mechanisms provide powerful <a href="/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/metal_cutting_tool" className="hover:underline">cutting</a> and <a href="/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/hydraulic_spreader" className="hover:underline">spreading</a> for aircraft skins, vehicle frames, metallic structures, and reinforced materials.
           </li>
 
           <li>
@@ -379,7 +379,7 @@ const page = () => {
             <h4 className="font-bold text-[#5C5649]">
               Reliable for Defence & Aviation Applications
             </h4>
-            Cuts cockpit frames, riveted sheets, doors, hatches, reinforced panels—ideal for first responders, flight-line teams, disaster response and ground safety crews.
+            Cuts cockpit frames, riveted sheets, <a href="/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/aircraft_door_opening_tool" className="hover:underline">doors, hatches, reinforced panels</a>—ideal for first responders, flight-line teams, disaster response and ground safety crews.
           </li>
 
           <li>
