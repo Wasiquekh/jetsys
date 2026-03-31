@@ -155,7 +155,7 @@ const page = () => {
             <p className="font-medium text-base">
               A transit custom detachable towbar offers flexibility and convenience for vehicle owners who 
               require towing capabilities only when needed. These detachable systems can be easily removed 
-              when not in use, maintaining the vehicle's clean appearance.
+              when not in use, maintaining the vehicles clean appearance.
             </p>
             
             <br />

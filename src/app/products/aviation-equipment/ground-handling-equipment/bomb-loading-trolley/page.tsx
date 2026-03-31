@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "Discover Jetsys Defence Bomb Loading Trolley for safe and efficient aircraft munition handling. Trusted manufacturer offering quality and competitive price in India.",
   alternates: {
     canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley",
-  },
+  },
 };
 
 const page = () => {
@@ -29,7 +29,7 @@ const page = () => {
             <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Bomb Loading Trolley – Jetsys Defence Aviation Equipment</h1>
              <p className=" font-medium text-base">The Bomb Loading Trolley (also searched as Bomb Loading Trolley) by Jetsys Defence is a rugged, precision-lift ground support solution for safe, efficient handling of aircraft bombs, missiles, and stores. Engineered for true vertical lift and fine positioning at the pylon/hardpoint, it shortens turnaround time while maximizing crew safety and reliability.
            </p>
-           <p className=" font-medium text-base">Target queries covered: Bomb Loading Trolley manufacturer, Bomb Loading Trolley price, Bomb Loading Trolley for aircraft.</p><br></br><br></br>
+           <p className=" font-medium text-base">Target queries covered: <a href="/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley/bomb-troller" className="hover:underline no-underline text-inherit">Bomb Loading Trolley</a> manufacturer, <a href="/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley/bomb-troller" className="hover:underline no-underline text-inherit">Bomb Loading Trolley</a> price, <a href="/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley/bomb-troller" className="hover:underline no-underline text-inherit">Bomb Loading Trolley</a> for aircraft.</p><br></br><br></br>
            <div>
                  <Image
                                  src="/images/Bomb Loading Troley.png"
@@ -61,7 +61,7 @@ const page = () => {
             <br />
             Fork adapters, lift-arm extensions, lug beams, tilt cradles
             <br />
-            Tow ring adapter, missile/munitions loading adapters
+            Tow ring adapter, <a href="/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley/missile-loading-trolley" className="hover:underline no-underline text-inherit">missile/munitions loading adapters</a>
           </li>
 
         </ul>
@@ -75,7 +75,7 @@ const page = () => {
             <h4 className="font-bold text-[#5C5649]">
               Power & Control
             </h4>
-            Electric or diesel hydraulic power packs
+            Electric or diesel <a href="/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley/hydraulic_power_pack" className="hover:underline no-underline text-inherit">hydraulic power packs</a>
             <br />
             Radio remote (for powered variants)
             <br />
@@ -121,7 +121,7 @@ const page = () => {
 <p className="text-black mb-4">
   As a leading <strong className="font-bold text-[#5C5649]">Bomb Loading Trolley manufacturer in India</strong>, Jetsys Defence designs and fabricates
   aviation-grade units with full technical documentation, operator training, and long-term spares support
-  including bush kits, seal kits, hoses, valves, rollers, tie-downs, and adapter sets.
+  including bush kits, <a href="/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley/seal_kit" className="hover:underline no-underline text-inherit">seal kits</a>, hoses, valves, rollers, tie-downs, and adapter sets.
 </p>
 
 <h2 className="font-bold text-3xl text-[#5C5649] mt-10 mb-5">
@@ -135,7 +135,7 @@ const page = () => {
 <ul className="list-disc pl-5 space-y-3 text-black">
   <li><strong className="font-bold text-[#5C5649]">Lifting capacity & maximum height</strong></li>
   <li><strong className="font-bold text-[#5C5649]">Powered vs manual pack</strong> (diesel / electric / hand-pump)</li>
-  <li><strong className="font-bold text-[#5C5649]">Adapter sets</strong> (bomb rollers, tie-downs, pylon cradles)</li>
+  <li><strong className="font-bold text-[#5C5649]">Adapter sets</strong> (<a href="/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley/aircraft_bomb_loader" className="hover:underline no-underline text-inherit">bomb rollers</a>, tie-downs, pylon cradles)</li>
   <li><strong className="font-bold text-[#5C5649]">Paint, marking & documentation packages</strong></li>
 </ul>
 
@@ -156,84 +156,84 @@ const page = () => {
           <tr className="bg-gray-200">
             <th className="px-4 py-2 text-left font-medium text-gray-700">Parameter</th>
             <th className="px-4 py-2 text-left font-medium text-gray-700">Specification</th>
-          </tr>
+           </tr>
         </thead>
 
         <tbody>
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Lifting Capacity</td>
             <td className="px-4 py-2 border-b">700–1,000 kg (configurable)</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Lift Height (Min–Max)</td>
             <td className="px-4 py-2 border-b">300–1,900 mm (options up to ~2,300 mm)</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Lift Geometry</td>
             <td className="px-4 py-2 border-b">Dual scissor, true vertical lift</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Control</td>
             <td className="px-4 py-2 border-b">Hand pump + proportional valve / optional powered pack</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Hydraulic Safety</td>
             <td className="px-4 py-2 border-b">Pilot check valves, relief valve, flow control</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Platform Adjustment</td>
             <td className="px-4 py-2 border-b">Fine height control; optional tilt/roll adapters</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Overall Dimensions (L×W×H, stowed)</td>
             <td className="px-4 py-2 border-b">~2,700 × 980 × 600 mm (model dependent)</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Ground Clearance</td>
             <td className="px-4 py-2 border-b">~90 mm</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Wheel Type</td>
             <td className="px-4 py-2 border-b">Solid rubber, ~300 × 70 mm</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Frame</td>
             <td className="px-4 py-2 border-b">High-strength steel, plate-sectioned</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Finish</td>
             <td className="px-4 py-2 border-b">Corrosion-resistant industrial coating</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Reservoir Capacity</td>
             <td className="px-4 py-2 border-b">~3 L (model dependent)</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Operating Temp</td>
             <td className="px-4 py-2 border-b">–20 °C to +55 °C (typical aviation range)</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Noise</td>
             <td className="px-4 py-2 border-b">≤85 dBA at 1 m (typical for powered versions)</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Net Weight</td>
             <td className="px-4 py-2 border-b">~300 kg (varies by configuration)</td>
-          </tr>
+           </tr>
         </tbody>
       </table>
     </div>
@@ -254,7 +254,7 @@ const page = () => {
             <h3 className="font-bold text-[#5C5649]">
               Aircraft Armament Loading
             </h3>
-            Bombs, missiles, pylons, pods, and fuel tanks precisely aligned
+            <a href="/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley/aircraft_bomb_loader" className="hover:underline no-underline text-inherit">Bombs</a>, <a href="/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley/missile-loading-trolley" className="hover:underline no-underline text-inherit">missiles</a>, pylons, pods, and <a href="/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley/fuel_tank_handling_trolley" className="hover:underline no-underline text-inherit">fuel tanks</a> precisely aligned
             to aircraft interfaces for fast, safe uploading/downloading.
           </li>
 
