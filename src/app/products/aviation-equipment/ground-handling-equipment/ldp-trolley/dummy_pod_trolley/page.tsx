@@ -37,7 +37,7 @@ const page = () => {
               <br />
               <div>
                 <Image
-                  src="/images/replacement_blades.png"
+                  src="/images/dummy_trolley.png"
                   width={500}
                   height={1000}
                   alt="Dummy Pod Trolley Aviation Equipment"

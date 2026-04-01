@@ -119,7 +119,7 @@ const Footer = () => {
                 </li>
                 <li className=" hover:text-secondary">
                   <Link href="/products/runway-spares/signbords">
-                    Signbords
+                    Signboards
                   </Link>
                 </li>
               </ul>

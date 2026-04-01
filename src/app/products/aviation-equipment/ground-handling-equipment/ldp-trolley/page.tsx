@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "Explore Jetsys Defence LDP Trolley built for precision aircraft loading. Check LDP Trolley dimensions, price, and expert customer service support today.",
   alternates: {
     canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-handling-equipment/ldp-trolley",
-  },
+  },
 };
 const page = () => {
   return (
@@ -128,61 +128,61 @@ const page = () => {
           <tr className="bg-gray-200">
             <th className="px-4 py-2 text-left font-medium text-gray-700">Parameter</th>
             <th className="px-4 py-2 text-left font-medium text-gray-700">Specification</th>
-          </tr>
+           </tr>
         </thead>
 
         <tbody>
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Load Capacity</td>
             <td className="px-4 py-2 border-b">200–300 kg (model options available)</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Lift Type</td>
             <td className="px-4 py-2 border-b">Manual/Hydraulic adjustable</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Lift Movement</td>
             <td className="px-4 py-2 border-b">Upward &amp; side adjustment</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Frame Material</td>
             <td className="px-4 py-2 border-b">High-strength steel / alloy</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Surface Finish</td>
             <td className="px-4 py-2 border-b">Corrosion-resistant aviation coating</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Wheels</td>
             <td className="px-4 py-2 border-b">Heavy duty, high-grip, low-noise</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">No. of Wheels</td>
             <td className="px-4 py-2 border-b">3 or 4 (depending on model)</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Control Mode</td>
             <td className="px-4 py-2 border-b">Manual hand lever / assisted</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Color</td>
             <td className="px-4 py-2 border-b">Yellow / custom paint on demand</td>
-          </tr>
+           </tr>
 
-          <tr>
+           <tr>
             <td className="px-4 py-2 border-b">Ideal Usage</td>
             <td className="px-4 py-2 border-b">
               Aircraft LDP handling, pod transportation, ground support operations
-            </td>
-          </tr>
+             </td>
+           </tr>
         </tbody>
       </table>
     </div>
@@ -200,7 +200,7 @@ const page = () => {
       <ul className="list-disc pl-5 space-y-3">
         <li>
           <h3 className="font-bold text-[#5C5649]">Aircraft Weapon Loading Operations</h3>
-          Used for lifting, aligning, and transporting Light Dummy Pods (LDP), practice bombs,
+          Used for lifting, aligning, and transporting <a href="/products/aviation-equipment/ground-handling-equipment/ldp-trolley/practice_bomb_handling_trolley" className="hover:underline">Light Dummy Pods (LDP)</a>, <a href="/products/aviation-equipment/ground-handling-equipment/ldp-trolley/practice_bomb_handling_trolley" className="hover:underline">practice bombs</a>,
           or small payloads to aircraft hardpoints, pylons, and weapon stations on the flight line.
         </li>
         <li>
@@ -277,7 +277,7 @@ const page = () => {
       <ul className="list-disc pl-5 space-y-4">
         <li>
           <h3 className="font-bold text-[#5C5649]">Purpose-Built for Aircraft Ground Operations</h3>
-          Designed specifically for safe movement, lifting, and alignment of Light Dummy Pods and training payloads used in aircraft weapon stations.
+          Designed specifically for safe movement, lifting, and alignment of <a href="/products/aviation-equipment/ground-handling-equipment/ldp-trolley/dummy_pod_trolley" className="hover:underline">Light Dummy Pods</a> and training payloads used in aircraft weapon stations.
         </li>
         <li>
           <h3 className="font-bold text-[#5C5649]">Rugged, Aviation-Grade Construction</h3>
