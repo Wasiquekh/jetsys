@@ -138,7 +138,7 @@ const Page = () => {
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-2">
                         <li>
-                          <strong className="text-[#5C5649]">Control Surface Mechanisms –</strong> These systems link cockpit controls to the aircraft's control surfaces, allowing pilots to adjust flight direction and stability.
+                          <strong className="text-[#5C5649]">Control Surface Mechanisms –</strong> These systems link cockpit controls to the aircraft&apos;s control surfaces, allowing pilots to adjust flight direction and stability.
                         </li>
                         <li>
                           <strong className="text-[#5C5649]">Actuation Systems –</strong> Hydraulic or electronic actuators control the movement of primary and secondary control surfaces of aircraft to ensure smooth and precise operation.
