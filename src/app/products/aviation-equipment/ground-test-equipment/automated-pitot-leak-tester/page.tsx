@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "Discover Jetsys Defence Automated Pitot Leak Tester for precise aircraft pressure testing. Explore complete kits, best prices, and reliable aviation performance.",
   alternates: {
     canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-test-equipment/automated-pitot-leak-tester",
-  },
+  },
 };
 const page = () => {
   return (
@@ -44,7 +44,7 @@ const page = () => {
     <p className="text-black mb-6">
       Designed around robust pressure control and smart automation, our tester simulates flight conditions to 
       validate pitot and static lines, sensors, and associated instruments. Automated sequences, real-time readings, 
-      and safe pressure trapping make it ideal for ramp and hangar operations.
+      and safe pressure trapping make it ideal for ramp and hangar operations. Explore more <a href="/products/aviation-equipment/ground-test-equipment/automated-pitot-leak-tester/aircraft_air_data_calibration_system" className="hover:underline">aircraft air data calibration system</a> options for advanced needs.
     </p>
 
     <h4 className="font-bold text-[#5C5649] mb-3">Highlights at a Glance</h4>
@@ -70,7 +70,7 @@ const page = () => {
           <li>
             <h4 className="font-bold text-[#5C5649]">Automated Control & Profiles</h4>
             Pre-loaded test profiles guide operators through pitot and static leak checks with consistent ramp rates 
-            and pass/fail thresholds for repeatable results.
+            and pass/fail thresholds for repeatable results. Compare with our dedicated <a href="/products/aviation-equipment/ground-test-equipment/automated-pitot-leak-tester/pitot_static_leak_tester" className="hover:underline">pitot static leak tester</a> for specialized applications.
           </li>
 
           <li>
@@ -94,7 +94,7 @@ const page = () => {
           <li>
             <h4 className="font-bold text-[#5C5649]">Portable, Field-Ready Design</h4>
             Lightweight enclosure, integrated pumps, and aviation quick-connect fittings enable rapid setup in hangar or 
-            ramp environments.
+            ramp environments. See our full range of <a href="/products/aviation-equipment/ground-test-equipment/automated-pitot-leak-tester/pitot_static_test_equipment" className="hover:underline">pitot static test equipment</a> for various operational needs.
           </li>
 
         </ul>
@@ -231,7 +231,7 @@ const page = () => {
 
           <li>
             <h4 className="font-bold text-[#5C5649]">Line & Base Maintenance</h4>
-            Quick pitot/static integrity checks after component replacement or troubleshooting.
+            Quick pitot/static integrity checks after component replacement or troubleshooting. Learn about comprehensive <a href="/products/aviation-equipment/ground-test-equipment/automated-pitot-leak-tester/air_data_test_equipment" className="hover:underline">air data test equipment</a> for deeper diagnostics.
           </li>
 
           <li>
@@ -252,7 +252,7 @@ const page = () => {
 
           <li>
             <h4 className="font-bold text-[#5C5649]">Training Labs</h4>
-            Intuitive UI and guided profiles reduce learning curve and operator error for educational environments.
+            Intuitive UI and guided profiles reduce learning curve and operator error for educational environments. Check our <a href="/products/aviation-equipment/ground-test-equipment/automated-pitot-leak-tester/aircraft-pitot-static-tester" className="hover:underline">aircraft pitot static tester</a> for training and field operations.
           </li>
 
         </ul>
@@ -313,7 +313,7 @@ const page = () => {
 
           <li>
             <h4 className="font-bold text-[#5C5649]">Ultra-Precise Digital Pressure Control</h4>
-            High-accuracy sensors and micro-controlled regulators simulate altitude and airspeed with extremely fine resolution—ideal for sensitive Pitot-Static and Air Data systems.
+            High-accuracy sensors and micro-controlled regulators simulate altitude and airspeed with extremely fine resolution—ideal for sensitive Pitot-Static and Air Data systems. Compare our <a href="/products/aviation-equipment/ground-test-equipment/automated-pitot-leak-tester/air_data_test_equipment" className="hover:underline">air data test equipment</a> range for specialized requirements.
           </li>
 
           <li>
@@ -349,7 +349,7 @@ const page = () => {
 
           <li>
             <h4 className="font-bold text-[#5C5649]">Customizable for Any Aircraft Fleet</h4>
-            Configurable pressure ranges, hose/adaptor kits, and dual-channel pitot-static capability for civil and military platforms.
+            Configurable pressure ranges, hose/adaptor kits, and dual-channel pitot-static capability for civil and military platforms. Explore our dedicated <a href="/products/aviation-equipment/ground-test-equipment/automated-pitot-leak-tester/pitot_static_test_equipment" className="hover:underline">pitot static test equipment</a> for fleet-specific configurations.
           </li>
 
         </ul>

@@ -7,11 +7,11 @@ import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
 
 export const metadata: Metadata = {
-  title: "Hydraulic Test Rig Aviation Equipment | Jetsys Defence",
+  title: "Aircraft Pitot Static Tester | Jetsys Defence Aviation Equipment",
   description:
-    "Explore hydraulic test rig by Jetsys Defence including hydraulic pump test rig, cylinder test rig, and aircraft hydraulic testing systems for precise performance validation.",
+    "Explore aircraft pitot static tester by Jetsys Defence including digital and portable pitot static test equipment for accurate air data system calibration and testing.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-test-equipment/brake-valve-test-rig/hydraulic_test_rig",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-test-equipment/automated-pitot-leak-tester/aircraft-pitot-static-tester",
   },
 };
 
@@ -25,83 +25,82 @@ const page = () => {
           <div className="container">
             <div>
               <h1 className="text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
-                Hydraulic Test Rig – Aviation Equipment by Jetsys Defence
+                Aircraft Pitot Static Tester – Aviation Equipment by Jetsys Defence
               </h1>
               <p className="font-medium text-base">
-                The Hydraulic Test Rig by Jetsys Defence is a high-performance aviation testing solution designed to evaluate, simulate, and validate hydraulic systems with precision. Engineered for reliability and accuracy, this advanced equipment ensures optimal performance of hydraulic components used in aircraft and defence systems.
+                The Aircraft Pitot Static Tester by Jetsys Defence is a high-precision aviation testing solution designed to calibrate and validate aircraft air data systems including altitude, airspeed, and pressure measurements. Built with advanced digital control and robust engineering, this equipment ensures accurate and reliable performance in critical aviation environments.
               </p>
               <p className="font-medium text-base">
-                Our hydraulic test rig is ideal for MRO facilities, aircraft manufacturers, and defence organizations requiring accurate and efficient hydraulic system testing.
+                Our aircraft pitot static tester is ideal for MRO facilities, aircraft manufacturers, and defence aviation operations where safety, compliance, and precision are essential.
               </p>
               <br />
               <br />
               <div>
                 <Image
-                  src="/images/Hydraulic Test Rig.png"
+                  src="/images/Aircraft Pitot Static Tester.png"
                   width={500}
                   height={1000}
-                  alt="Hydraulic Test Rig Aviation Equipment"
+                  alt="Aircraft Pitot Static Tester Equipment"
                   className="m-auto mb-6"
                 />
                 <OrderNowContactButton />
               </div>
 
-              {/* What is a Hydraulic Test Rig? */}
+              {/* What is an Aircraft Pitot Static Tester? */}
               <section>
                 <br />
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    What is a Hydraulic Test Rig?
+                    What is an Aircraft Pitot Static Tester?
                   </h2>
                   <p className="text-black mb-4">
-                    A hydraulic test rig is specialized equipment used to test hydraulic systems, components, and assemblies under controlled pressure and flow conditions. It replicates real-world operating environments to ensure performance, safety, and compliance.
+                    An aircraft pitot static tester is specialized equipment used to test and calibrate pitot and static systems in aircraft. These systems are essential for measuring altitude, airspeed, and atmospheric pressure, making them critical for safe flight operations.
                   </p>
                   <p className="text-black font-semibold mb-2">
-                    It is commonly referred to as:
+                    These systems are widely used for:
                   </p>
                   <ul className="list-disc pl-5 text-black space-y-2">
-                    <li>Hydraulic pump test rig</li>
-                    <li>Hydro test rig</li>
-                    <li>Hydraulic test rig for aircraft</li>
-                    <li>Hydraulic cylinder test rig</li>
+                    <li>Pitot static system testing for complete validation</li>
+                    <li>Air data system calibration in aircraft</li>
+                    <li>Pitot static leak testing and pressure simulation</li>
                   </ul>
                 </div>
               </section>
 
-              {/* Types of Hydraulic Test Rigs */}
+              {/* Types of Aircraft Pitot Static Testers */}
               <section>
                 <br />
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Types of Hydraulic Test Rigs
+                    Types of Aircraft Pitot Static Testers
                   </h2>
                   <p className="text-black mb-4">
-                    Jetsys Defence offers multiple configurations for different testing applications:
+                    Jetsys Defence offers a range of advanced testing solutions:
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
                         <li>
-                          <h3 className="font-bold text-[#5C5649]">1. Hydraulic Pump Test Rig</h3>
-                          A hydraulic pump test rig is used to evaluate pump efficiency, pressure output, and flow characteristics.
+                          <h3 className="font-bold text-[#5C5649]">1. Digital Pitot Static Tester</h3>
+                          A high-precision digital pitot static tester designed for accurate pressure simulation and calibration.
                         </li>
                         <li>
-                          <h3 className="font-bold text-[#5C5649]">2. Hydraulic Cylinder Test Rig</h3>
-                          The hydraulic cylinder test rig is designed to test cylinder performance, sealing, and load-bearing capacity.
+                          <h3 className="font-bold text-[#5C5649]">2. Portable Pitot Static Tester</h3>
+                          A compact and lightweight portable pitot static tester ideal for on-site aircraft maintenance and field operations.
                         </li>
                       </ul>
                     </div>
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
                         <li>
-                          <h3 className="font-bold text-[#5C5649]">3. Aircraft Hydraulic Test Rig</h3>
-                          A specialized hydraulic test rig for aircraft used for testing aviation hydraulic systems under real operational conditions.
+                          <h3 className="font-bold text-[#5C5649]">3. Pitot Static Test Box</h3>
+                          A reliable pitot static test box used for quick and efficient testing of air data systems.
                         </li>
                         <li>
-                          <h3 className="font-bold text-[#5C5649]">4. Hydro Test Rig</h3>
-                          A hydro test rig is used for pressure testing and leak detection in hydraulic components and pipelines.
+                          <h3 className="font-bold text-[#5C5649]">4. Integrated Pitot Static System Tester</h3>
+                          A complete pitot static system tester that combines testing, calibration, and leak detection capabilities.
                         </li>
                       </ul>
                     </div>
@@ -109,26 +108,26 @@ const page = () => {
                 </div>
               </section>
 
-              {/* Applications */}
+              {/* Applications of Aircraft Pitot Static Tester */}
               <section>
                 <br />
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Applications of Hydraulic Test Rig
+                    Applications of Aircraft Pitot Static Tester
                   </h2>
                   <p className="text-black mb-4">
-                    The hydraulic test rig from Jetsys Defence is widely used in:
+                    The aircraft pitot static tester from Jetsys Defence is widely used in:
                   </p>
                   <ul className="list-disc pl-5 space-y-2 text-black">
                     <li>Aircraft maintenance, repair, and overhaul (MRO)</li>
-                    <li>Aircraft manufacturing and system validation</li>
+                    <li>Aircraft calibration and certification processes</li>
+                    <li>Aviation ground testing operations</li>
+                    <li>Air data system validation and troubleshooting</li>
                     <li>Defence aviation testing facilities</li>
-                    <li>Hydraulic component testing and calibration</li>
-                    <li>Industrial and aerospace engineering applications</li>
                   </ul>
                   <p className="text-black mt-4">
-                    Our hydraulic cylinder test rig and hydraulic pump test rig ensure accurate testing in critical environments.
+                    Our pitot static tester ensures accurate and reliable testing in mission-critical environments.
                   </p>
                 </div>
               </section>
@@ -139,25 +138,25 @@ const page = () => {
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Key Features of Jetsys Defence Hydraulic Test Rig
+                    Key Features of Jetsys Defence Aircraft Pitot Static Tester
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>High-precision pressure and flow control</li>
-                        <li>Real-time data monitoring and analysis</li>
-                        <li>PLC-based automated operation</li>
+                        <li>High-precision pressure and altitude simulation</li>
+                        <li>Real-time digital monitoring and control</li>
+                        <li>Portable and user-friendly design</li>
                       </ul>
                     </div>
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>Durable and robust construction</li>
-                        <li>Designed for aviation safety standards</li>
+                        <li>Durable aviation-grade construction</li>
+                        <li>Designed to meet global aviation safety standards</li>
                       </ul>
                     </div>
                   </div>
                   <p className="text-black mt-4">
-                    Our hydraulic test rig for aircraft ensures reliable and repeatable testing results.
+                    Our aircraft pitot static tester ensures consistent and repeatable testing performance.
                   </p>
                 </div>
               </section>
@@ -171,16 +170,16 @@ const page = () => {
                     Why Choose Jetsys Defence?
                   </h2>
                   <p className="text-black mb-4">
-                    Jetsys Defence is a trusted manufacturer of aviation equipment, delivering advanced testing solutions for mission-critical operations.
+                    Jetsys Defence is a trusted manufacturer of aviation equipment, delivering advanced testing solutions for critical operations.
                   </p>
                   <p className="text-black mb-4">
                     We provide:
                   </p>
                   <ul className="list-disc pl-5 space-y-2 text-black">
-                    <li>High-performance hydraulic test rigs</li>
-                    <li>Reliable hydraulic pump test rig and hydraulic cylinder test rig solutions</li>
-                    <li>Custom-built systems for aviation and defence</li>
-                    <li>Long-lasting and efficient equipment</li>
+                    <li>High-performance aircraft pitot static tester systems</li>
+                    <li>Reliable pitot static system tester solutions</li>
+                    <li>Advanced air data testing equipment</li>
+                    <li>Custom-built solutions for aviation and defence</li>
                   </ul>
                 </div>
               </section>
@@ -191,16 +190,15 @@ const page = () => {
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Hydraulic Test Rig Price & Availability
+                    Aircraft Pitot Static Tester Price & Availability
                   </h2>
                   <p className="text-black mb-4">
-                    The price of a hydraulic test rig depends on testing capacity, automation level, and customization. Jetsys Defence offers a wide range of options including:
+                    The price of an aircraft pitot static tester depends on features such as pressure range, automation, and portability. Jetsys Defence offers a wide range of options including:
                   </p>
                   <ul className="list-disc pl-5 space-y-2 text-black">
-                    <li>Hydraulic pump test rig</li>
-                    <li>Hydraulic cylinder test rig</li>
-                    <li>Hydraulic test rig for aircraft</li>
-                    <li>Hydro test rig systems</li>
+                    <li>Digital pitot static tester</li>
+                    <li>Portable pitot static tester</li>
+                    <li>Pitot static test box systems</li>
                   </ul>
                 </div>
               </section>
@@ -214,7 +212,7 @@ const page = () => {
                     Conclusion
                   </h2>
                   <p className="text-black mb-4">
-                    The Hydraulic Test Rig by Jetsys Defence is an essential solution for aviation and defence testing applications. With advanced features like precision hydraulic control, automated systems, and real-time monitoring, our equipment ensures accurate, efficient, and reliable testing of hydraulic systems.
+                    The Aircraft Pitot Static Tester by Jetsys Defence is an essential tool for ensuring aircraft safety and performance. With advanced features like precision pressure simulation, real-time monitoring, and integrated testing capabilities, our equipment delivers accurate and reliable air data system validation for aviation applications.
                   </p>
                 </div>
               </section>

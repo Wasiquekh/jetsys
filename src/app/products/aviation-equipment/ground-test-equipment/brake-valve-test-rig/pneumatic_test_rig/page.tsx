@@ -7,11 +7,11 @@ import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
 
 export const metadata: Metadata = {
-  title: "Hydraulic Test Rig Aviation Equipment | Jetsys Defence",
+  title: "Pneumatic Test Rig Aviation Equipment | Jetsys Defence",
   description:
-    "Explore hydraulic test rig by Jetsys Defence including hydraulic pump test rig, cylinder test rig, and aircraft hydraulic testing systems for precise performance validation.",
+    "Discover pneumatic test rig by Jetsys Defence including air pressure test rigs, pneumatic valve testing systems, and compressed air testing solutions for aviation use.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-test-equipment/brake-valve-test-rig/hydraulic_test_rig",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-test-equipment/brake-valve-test-rig/pneumatic_test_rig",
   },
 };
 
@@ -25,83 +25,88 @@ const page = () => {
           <div className="container">
             <div>
               <h1 className="text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
-                Hydraulic Test Rig – Aviation Equipment by Jetsys Defence
+                Pneumatic Test Rig – Aviation Equipment by Jetsys Defence
               </h1>
               <p className="font-medium text-base">
-                The Hydraulic Test Rig by Jetsys Defence is a high-performance aviation testing solution designed to evaluate, simulate, and validate hydraulic systems with precision. Engineered for reliability and accuracy, this advanced equipment ensures optimal performance of hydraulic components used in aircraft and defence systems.
+                The Pneumatic Test Rig by Jetsys Defence is a high-precision aviation testing solution designed to evaluate, simulate, and validate pneumatic systems with superior accuracy. Built with advanced control systems and durable construction, this equipment ensures reliable testing of air-based systems used in aircraft and defence operations.
               </p>
               <p className="font-medium text-base">
-                Our hydraulic test rig is ideal for MRO facilities, aircraft manufacturers, and defence organizations requiring accurate and efficient hydraulic system testing.
+                Our pneumatic test rig is ideal for MRO facilities, aircraft manufacturers, and defence organizations that require accurate and efficient pneumatic system validation.
               </p>
               <br />
               <br />
               <div>
                 <Image
-                  src="/images/Hydraulic Test Rig.png"
+                  src="/images/Pneumatic Test Rig.png"
                   width={500}
                   height={1000}
-                  alt="Hydraulic Test Rig Aviation Equipment"
+                  alt="Pneumatic Test Rig Aviation Equipment"
                   className="m-auto mb-6"
                 />
                 <OrderNowContactButton />
               </div>
 
-              {/* What is a Hydraulic Test Rig? */}
+              {/* What is a Pneumatic Test Rig? */}
               <section>
                 <br />
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    What is a Hydraulic Test Rig?
+                    What is a Pneumatic Test Rig?
                   </h2>
                   <p className="text-black mb-4">
-                    A hydraulic test rig is specialized equipment used to test hydraulic systems, components, and assemblies under controlled pressure and flow conditions. It replicates real-world operating environments to ensure performance, safety, and compliance.
+                    A pneumatic test rig is specialized equipment used to test air pressure systems, pneumatic components, and control systems under controlled conditions. It replicates real-world operating environments to ensure safety, performance, and compliance.
                   </p>
                   <p className="text-black font-semibold mb-2">
-                    It is commonly referred to as:
+                    These systems are widely used in aviation and industrial applications for testing and validation, including:
                   </p>
                   <ul className="list-disc pl-5 text-black space-y-2">
-                    <li>Hydraulic pump test rig</li>
-                    <li>Hydro test rig</li>
-                    <li>Hydraulic test rig for aircraft</li>
-                    <li>Hydraulic cylinder test rig</li>
+                    <li>Pneumatic system test rig for complete system evaluation</li>
+                    <li>Air pressure test rig for precise pressure testing</li>
+                    <li>Pneumatic testing machine for automated validation</li>
+                    <li>Pneumatic test bench for controlled lab testing</li>
+                    <li>Compressed air test rig for high-pressure simulation</li>
                   </ul>
                 </div>
               </section>
 
-              {/* Types of Hydraulic Test Rigs */}
+              {/* Types of Pneumatic Test Rigs */}
               <section>
                 <br />
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Types of Hydraulic Test Rigs
+                    Types of Pneumatic Test Rigs
                   </h2>
                   <p className="text-black mb-4">
-                    Jetsys Defence offers multiple configurations for different testing applications:
+                    Jetsys Defence offers advanced configurations for various applications:
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
                         <li>
-                          <h3 className="font-bold text-[#5C5649]">1. Hydraulic Pump Test Rig</h3>
-                          A hydraulic pump test rig is used to evaluate pump efficiency, pressure output, and flow characteristics.
+                          <h3 className="font-bold text-[#5C5649]">1. Pneumatic System Test Rig</h3>
+                          A complete pneumatic system test rig used for testing full air-based systems in aviation and industrial setups.
                         </li>
                         <li>
-                          <h3 className="font-bold text-[#5C5649]">2. Hydraulic Cylinder Test Rig</h3>
-                          The hydraulic cylinder test rig is designed to test cylinder performance, sealing, and load-bearing capacity.
+                          <h3 className="font-bold text-[#5C5649]">2. Air Pressure Test Rig</h3>
+                          Designed for precise air pressure testing equipment, ensuring accurate pressure measurement and validation.
+                        </li>
+                        <li>
+                          <h3 className="font-bold text-[#5C5649]">3. Pneumatic Valve Test Rig</h3>
+                          A pneumatic valve test rig used to test valve performance, leakage, and pressure response.
                         </li>
                       </ul>
                     </div>
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
                         <li>
-                          <h3 className="font-bold text-[#5C5649]">3. Aircraft Hydraulic Test Rig</h3>
-                          A specialized hydraulic test rig for aircraft used for testing aviation hydraulic systems under real operational conditions.
+                          <h3 className="font-bold text-[#5C5649]">4. Pneumatic Actuator Test Rig</h3>
+                          Used for evaluating actuator performance in aircraft pneumatic systems.
                         </li>
                         <li>
-                          <h3 className="font-bold text-[#5C5649]">4. Hydro Test Rig</h3>
-                          A hydro test rig is used for pressure testing and leak detection in hydraulic components and pipelines.
+                          <h3 className="font-bold text-[#5C5649]">5. Compressed Air Test Rig</h3>
+                          A compressed air test rig designed for high-pressure testing and simulation of real operating conditions.
                         </li>
                       </ul>
                     </div>
@@ -115,20 +120,20 @@ const page = () => {
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Applications of Hydraulic Test Rig
+                    Applications of Pneumatic Test Rig
                   </h2>
                   <p className="text-black mb-4">
-                    The hydraulic test rig from Jetsys Defence is widely used in:
+                    The pneumatic test rig from Jetsys Defence is widely used in:
                   </p>
                   <ul className="list-disc pl-5 space-y-2 text-black">
                     <li>Aircraft maintenance, repair, and overhaul (MRO)</li>
                     <li>Aircraft manufacturing and system validation</li>
                     <li>Defence aviation testing facilities</li>
-                    <li>Hydraulic component testing and calibration</li>
-                    <li>Industrial and aerospace engineering applications</li>
+                    <li>Testing of pneumatic valves, actuators, and air systems</li>
+                    <li>Aerospace and industrial engineering applications</li>
                   </ul>
                   <p className="text-black mt-4">
-                    Our hydraulic cylinder test rig and hydraulic pump test rig ensure accurate testing in critical environments.
+                    Our pneumatic testing machine ensures accurate results in mission-critical environments.
                   </p>
                 </div>
               </section>
@@ -139,25 +144,25 @@ const page = () => {
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Key Features of Jetsys Defence Hydraulic Test Rig
+                    Key Features of Jetsys Defence Pneumatic Test Rig
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>High-precision pressure and flow control</li>
-                        <li>Real-time data monitoring and analysis</li>
-                        <li>PLC-based automated operation</li>
+                        <li>High-precision air pressure control system</li>
+                        <li>Real-time monitoring and data analysis</li>
+                        <li>PLC-based automation for efficient testing</li>
                       </ul>
                     </div>
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>Durable and robust construction</li>
-                        <li>Designed for aviation safety standards</li>
+                        <li>Durable and heavy-duty construction</li>
+                        <li>Designed to meet aviation safety standards</li>
                       </ul>
                     </div>
                   </div>
                   <p className="text-black mt-4">
-                    Our hydraulic test rig for aircraft ensures reliable and repeatable testing results.
+                    Our pneumatic test bench ensures consistent and repeatable testing performance.
                   </p>
                 </div>
               </section>
@@ -171,15 +176,15 @@ const page = () => {
                     Why Choose Jetsys Defence?
                   </h2>
                   <p className="text-black mb-4">
-                    Jetsys Defence is a trusted manufacturer of aviation equipment, delivering advanced testing solutions for mission-critical operations.
+                    Jetsys Defence is a trusted name in aviation equipment manufacturing, delivering advanced testing solutions for critical operations.
                   </p>
                   <p className="text-black mb-4">
                     We provide:
                   </p>
                   <ul className="list-disc pl-5 space-y-2 text-black">
-                    <li>High-performance hydraulic test rigs</li>
-                    <li>Reliable hydraulic pump test rig and hydraulic cylinder test rig solutions</li>
-                    <li>Custom-built systems for aviation and defence</li>
+                    <li>High-performance pneumatic test rigs</li>
+                    <li>Reliable air pressure test rig systems</li>
+                    <li>Custom-built solutions for aviation and defence</li>
                     <li>Long-lasting and efficient equipment</li>
                   </ul>
                 </div>
@@ -191,16 +196,15 @@ const page = () => {
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Hydraulic Test Rig Price & Availability
+                    Pneumatic Test Rig Price & Availability
                   </h2>
                   <p className="text-black mb-4">
-                    The price of a hydraulic test rig depends on testing capacity, automation level, and customization. Jetsys Defence offers a wide range of options including:
+                    The price of a pneumatic test rig depends on specifications such as pressure capacity, automation level, and customization. Jetsys Defence offers a wide range of options including:
                   </p>
                   <ul className="list-disc pl-5 space-y-2 text-black">
-                    <li>Hydraulic pump test rig</li>
-                    <li>Hydraulic cylinder test rig</li>
-                    <li>Hydraulic test rig for aircraft</li>
-                    <li>Hydro test rig systems</li>
+                    <li>Pneumatic valve test rig</li>
+                    <li>Pneumatic actuator test rig</li>
+                    <li>Compressed air test rig systems</li>
                   </ul>
                 </div>
               </section>
@@ -214,7 +218,7 @@ const page = () => {
                     Conclusion
                   </h2>
                   <p className="text-black mb-4">
-                    The Hydraulic Test Rig by Jetsys Defence is an essential solution for aviation and defence testing applications. With advanced features like precision hydraulic control, automated systems, and real-time monitoring, our equipment ensures accurate, efficient, and reliable testing of hydraulic systems.
+                    The Pneumatic Test Rig by Jetsys Defence is an essential solution for aviation and defence testing applications. With advanced features like precision air pressure control, automated systems, and real-time monitoring, our equipment ensures accurate, efficient, and reliable testing of pneumatic systems.
                   </p>
                 </div>
               </section>

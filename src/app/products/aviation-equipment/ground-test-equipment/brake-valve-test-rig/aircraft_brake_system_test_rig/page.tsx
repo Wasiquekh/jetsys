@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Explore aircraft brake system test rig by Jetsys Defence including hydraulic brake testing equipment and aviation test systems for accurate performance validation.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-handling-equipment/brake-valve-test-rig/aircraft_brake_system_test_rig",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-test-equipment/brake-valve-test-rig/aircraft_brake_system_test_rig",
   },
 };
 
