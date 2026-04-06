@@ -13,20 +13,51 @@ export const metadata: Metadata = {
     "Test transparency and reflection with Jetsys Defence Glass Optical Properties Checker. Analyze glass quality online with precision for aviation and defense use.",
   alternates: {
     canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-test-equipment/glass-optical-properties-checker",
-  },
+  },
 };
+
+// Internal links data for dynamic linking
+const internalLinks = {
+  aircraftCanopy: "/products/aviation-equipment/ground-test-equipment/glass-optical-properties-checker/aircraft_canopy_testing_system",
+  aircraftWindow: "/products/aviation-equipment/ground-test-equipment/glass-optical-properties-checker/aircraft_window_testing_equipment",
+  aircraftWindshield: "/products/aviation-equipment/ground-test-equipment/glass-optical-properties-checker/aircraft_windshield_testing_equipment",
+  birefringence: "/products/aviation-equipment/ground-test-equipment/glass-optical-properties-checker/birefringence_testing_equipment",
+  glassTesting: "/products/aviation-equipment/ground-test-equipment/glass-optical-properties-checker/glass_testing_equipment",
+  opticalTest: "/products/aviation-equipment/ground-test-equipment/glass-optical-properties-checker/optical_test_equipment",
+  refractiveIndex: "/products/aviation-equipment/ground-test-equipment/glass-optical-properties-checker/refractive_index_measurement_system",
+  wavefront: "/products/aviation-equipment/ground-test-equipment/glass-optical-properties-checker/wavefront_measurement_system",
+};
+
+// Custom Link component for internal linking with hover underline and no color change
+const InternalLink = ({ href, children, className = "" }: { href: string; children: React.ReactNode; className?: string }) => {
+  return (
+    <a
+      href={href}
+      className={`hover:underline ${className}`}
+      style={{ textDecoration: "none", color: "inherit" }}
+    >
+      {children}
+    </a>
+  );
+};
+
 const page = () => {
   return (
     <>
- 
+
     <div>
       <Header />
       <StickyHeader />
+      <style>{`
+        a {
+          transition: text-decoration 0.2s ease;
+        }
+      `}</style>
       <section>
         <div className="container">
   <div>
               <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Glass Optical Properties Checker — Precision Optical Testing for Aviation & Defence</h1>
-               <p className=" font-medium text-base">Jetsys Defence’s Glass Optical Properties Checker verifies optical clarity and structural reliability of aircraft windows, canopies, windshields and sensor covers. It measures spectral transmittance, reflectance, haze, clarity, refractive index, birefringence, wavefront error, striae, and wedge—giving maintenance teams and QA labs rapid, traceable results. An optional Glass Optical Properties Checker online reporting module turns lab data into shareable, audit-ready certificates.</p><br></br>
+               <p className=" font-medium text-base">Jetsys Defence’s Glass Optical Properties Checker verifies optical clarity and structural reliability of <InternalLink href={internalLinks.aircraftWindow}>aircraft windows</InternalLink>, <InternalLink href={internalLinks.aircraftCanopy}>canopies</InternalLink>, <InternalLink href={internalLinks.aircraftWindshield}>windshields</InternalLink> and sensor covers. It measures spectral transmittance, reflectance, haze, clarity, <InternalLink href={internalLinks.refractiveIndex}>refractive index</InternalLink>, <InternalLink href={internalLinks.birefringence}>birefringence</InternalLink>, <InternalLink href={internalLinks.wavefront}>wavefront error</InternalLink>, striae, and wedge—giving maintenance teams and QA labs rapid, traceable results. An optional Glass Optical Properties Checker online reporting module turns lab data into shareable, audit-ready certificates.</p><br></br>
              <br></br>
              <div>
         <Image
@@ -110,17 +141,17 @@ const page = () => {
         <ul className="list-disc pl-5 space-y-4">
           <li>
             <h4 className="font-bold text-[#5C5649]">High-Accuracy Optical Certification</h4>
-            Delivers precise measurements of transmittance, reflectance, haze, clarity, refractive index, and birefringence—ensuring compliance with aerospace, defence, and industrial standards.
+            Delivers precise measurements of transmittance, reflectance, haze, clarity, <InternalLink href={internalLinks.refractiveIndex}>refractive index</InternalLink>, and <InternalLink href={internalLinks.birefringence}>birefringence</InternalLink>—ensuring compliance with aerospace, defence, and industrial standards.
           </li>
 
           <li>
             <h4 className="font-bold text-[#5C5649]">Improves Pilot Visibility & Safety</h4>
-            Detects scatter, haze, and wavefront distortion to maintain crystal-clear cockpit visibility and HUD compatibility in mission-critical environments.
+            Detects scatter, haze, and <InternalLink href={internalLinks.wavefront}>wavefront distortion</InternalLink> to maintain crystal-clear cockpit visibility and HUD compatibility in mission-critical environments.
           </li>
 
           <li>
             <h4 className="font-bold text-[#5C5649]">Ensures Material Reliability in Harsh Environments</h4>
-            Validates optical performance after mechanical stress, heat, UV exposure, and aging for aircraft canopies, windscreens, domes, and windows.
+            Validates optical performance after mechanical stress, heat, UV exposure, and aging for <InternalLink href={internalLinks.aircraftCanopy}>aircraft canopies</InternalLink>, windscreens, domes, and <InternalLink href={internalLinks.aircraftWindow}>windows</InternalLink>.
           </li>
 
           <li>
@@ -154,7 +185,7 @@ const page = () => {
 
           <li>
             <h4 className="font-bold text-[#5C5649]">Works for Multiple Transparent Materials</h4>
-            Compatible with glass, acrylic, polycarbonate, laminated canopies, transparent armor, windshields, and coated optical substrates.
+            Compatible with glass, acrylic, polycarbonate, laminated canopies, transparent armor, <InternalLink href={internalLinks.aircraftWindshield}>windshields</InternalLink>, and coated optical substrates.
           </li>
         </ul>
       </div>
@@ -332,7 +363,7 @@ const page = () => {
 
           <li>
             <h4 className="font-bold text-[#5C5649]">EO/IR Turret & Radome Windows</h4>
-            Validates wavefront error, refractive index, and coating behaviour for ISR, targeting pods, and surveillance payloads.
+            Validates <InternalLink href={internalLinks.wavefront}>wavefront error</InternalLink>, <InternalLink href={internalLinks.refractiveIndex}>refractive index</InternalLink>, and coating behaviour for ISR, targeting pods, and surveillance payloads.
           </li>
 
           <li>
@@ -364,7 +395,7 @@ const page = () => {
 
           <li>
             <h4 className="font-bold text-[#5C5649]">Select Scan Mode</h4>
-            Run spectral sweep, haze/clarity, wavefront analysis, or the full optical test suite.
+            Run spectral sweep, haze/clarity, <InternalLink href={internalLinks.wavefront}>wavefront analysis</InternalLink>, or the full optical test suite.
           </li>
 
         </ul>
@@ -402,7 +433,7 @@ const page = () => {
 
           <li>
             <h4 className="font-bold text-[#5C5649]">Aerospace-Grade Precision Engineering</h4>
-            Designed specifically for flight-critical transparencies like canopies, windscreens, HUD glass and domes—ensuring accurate readings for transmittance, haze, clarity, and birefringence.
+            Designed specifically for flight-critical transparencies like <InternalLink href={internalLinks.aircraftCanopy}>canopies</InternalLink>, <InternalLink href={internalLinks.aircraftWindshield}>windscreens</InternalLink>, HUD glass and domes—ensuring accurate readings for transmittance, haze, clarity, and <InternalLink href={internalLinks.birefringence}>birefringence</InternalLink>.
           </li>
 
           <li>
