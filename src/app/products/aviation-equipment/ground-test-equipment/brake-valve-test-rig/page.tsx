@@ -123,7 +123,7 @@ const page = () => {
                         <tr><td className="px-4 py-2 border-b">Hydraulic Flow Rate</td><td className="px-4 py-2 border-b">Up to 50 L/min, multi-zone control</td></tr>
                         <tr><td className="px-4 py-2 border-b">Reservoir Capacity</td><td className="px-4 py-2 border-b">Hydraulic – 200 L; Pneumatic – 240 L / 450 L</td></tr>
                         <tr><td className="px-4 py-2 border-b">DAQ System</td><td className="px-4 py-2 border-b">≥ 1,000 samples/sec; 24-bit; 16+ channels</td></tr>
-                        <tr><td className="px-4 py-2 border-b">Control System</td><td className="px-4 py-2 border-b">Siemens / Allen-Bradley PLC with 15" HMI</td></tr>
+                        <tr><td className="px-4 py-2 border-b">Control System</td><td className="px-4 py-2 border-b">Siemens / Allen-Bradley PLC with 15&quot; HMI</td></tr>
                         <tr><td className="px-4 py-2 border-b">Power Requirement</td><td className="px-4 py-2 border-b">415 V ± 10%, 50 Hz, 3-phase</td></tr>
                         <tr><td className="px-4 py-2 border-b">Motor Drives</td><td className="px-4 py-2 border-b">VFD-controlled induction motors up to 5 kW</td></tr>
                         <tr><td className="px-4 py-2 border-b">Noise Level</td><td className="px-4 py-2 border-b">≤ 80 dB(A) at 1 m distance</td></tr>

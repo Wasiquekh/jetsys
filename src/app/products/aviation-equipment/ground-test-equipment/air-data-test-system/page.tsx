@@ -182,7 +182,7 @@ const page = () => {
                   <h3 className="font-bold text-3xl text-[#5C5649] mb-5">
                     <Link href="/products/aviation-equipment/ground-test-equipment/air-data-test-system/air_data_test_equipment" className="hover:underline no-underline text-inherit">
                       Air Data Test System Set
-                    </Link> — What's Included
+                    </Link> — What&quot;s Included
                   </h3>
 
                   <h4 className="font-bold text-[#5C5649] mb-3">Standard Kit Includes:</h4>
@@ -224,7 +224,7 @@ const page = () => {
                     <Link href="/products/aviation-equipment/ground-test-equipment/air-data-test-system/air_data_test_equipment" className="hover:underline no-underline text-inherit">
                       Air Data Test System
                     </Link> price varies based on configuration (channels, remote operation features, and accessories). 
-                    For the best price tailored to your fleet's needs, please contact Jetsys Defence for a personalized quote.
+                    For the best price tailored to your fleet&quot;s needs, please contact Jetsys Defence for a personalized quote.
                   </p>
                 </div>
               </section>
