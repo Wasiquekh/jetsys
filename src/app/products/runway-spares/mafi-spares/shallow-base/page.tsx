@@ -13,8 +13,16 @@ export const metadata: Metadata = {
     "Explore Jetsys Defence’s high-quality Shallow Base units for airport runway spares. Get competitive Shallow Base price quotes, reliable supply and efficient logistics for defence & aviation infrastructure.",
   alternates: {
     canonical: "https://www.jetsys.co.in/products/runway-spares/mafi-spares/shallow-base",
-  },
+  },
 };
+
+// Internal link component with hover:underline and no color change
+const InternalLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
+  <a href={href} className="hover:underline no-underline text-inherit">
+    {children}
+  </a>
+);
+
 const page = () => {
   return (
     <>
@@ -82,15 +90,19 @@ const page = () => {
       {/* LEFT COLUMN */}
       <ul className="list-disc pl-5 space-y-4">
         <li>
-          <h3 className="font-bold text-[#5C5649]">Runway Lighting Fixtures</h3>
-          Used to mount runway edge lights, centreline lights, touchdown zone lights, and approach
+          <h3 className="font-bold text-[#5C5649]">
+            <InternalLink href="/products/runway-spares/mafi-spares/shallow-base/runway-lighting-base-system">Runway Lighting Fixtures</InternalLink>
+          </h3>
+          Used to mount <InternalLink href="/products/runway-spares/mafi-spares/shallow-base/runway-light-base">runway edge lights</InternalLink>, centreline lights, touchdown zone lights, and approach
           lights where deep foundations are not possible.
         </li>
 
         <li>
-          <h3 className="font-bold text-[#5C5649]">Taxiway & Apron Lighting</h3>
-          Supports installation of taxiway guidance signs, elevated/taxiway lights, and apron
-          floodlighting on concrete or paved surfaces.
+          <h3 className="font-bold text-[#5C5649]">
+            <InternalLink href="/products/runway-spares/mafi-spares/shallow-base/taxiway-lighting-base">Taxiway & Apron Lighting</InternalLink>
+          </h3>
+          Supports installation of taxiway guidance signs, elevated/taxiway lights, and 
+          <InternalLink href="/products/runway-spares/mafi-spares/shallow-base/apron_lighting_base"> apron floodlighting</InternalLink> on concrete or paved surfaces.
         </li>
 
         <li>
@@ -115,15 +127,19 @@ const page = () => {
         </li>
 
         <li>
-          <h3 className="font-bold text-[#5C5649]">Helipad Lighting Systems</h3>
+          <h3 className="font-bold text-[#5C5649]">
+            <InternalLink href="/products/runway-spares/mafi-spares/shallow-base/helipad-lighting-base">Helipad Lighting Systems</InternalLink>
+          </h3>
           Used to mount helipad edge lights and approach aids with minimal excavation and stable
           electrical interfaces.
         </li>
 
         <li>
-          <h3 className="font-bold text-[#5C5649]">Solar or LED-Based Airfield Lights</h3>
+          <h3 className="font-bold text-[#5C5649]">
+            <InternalLink href="/products/runway-spares/mafi-spares/shallow-base/led-airfield-light-base">Solar or LED-Based Airfield Lights</InternalLink>
+          </h3>
           Supports modern low-profile LED and solar lights that require compact underground
-          housings without deep foundation pits.
+          housings without deep foundation pits. (<InternalLink href="/products/runway-spares/mafi-spares/shallow-base/solar-airfield-light-base">Solar airfield light base</InternalLink> available)
         </li>
 
         <li>
@@ -156,83 +172,83 @@ const page = () => {
           <tr className="bg-gray-200">
             <th className="px-4 py-2 text-left font-medium text-gray-700">Parameter</th>
             <th className="px-4 py-2 text-left font-medium text-gray-700">Specification</th>
-          </tr>
+           </tr>
         </thead>
 
         <tbody>
           <tr>
             <td className="px-4 py-2 border-b">Nominal Sizes</td>
             <td className="px-4 py-2 border-b">8″ and 12″ Shallow Base units (other diameters on request)</td>
-          </tr>
+           </tr>
 
           <tr>
             <td className="px-4 py-2 border-b">Outside Diameter (typ.)</td>
             <td className="px-4 py-2 border-b">8″ ≈ 220 mm; 12″ ≈ 320 mm</td>
-          </tr>
+           </tr>
 
           <tr>
             <td className="px-4 py-2 border-b">Depth (typ.)</td>
             <td className="px-4 py-2 border-b">~150 mm shallow depth profile</td>
-          </tr>
+           </tr>
 
           <tr>
             <td className="px-4 py-2 border-b">Body Material</td>
             <td className="px-4 py-2 border-b">High-strength aluminium alloy (forged/cast), anodised or coated</td>
-          </tr>
+           </tr>
 
           <tr>
             <td className="px-4 py-2 border-b">Hardware</td>
             <td className="px-4 py-2 border-b">Stainless-steel screws, washers, threaded sleeves/inserts</td>
-          </tr>
+           </tr>
 
           <tr>
             <td className="px-4 py-2 border-b">Cable Entry</td>
             <td className="px-4 py-2 border-b">Bottom entry (standard); optional single/dual side entries with glands</td>
-          </tr>
+           </tr>
 
           <tr>
             <td className="px-4 py-2 border-b">Sealing</td>
             <td className="px-4 py-2 border-b">Gasketed dry-base option between base and fixture; epoxy set in core</td>
-          </tr>
+           </tr>
 
           <tr>
             <td className="px-4 py-2 border-b">Finish</td>
             <td className="px-4 py-2 border-b">Industrial two-pack coating / anodised finish (project-specific colours)</td>
-          </tr>
+           </tr>
 
           <tr>
             <td className="px-4 py-2 border-b">Temperature Range</td>
             <td className="px-4 py-2 border-b">–55 °C to +55 °C (storage up to +70 °C)</td>
-          </tr>
+           </tr>
 
           <tr>
             <td className="px-4 py-2 border-b">Altitude</td>
             <td className="px-4 py-2 border-b">Up to ~3,000 m</td>
-          </tr>
+           </tr>
 
           <tr>
             <td className="px-4 py-2 border-b">Loading/Environment</td>
             <td className="px-4 py-2 border-b">Designed for airfield pavement mechanical loads and jet-blast environment</td>
-          </tr>
+           </tr>
 
           <tr>
             <td className="px-4 py-2 border-b">Compatibility</td>
             <td className="px-4 py-2 border-b">8″/12″ inset light footprints (model-dependent)</td>
-          </tr>
+           </tr>
 
           <tr>
             <td className="px-4 py-2 border-b">Standards Alignment</td>
             <td className="px-4 py-2 border-b">
               FAA AC 150/5345-42 (as applicable), IEC 61822/61827 mechanical/env.
             </td>
-          </tr>
+           </tr>
 
           <tr>
             <td className="px-4 py-2 border-b">Accessories</td>
             <td className="px-4 py-2 border-b">
               Mounting jigs, sealing gaskets, gland kits, alignment plates, concrete collars
             </td>
-          </tr>
+           </tr>
         </tbody>
       </table>
     </div>
@@ -283,7 +299,9 @@ const page = () => {
       {/* LEFT COLUMN */}
       <ul className="list-disc pl-5 space-y-4">
         <li>
-          <h3 className="font-bold text-[#5C5649]">Durable, Airfield-Ready Construction</h3>
+          <h3 className="font-bold text-[#5C5649]">
+            <InternalLink href="/products/runway-spares/mafi-spares/shallow-base/airfield-lighting-base">Durable, Airfield-Ready Construction</InternalLink>
+          </h3>
           Forged/cast aerospace-grade aluminium body with stainless-steel hardware resists corrosion,
           impact, and cyclic loading from aircraft operations.
         </li>
@@ -304,7 +322,9 @@ const page = () => {
         </li>
 
         <li>
-          <h3 className="font-bold text-[#5C5649]">Standards-Aligned Design</h3>
+          <h3 className="font-bold text-[#5C5649]">
+            <InternalLink href="/products/runway-spares/mafi-spares/shallow-base/inset-light-base">Standards-Aligned Design</InternalLink>
+          </h3>
           Designed in line with common airfield mechanical and environmental requirements
           (e.g., FAA AC 150/5345-42 / related guidance and IEC 61822/61827 considerations).  
           <br/>

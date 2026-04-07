@@ -13,9 +13,12 @@ export const metadata: Metadata = {
     "Explore Jetsys Defence SASD Test Rig designed for aircraft system testing. Find your nearest branch and check the latest SASD Test Rig price today.",
   alternates: {
     canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-test-equipment/sasd-test-rig",
-  },
+  },
 };
 const page = () => {
+  // Internal link styling: no underline, no color change on hover
+  const linkClass = "no-underline hover:no-underline hover:text-inherit";
+
   return (
     <>
 
@@ -26,7 +29,7 @@ const page = () => {
         <div className="container">
   <div>
                 <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">SASD Test Rig for Aircraft – Precision Testing by Jetsys Defence</h1>
-                 <p className=" font-medium text-base">The SASD Test Rig by Jetsys Defence is engineered for dependable testing of aircraft hydraulic and pneumatic systems. Built with aerospace-grade components and smart automation, it helps maintenance facilities, research labs, and MRO centers ensure aircraft system performance under real operational loads. Whether an organization needs a new SASD Test Rig, wants to find a nearest SASD Test Rig branch, or is evaluating SASD Test Rig price options, Jetsys Defence offers a complete, scalable solution.
+                 <p className=" font-medium text-base">The SASD Test Rig by Jetsys Defence is engineered for dependable testing of aircraft hydraulic and pneumatic systems. Built with aerospace-grade components and smart automation, it helps maintenance facilities, research labs, and MRO centers ensure <a href="/products/aviation-equipment/ground-test-equipment/sasd-test-rig/aircraft-testing-equipment" className={linkClass}>aircraft system performance</a> under real operational loads. Whether an organization needs a new SASD Test Rig, wants to find a nearest SASD Test Rig branch, or is evaluating SASD Test Rig price options, Jetsys Defence offers a complete, scalable solution.
                   </p><br></br>
                <br></br>
                <div>
@@ -47,7 +50,7 @@ const page = () => {
 
     <p className="text-black mb-4">
       A SASD Test Rig is a controlled aerospace testing platform that simulates real flight and ground conditions. 
-      It applies pressure, flow, temperature fluctuation, and load cycles to verify aircraft system endurance, 
+      It applies pressure, flow, temperature fluctuation, and load cycles to verify <a href="/products/aviation-equipment/ground-test-equipment/sasd-test-rig/aircraft-component-test-bench" className={linkClass}>aircraft system endurance</a>, 
       response time, leak resistance, and operational accuracy.
     </p>
 
@@ -71,7 +74,7 @@ const page = () => {
 
           <li>
             <h4 className="font-bold text-[#5C5649]">Aircraft Component Validation</h4>
-            Pressure testing of actuators, valves, pumps, hoses, pipes, and fittings. 
+            <a href="/products/aviation-equipment/ground-test-equipment/sasd-test-rig/aircraft-component-test-bench" className={linkClass}>Pressure testing of actuators, valves, pumps, hoses, pipes, and fittings</a>. 
             Measures leakage, hysteresis, and performance decay with durability and accelerated fatigue testing.
           </li>
 
@@ -193,7 +196,7 @@ const page = () => {
         <tbody>
           <tr>
             <td className="px-4 py-2 border-b">Working Fluid</td>
-            <td className="px-4 py-2 border-b">Hydraulic Oil / Synthetic Fluids</td>
+            <td className="px-4 py-2 border-b"><a href="/products/aviation-equipment/ground-test-equipment/sasd-test-rig/hydraulic-&-pneumatic-test-system" className={linkClass}>Hydraulic Oil / Synthetic Fluids</a></td>
             <td className="px-4 py-2 border-b">Compatible with aerospace-grade fluids</td>
           </tr>
 
@@ -322,7 +325,7 @@ const page = () => {
       <div className="text-black space-y-4">
         <ul className="list-disc pl-5 space-y-4">
           <li>Research and educational labs</li>
-          <li>Hydraulic equipment producers</li>
+          <li><a href="/products/aviation-equipment/ground-test-equipment/sasd-test-rig/hydraulic-test-ig" className={linkClass}>Hydraulic equipment producers</a></li>
           <li>MRO and overhaul workshops</li>
         </ul>
       </div>
