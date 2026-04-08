@@ -39,7 +39,7 @@ const page = () => {
               <br />
               <div>
                 <Image
-                  src="/images/Runway-Lighting-System.png"
+                  src="/images/Runway Lighting System –.png"
                   width={500}
                   height={1000}
                   alt="Runway Lighting System by Jetsys Defence"
