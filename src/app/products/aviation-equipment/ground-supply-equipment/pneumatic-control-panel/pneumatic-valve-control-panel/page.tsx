@@ -7,11 +7,11 @@ import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
 
 export const metadata: Metadata = {
-  title: "Electro Pneumatic Control Panel | PLC Based Pneumatic Control System | Jetsys Defence",
+  title: "Pneumatic Valve Control Panel | Automatic Valve Control System | Jetsys Defence",
   description:
-    "Explore Electro Pneumatic Control Panel by Jetsys Defence. High-performance electro pneumatic control system with PLC for aviation and industrial automation applications.",
+    "Explore Pneumatic Valve Control Panel by Jetsys Defence. High-performance pneumatic valve control system for aviation and industrial applications with precision and reliability.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/pneumatic-control-panel/electro-pneumatic-control-panel",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/pneumatic-control-panel/pneumatic-valve-control-panel",
   },
 };
 
@@ -25,23 +25,23 @@ const page = () => {
           <div className="container">
             <div>
               <h1 className="text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
-                Electro Pneumatic Control Panel – Advanced Aviation Control System by Jetsys Defence
+                Pneumatic Valve Control Panel – Advanced Valve Control System by Jetsys Defence
               </h1>
               <p className="font-medium text-base">
-                Jetsys Defence offers a precision-engineered Electro Pneumatic Control Panel designed for advanced aviation
-                and industrial control applications. Under the Aviation Equipment – Pneumatic Control Panel category, this
-                system combines electrical and pneumatic technologies to deliver accurate and reliable control performance.
-                As a leading electro pneumatic control panel manufacturer, Jetsys Defence provides robust and customizable
-                solutions for aviation ground operations and automation systems.
+                Jetsys Defence offers a high-performance Pneumatic Valve Control Panel designed for advanced aviation and
+                industrial applications. Under the Aviation Equipment – Pneumatic Control Panel category, this system ensures
+                precise control of pneumatic valves for efficient and reliable operations. As a trusted pneumatic valve
+                control panel manufacturer, Jetsys Defence provides durable and customizable solutions for various control
+                system requirements.
               </p>
               <br />
               <br />
               <div>
                 <Image
-                  src="/images/Electro Pneumatic Control Panel.png"
+                  src="/images/Pneumatic Valve Control Panel.png"
                   width={500}
                   height={1000}
-                  alt="Electro Pneumatic Control Panel by Jetsys Defence"
+                  alt="Pneumatic Valve Control Panel by Jetsys Defence"
                   className="m-auto mb-6"
                 />
                 <OrderNowContactButton />
@@ -56,33 +56,33 @@ const page = () => {
                     Product Overview
                   </h2>
                   <p className="text-black mb-4">
-                    The Electro Pneumatic Control Panel is an integrated system that combines electrical control mechanisms
-                    with pneumatic actuation. This electro pneumatic control system ensures efficient control of air pressure,
-                    flow, and mechanical operations in aviation environments.
+                    The Pneumatic Valve Control Panel is a specialized system designed to manage and control pneumatic valves
+                    through a centralized interface. This pneumatic valve control system enables efficient regulation of
+                    air flow, pressure, and valve operations in aviation and industrial environments.
                   </p>
                   <p className="text-black">
-                    Engineered for reliability, this pneumatic electrical control panel is widely used in automated systems
-                    requiring precise and responsive control.
+                    Engineered for accuracy and performance, this valve control panel pneumatic solution enhances system
+                    efficiency and automation.
                   </p>
                 </div>
               </section>
 
-              {/* What is Electro Pneumatic Control Panel? */}
+              {/* What is Pneumatic Valve Control Panel? */}
               <section>
                 <br />
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    What is Electro Pneumatic Control Panel?
+                    What is Pneumatic Valve Control Panel?
                   </h2>
                   <p className="text-black mb-4">
-                    An Electro Pneumatic Control Panel is a system that uses electrical signals to control pneumatic components
-                    such as valves, actuators, and air distribution systems. It functions as a complete electro pneumatic
-                    control panel system, enabling automated operations through controlled air pressure.
+                    A Pneumatic Valve Control Panel is a control system that operates pneumatic valves using air pressure
+                    and control signals. It functions as a complete pneumatic valve control panel system, enabling automated
+                    or manual control of valve operations.
                   </p>
                   <p className="text-black">
-                    This system is often integrated with PLC technology, making it a highly efficient electro pneumatic
-                    control panel with PLC for modern aviation and industrial automation.
+                    This pneumatic control panel for valves ensures precise control over airflow and system functionality
+                    in critical applications.
                   </p>
                 </div>
               </section>
@@ -93,23 +93,23 @@ const page = () => {
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Key Features of Electro Pneumatic Control Panel
+                    Key Features of Pneumatic Valve Control Panel
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     {/* LEFT COLUMN */}
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
                         <li>
-                          <h4 className="font-bold text-[#5C5649]">Integrated Electrical & Pneumatic Control</h4>
-                          Combines electrical logic with pneumatic actuation in a single electro pneumatic control system.
+                          <h4 className="font-bold text-[#5C5649]">Precision Valve Control</h4>
+                          Provides accurate control of airflow through an advanced pneumatic valve control system.
                         </li>
                         <li>
-                          <h4 className="font-bold text-[#5C5649]">PLC-Based Automation</h4>
-                          Advanced electro pneumatic control panel with PLC for precise and automated operations.
+                          <h4 className="font-bold text-[#5C5649]">Automated Operation</h4>
+                          Supports automatic pneumatic valve control system functionality for enhanced efficiency.
                         </li>
                         <li>
-                          <h4 className="font-bold text-[#5C5649]">High Precision Control</h4>
-                          Ensures accurate air pressure and flow management for sensitive applications.
+                          <h4 className="font-bold text-[#5C5649]">Robust Industrial Design</h4>
+                          Designed as an industrial pneumatic valve control panel for demanding environments.
                         </li>
                       </ul>
                     </div>
@@ -117,12 +117,12 @@ const page = () => {
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
                         <li>
-                          <h4 className="font-bold text-[#5C5649]">Modular & Scalable Design</h4>
-                          Flexible architecture for custom electro pneumatic control panel configurations.
+                          <h4 className="font-bold text-[#5C5649]">Centralized Control Interface</h4>
+                          User-friendly control panel for efficient monitoring and operation.
                         </li>
                         <li>
-                          <h4 className="font-bold text-[#5C5649]">Durable Industrial Build</h4>
-                          Designed as an industrial electro pneumatic control panel suitable for harsh environments.
+                          <h4 className="font-bold text-[#5C5649]">Customizable Configurations</h4>
+                          Supports custom pneumatic valve control panel solutions for specific applications.
                         </li>
                       </ul>
                     </div>
@@ -136,7 +136,7 @@ const page = () => {
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Technical Specifications of Electro Pneumatic Control Panel
+                    Technical Specifications of Pneumatic Valve Control Panel
                   </h2>
                   <div className="overflow-x-auto bg-white rounded-lg">
                     <table className="min-w-full table-auto">
@@ -147,14 +147,14 @@ const page = () => {
                         </tr>
                       </thead>
                       <tbody>
-                        <tr><td className="px-4 py-2 border-b">Control Type</td><td className="px-4 py-2 border-b">Electro Pneumatic Control System</td></tr>
-                        <tr><td className="px-4 py-2 border-b">PLC Integration</td><td className="px-4 py-2 border-b">Available (optional/custom)</td></tr>
-                        <tr><td className="px-4 py-2 border-b">Voltage Range</td><td className="px-4 py-2 border-b">As per system requirement</td></tr>
-                        <tr><td className="px-4 py-2 border-b">Pneumatic Pressure Range</td><td className="px-4 py-2 border-b">Adjustable</td></tr>
-                        <tr><td className="px-4 py-2 border-b">Components</td><td className="px-4 py-2 border-b">Solenoid valves, regulators, actuators</td></tr>
-                        <tr><td className="px-4 py-2 border-b">Interface</td><td className="px-4 py-2 border-b">Digital / PLC-based control panel</td></tr>
+                        <tr><td className="px-4 py-2 border-b">Control Type</td><td className="px-4 py-2 border-b">Pneumatic Valve Control System</td></tr>
+                        <tr><td className="px-4 py-2 border-b">Operation Mode</td><td className="px-4 py-2 border-b">Manual / Automatic</td></tr>
+                        <tr><td className="px-4 py-2 border-b">Pressure Range</td><td className="px-4 py-2 border-b">Adjustable based on system requirements</td></tr>
+                        <tr><td className="px-4 py-2 border-b">Components</td><td className="px-4 py-2 border-b">Pneumatic valves, regulators, actuators</td></tr>
+                        <tr><td className="px-4 py-2 border-b">Interface</td><td className="px-4 py-2 border-b">Control panel with indicators and switches</td></tr>
+                        <tr><td className="px-4 py-2 border-b">Automation</td><td className="px-4 py-2 border-b">Optional integration with control systems</td></tr>
                         <tr><td className="px-4 py-2 border-b">Cooling System</td><td className="px-4 py-2 border-b">Air-cooled</td></tr>
-                        <tr><td className="px-4 py-2 border-b">Protection</td><td className="px-4 py-2 border-b">Overload, Short Circuit, Pressure Control</td></tr>
+                        <tr><td className="px-4 py-2 border-b">Protection</td><td className="px-4 py-2 border-b">Overpressure, System Safety Controls</td></tr>
                         <tr><td className="px-4 py-2 border-b">Build</td><td className="px-4 py-2 border-b">Industrial-grade enclosure</td></tr>
                       </tbody>
                     </table>
@@ -168,27 +168,27 @@ const page = () => {
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Variants of Electro Pneumatic Control Panel
+                    Variants of Pneumatic Valve Control Panel
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     {/* LEFT COLUMN */}
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>PLC-Based Electro Pneumatic Control Panel Systems</li>
-                        <li>Industrial Electro Pneumatic Control Panel Units</li>
-                        <li>Custom Electro Pneumatic Control Panel Solutions</li>
+                        <li>Industrial Pneumatic Valve Control Panel Systems</li>
+                        <li>Automatic Pneumatic Valve Control System Units</li>
+                        <li>Custom Pneumatic Valve Control Panel Solutions</li>
                       </ul>
                     </div>
                     {/* RIGHT COLUMN */}
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>Automation-Based Electro Pneumatic Control Panels</li>
-                        <li>Compact Pneumatic Electrical Control Panel Units</li>
+                        <li>Compact Valve Control Panel Pneumatic Units</li>
+                        <li>Multi-Valve Control Panel Systems</li>
                       </ul>
                     </div>
                   </div>
                   <p className="text-black mt-4">
-                    These variants are designed for different aviation and automation requirements.
+                    These variants are designed for different operational and system requirements.
                   </p>
                 </div>
               </section>
@@ -199,22 +199,22 @@ const page = () => {
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Benefits of Electro Pneumatic Control Panel
+                    Benefits of Pneumatic Valve Control Panel
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     {/* LEFT COLUMN */}
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>High precision and reliable control system</li>
-                        <li>Efficient electro pneumatic automation panel performance</li>
-                        <li>Reduces manual intervention through automation</li>
+                        <li>Precise control of pneumatic valve operations</li>
+                        <li>Improved efficiency through automation</li>
+                        <li>Reliable pneumatic valve control panel system</li>
                       </ul>
                     </div>
                     {/* RIGHT COLUMN */}
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>Enhances operational efficiency and system response</li>
-                        <li>Customizable for specific applications</li>
+                        <li>Reduced manual intervention</li>
+                        <li>Customizable solutions for diverse applications</li>
                         <li>Durable and low-maintenance system</li>
                       </ul>
                     </div>
@@ -228,7 +228,7 @@ const page = () => {
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Applications of Electro Pneumatic Control Panel
+                    Applications of Pneumatic Valve Control Panel
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     {/* LEFT COLUMN */}
@@ -242,14 +242,14 @@ const page = () => {
                     {/* RIGHT COLUMN */}
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>Air pressure control and distribution systems</li>
-                        <li>Manufacturing and process control applications</li>
-                        <li>Testing and maintenance environments</li>
+                        <li>Air pressure and valve regulation systems</li>
+                        <li>Manufacturing and process industries</li>
+                        <li>Maintenance and testing environments</li>
                       </ul>
                     </div>
                   </div>
                   <p className="text-black mt-4">
-                    This electro pneumatic control panel system is widely used in both aviation and industrial sectors.
+                    This pneumatic valve control panel is widely used in aviation and industrial sectors.
                   </p>
                 </div>
               </section>
@@ -266,16 +266,16 @@ const page = () => {
                     {/* LEFT COLUMN */}
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>PLC-based control interface</li>
-                        <li>Real-time pressure and system monitoring</li>
-                        <li>Fault detection and alert system</li>
+                        <li>Real-time system monitoring</li>
+                        <li>Pressure and valve status indicators</li>
+                        <li>Fault detection and alert systems</li>
                       </ul>
                     </div>
                     {/* RIGHT COLUMN */}
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>Performance diagnostics and system tracking</li>
-                        <li>Optional remote monitoring capability</li>
+                        <li>Performance tracking</li>
+                        <li>Optional integration with advanced control systems</li>
                       </ul>
                     </div>
                   </div>
@@ -288,28 +288,28 @@ const page = () => {
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Why Choose Jetsys Defence for Electro Pneumatic Control Panel
+                    Why Choose Jetsys Defence for Pneumatic Valve Control Panel
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     {/* LEFT COLUMN */}
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>Trusted electro pneumatic control panel supplier</li>
-                        <li>Expertise in aviation and automation systems</li>
-                        <li>High-quality and durable engineering standards</li>
+                        <li>Trusted pneumatic valve control panel supplier</li>
+                        <li>Expertise in aviation and pneumatic systems</li>
+                        <li>High-quality and durable engineering</li>
                       </ul>
                     </div>
                     {/* RIGHT COLUMN */}
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>Custom-built electro pneumatic control panel system</li>
+                        <li>Custom-built pneumatic valve control panel system</li>
                         <li>Proven performance across industries</li>
                         <li>Strong technical support and service</li>
                       </ul>
                     </div>
                   </div>
                   <p className="text-black mt-4">
-                    Jetsys Defence is a reliable electro pneumatic control panel manufacturer delivering advanced control solutions.
+                    Jetsys Defence is a reliable pneumatic valve control panel manufacturer delivering precision-engineered solutions.
                   </p>
                 </div>
               </section>
@@ -320,15 +320,15 @@ const page = () => {
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Order Our Electro Pneumatic Control Panel System from Jetsys Defence
+                    Order Our Pneumatic Valve Control Panel System from Jetsys Defence
                   </h2>
                   <p className="text-black">
-                    Upgrade your aviation and automation systems with Jetsys Defence's Electro Pneumatic Control Panel.
-                    Whether you require a custom electro pneumatic control panel or a PLC-based automation system, we provide
+                    Enhance your control systems with Jetsys Defence's Pneumatic Valve Control Panel. Whether you require
+                    a custom pneumatic valve control panel or an advanced automatic pneumatic valve control system, we provide
                     high-performance solutions tailored to your needs.
                   </p>
                   <p className="text-black mt-4">
-                    Contact Jetsys Defence today to enhance your operational efficiency with advanced control systems.
+                    Contact Jetsys Defence today to upgrade your operational efficiency.
                   </p>
                 </div>
               </section>
