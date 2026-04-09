@@ -7,11 +7,11 @@ import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
 
 export const metadata: Metadata = {
-  title: "Ground Power Unit for Airports | Airport Ground Power Unit System | Jetsys Defence",
+  title: "Electro Pneumatic Control Panel | PLC Based Pneumatic Control System | Jetsys Defence",
   description:
-    "High-performance Ground Power Unit for Airports by Jetsys Defence. Reliable airport ground power unit and aircraft stand power supply for efficient aviation operations.",
+    "Explore Electro Pneumatic Control Panel by Jetsys Defence. High-performance electro pneumatic control system with PLC for aviation and industrial automation applications.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/ground-power-unit-for-airports",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/pneumatic-control-panel/electro-pneumatic-control-panel",
   },
 };
 
@@ -25,23 +25,23 @@ const page = () => {
           <div className="container">
             <div>
               <h1 className="text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
-                Ground Power Unit for Airports – Advanced Airport Ground Power System by Jetsys Defence
+                Electro Pneumatic Control Panel – Advanced Aviation Control System by Jetsys Defence
               </h1>
               <p className="font-medium text-base">
-                Jetsys Defence presents a high-efficiency Ground Power Unit for Airports, designed to deliver reliable and
-                continuous airport ground power unit solutions for modern aviation infrastructure. As part of our Runway
-                Spares category, this advanced system ensures stable aircraft stand power supply for seamless airport
-                operations. Our expertise in ground power system airport solutions positions Jetsys Defence as a trusted
-                provider for civil and military aviation environments.
+                Jetsys Defence offers a precision-engineered Electro Pneumatic Control Panel designed for advanced aviation
+                and industrial control applications. Under the Aviation Equipment – Pneumatic Control Panel category, this
+                system combines electrical and pneumatic technologies to deliver accurate and reliable control performance.
+                As a leading electro pneumatic control panel manufacturer, Jetsys Defence provides robust and customizable
+                solutions for aviation ground operations and automation systems.
               </p>
               <br />
               <br />
               <div>
                 <Image
-                  src="/images/ground-power-unit-for-airports.png"
+                  src="/images/Electro Pneumatic Control Panel.png"
                   width={500}
                   height={1000}
-                  alt="Ground Power Unit for Airports by Jetsys Defence"
+                  alt="Electro Pneumatic Control Panel by Jetsys Defence"
                   className="m-auto mb-6"
                 />
                 <OrderNowContactButton />
@@ -56,32 +56,33 @@ const page = () => {
                     Product Overview
                   </h2>
                   <p className="text-black mb-4">
-                    The Ground Power Unit for Airports is a critical system used to supply electrical power to aircraft
-                    parked at terminals, stands, and gates. This airport ground power unit supports aircraft systems during
-                    boarding, servicing, and maintenance without relying on onboard power sources.
+                    The Electro Pneumatic Control Panel is an integrated system that combines electrical control mechanisms
+                    with pneumatic actuation. This electro pneumatic control system ensures efficient control of air pressure,
+                    flow, and mechanical operations in aviation environments.
                   </p>
                   <p className="text-black">
-                    Engineered for high-demand airport environments, this ground power system airport ensures operational
-                    efficiency, energy savings, and reduced emissions.
+                    Engineered for reliability, this pneumatic electrical control panel is widely used in automated systems
+                    requiring precise and responsive control.
                   </p>
                 </div>
               </section>
 
-              {/* What is Ground Power Unit for Airports? */}
+              {/* What is Electro Pneumatic Control Panel? */}
               <section>
                 <br />
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    What is Ground Power Unit for Airports?
+                    What is Electro Pneumatic Control Panel?
                   </h2>
                   <p className="text-black mb-4">
-                    A Ground Power Unit for Airports is an external electrical system that provides power to aircraft while
-                    they are stationed at airport stands or gates. It acts as a reliable aircraft stand power supply, supporting
-                    avionics, cabin systems, and maintenance operations.
+                    An Electro Pneumatic Control Panel is a system that uses electrical signals to control pneumatic components
+                    such as valves, actuators, and air distribution systems. It functions as a complete electro pneumatic
+                    control panel system, enabling automated operations through controlled air pressure.
                   </p>
                   <p className="text-black">
-                    This airport ground power unit is essential for ensuring smooth and efficient ground handling processes.
+                    This system is often integrated with PLC technology, making it a highly efficient electro pneumatic
+                    control panel with PLC for modern aviation and industrial automation.
                   </p>
                 </div>
               </section>
@@ -92,23 +93,23 @@ const page = () => {
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Key Features of Ground Power Unit for Airports
+                    Key Features of Electro Pneumatic Control Panel
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     {/* LEFT COLUMN */}
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
                         <li>
-                          <h4 className="font-bold text-[#5C5649]">Continuous Power Supply</h4>
-                          Provides uninterrupted ground power system airport support for all aircraft operations.
+                          <h4 className="font-bold text-[#5C5649]">Integrated Electrical & Pneumatic Control</h4>
+                          Combines electrical logic with pneumatic actuation in a single electro pneumatic control system.
                         </li>
                         <li>
-                          <h4 className="font-bold text-[#5C5649]">High Load Capacity</h4>
-                          Designed to handle multiple aircraft requirements with stable aircraft stand power supply.
+                          <h4 className="font-bold text-[#5C5649]">PLC-Based Automation</h4>
+                          Advanced electro pneumatic control panel with PLC for precise and automated operations.
                         </li>
                         <li>
-                          <h4 className="font-bold text-[#5C5649]">Energy Efficient Operation</h4>
-                          Optimized power delivery reduces operational costs and energy consumption.
+                          <h4 className="font-bold text-[#5C5649]">High Precision Control</h4>
+                          Ensures accurate air pressure and flow management for sensitive applications.
                         </li>
                       </ul>
                     </div>
@@ -116,12 +117,12 @@ const page = () => {
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
                         <li>
-                          <h4 className="font-bold text-[#5C5649]">Rugged Airport Design</h4>
-                          Built to withstand heavy-duty airport conditions and continuous usage.
+                          <h4 className="font-bold text-[#5C5649]">Modular & Scalable Design</h4>
+                          Flexible architecture for custom electro pneumatic control panel configurations.
                         </li>
                         <li>
-                          <h4 className="font-bold text-[#5C5649]">Flexible Integration</h4>
-                          Compatible with various airport infrastructures including gates and remote stands.
+                          <h4 className="font-bold text-[#5C5649]">Durable Industrial Build</h4>
+                          Designed as an industrial electro pneumatic control panel suitable for harsh environments.
                         </li>
                       </ul>
                     </div>
@@ -135,7 +136,7 @@ const page = () => {
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Technical Specifications of Ground Power Unit for Airports
+                    Technical Specifications of Electro Pneumatic Control Panel
                   </h2>
                   <div className="overflow-x-auto bg-white rounded-lg">
                     <table className="min-w-full table-auto">
@@ -146,14 +147,15 @@ const page = () => {
                         </tr>
                       </thead>
                       <tbody>
-                        <tr><td className="px-4 py-2 border-b">Output Power</td><td className="px-4 py-2 border-b">400 Hz AC / 28.5V DC (configurable)</td></tr>
-                        <tr><td className="px-4 py-2 border-b">Voltage Range</td><td className="px-4 py-2 border-b">115/200 V AC</td></tr>
-                        <tr><td className="px-4 py-2 border-b">Frequency</td><td className="px-4 py-2 border-b">400 Hz</td></tr>
-                        <tr><td className="px-4 py-2 border-b">Power Capacity</td><td className="px-4 py-2 border-b">Customizable for airport operations</td></tr>
-                        <tr><td className="px-4 py-2 border-b">Cooling System</td><td className="px-4 py-2 border-b">Air-cooled / Forced ventilation</td></tr>
-                        <tr><td className="px-4 py-2 border-b">Installation Type</td><td className="px-4 py-2 border-b">Mobile / Fixed</td></tr>
-                        <tr><td className="px-4 py-2 border-b">Protection</td><td className="px-4 py-2 border-b">Overload, Overvoltage, Short Circuit</td></tr>
-                        <tr><td className="px-4 py-2 border-b">Control System</td><td className="px-4 py-2 border-b">Digital interface with monitoring</td></tr>
+                        <tr><td className="px-4 py-2 border-b">Control Type</td><td className="px-4 py-2 border-b">Electro Pneumatic Control System</td></tr>
+                        <tr><td className="px-4 py-2 border-b">PLC Integration</td><td className="px-4 py-2 border-b">Available (optional/custom)</td></tr>
+                        <tr><td className="px-4 py-2 border-b">Voltage Range</td><td className="px-4 py-2 border-b">As per system requirement</td></tr>
+                        <tr><td className="px-4 py-2 border-b">Pneumatic Pressure Range</td><td className="px-4 py-2 border-b">Adjustable</td></tr>
+                        <tr><td className="px-4 py-2 border-b">Components</td><td className="px-4 py-2 border-b">Solenoid valves, regulators, actuators</td></tr>
+                        <tr><td className="px-4 py-2 border-b">Interface</td><td className="px-4 py-2 border-b">Digital / PLC-based control panel</td></tr>
+                        <tr><td className="px-4 py-2 border-b">Cooling System</td><td className="px-4 py-2 border-b">Air-cooled</td></tr>
+                        <tr><td className="px-4 py-2 border-b">Protection</td><td className="px-4 py-2 border-b">Overload, Short Circuit, Pressure Control</td></tr>
+                        <tr><td className="px-4 py-2 border-b">Build</td><td className="px-4 py-2 border-b">Industrial-grade enclosure</td></tr>
                       </tbody>
                     </table>
                   </div>
@@ -166,27 +168,27 @@ const page = () => {
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Variants of Ground Power Unit for Airports
+                    Variants of Electro Pneumatic Control Panel
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     {/* LEFT COLUMN */}
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>Mobile Airport Ground Power Unit</li>
-                        <li>Fixed Ground Power System Airport</li>
-                        <li>Bridge Mounted Aircraft Stand Power Supply Systems</li>
+                        <li>PLC-Based Electro Pneumatic Control Panel Systems</li>
+                        <li>Industrial Electro Pneumatic Control Panel Units</li>
+                        <li>Custom Electro Pneumatic Control Panel Solutions</li>
                       </ul>
                     </div>
                     {/* RIGHT COLUMN */}
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>Centralized Airport Ground Power Unit Systems</li>
-                        <li>Hybrid Ground Power Units for Airports</li>
+                        <li>Automation-Based Electro Pneumatic Control Panels</li>
+                        <li>Compact Pneumatic Electrical Control Panel Units</li>
                       </ul>
                     </div>
                   </div>
                   <p className="text-black mt-4">
-                    These variants provide flexibility for different airport layouts and operational requirements.
+                    These variants are designed for different aviation and automation requirements.
                   </p>
                 </div>
               </section>
@@ -197,23 +199,23 @@ const page = () => {
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Benefits of Ground Power Unit for Airports
+                    Benefits of Electro Pneumatic Control Panel
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     {/* LEFT COLUMN */}
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>Ensures reliable aircraft stand power supply</li>
-                        <li>Reduces aircraft fuel consumption and emissions</li>
-                        <li>Improves airport operational efficiency</li>
+                        <li>High precision and reliable control system</li>
+                        <li>Efficient electro pneumatic automation panel performance</li>
+                        <li>Reduces manual intervention through automation</li>
                       </ul>
                     </div>
                     {/* RIGHT COLUMN */}
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>Minimizes dependency on onboard power systems</li>
-                        <li>Enhances passenger comfort during boarding</li>
-                        <li>Cost-effective long-term airport ground power unit solution</li>
+                        <li>Enhances operational efficiency and system response</li>
+                        <li>Customizable for specific applications</li>
+                        <li>Durable and low-maintenance system</li>
                       </ul>
                     </div>
                   </div>
@@ -226,28 +228,28 @@ const page = () => {
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Applications of Ground Power Unit for Airports
+                    Applications of Electro Pneumatic Control Panel
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     {/* LEFT COLUMN */}
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>Airport terminal gate operations</li>
-                        <li>Aircraft stand and apron power supply</li>
-                        <li>Ground handling and servicing</li>
+                        <li>Aviation ground support systems</li>
+                        <li>Aircraft pneumatic control panel for ground operations</li>
+                        <li>Industrial automation systems</li>
                       </ul>
                     </div>
                     {/* RIGHT COLUMN */}
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>Aircraft maintenance and inspection</li>
-                        <li>Military and civil aviation airports</li>
-                        <li>Remote stand power solutions</li>
+                        <li>Air pressure control and distribution systems</li>
+                        <li>Manufacturing and process control applications</li>
+                        <li>Testing and maintenance environments</li>
                       </ul>
                     </div>
                   </div>
                   <p className="text-black mt-4">
-                    This ground power system airport is essential for modern airport infrastructure.
+                    This electro pneumatic control panel system is widely used in both aviation and industrial sectors.
                   </p>
                 </div>
               </section>
@@ -264,16 +266,16 @@ const page = () => {
                     {/* LEFT COLUMN */}
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>Digital control panel for real-time data</li>
+                        <li>PLC-based control interface</li>
+                        <li>Real-time pressure and system monitoring</li>
                         <li>Fault detection and alert system</li>
-                        <li>Power usage monitoring</li>
                       </ul>
                     </div>
                     {/* RIGHT COLUMN */}
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>Remote diagnostics capability</li>
-                        <li>Automated safety shutdown systems</li>
+                        <li>Performance diagnostics and system tracking</li>
+                        <li>Optional remote monitoring capability</li>
                       </ul>
                     </div>
                   </div>
@@ -286,28 +288,28 @@ const page = () => {
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Why Choose Jetsys Defence for Ground Power Unit for Airports
+                    Why Choose Jetsys Defence for Electro Pneumatic Control Panel
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     {/* LEFT COLUMN */}
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>Expertise in airport ground power unit systems</li>
-                        <li>Reliable and durable aviation-grade products</li>
-                        <li>Customizable solutions for different airport needs</li>
+                        <li>Trusted electro pneumatic control panel supplier</li>
+                        <li>Expertise in aviation and automation systems</li>
+                        <li>High-quality and durable engineering standards</li>
                       </ul>
                     </div>
                     {/* RIGHT COLUMN */}
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5 space-y-4">
-                        <li>Competitive pricing with long-term value</li>
-                        <li>Proven performance in aviation and defence sectors</li>
-                        <li>Dedicated support and service</li>
+                        <li>Custom-built electro pneumatic control panel system</li>
+                        <li>Proven performance across industries</li>
+                        <li>Strong technical support and service</li>
                       </ul>
                     </div>
                   </div>
                   <p className="text-black mt-4">
-                    Jetsys Defence delivers advanced ground power system airport solutions built for performance and reliability.
+                    Jetsys Defence is a reliable electro pneumatic control panel manufacturer delivering advanced control solutions.
                   </p>
                 </div>
               </section>
@@ -318,15 +320,15 @@ const page = () => {
                 <br />
                 <div>
                   <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    Order Our Ground Power Unit for Airports from Jetsys Defence
+                    Order Our Electro Pneumatic Control Panel System from Jetsys Defence
                   </h2>
                   <p className="text-black">
-                    Upgrade your airport operations with Jetsys Defence's Ground Power Unit for Airports. Whether you need
-                    a fixed ground power system airport or a mobile aircraft stand power supply, we offer tailored solutions
-                    designed for maximum efficiency.
+                    Upgrade your aviation and automation systems with Jetsys Defence's Electro Pneumatic Control Panel.
+                    Whether you require a custom electro pneumatic control panel or a PLC-based automation system, we provide
+                    high-performance solutions tailored to your needs.
                   </p>
                   <p className="text-black mt-4">
-                    Contact Jetsys Defence today to enhance your airport ground power unit infrastructure.
+                    Contact Jetsys Defence today to enhance your operational efficiency with advanced control systems.
                   </p>
                 </div>
               </section>
