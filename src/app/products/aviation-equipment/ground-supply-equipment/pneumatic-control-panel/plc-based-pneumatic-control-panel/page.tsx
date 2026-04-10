@@ -266,7 +266,7 @@ export default function Page() {
                   Order Our PLC Based Pneumatic Control Panel System from Jetsys Defence
                 </h2>
                 <p className="text-black">
-                  Upgrade your automation systems with Jetsys Defence's PLC Based Pneumatic Control Panel. Whether you
+                  Upgrade your automation systems with Jetsys Defence&apos;s PLC Based Pneumatic Control Panel. Whether you
                   require a custom PLC pneumatic control panel or a complete automated pneumatic control system with PLC,
                   we provide high-performance solutions tailored to your needs.
                 </p>

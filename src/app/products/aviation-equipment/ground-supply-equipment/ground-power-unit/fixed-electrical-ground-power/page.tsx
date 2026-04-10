@@ -320,7 +320,7 @@ const page = () => {
                     Order Our Electric Ground Power Unit (eGPU) from Jetsys Defence
                   </h2>
                   <p className="text-black">
-                    Enhance your aviation operations with Jetsys Defence's Electric Ground Power Unit (eGPU). Whether you need
+                    Enhance your aviation operations with Jetsys Defence&apos;s Electric Ground Power Unit (eGPU). Whether you need
                     a battery ground power unit, fixed ground power unit, or portable solution, we provide high-performance
                     systems designed for efficiency and sustainability.
                   </p>

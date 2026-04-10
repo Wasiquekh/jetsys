@@ -323,7 +323,7 @@ const page = () => {
                     Order Our Military Ground Power Unit from Jetsys Defence
                   </h2>
                   <p className="text-black">
-                    Enhance your defense aviation operations with Jetsys Defence's Military Ground Power Unit. Whether you
+                    Enhance your defense aviation operations with Jetsys Defence&apos;s Military Ground Power Unit. Whether you
                     require a portable defense aviation GPU or a complete military aircraft ground power unit system, we
                     provide high-performance solutions designed for reliability and durability.
                   </p>

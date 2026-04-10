@@ -322,7 +322,7 @@ const page = () => {
                     Order Our Ground Power Unit for Aircraft Maintenance from Jetsys Defence
                   </h2>
                   <p className="text-black">
-                    Enhance your aircraft servicing capabilities with Jetsys Defence's Ground Power Unit for Aircraft Maintenance.
+                    Enhance your aircraft servicing capabilities with Jetsys Defence&apos;s Ground Power Unit for Aircraft Maintenance.
                     Whether you require a portable avionics testing power unit or a complete aircraft maintenance power supply
                     system, we offer high-performance solutions built for precision and reliability.
                   </p>

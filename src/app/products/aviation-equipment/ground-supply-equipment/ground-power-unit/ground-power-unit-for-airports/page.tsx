@@ -321,7 +321,7 @@ const page = () => {
                     Order Our Ground Power Unit for Airports from Jetsys Defence
                   </h2>
                   <p className="text-black">
-                    Upgrade your airport operations with Jetsys Defence's Ground Power Unit for Airports. Whether you need
+                    Upgrade your airport operations with Jetsys Defence&apos;s Ground Power Unit for Airports. Whether you need
                     a fixed ground power system airport or a mobile aircraft stand power supply, we offer tailored solutions
                     designed for maximum efficiency.
                   </p>
