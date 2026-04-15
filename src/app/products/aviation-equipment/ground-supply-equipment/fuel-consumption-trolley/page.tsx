@@ -247,7 +247,7 @@ const page = () => {
 
               <section><br /><br />
                 <div>
-                  <h3 className="font-bold text-3xl text-[#5C5649] mb-5">What's Included</h3>
+                  <h3 className="font-bold text-3xl text-[#5C5649] mb-5">What&apos;s Included</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5">
