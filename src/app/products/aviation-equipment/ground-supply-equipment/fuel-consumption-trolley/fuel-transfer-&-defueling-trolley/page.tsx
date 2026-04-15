@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "High-performance Fuel Transfer & Defueling Trolley by Jetsys Defence for safe aircraft fuel transfer, defueling, and circulation. Ideal for aviation fuel handling, ground support, and military operations.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/fuel-transfer-&-defueling-trolley",
   },
 };
 
@@ -180,7 +180,7 @@ const Page = () => {
                   <div><h3 className="font-bold text-[#5C5649]">End-to-End Support</h3><p>Complete support from design to deployment and service</p></div>
                 </div>
               </section>
-
+                                                                                                                                      
               {/* Order Section */}
               <section className="mb-8">
                 <h2 className="font-bold text-3xl text-[#5C5649] mb-5">Order Fuel Transfer & Defueling Trolley from Jetsys Defence</h2>
