@@ -4,8 +4,8 @@ import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
 import Image from "next/image";
 import { Metadata } from "next";
-
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+
 export const metadata: Metadata = {
   title:
     "Aircraft Jacks – Nose Jack & Main Jack for Defence Aircraft | Jetsys Defence",
@@ -13,47 +13,51 @@ export const metadata: Metadata = {
     "Looking for a nose jack & main jack? Jetsys Defence offers rugged aircraft jacks for defence use, engineered for performance and safety. Request a quote and pricing now.",
   alternates: {
     canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/nose-jack",
-  },
+  },
 };
 
 const page = () => {
   return (
     <>
-   
-    <div>
-      <Header />
-      <StickyHeader />
-      <section>
-        <div className="container">
-        <div>
-                  <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Nose Jack & Main Jack – Precision Aircraft Jacks by Jetsys Defence</h1>
-                  <p className=" font-medium text-base">At Jetsys Defence, we engineer world-class Nose Jacks and Main Jacks designed for the maintenance and lifting of both defence and commercial aircraft. Our jacks are known for their superior stability, precision hydraulics, and safety-first design, making them ideal for military bases, MRO facilities, and aviation service workshops.
-                  </p><br></br><br></br>
-                  <div>
-                                <Image
-                                  src="/images/Nose Jack & Main Jack.png"
-                                  width={500}
-                                  height={1000}
-                                  alt="Picture of the author"
-                                  className=" m-auto mb-6"
-                                />
-                                <OrderNowContactButton />
-                              </div>
-                  <br></br><br></br>     
-                <h2 className=" font-bold text-3xl text-[#5C5649] mb-5">Overview of Our Aircraft Jacks</h2>
-                <p className=" font-medium text-base">Our Aircraft Nose & Main Jacks are developed with advanced hydraulic technology to ensure maximum reliability during critical operations. Each unit is manufactured under stringent quality control, combining strength, accuracy, and durability to support all aircraft maintenance requirements.</p>
-                <p className=" font-medium text-base">They are ideal for:</p>
-                <ul className="list-disc pl-5">
-                        <li className="font-bold text-[#5C5649]">Defence aircraft operations</li>
-                        <li className="font-bold text-[#5C5649]">Heavy-duty MRO (Maintenance, Repair & Overhaul) facilities</li>
-                        <li className="font-bold text-[#5C5649]">Hangar and flight-line maintenance</li>
-                      </ul>
+      <div>
+        <Header />
+        <StickyHeader />
+        <section>
+          <div className="container">
+            <div>
+              <h1 className="text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
+                <a href="/products/aviation-equipment/ground-support-equipment/nose-jack/aviation-ground-support-lack" className="hover:underline" style={{ color: 'inherit' }}>Nose Jack & Main Jack</a> – Precision Aircraft Jacks by Jetsys Defence
+              </h1>
+              <p className="font-medium text-base">
+                At Jetsys Defence, we engineer world-class <a href="/products/aviation-equipment/ground-support-equipment/nose-jack/aviation-ground-support-lack" className="hover:underline" style={{ color: 'inherit' }}>Nose Jacks and Main Jacks</a> designed for the maintenance and lifting of both defence and commercial aircraft. Our jacks are known for their superior stability, precision hydraulics, and safety-first design, making them ideal for military bases, MRO facilities, and aviation service workshops.
+              </p>
+              <br /><br />
+              <div>
+                <Image
+                  src="/images/Nose Jack & Main Jack.png"
+                  width={500}
+                  height={1000}
+                  alt="Picture of the author"
+                  className="m-auto mb-6"
+                />
+                <OrderNowContactButton />
+              </div>
+              <br /><br />
 
-     
-              <section><br></br><br></br>
-            
-                <div >
-                  <h3 className=" font-bold text-3xl text-[#5C5649] mb-5">Key Features of Jetsys Defence Nose & Main Jacks</h3>
+              <h2 className="font-bold text-3xl text-[#5C5649] mb-5">Overview of Our Aircraft Jacks</h2>
+              <p className="font-medium text-base">
+                Our <a href="/products/aviation-equipment/ground-support-equipment/nose-jack/aviation-ground-support-lack" className="hover:underline" style={{ color: 'inherit' }}>Aircraft Nose & Main Jacks</a> are developed with advanced hydraulic technology to ensure maximum reliability during critical operations. Each unit is manufactured under stringent quality control, combining strength, accuracy, and durability to support all aircraft maintenance requirements.
+              </p>
+              <p className="font-medium text-base">They are ideal for:</p>
+              <ul className="list-disc pl-5">
+                <li className="font-bold text-[#5C5649]">Defence aircraft operations</li>
+                <li className="font-bold text-[#5C5649]">Heavy-duty MRO (Maintenance, Repair & Overhaul) facilities</li>
+                <li className="font-bold text-[#5C5649]">Hangar and flight-line maintenance</li>
+              </ul>
+
+              <section><br /><br />
+                <div>
+                  <h3 className="font-bold text-3xl text-[#5C5649] mb-5">Key Features of Jetsys Defence Nose & Main Jacks</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5">
@@ -66,17 +70,15 @@ const page = () => {
                       <ul className="list-disc pl-5">
                         <li><h4 className="font-bold text-[#5C5649]">Universal Compatibility</h4>Supports a range of aircraft types via interchangeable adapters and height-adjustable frames</li>
                         <li><h4 className="font-bold text-[#5C5649]">Corrosion-Resistant Construction</h4>Skydrol-resistant paint and hard-chrome-plated hydraulic pistons ensure long service life in all weather conditions.</li>
-                        </ul>
+                      </ul>
                     </div>
                   </div>
                 </div>
               </section>
+
               <section><br /><br />
                 <div className="mx-auto">
-                  <h2 className="text-3xl font-bold text-[#5C5649] mb-6">
-                    Technical Specifications (Tripod Jacks)
-                  </h2>
-
+                  <h2 className="text-3xl font-bold text-[#5C5649] mb-6">Technical Specifications (Tripod Jacks)</h2>
                   <div className="overflow-x-auto bg-white rounded-lg">
                     <table className="min-w-full table-auto">
                       <thead>
@@ -85,7 +87,6 @@ const page = () => {
                           <th className="px-4 py-2 text-left font-medium text-gray-700">Specification</th>
                         </tr>
                       </thead>
-
                       <tbody>
                         <tr>
                           <td className="px-4 py-2 border-b">Model Type</td>
@@ -153,9 +154,9 @@ const page = () => {
                 </div>
               </section>
 
-              <section><br></br><br></br>
-                <div >
-                  <h2 className=" font-bold text-3xl text-[#5C5649] mb-5">Benefits of Using Jetsys Defence Aircraft Jacks</h2>
+              <section><br /><br />
+                <div>
+                  <h2 className="font-bold text-3xl text-[#5C5649] mb-5">Benefits of Using Jetsys Defence Aircraft Jacks</h2>
                   <div className="grid grid-cols-1 gap-8">
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5">
@@ -165,56 +166,60 @@ const page = () => {
                         <li><strong className="text-[#5C5649]">Precision Lifting–</strong>Smooth hydraulic motion and bubble-level indicators guarantee accurate positioning.</li>
                         <li><strong className="text-[#5C5649]">Custom-Built for Defence –</strong>Tailored to meet defence aircraft lifting standards for reliability in critical operations.</li>
                         <li><strong className="text-[#5C5649]">Field-Ready Design–</strong>Easy mobility with tow handle and castors, perfect for hangar and tarmac use.</li>
-                        <li><strong className="text-[#5C5649]">Eco-Safe Materials –</strong>Environmentally compliant hydraulic fluids and coatings.
-                      </li>
+                        <li><strong className="text-[#5C5649]">Eco-Safe Materials –</strong>Environmentally compliant hydraulic fluids and coatings.</li>
                       </ul>
                     </div>
                   </div>
                 </div>
               </section>
-                <section><br></br><br></br>
-                <div >
-                  <h2 className=" font-bold text-3xl text-[#5C5649] mb-5">Applications in Aviation and Defence</h2>
+
+              <section><br /><br />
+                <div>
+                  <h2 className="font-bold text-3xl text-[#5C5649] mb-5">Applications in Aviation and Defence</h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5">
                         <li>Fighter jets, transport aircraft, and helicopters</li>
-                        <li> Air Force maintenance units</li>
+                        <li>Air Force maintenance units</li>
                         <li>Civil aviation ground support</li>
-                        <li>Defence equipment testing facilities</li> 
+                        <li>Defence equipment testing facilities</li>
                       </ul>
                     </div>
                   </div>
                 </div>
-              </section><br></br><br></br>
-              <h2 className=" font-bold text-3xl text-[#5C5649] mb-5">Nitrogen Trolley Price and Support</h2>
-              <p className=" font-medium text-base">At Jetsys Defence, we provide competitive nitrogen trolley price options without compromising quality. Each unit undergoes stringent calibration and testing to meet exacting aviation standards.</p>
-              <p className=" font-medium text-base">For custom configurations or bulk orders, our technical team offers end-to-end consultation, training, and after-sales support.</p>
-             <section className="mt-10 mb-10">
-              <div>
-                <h3 className="font-bold text-3xl text-[#5C5649] mb-5">
-                  Why Choose Jetsys Defence?
-                </h3>
+              </section>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-black">
-                  <ul className="list-disc pl-5 space-y-3">
-                    <li><strong className="text-[#5C5649]">Made in India – </strong>Built for the World</li>
-                    <li>Certified quality assurance with 150% proof-load tests</li>
-                    <li>Custom engineering for all aircraft models</li>
-                  </ul>
+              <br /><br />
 
-                  <ul className="list-disc pl-5 space-y-3">
-                    <li>Expert after-sales support & spare-part availability</li>
-                    <li>Over a decade of trust in defence ground-support manufacturing</li>
-                  </ul>
+              <h2 className="font-bold text-3xl text-[#5C5649] mb-5">Nitrogen Trolley Price and Support</h2>
+              <p className="font-medium text-base">
+                At Jetsys Defence, we provide competitive nitrogen trolley price options without compromising quality. Each unit undergoes stringent calibration and testing to meet exacting aviation standards.
+              </p>
+              <p className="font-medium text-base">
+                For custom configurations or bulk orders, our technical team offers end-to-end consultation, training, and after-sales support.
+              </p>
+
+              <section className="mt-10 mb-10">
+                <div>
+                  <h3 className="font-bold text-3xl text-[#5C5649] mb-5">Why Choose Jetsys Defence?</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-black">
+                    <ul className="list-disc pl-5 space-y-3">
+                      <li><strong className="text-[#5C5649]">Made in India – </strong>Built for the World</li>
+                      <li>Certified quality assurance with 150% proof-load tests</li>
+                      <li>Custom engineering for all aircraft models</li>
+                    </ul>
+                    <ul className="list-disc pl-5 space-y-3">
+                      <li>Expert after-sales support & spare-part availability</li>
+                      <li>Over a decade of trust in defence ground-support manufacturing</li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-            </section>
-    </div>
-        </div>
-      </section>
-      <Footer />
-    </div>
+              </section>
+            </div>
+          </div>
+        </section>
+        <Footer />
+      </div>
     </>
   );
 };
