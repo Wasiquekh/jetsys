@@ -177,3 +177,53 @@ video::-webkit-media-controls-start-playback-button {
 .safari-video-icon {
   pointer-events: none;
 }
+.safari-video-icon {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+
+/* Hide Safari/iOS native video UI */
+.safari-video-icon::-webkit-media-controls {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.safari-video-icon::-webkit-media-controls-panel {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.safari-video-icon::-webkit-media-controls-play-button {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.safari-video-icon::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  -webkit-appearance: none !important;
+}
+
+.safari-video-icon::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.safari-video-icon::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+.safari-video-icon::-webkit-media-controls-current-time-display,
+.safari-video-icon::-webkit-media-controls-time-remaining-display,
+.safari-video-icon::-webkit-media-controls-timeline,
+.safari-video-icon::-webkit-media-controls-mute-button,
+.safari-video-icon::-webkit-media-controls-volume-slider,
+.safari-video-icon::-webkit-media-controls-fullscreen-button {
+  display: none !important;
+}

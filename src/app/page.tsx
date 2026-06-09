@@ -197,199 +197,77 @@ export default function Home() {
       </section>
 {/* Safari / iOS video controls hide */}
 {/* ICON DESIGN DESKTOP */}
+
 <div className="hidden md:block">
   {/* RING */}
   <div className="max-w-[1120px] px-5 mx-auto flex justify-between -z-10">
-    <Image
-      src="/images/ring.svg"
-      width={100}
-      height={100}
-      alt="Picture of the author"
-      className="-z-10"
-    />
-    <Image
-      src="/images/ring.svg"
-      width={100}
-      height={100}
-      alt="Picture of the author"
-      className="-z-10"
-    />
-    <Image
-      src="/images/ring.svg"
-      width={100}
-      height={100}
-      alt="Picture of the author"
-      className="-z-10"
-    />
-    <Image
-      src="/images/ring.svg"
-      width={100}
-      height={100}
-      alt="Picture of the author"
-      className="-z-10"
-    />
-    <Image
-      src="/images/ring.svg"
-      width={100}
-      height={100}
-      alt="Picture of the author"
-      className="-z-10"
-    />
-    <Image
-      src="/images/ring.svg"
-      width={100}
-      height={100}
-      alt="Picture of the author"
-      className="-z-10"
-    />
-    <Image
-      src="/images/ring.svg"
-      width={100}
-      height={100}
-      alt="Picture of the author"
-      className="-z-10"
-    />
-    <Image
-      src="/images/ring.svg"
-      width={100}
-      height={100}
-      alt="Picture of the author"
-      className="-z-10"
-    />
+    {Array.from({ length: 8 }).map((_, index) => (
+      <Image
+        key={index}
+        src="/images/ring.svg"
+        width={100}
+        height={100}
+        alt="Ring decorative icon"
+        className="-z-10"
+      />
+    ))}
   </div>
 
   {/* BACKGROUND THEME COLOR LINE */}
   <div className="bg-primary h-14 -mt-[76px] -mb-[70px] z-10"></div>
 
-  {/* ICON IMAGES */}
-  <div className="max-w-[1120px] px-5 mx-auto flex justify-between">
-    <video
-      src="/images/Expert-Engineers.webm"
-      width={80}
-      height={80}
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="auto"
-      controls={false}
-      disablePictureInPicture
-      controlsList="nodownload nofullscreen noremoteplayback"
-      onContextMenu={(e) => e.preventDefault()}
-      className="safari-video-icon pointer-events-none relative left-[10px]"
-    />
-
-    <video
-      src="/images/Rapid-Deployment.webm"
-      width={80}
-      height={80}
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="auto"
-      controls={false}
-      disablePictureInPicture
-      controlsList="nodownload nofullscreen noremoteplayback"
-      onContextMenu={(e) => e.preventDefault()}
-      className="safari-video-icon pointer-events-none relative left-[7px]"
-    />
-
-    <video
-      src="/images/Global-Reach.webm"
-      width={80}
-      height={80}
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="auto"
-      controls={false}
-      disablePictureInPicture
-      controlsList="nodownload nofullscreen noremoteplayback"
-      onContextMenu={(e) => e.preventDefault()}
-      className="safari-video-icon pointer-events-none relative left-[5.5px]"
-    />
-
-    <video
-      src="/images/Indigenous-Capability.webm"
-      width={80}
-      height={80}
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="auto"
-      controls={false}
-      disablePictureInPicture
-      controlsList="nodownload nofullscreen noremoteplayback"
-      onContextMenu={(e) => e.preventDefault()}
-      className="safari-video-icon pointer-events-none relative left-[2px]"
-    />
-
-    <video
-      src="/images/Precise-Production.webm"
-      width={80}
-      height={80}
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="auto"
-      controls={false}
-      disablePictureInPicture
-      controlsList="nodownload nofullscreen noremoteplayback"
-      onContextMenu={(e) => e.preventDefault()}
-      className="safari-video-icon pointer-events-none relative right-[1px]"
-    />
-
-    <video
-      src="/images/Innovation-at-Core.webm"
-      width={80}
-      height={80}
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="auto"
-      controls={false}
-      disablePictureInPicture
-      controlsList="nodownload nofullscreen noremoteplayback"
-      onContextMenu={(e) => e.preventDefault()}
-      className="safari-video-icon pointer-events-none relative right-[4.5px]"
-    />
-
-    <video
-      src="/images/end-to-end-solutions.webm"
-      width={80}
-      height={80}
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="auto"
-      controls={false}
-      disablePictureInPicture
-      controlsList="nodownload nofullscreen noremoteplayback"
-      onContextMenu={(e) => e.preventDefault()}
-      className="safari-video-icon pointer-events-none relative right-[7px]"
-    />
-
-    <video
-      src="/images/Custom-Fit.webm"
-      width={80}
-      height={80}
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="auto"
-      controls={false}
-      disablePictureInPicture
-      controlsList="nodownload nofullscreen noremoteplayback"
-      onContextMenu={(e) => e.preventDefault()}
-      className="safari-video-icon pointer-events-none relative right-[10px]"
-    />
+  {/* ICON IMAGES - NO VIDEO, NO PLAY BUTTON */}
+  <div className="max-w-[1120px] px-5 mx-auto flex justify-between relative z-20">
+    {[
+      {
+        src: "/images/Expert-Engineers.gif",
+        alt: "Expert Engineers",
+        className: "relative left-[10px]",
+      },
+      {
+        src: "/images/Rapid-Deployment.gif",
+        alt: "Rapid Deployment",
+        className: "relative left-[7px]",
+      },
+      {
+        src: "/images/Global-Reach.gif",
+        alt: "Global Reach",
+        className: "relative left-[5.5px]",
+      },
+      {
+        src: "/images/Indigenous-Capability.gif",
+        alt: "Indigenous Capability",
+        className: "relative left-[2px]",
+      },
+      {
+        src: "/images/Precise-Production.gif",
+        alt: "Precise Production",
+        className: "relative right-[1px]",
+      },
+      {
+        src: "/images/Innovation-at-Core.gif",
+        alt: "Innovation at Core",
+        className: "relative right-[4.5px]",
+      },
+      {
+        src: "/images/end-to-end-solutions.gif",
+        alt: "End to end solutions",
+        className: "relative right-[7px]",
+      },
+      {
+        src: "/images/Custom-Fit.gif",
+        alt: "Custom-Fit",
+        className: "relative right-[10px]",
+      },
+    ].map((item) => (
+      <img
+        key={item.alt}
+        src={item.src}
+        alt={item.alt}
+        className={`w-[80px] h-[80px] object-contain block ${item.className}`}
+        draggable={false}
+      />
+    ))}
   </div>
 
   {/* TEXT */}
@@ -397,34 +275,41 @@ export default function Home() {
     <div className="w-full">
       <p className="text-center text-lg relative right-6">Expert Engineers</p>
     </div>
+
     <div className="w-full">
       <p className="text-center text-lg relative right-3">Rapid Deployment</p>
     </div>
+
     <div className="w-full">
       <p className="text-center text-lg">
         Global <br /> Reach
       </p>
     </div>
+
     <div className="w-full">
       <p className="text-center text-lg relative left-1">
         Indigenous Capability
       </p>
     </div>
+
     <div className="w-full">
       <p className="text-center text-lg relative left-2 w-[98%]">
         Precise Production
       </p>
     </div>
+
     <div className="w-full">
       <p className="text-center text-lg relative left-4 w-[98%]">
         Innovation at Core
       </p>
     </div>
+
     <div className="w-full">
       <p className="text-center text-lg relative left-6 w-[98%]">
         End to end solutions
       </p>
     </div>
+
     <div className="w-full">
       <p className="text-center text-lg relative left-6 w-[98%]">
         Custom-Fit
@@ -436,157 +321,58 @@ export default function Home() {
 {/* DESIGN MOBILE */}
 <section className="block md:hidden">
   <div className="container !pt-0 grid grid-cols-2 gap-4">
-    <div className="w-full">
-      <video
-        src="/images/Expert-Engineers.webm"
-        width={300}
-        height={300}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        controls={false}
-        disablePictureInPicture
-        controlsList="nodownload nofullscreen noremoteplayback"
-        onContextMenu={(e) => e.preventDefault()}
-        className="safari-video-icon pointer-events-none w-3/4 mb-2 m-auto"
-      />
-      <p className="text-center">Expert Engineers</p>
-    </div>
-
-    <div className="w-full">
-      <video
-        src="/images/Rapid-Deployment.webm"
-        width={300}
-        height={300}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        controls={false}
-        disablePictureInPicture
-        controlsList="nodownload nofullscreen noremoteplayback"
-        onContextMenu={(e) => e.preventDefault()}
-        className="safari-video-icon pointer-events-none w-3/4 mb-2 m-auto"
-      />
-      <p className="text-center">Rapid Deployment </p>
-    </div>
-
-    <div className="w-full">
-      <video
-        src="/images/Global-Reach.webm"
-        width={300}
-        height={300}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        controls={false}
-        disablePictureInPicture
-        controlsList="nodownload nofullscreen noremoteplayback"
-        onContextMenu={(e) => e.preventDefault()}
-        className="safari-video-icon pointer-events-none w-3/4 mb-2 m-auto"
-      />
-      <p className="text-center">Global Reach</p>
-    </div>
-
-    <div className="w-full">
-      <video
-        src="/images/Indigenous-Capability.webm"
-        width={300}
-        height={300}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        controls={false}
-        disablePictureInPicture
-        controlsList="nodownload nofullscreen noremoteplayback"
-        onContextMenu={(e) => e.preventDefault()}
-        className="safari-video-icon pointer-events-none w-3/4 mb-2 m-auto"
-      />
-      <p className="text-center">Indigenous Capability</p>
-    </div>
-
-    <div className="w-full">
-      <video
-        src="/images/Precise-Production.webm"
-        width={300}
-        height={300}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        controls={false}
-        disablePictureInPicture
-        controlsList="nodownload nofullscreen noremoteplayback"
-        onContextMenu={(e) => e.preventDefault()}
-        className="safari-video-icon pointer-events-none w-3/4 mb-2 m-auto"
-      />
-      <p className="text-center">Precise Production</p>
-    </div>
-
-    <div className="w-full">
-      <video
-        src="/images/Innovation-at-Core.webm"
-        width={300}
-        height={300}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        controls={false}
-        disablePictureInPicture
-        controlsList="nodownload nofullscreen noremoteplayback"
-        onContextMenu={(e) => e.preventDefault()}
-        className="safari-video-icon pointer-events-none w-3/4 mb-2 m-auto"
-      />
-      <p className="text-center">Innovation at Core</p>
-    </div>
-
-    <div className="w-full">
-      <video
-        src="/images/end-to-end-solutions.webm"
-        width={300}
-        height={300}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        controls={false}
-        disablePictureInPicture
-        controlsList="nodownload nofullscreen noremoteplayback"
-        onContextMenu={(e) => e.preventDefault()}
-        className="safari-video-icon pointer-events-none w-3/4 mb-2 m-auto"
-      />
-      <p className="text-center">End to end solutions</p>
-    </div>
-
-    <div className="w-full">
-      <video
-        src="/images/Custom-Fit.webm"
-        width={300}
-        height={300}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        controls={false}
-        disablePictureInPicture
-        controlsList="nodownload nofullscreen noremoteplayback"
-        onContextMenu={(e) => e.preventDefault()}
-        className="safari-video-icon pointer-events-none w-3/4 mb-2 m-auto"
-      />
-      <p className="text-center">Custom-Fit</p>
-    </div>
+    {[
+      {
+        src: "/images/Expert-Engineers.gif",
+        alt: "Expert Engineers",
+        title: "Expert Engineers",
+      },
+      {
+        src: "/images/Rapid-Deployment.gif",
+        alt: "Rapid Deployment",
+        title: "Rapid Deployment",
+      },
+      {
+        src: "/images/Global-Reach.gif",
+        alt: "Global Reach",
+        title: "Global Reach",
+      },
+      {
+        src: "/images/Indigenous-Capability.gif",
+        alt: "Indigenous Capability",
+        title: "Indigenous Capability",
+      },
+      {
+        src: "/images/Precise-Production.gif",
+        alt: "Precise Production",
+        title: "Precise Production",
+      },
+      {
+        src: "/images/Innovation-at-Core.gif",
+        alt: "Innovation at Core",
+        title: "Innovation at Core",
+      },
+      {
+        src: "/images/end-to-end-solutions.gif",
+        alt: "End to end solutions",
+        title: "End to end solutions",
+      },
+      {
+        src: "/images/Custom-Fit.gif",
+        alt: "Custom-Fit",
+        title: "Custom-Fit",
+      },
+    ].map((item) => (
+      <div key={item.title} className="w-full">
+        <img
+          src={item.src}
+          alt={item.alt}
+          className="w-3/4 mb-2 m-auto object-contain block"
+          draggable={false}
+        />
+        <p className="text-center">{item.title}</p>
+      </div>
+    ))}
   </div>
 </section>
 
