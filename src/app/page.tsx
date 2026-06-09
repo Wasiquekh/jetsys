@@ -44,45 +44,86 @@ export default function Home() {
       <Header />
       <StickyHeader />
       {/* HOME TOP */}
-      <section className="relative w-full  h-[600px] overflow-hidden flex items-center">
-        {/* Background Video */}
-        <video
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster="/images/poster.jpg" // fallback poster image
-        >
-          <source src="/images/bg-video.mp4" type="video/mp4" />
-          Your browser does not support the video tag
-        </video>
+      <section className="relative w-full h-[600px] overflow-hidden flex items-center">
+  {/* Background Video */}
+  <video
+    className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
+    autoPlay
+    loop
+    muted
+    playsInline
+    preload="auto"
+    poster="/images/poster.jpg"
+    controls={false}
+    disablePictureInPicture
+    controlsList="nodownload nofullscreen noremoteplayback"
+    onContextMenu={(e) => e.preventDefault()}
+  >
+    <source src="/images/bg-video.mp4" type="video/mp4" />
+    Your browser does not support the video tag
+  </video>
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+  {/* Safari / iOS video controls hide */}
+  <style jsx global>{`
+    video::-webkit-media-controls {
+      display: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
 
-        {/* Content */}
-        <div className="container !p-0">
-          <div className="relative z-10 flex flex-col w-full md:w-1/2 justify-center h-full text-center px-4 container !ml-0 ">
-            <ScrollUpText className="text-4xl md:text-6xl  font-extrabold text-white  uppercase w-full text-center md:text-left horizon">
-              We Build,
-              <br />
-              What Sky Demands
-            </ScrollUpText>
-            <ScrollUpText className="mt-4 text-base font-semibold text-white md:text-xl  capitalize text-center md:text-left">
-              Leading aerospace with bold innovation
-            </ScrollUpText>
-            <Link
-              className="w-full  md:w-auto flex justify-center md:justify-start"
-              href="/about-us"
-            >
-              <button className="mt-16 px-10 py-3 bg-white text-base text-primary font-bold rounded shadow-lg hover:bg-primary transition border border-primary hover:text-white ">
-                Get Started
-              </button>
-            </Link>
-          </div>
-        </div>
-      </section>
+    video::-webkit-media-controls-panel {
+      display: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+
+    video::-webkit-media-controls-play-button {
+      display: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+
+    video::-webkit-media-controls-start-playback-button {
+      display: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      -webkit-appearance: none !important;
+    }
+
+    video::-webkit-media-controls-overlay-play-button {
+      display: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+  `}</style>
+
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/40" />
+
+  {/* Content */}
+  <div className="container !p-0">
+    <div className="relative z-10 flex flex-col w-full md:w-1/2 justify-center h-full text-center px-4 container !ml-0">
+      <ScrollUpText className="text-4xl md:text-6xl font-extrabold text-white uppercase w-full text-center md:text-left horizon">
+        We Build,
+        <br />
+        What Sky Demands
+      </ScrollUpText>
+
+      <ScrollUpText className="mt-4 text-base font-semibold text-white md:text-xl capitalize text-center md:text-left">
+        Leading aerospace with bold innovation
+      </ScrollUpText>
+
+      <Link
+        className="w-full md:w-auto flex justify-center md:justify-start"
+        href="/about-us"
+      >
+        <button className="mt-16 px-10 py-3 bg-white text-base text-primary font-bold rounded shadow-lg hover:bg-primary transition border border-primary hover:text-white">
+          Get Started
+        </button>
+      </Link>
+    </div>
+  </div>
+</section>
       {/* AFTER TOP SECTION */}
       <section className=" hidden md:block">
         {" "}
@@ -154,317 +195,400 @@ export default function Home() {
           {/* END MISSION VISION SECTION STATIC */}
         </div>
       </section>
-      {/* ICON DESIGN DESKTOP */}
-      <div className=" hidden md:block">
-        {/* RING */}
-        <div className=" max-w-[1120px] px-5 mx-auto flex justify-between -z-10">
-          <Image
-            src="/images/ring.svg"
-            width={100}
-            height={100}
-            alt="Picture of the author"
-            className=" -z-10"
-          />
-          <Image
-            src="/images/ring.svg"
-            width={100}
-            height={100}
-            alt="Picture of the author"
-            className=" -z-10"
-          />
-          <Image
-            src="/images/ring.svg"
-            width={100}
-            height={100}
-            alt="Picture of the author"
-            className=" -z-10"
-          />
-          <Image
-            src="/images/ring.svg"
-            width={100}
-            height={100}
-            alt="Picture of the author"
-            className=" -z-10"
-          />
-          <Image
-            src="/images/ring.svg"
-            width={100}
-            height={100}
-            alt="Picture of the author"
-            className=" -z-10"
-          />
-          <Image
-            src="/images/ring.svg"
-            width={100}
-            height={100}
-            alt="Picture of the author"
-            className=" -z-10"
-          />
-          <Image
-            src="/images/ring.svg"
-            width={100}
-            height={100}
-            alt="Picture of the author"
-            className=" -z-10"
-          />
-          <Image
-            src="/images/ring.svg"
-            width={100}
-            height={100}
-            alt="Picture of the author"
-            className=" -z-10"
-          />
-        </div>
-        {/* BACKGROUND THEME COLOR LINE */}
-        <div className=" bg-primary h-14 -mt-[76px] -mb-[70px] z-10"></div>
-        {/* ICON IMAGES */}
-        <div className=" max-w-[1120px] px-5 mx-auto  flex justify-between">
-          <video
-            src="/images/Expert-Engineers.webm"
-            width={80}
-            height={80}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="relative left-[10px]"
-          />
-          <video
-            src="/images/Rapid-Deployment.webm"
-            width={80}
-            height={80}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="relative left-[7px]"
-          />
+{/* Safari / iOS video controls hide */}
+{/* ICON DESIGN DESKTOP */}
+<div className="hidden md:block">
+  {/* RING */}
+  <div className="max-w-[1120px] px-5 mx-auto flex justify-between -z-10">
+    <Image
+      src="/images/ring.svg"
+      width={100}
+      height={100}
+      alt="Picture of the author"
+      className="-z-10"
+    />
+    <Image
+      src="/images/ring.svg"
+      width={100}
+      height={100}
+      alt="Picture of the author"
+      className="-z-10"
+    />
+    <Image
+      src="/images/ring.svg"
+      width={100}
+      height={100}
+      alt="Picture of the author"
+      className="-z-10"
+    />
+    <Image
+      src="/images/ring.svg"
+      width={100}
+      height={100}
+      alt="Picture of the author"
+      className="-z-10"
+    />
+    <Image
+      src="/images/ring.svg"
+      width={100}
+      height={100}
+      alt="Picture of the author"
+      className="-z-10"
+    />
+    <Image
+      src="/images/ring.svg"
+      width={100}
+      height={100}
+      alt="Picture of the author"
+      className="-z-10"
+    />
+    <Image
+      src="/images/ring.svg"
+      width={100}
+      height={100}
+      alt="Picture of the author"
+      className="-z-10"
+    />
+    <Image
+      src="/images/ring.svg"
+      width={100}
+      height={100}
+      alt="Picture of the author"
+      className="-z-10"
+    />
+  </div>
 
-          <video
-            src="/images/Global-Reach.webm"
-            width={80}
-            height={80}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="relative left-[5.5px]"
-          />
+  {/* BACKGROUND THEME COLOR LINE */}
+  <div className="bg-primary h-14 -mt-[76px] -mb-[70px] z-10"></div>
 
-          <video
-            src="/images/Indigenous-Capability.webm"
-            width={80}
-            height={80}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="relative left-[2px]"
-          />
+  {/* ICON IMAGES */}
+  <div className="max-w-[1120px] px-5 mx-auto flex justify-between">
+    <video
+      src="/images/Expert-Engineers.webm"
+      width={80}
+      height={80}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+      controls={false}
+      disablePictureInPicture
+      controlsList="nodownload nofullscreen noremoteplayback"
+      onContextMenu={(e) => e.preventDefault()}
+      className="safari-video-icon pointer-events-none relative left-[10px]"
+    />
 
-          <video
-            src="/images/Precise-Production.webm"
-            width={80}
-            height={80}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="relative right-[1px]"
-          />
-          <video
-            src="/images/Innovation-at-Core.webm"
-            width={80}
-            height={80}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="relative right-[4.5px]"
-          />
+    <video
+      src="/images/Rapid-Deployment.webm"
+      width={80}
+      height={80}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+      controls={false}
+      disablePictureInPicture
+      controlsList="nodownload nofullscreen noremoteplayback"
+      onContextMenu={(e) => e.preventDefault()}
+      className="safari-video-icon pointer-events-none relative left-[7px]"
+    />
 
-          <video
-            src="/images/end-to-end-solutions.webm"
-            width={80}
-            height={80}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="relative right-[7px]"
-          />
+    <video
+      src="/images/Global-Reach.webm"
+      width={80}
+      height={80}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+      controls={false}
+      disablePictureInPicture
+      controlsList="nodownload nofullscreen noremoteplayback"
+      onContextMenu={(e) => e.preventDefault()}
+      className="safari-video-icon pointer-events-none relative left-[5.5px]"
+    />
 
-          <video
-            src="/images/Custom-Fit.webm"
-            width={80}
-            height={80}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="relative right-[10px]"
-          />
-        </div>
-        {/* TEXT */}
-        <div className="max-w-[1120px] px-5 mx-auto flex justify-between mt-10">
-          <div className=" w-full">
-            <p className="text-center text-lg  relative right-6 ">
-              Expert Engineers
-            </p>
-          </div>
-          <div className=" w-full">
-            <p className="text-center text-lg relative right-3">
-              Rapid Deployment
-            </p>
-          </div>
-          <div className=" w-full">
-            <p className="text-center text-lg">
-              Global <br /> Reach
-            </p>
-          </div>
-          <div className=" w-full">
-            <p className="text-center text-lg relative left-1">
-              Indigenous Capability
-            </p>
-          </div>
-          <div className=" w-full">
-            <p className="text-center text-lg relative left-2 w-[98%]">
-              Precise Production
-            </p>
-          </div>
-          <div className=" w-full">
-            <p className="text-center text-lg relative left-4 w-[98%]">
-              Innovation at Core
-            </p>
-          </div>
-          <div className=" w-full">
-            <p className="text-center text-lg relative left-6 w-[98%]">
-              End to end solutions
-            </p>
-          </div>
-          <div className=" w-full">
-            <p className="text-center text-lg relative left-6 w-[98%]">
-              Custom-Fit
-            </p>
-          </div>
-        </div>
-      </div>
-      {/* DESIGN MOBILE */}
-      <section className=" block md:hidden">
-        <div className="container !pt-0 grid grid-cols-2 gap-4">
-          <div className=" w-full">
-            <video
-              src="/images/Expert-Engineers.webm"
-              width={300}
-              height={300}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className=" w-3/4 mb-2 m-auto"
-            />
-            <p className=" text-center">Expert Engineers</p>
-          </div>
+    <video
+      src="/images/Indigenous-Capability.webm"
+      width={80}
+      height={80}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+      controls={false}
+      disablePictureInPicture
+      controlsList="nodownload nofullscreen noremoteplayback"
+      onContextMenu={(e) => e.preventDefault()}
+      className="safari-video-icon pointer-events-none relative left-[2px]"
+    />
 
-          <div className=" w-full">
-            <video
-              src="/images/Rapid-Deployment.webm"
-              width={300}
-              height={300}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className=" w-3/4 mb-2 m-auto"
-            />
-            <p className=" text-center">Rapid Deployment </p>
-          </div>
+    <video
+      src="/images/Precise-Production.webm"
+      width={80}
+      height={80}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+      controls={false}
+      disablePictureInPicture
+      controlsList="nodownload nofullscreen noremoteplayback"
+      onContextMenu={(e) => e.preventDefault()}
+      className="safari-video-icon pointer-events-none relative right-[1px]"
+    />
 
-          <div className=" w-full">
-            <video
-              src="/images/Global-Reach.webm"
-              width={300}
-              height={300}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className=" w-3/4 mb-2 m-auto"
-            />
-            <p className=" text-center">Global Reach</p>
-          </div>
+    <video
+      src="/images/Innovation-at-Core.webm"
+      width={80}
+      height={80}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+      controls={false}
+      disablePictureInPicture
+      controlsList="nodownload nofullscreen noremoteplayback"
+      onContextMenu={(e) => e.preventDefault()}
+      className="safari-video-icon pointer-events-none relative right-[4.5px]"
+    />
 
-          <div className=" w-full">
-            <video
-              src="/images/Indigenous-Capability.webm"
-              width={300}
-              height={300}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className=" w-3/4 mb-2 m-auto"
-            />
-            <p className=" text-center">Indigenous Capability</p>
-          </div>
+    <video
+      src="/images/end-to-end-solutions.webm"
+      width={80}
+      height={80}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+      controls={false}
+      disablePictureInPicture
+      controlsList="nodownload nofullscreen noremoteplayback"
+      onContextMenu={(e) => e.preventDefault()}
+      className="safari-video-icon pointer-events-none relative right-[7px]"
+    />
 
-          <div className=" w-full">
-            <video
-              src="/images/Precise-Production.webm"
-              width={300}
-              height={300}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className=" w-3/4 mb-2 m-auto"
-            />
-            <p className=" text-center">Precise Production</p>
-          </div>
+    <video
+      src="/images/Custom-Fit.webm"
+      width={80}
+      height={80}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+      controls={false}
+      disablePictureInPicture
+      controlsList="nodownload nofullscreen noremoteplayback"
+      onContextMenu={(e) => e.preventDefault()}
+      className="safari-video-icon pointer-events-none relative right-[10px]"
+    />
+  </div>
 
-          <div className=" w-full">
-            <video
-              src="/images/Innovation-at-Core.webm"
-              width={300}
-              height={300}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className=" w-3/4 mb-2 m-auto"
-            />
-            <p className=" text-center">Innovation at Core</p>
-          </div>
+  {/* TEXT */}
+  <div className="max-w-[1120px] px-5 mx-auto flex justify-between mt-10">
+    <div className="w-full">
+      <p className="text-center text-lg relative right-6">Expert Engineers</p>
+    </div>
+    <div className="w-full">
+      <p className="text-center text-lg relative right-3">Rapid Deployment</p>
+    </div>
+    <div className="w-full">
+      <p className="text-center text-lg">
+        Global <br /> Reach
+      </p>
+    </div>
+    <div className="w-full">
+      <p className="text-center text-lg relative left-1">
+        Indigenous Capability
+      </p>
+    </div>
+    <div className="w-full">
+      <p className="text-center text-lg relative left-2 w-[98%]">
+        Precise Production
+      </p>
+    </div>
+    <div className="w-full">
+      <p className="text-center text-lg relative left-4 w-[98%]">
+        Innovation at Core
+      </p>
+    </div>
+    <div className="w-full">
+      <p className="text-center text-lg relative left-6 w-[98%]">
+        End to end solutions
+      </p>
+    </div>
+    <div className="w-full">
+      <p className="text-center text-lg relative left-6 w-[98%]">
+        Custom-Fit
+      </p>
+    </div>
+  </div>
+</div>
 
-          <div className=" w-full">
-            <video
-              src="/images/end-to-end-solutions.webm"
-              width={300}
-              height={300}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className=" w-3/4 mb-2 m-auto"
-            />
-            <p className=" text-center">End to end solutions</p>
-          </div>
+{/* DESIGN MOBILE */}
+<section className="block md:hidden">
+  <div className="container !pt-0 grid grid-cols-2 gap-4">
+    <div className="w-full">
+      <video
+        src="/images/Expert-Engineers.webm"
+        width={300}
+        height={300}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        controls={false}
+        disablePictureInPicture
+        controlsList="nodownload nofullscreen noremoteplayback"
+        onContextMenu={(e) => e.preventDefault()}
+        className="safari-video-icon pointer-events-none w-3/4 mb-2 m-auto"
+      />
+      <p className="text-center">Expert Engineers</p>
+    </div>
 
-          <div className=" w-full">
-            <video
-              src="/images/Custom-Fit.webm"
-              width={300}
-              height={300}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className=" w-3/4 mb-2 m-auto"
-            />
-            <p className=" text-center">Custom-Fit</p>
-          </div>
-        </div>
-      </section>
+    <div className="w-full">
+      <video
+        src="/images/Rapid-Deployment.webm"
+        width={300}
+        height={300}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        controls={false}
+        disablePictureInPicture
+        controlsList="nodownload nofullscreen noremoteplayback"
+        onContextMenu={(e) => e.preventDefault()}
+        className="safari-video-icon pointer-events-none w-3/4 mb-2 m-auto"
+      />
+      <p className="text-center">Rapid Deployment </p>
+    </div>
+
+    <div className="w-full">
+      <video
+        src="/images/Global-Reach.webm"
+        width={300}
+        height={300}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        controls={false}
+        disablePictureInPicture
+        controlsList="nodownload nofullscreen noremoteplayback"
+        onContextMenu={(e) => e.preventDefault()}
+        className="safari-video-icon pointer-events-none w-3/4 mb-2 m-auto"
+      />
+      <p className="text-center">Global Reach</p>
+    </div>
+
+    <div className="w-full">
+      <video
+        src="/images/Indigenous-Capability.webm"
+        width={300}
+        height={300}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        controls={false}
+        disablePictureInPicture
+        controlsList="nodownload nofullscreen noremoteplayback"
+        onContextMenu={(e) => e.preventDefault()}
+        className="safari-video-icon pointer-events-none w-3/4 mb-2 m-auto"
+      />
+      <p className="text-center">Indigenous Capability</p>
+    </div>
+
+    <div className="w-full">
+      <video
+        src="/images/Precise-Production.webm"
+        width={300}
+        height={300}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        controls={false}
+        disablePictureInPicture
+        controlsList="nodownload nofullscreen noremoteplayback"
+        onContextMenu={(e) => e.preventDefault()}
+        className="safari-video-icon pointer-events-none w-3/4 mb-2 m-auto"
+      />
+      <p className="text-center">Precise Production</p>
+    </div>
+
+    <div className="w-full">
+      <video
+        src="/images/Innovation-at-Core.webm"
+        width={300}
+        height={300}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        controls={false}
+        disablePictureInPicture
+        controlsList="nodownload nofullscreen noremoteplayback"
+        onContextMenu={(e) => e.preventDefault()}
+        className="safari-video-icon pointer-events-none w-3/4 mb-2 m-auto"
+      />
+      <p className="text-center">Innovation at Core</p>
+    </div>
+
+    <div className="w-full">
+      <video
+        src="/images/end-to-end-solutions.webm"
+        width={300}
+        height={300}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        controls={false}
+        disablePictureInPicture
+        controlsList="nodownload nofullscreen noremoteplayback"
+        onContextMenu={(e) => e.preventDefault()}
+        className="safari-video-icon pointer-events-none w-3/4 mb-2 m-auto"
+      />
+      <p className="text-center">End to end solutions</p>
+    </div>
+
+    <div className="w-full">
+      <video
+        src="/images/Custom-Fit.webm"
+        width={300}
+        height={300}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        controls={false}
+        disablePictureInPicture
+        controlsList="nodownload nofullscreen noremoteplayback"
+        onContextMenu={(e) => e.preventDefault()}
+        className="safari-video-icon pointer-events-none w-3/4 mb-2 m-auto"
+      />
+      <p className="text-center">Custom-Fit</p>
+    </div>
+  </div>
+</section>
 
       {/* END MOBILE DESIGN */}
       {/* OPTIONAL  SPACE FOR DESKTOP */}

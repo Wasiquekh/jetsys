@@ -136,9 +136,44 @@ h1 {
     stroke-dashoffset: 0;
   }
 }
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+.safari-video-icon::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+/* Safari / iOS video controls hide */
+.safari-video-icon::-webkit-media-controls {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
 
+.safari-video-icon::-webkit-media-controls-panel {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
 
+.safari-video-icon::-webkit-media-controls-play-button {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
 
+.safari-video-icon::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  -webkit-appearance: none !important;
+}
 
+.safari-video-icon::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
 
-
+.safari-video-icon {
+  pointer-events: none;
+}
