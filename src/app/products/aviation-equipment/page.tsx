@@ -1,162 +1,400 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
-import ScrollUpText from "@/app/components/ScrollUpText";
+
+export const metadata = {
+  title: "Aviation Equipment & Ground Support Solutions",
+  description:
+    "Explore precision-engineered aviation equipment for ground support, ground supply, aircraft testing and ground handling operations.",
+  keywords: [
+    "aviation equipment",
+    "ground support equipment",
+    "ground supply equipment",
+    "ground test equipment",
+    "ground handling equipment",
+    "aerospace engineering",
+  ],
+  openGraph: {
+    title: "Aviation Equipment & Ground Support Solutions",
+    description:
+      "Mission-ready aviation equipment engineered for safe, efficient and dependable ground operations.",
+    type: "website",
+  },
+};
+
+const strengths = [
+  ["01", "Tactical Engineering", "Purpose-built systems engineered around real operational demands."],
+  ["02", "System Integration", "Connected equipment designed to work reliably across complex aviation environments."],
+  ["03", "Built for Endurance", "Robust construction for repeatable performance in demanding ground operations."],
+  ["04", "Modular Flexibility", "Configurable platforms that adapt to changing aircraft and mission requirements."],
+  ["05", "Laser Precision", "Controlled manufacturing and inspection for consistent, dependable outcomes."],
+];
+
+const categories = [
+  {
+    href: "/products/aviation-equipment/ground-support-equipment",
+    image: "/images/Ground Support Equipment.svg",
+    title: "Ground Support Equipment",
+    eyebrow: "Aircraft Operations",
+    description:
+      "Reliable equipment developed to support aircraft servicing, movement and turnaround efficiency on the ground.",
+  },
+  {
+    href: "/products/aviation-equipment/ground-supply-equipment",
+    image: "/images/Ground Supply Equipment.svg",
+    title: "Ground Supply Equipment",
+    eyebrow: "Power & Utilities",
+    description:
+      "Engineered supply solutions that help deliver essential power, air and utilities where aircraft teams need them.",
+  },
+  {
+    href: "/products/aviation-equipment/ground-test-equipment",
+    image: "/images/Ground Test Equipment.svg",
+    title: "Ground Test Equipment",
+    eyebrow: "Testing & Validation",
+    description:
+      "Precision test systems that support safe diagnostics, repeatable validation and confident maintenance decisions.",
+  },
+  {
+    href: "/products/aviation-equipment/ground-handling-equipment",
+    image: "/images/Ground Handling Equipment.svg",
+    title: "Ground Handling Equipment",
+    eyebrow: "Ramp Efficiency",
+    description:
+      "Practical handling solutions designed to improve movement, workflow and safety across busy aviation facilities.",
+  },
+];
 
 export default function Page() {
   return (
-    <div>
-        <Header />
-        <StickyHeader />
-           <section>
-             <div className="container">
-               <ScrollUpText className=" text-center text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
-                 Our Products
-                    </ScrollUpText>
-               <h2 className=" font-bold text-2xl md:text-3xl text-[#5C5649] text-center mb-5">
-                 Empowering the Future of Aerospace Engineering
-               </h2>
-               <p className=" font-medium text-base text-center">
-                 From concept to creation, we craft solutions that inspire trust,
-                 ensure performance, and push boundaries. Built with precision, they
-                 address the demands of modern aerospace technology while setting new
-                 industry benchmarks.
-               </p>
-             </div>
-           </section>
-           <section>
-             <div className=" container !pt-0">
-               <div className=" w-full grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-0 justify-center items-center">
-                 <Image
-                   src="/images/Tactical Engineering.svg"
-                   width={160}
-                   height={234}
-                   alt="Picture of the author"
-                   className=" w-[120px] m-auto"
-                 />
-                 <Image
-                   src="/images/System Integration.svg"
-                   width={160}
-                   height={234}
-                   alt="Picture of the author"
-                   className=" w-[120px] m-auto"
-                 />
-                 <Image
-                   src="/images/Built for Endurance.svg"
-                   width={160}
-                   height={234}
-                   alt="Picture of the author"
-                   className=" w-[120px] m-auto"
-                 />
-                 <Image
-                   src="/images/Modular Flexibility.svg"
-                   width={160}
-                   height={234}
-                   alt="Picture of the author"
-                   className=" w-[120px] m-auto"
-                 />
-                 <Image
-                   src="/images/Laser Precision.svg"
-                   width={160}
-                   height={234}
-                   alt="Picture of the author"
-                   className=" w-[120px] m-auto"
-                 />
-               </div>
-             </div>
-           </section>
-      {/* ---------- STATIC: Aviation Equipment (no animation) ---------- */}
-      <section>
-        <div className="container">
-          <div className=" rounded-2xl  flex flex-col md:flex-row justify-between p-5">
-            {/* Left column */}
-            <div className="flex flex-col w-full md:w-[30%]">
-              <Image
-                src="/images/Aviation Equipment.png"
-                width={500}
-                height={500}
-                alt="Aviation Equipment"
-                className="mb-5 rounded-2xl"
-              />
-              <h2 className="font-bold text-2xl mb-5">Aviation Equipment</h2>
-              <p className="font-bold text-sm mb-5">Precision Beyond Expectations</p>
-              <p className="font-normal text-sm mb-5">
-                Our aviation equipment portfolio is engineered to deliver high performance,
-                meeting rigorous industry standards. Explore how our products optimize
-                operational excellence in aviation.
+    <div className="overflow-hidden bg-[#f6f4ed] text-[#292820]">
+      <Header />
+      <StickyHeader />
+
+      <main>
+        <section className="relative isolate min-h-[620px] overflow-hidden bg-[#191a14]">
+          <Image
+            src="/images/Aviation Equipment.png"
+            fill
+            priority
+            sizes="100vw"
+            alt="Advanced aviation ground equipment supporting aerospace operations"
+            className="object-cover opacity-45"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#171811] via-[#171811]/90 to-[#171811]/30" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_40%,rgba(221,197,105,0.2),transparent_36%)]" />
+
+          <div className="container relative z-10 flex min-h-[620px] items-center py-20">
+            <div className="max-w-3xl" data-reveal>
+              <p className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.3em] text-[#ddc569]">
+                <span className="h-px w-12 bg-[#ddc569]" />
+                Aviation engineering
               </p>
-              {/* <button className="bg-primary px-8 py-3 rounded mb-0 hover:bg-[#5f5b00] text-[#E9DCB4] font-semibold text-base transition">
-                Explore Now
-              </button> */}
-            </div>
-
-            {/* Right column */}
-            <div className="w-full md:w-[50%]">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch mt-4 md:mt-0">
-                <Link href="/products/aviation-equipment/ground-support-equipment">
-                  <div className="bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
-                    <Image
-                      src="/images/Ground Support Equipment.svg"
-                      width={44}
-                      height={45}
-                      alt="Ground Support Equipment"
-                      className="bg-[#E9DCB4] p-2 rounded mb-4 w-[50px] h-[50px]"
-                    />
-                    <p className="font-medium text-xl mb-4">Ground Support Equipment</p>
-                  </div>
-                </Link>
-
-                <Link href="/products/aviation-equipment/ground-supply-equipment">
-                  <div className="bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
-                    <Image
-                      src="/images/Ground Supply Equipment.svg"
-                      width={44}
-                      height={45}
-                      alt="Ground Supply Equipment"
-                      className="bg-[#E9DCB4] p-2 rounded mb-4 w-[50px] h-[50px]"
-                    />
-                    <p className="font-medium text-xl mb-4">Ground Supply Equipment</p>
-                  </div>
-                </Link>
-
-                <Link href="/products/aviation-equipment/ground-test-equipment">
-                  <div className="bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
-                    <Image
-                      src="/images/Ground Test Equipment.svg"
-                      width={44}
-                      height={45}
-                      alt="Ground Test Equipment"
-                      className="bg-[#E9DCB4] p-2 rounded mb-4 w-[50px] h-[50px]"
-                    />
-                    <p className="font-medium text-xl mb-4">Ground Test Equipment</p>
-                  </div>
-                </Link>
-
-                <Link href="/products/aviation-equipment/ground-handling-equipment">
-                  <div className="bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
-                    <Image
-                      src="/images/Ground Handling Equipment.svg"
-                      width={44}
-                      height={45}
-                      alt="Ground Handling Equipment"
-                      className="bg-[#E9DCB4] p-2 rounded mb-4 w-[50px] h-[50px]"
-                    />
-                    <p className="font-medium text-xl mb-4">Ground Handling Equipment</p>
-                  </div>
+              <h1 className="max-w-3xl text-4xl font-extrabold uppercase leading-[1.05] text-white md:text-6xl lg:text-7xl">
+                Equipment engineered for{" "}
+                <span className="text-[#ddc569]">mission readiness</span>
+              </h1>
+              <p className="mt-7 max-w-2xl text-base leading-8 text-white/75 md:text-lg">
+                High-performance aviation ground equipment created for dependable
+                servicing, testing, supply and handling—where precision, safety and
+                operational continuity matter most.
+              </p>
+              <div className="mt-9 flex flex-wrap gap-4">
+                <a
+                  href="/about-us"
+                  className="rounded-sm bg-[#ddc569] px-7 py-4 text-sm font-extrabold uppercase tracking-wider text-[#171811] transition hover:-translate-y-1 hover:bg-[#ead888]"
+                >
+                  Explore equipment
+                </a>
+                <Link
+                  href="/contact-us"
+                  className="rounded-sm border border-white/30 px-7 py-4 text-sm font-extrabold uppercase tracking-wider text-white transition hover:border-[#ddc569] hover:text-[#ddc569]"
+                >
+                  Discuss a requirement
                 </Link>
               </div>
             </div>
           </div>
 
-          {/* If you want a heading above, keep it outside the card */}
-          {/* <h2 className="text-3xl font-bold mt-8">Aviation Equipment</h2> */}
-        </div>
-      </section>
+          <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#ddc569] to-transparent" />
+        </section>
+
+        <section className="container py-20 md:py-28">
+          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+            <div data-reveal>
+              <p className="section-kicker">Built around the operation</p>
+              <h2 className="section-title">
+                Aerospace capability that performs beyond the specification
+              </h2>
+            </div>
+            <div className="space-y-6 text-base leading-8 text-[#5c594e]" data-reveal>
+              <p>
+                Modern aviation operations demand more than individual products. They
+                require integrated equipment that is safe to operate, simple to
+                maintain and dependable throughout demanding service cycles.
+              </p>
+              <p>
+                Our aviation equipment portfolio brings engineering discipline,
+                manufacturing precision and practical field awareness together. Each
+                solution is developed to support efficient aircraft turnaround,
+                accurate maintenance and reliable ground operations.
+              </p>
+              <div className="grid grid-cols-2 gap-4 pt-3 sm:grid-cols-3">
+                {["Mission-ready", "Serviceable", "Configurable"].map((item) => (
+                  <div key={item} className="border-l-2 border-[#9d8a35] pl-4">
+                    <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-[#292820]">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#25271f] py-20 md:py-24">
+          <div className="container">
+            <div className="mb-12 max-w-2xl" data-reveal>
+              <p className="section-kicker !text-[#ddc569]">Engineering principles</p>
+              <h2 className="section-title !text-white">
+                Designed for the realities of aviation
+              </h2>
+            </div>
+            <div className="grid gap-px overflow-hidden border border-white/10 bg-white/10 md:grid-cols-5">
+              {strengths.map(([number, title, copy], index) => (
+                <article
+                  key={title}
+                  data-reveal
+                  style={{ transitionDelay: `${index * 80}ms` }}
+                  className="group relative min-h-[260px] bg-[#25271f] p-6 transition-colors hover:bg-[#303328]"
+                >
+                  <span className="text-xs font-bold tracking-[0.2em] text-[#ddc569]">
+                    {number}
+                  </span>
+                  <div className="mt-14 h-px w-10 bg-[#ddc569] transition-all duration-500 group-hover:w-full" />
+                  <h3 className="mt-5 text-lg font-bold text-white">{title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-white/55">{copy}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="equipment-categories" className="equipment-section relative overflow-hidden py-20 md:py-28">
+          <div className="equipment-grid absolute inset-0 opacity-25" />
+          <div className="absolute -left-40 top-10 h-[420px] w-[420px] rounded-full bg-[#b49d42]/10 blur-[110px]" />
+          <div className="absolute -right-40 bottom-0 h-[460px] w-[460px] rounded-full bg-[#ddc569]/10 blur-[130px]" />
+
+          <div className="container relative z-10">
+            <div className="mb-14 flex flex-col justify-between gap-7 md:flex-row md:items-end" data-reveal>
+              <div className="max-w-2xl">
+                <p className="section-kicker">Product portfolio</p>
+                <h2 className="section-title">
+                  Explore aviation equipment categories
+                </h2>
+              </div>
+              <p className="max-w-md border-l border-[#9d8a35]/50 pl-5 text-sm leading-7 text-[#686459]">
+                Select a category to discover specialized ground equipment engineered
+                for efficient, controlled and dependable aerospace operations.
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              {categories.map((category, index) => (
+                <Link
+                  key={category.title}
+                  href={category.href}
+                  data-reveal
+                  style={{ animationDelay: `${120 + index * 80}ms` }}
+                  className="equipment-card group relative min-h-[350px] overflow-hidden rounded-[3px] border border-[#d8d2bf] bg-white/95 p-7 md:p-9"
+                >
+                  <div className="absolute right-0 top-0 h-32 w-32 border-b border-l border-[#e5e0d1] bg-[#f7f5ee]" />
+                  <span className="absolute right-5 top-3 text-[86px] font-black leading-none text-[#d9d4c4]/40 transition-all duration-500 group-hover:text-[#c2ae55]/20">
+                    0{index + 1}
+                  </span>
+
+                  <div className="relative z-10 flex h-full flex-col">
+                    <div className="flex items-start justify-between">
+                      <div className="icon-frame relative flex h-[76px] w-[76px] items-center justify-center border border-[#ddc569]/40 bg-[#ddc569]/10 transition-all duration-500 group-hover:border-[#ddc569] group-hover:bg-[#ddc569]">
+                        <span className="absolute -left-1 -top-1 h-3 w-3 border-l border-t border-[#ddc569]" />
+                        <span className="absolute -bottom-1 -right-1 h-3 w-3 border-b border-r border-[#ddc569]" />
+                        <Image
+                          src={category.image}
+                          width={40}
+                          height={40}
+                          alt=""
+                          aria-hidden="true"
+                          className="h-10 w-10 object-contain transition-transform duration-500 group-hover:scale-110"
+                        />
+                      </div>
+                      <span className="mt-2 h-2 w-2 rounded-full bg-[#9d8a35] shadow-[0_0_14px_rgba(157,138,53,0.45)]" />
+                    </div>
+
+                    <p className="mt-9 text-[10px] font-extrabold uppercase tracking-[0.24em] text-[#887629]">
+                      {category.eyebrow}
+                    </p>
+                    <h3 className="mt-3 max-w-md text-2xl font-extrabold text-[#292820] md:text-[30px]">
+                      {category.title}
+                    </h3>
+                    <p className="mt-4 max-w-lg text-sm leading-7 text-[#686459] transition-colors group-hover:text-[#3f3d35]">
+                      {category.description}
+                    </p>
+
+                    <div className="mt-auto flex items-center justify-between border-t border-[#ded9ca] pt-6">
+                      <span className="text-[11px] font-extrabold uppercase tracking-[0.17em] text-[#292820]">
+                        View category
+                      </span>
+                      <span className="flex h-10 w-10 items-center justify-center border border-[#9d8a35]/50 text-xl text-[#887629] transition-all duration-300 group-hover:translate-x-1 group-hover:bg-[#9d8a35] group-hover:text-white">
+                        →
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#efede5]">
+          <div className="container py-20 md:py-24">
+            <div className="mb-10 max-w-2xl" data-reveal>
+              <p className="section-kicker">From requirement to readiness</p>
+              <h2 className="text-3xl font-extrabold text-[#292820] md:text-4xl">
+                An engineering approach built around your operation
+              </h2>
+            </div>
+            <div className="grid border-y border-[#cbc5b2] md:grid-cols-3" data-reveal>
+              {[
+                ["01", "Understand", "We study the aircraft, application, operating environment and performance requirement."],
+                ["02", "Engineer", "The solution is configured for reliable integration, serviceability and controlled performance."],
+                ["03", "Validate", "Equipment is checked against defined requirements before it enters operational service."],
+              ].map(([number, title, description], index) => (
+                <article
+                  key={title}
+                  className={`process-step relative px-6 py-9 md:px-8 ${
+                    index !== 2 ? "md:border-r md:border-[#cbc5b2]" : ""
+                  }`}
+                >
+                  <span className="text-xs font-black tracking-[0.2em] text-[#9d8a35]">
+                    {number}
+                  </span>
+                  <h3 className="mt-5 text-xl font-extrabold text-[#292820]">{title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-[#686459]">{description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
+
       <Footer />
+
+      <style>{`
+        html {
+          scroll-behavior: smooth;
+        }
+        [data-reveal] {
+          animation: reveal-up 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+          animation-delay: 120ms;
+        }
+        @keyframes reveal-up {
+          from {
+            opacity: 0;
+            transform: translateY(28px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .section-kicker {
+          margin-bottom: 0.9rem;
+          color: #887629;
+          font-size: 0.7rem;
+          font-weight: 800;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+        }
+        .section-title {
+          max-width: 48rem;
+          color: #292820;
+          font-size: clamp(2rem, 4vw, 3.5rem);
+          font-weight: 800;
+          line-height: 1.08;
+        }
+        .equipment-section {
+          background:
+            radial-gradient(circle at 50% 0%, rgba(157, 138, 53, 0.09), transparent 34%),
+            linear-gradient(145deg, #ffffff 0%, #f8f6ef 48%, #ffffff 100%);
+        }
+        .equipment-grid {
+          background-image:
+            linear-gradient(rgba(41, 40, 32, 0.045) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(41, 40, 32, 0.045) 1px, transparent 1px);
+          background-size: 48px 48px;
+          mask-image: linear-gradient(to bottom, black, transparent 95%);
+        }
+        .equipment-card {
+          box-shadow: 0 18px 45px rgba(55, 50, 32, 0.08);
+          transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1),
+            border-color 450ms ease, box-shadow 450ms ease;
+        }
+        .equipment-card::before {
+          content: "";
+          position: absolute;
+          inset: 0 auto 0 0;
+          width: 3px;
+          background: #ddc569;
+          transform: scaleY(0);
+          transform-origin: bottom;
+          transition: transform 450ms ease;
+        }
+        .equipment-card::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(120deg, transparent 45%, rgba(221, 197, 105, 0.07), transparent 62%);
+          transform: translateX(-100%);
+          transition: transform 700ms ease;
+          pointer-events: none;
+        }
+        .equipment-card:hover {
+          transform: translateY(-8px);
+          border-color: rgba(157, 138, 53, 0.65);
+          box-shadow: 0 25px 60px rgba(55, 50, 32, 0.15);
+        }
+        .equipment-card:hover::before {
+          transform: scaleY(1);
+        }
+        .equipment-card:hover::after {
+          transform: translateX(100%);
+        }
+        .process-step::after {
+          content: "";
+          position: absolute;
+          left: 2rem;
+          bottom: -1px;
+          width: 44px;
+          height: 3px;
+          background: #9d8a35;
+          transition: width 400ms ease;
+        }
+        .process-step:hover::after {
+          width: calc(100% - 4rem);
+        }
+        @media (prefers-reduced-motion: reduce) {
+          html {
+            scroll-behavior: auto;
+          }
+          [data-reveal] {
+            opacity: 1;
+            transform: none;
+            animation: none;
+          }
+        }
+      `}</style>
     </div>
   );
 }

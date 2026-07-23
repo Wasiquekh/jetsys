@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import type { Transition } from "framer-motion";
-
 const reveal: Transition = { type: "tween", duration: 0.35, ease: "easeInOut" };
 
 const ProductAnimate = () => {
@@ -69,9 +68,11 @@ const ProductAnimate = () => {
                         standards. Explore how our products optimize operational
                         excellence in aviation.
                       </p>
-                      <button className="bg-primary px-8 py-3 rounded mb-0 hover:bg-[#5f5b00] text-[#E9DCB4] font-semibold text-base  transition ">
-                        Explore Now
-                      </button>
+                     <Link href="/products/aviation-equipment">
+  <button className="bg-primary px-8 py-3 rounded mb-0 hover:bg-[#5f5b00] text-[#E9DCB4] font-semibold text-base transition">
+    Explore Now
+  </button>
+</Link>
                     </div>
                     <div className="w-full md:w-[50%]">
                       <div className=" grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch mt-4 md:mt-0">
@@ -160,9 +161,12 @@ const ProductAnimate = () => {
                         seamless operations, enabling uninterrupted performance
                         for your fleet.
                       </p>
-                      <button className="bg-primary px-8 py-3 rounded mb-0 hover:bg-[#5f5b00] text-[#E9DCB4] font-semibold text-base  transition ">
-                        Explore Now
-                      </button>
+                     <Link
+  href="/products/runway-spares"
+  className="inline-block bg-primary px-8 py-3 rounded mb-0 hover:bg-[#5f5b00] text-[#E9DCB4] font-semibold text-base transition"
+>
+  Explore Now
+</Link>
                     </div>
                     <div className="w-full md:w-[50%]">
                       <div className=" grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch mt-4 md:mt-0">
@@ -239,9 +243,12 @@ const ProductAnimate = () => {
                         reliability and precision, ensuring mission readiness
                         and long-term performance for every airborne platform.
                       </p>
-                      <button className="bg-primary px-8 py-3 rounded mb-0 hover:bg-[#5f5b00] text-[#E9DCB4] font-semibold text-base  transition ">
-                        Explore Now
-                      </button>
+                     <Link
+  href="/products/aircraft-spares-system"
+  className="inline-block bg-primary px-8 py-3 rounded mb-0 hover:bg-[#5f5b00] text-[#E9DCB4] font-semibold text-base transition"
+>
+  Explore Now
+</Link>
                     </div>
                     <div className="w-full md:w-[50%]">
                       <div className=" grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch mt-4 md:mt-0">
@@ -360,9 +367,11 @@ const ProductAnimate = () => {
                         aerospace durability, innovation, and efficiency — the
                         foundation of next-gen aviation systems.
                       </p>
-                      <button className="bg-primary px-8 py-3 rounded mb-0 hover:bg-[#5f5b00] text-[#E9DCB4] font-semibold text-base  transition ">
-                        Explore Now
-                      </button>
+                    <Link href="/products/airborne-raw-materials">
+  <button className="bg-primary px-8 py-3 rounded mb-0 hover:bg-[#5f5b00] text-[#E9DCB4] font-semibold text-base transition">
+    Explore Now
+  </button>
+</Link>
                     </div>
                     <div className="w-full md:w-[50%]">
                       <div className=" grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch mt-4 md:mt-0">
@@ -602,11 +611,14 @@ const ProductAnimate = () => {
                 for defense and aerospace, ensuring every need is met with
                 precision.
               </p>
-              <button className="bg-primary px-8 py-3 rounded mb-5 mt-auto hover:bg-[#5f5b00] transition">
-                <span className="text-[#E9DCB4] font-semibold text-base">
-                  Explore Now
-                </span>
-              </button>
+            <Link
+  href="#"
+  className="block w-full bg-primary px-8 py-3 rounded mb-5 mt-auto text-center hover:bg-[#5f5b00] transition"
+>
+  <span className="text-[#E9DCB4] font-semibold text-base">
+    Explore Now
+  </span>
+</Link>
             </div>
           </div>
         </div>
