@@ -76,8 +76,13 @@ const Footer = () => {
           <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt:10 md:text-left text-center">
             {/* Column 1 */}
             <div className="lg:w-1/2 md:w-1/2 w-full px-4">
-              <h2 className="font-bold text-white text-xl tracking-widest mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
-                Aviation Equipment
+              <h2 className="mb-3 inline-block border-b-2 border-b-secondary pb-1 text-xl font-bold uppercase tracking-widest text-white">
+                <Link
+                  href="/products/aviation-equipment"
+                  className="transition-colors hover:text-secondary"
+                >
+                  Aviation Equipment
+                </Link>
               </h2>
 
               <ul className="list-none mb-5 text-base font-medium text-white space-y-1">
@@ -103,8 +108,13 @@ const Footer = () => {
                 </li>
               </ul>
 
-              <h2 className="font-bold text-white text-xl tracking-widest mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
-                Runway Spares
+              <h2 className="mb-3 inline-block border-b-2 border-b-secondary pb-1 text-xl font-bold uppercase tracking-widest text-white">
+                <Link
+                  href="/products/runway-spares"
+                  className="transition-colors hover:text-secondary"
+                >
+                  Runway Spares
+                </Link>
               </h2>
               <ul className="list-none mb-5 text-base font-medium text-white space-y-1">
                 <li className=" hover:text-secondary">
@@ -124,8 +134,36 @@ const Footer = () => {
                 </li>
               </ul>
 
-              <h2 className="font-bold text-white text-xl tracking-widest mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
-                Solutions
+            
+
+              <h2 className="mb-3 inline-block border-b-2 border-b-secondary pb-1 text-xl font-bold uppercase tracking-widest text-white">
+                <Link
+                  href="/products"
+                  className="transition-colors hover:text-secondary"
+                >
+                  Other Offerings
+                </Link>
+              </h2>
+              <ul className="list-none mb-0 text-base font-medium text-white space-y-1">
+                <li>
+                  <Link className=" hover:text-secondary" href="/products/aircraft-spares-system">
+                    Aircraft Spares & System
+                  </Link>
+                </li>
+                <li>
+                  <Link className=" hover:text-secondary" href="/products/airborne-raw-materials">
+                    Raw Materials
+                  </Link>
+                </li>
+              </ul>
+              <br />
+  <h2 className="mb-3 inline-block border-b-2 border-b-secondary pb-1 text-xl font-bold uppercase tracking-widest text-white">
+                <Link
+                  href="/solutions"
+                  className="transition-colors hover:text-secondary"
+                >
+                  Solutions
+                </Link>
               </h2>
               <ul className="list-none mb-5 text-base font-medium text-white space-y-1">
                 <li>
@@ -142,27 +180,6 @@ const Footer = () => {
                     href="/solutions/testing-maintenance"
                   >
                     Testing &amp; Maintenance
-                  </Link>
-                </li>
-              </ul>
-
-              <h2 className="font-bold text-white text-xl tracking-widest mb-3 uppercase border-b-2 border-b-secondary inline-block pb-1">
-                Other Offerings
-              </h2>
-              <ul className="list-none mb-0 text-base font-medium text-white space-y-1">
-                <li>
-                  <Link className=" hover:text-secondary" href="/">
-                    Aircraft ROH
-                  </Link>
-                </li>
-                <li>
-                  <Link className=" hover:text-secondary" href="/">
-                    Aircraft Spares
-                  </Link>
-                </li>
-                <li>
-                  <Link className=" hover:text-secondary" href="/">
-                    Raw Materials
                   </Link>
                 </li>
               </ul>
@@ -226,16 +243,22 @@ const Footer = () => {
                     </Link>
                   </div>
                 </li>
-                <li>
-                  <div className=" flex gap-2 justify-center  md:justify-start">
-                    <div>
-                      <FaLinkedin className=" text-primary text-2xl" />
-                    </div>
-                    <div className=" hover:text-secondary">
-                      linkedin.com/jetsysdefence
-                    </div>
-                  </div>
-                </li>
+               <li>
+  <div className="flex gap-2 justify-center md:justify-start">
+    <div>
+      <FaLinkedin className="text-primary text-2xl" />
+    </div>
+
+    <Link
+      href="https://www.linkedin.com/company/jetsys-defence/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-secondary"
+    >
+      linkedin.com
+    </Link>
+  </div>
+</li>
               </ul>
             </div>
           </div>

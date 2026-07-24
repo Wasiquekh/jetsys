@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useMemo, useState, useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 const CATEGORIES = [
   {
     name: "Aviation Equipment",
+    link: "/products/aviation-equipment",
     items: [
       {
         title: "Ground Support Equipment",
@@ -32,6 +33,7 @@ const CATEGORIES = [
   },
   {
     name: "Runway Spares",
+    link: "/products/runway-spares",
     items: [
       {
         title: "Mafi Spares",
@@ -52,6 +54,7 @@ const CATEGORIES = [
   },
   {
     name: "Aircraft Spares & System",
+    link: "/products/aircraft-spares-system",
     items: [
       {
         title: "Aircraft Spares",
@@ -86,7 +89,8 @@ const CATEGORIES = [
     ],
   },
   {
-    name: "Airborne Raw Materials",
+    name: "airborne-raw-materials",
+    link: "/products/airborne-raw-materials",
     items: [
       {
         title: "Steel (low Carbon)",
@@ -98,7 +102,11 @@ const CATEGORIES = [
         image: "/images/Steel (Carbon).svg",
         link: "/products",
       },
-      { title: "Fasteners", image: "/images/Fasteners.svg", link: "/products" },
+      {
+        title: "Fasteners",
+        image: "/images/Fasteners.svg",
+        link: "/products",
+      },
       {
         title: "Airborne Glues",
         image: "/images/Airborne Glues.svg",
@@ -114,17 +122,20 @@ export default function ProductMegaMenu() {
   const triggerRef = useRef<HTMLAnchorElement | null>(null);
 
   const items = useMemo(() => {
-    const cat = CATEGORIES.find((c) => c.name === activeCategory);
-    return cat ? cat.items : [];
+    return (
+      CATEGORIES.find((category) => category.name === activeCategory)?.items ??
+      []
+    );
   }, [activeCategory]);
 
   useEffect(() => {
-    const onEsc = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
+    const onEsc = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
         setOpen(false);
         triggerRef.current?.focus();
       }
     };
+
     document.addEventListener("keydown", onEsc);
     return () => document.removeEventListener("keydown", onEsc);
   }, []);
@@ -134,7 +145,6 @@ export default function ProductMegaMenu() {
       className="relative mr-5 inline-block"
       onMouseLeave={() => setOpen(false)}
     >
-      {/* Trigger */}
       <Link
         ref={triggerRef}
         href="/products"
@@ -147,52 +157,51 @@ export default function ProductMegaMenu() {
         PRODUCTS
       </Link>
 
-      {/* hover bridge */}
       {open && (
         <div
-          className="absolute left-1/2 -translate-x-1/2 top-full h-2 w-[600px]"
+          className="absolute left-1/2 top-full h-2 w-[600px] -translate-x-1/2"
           onMouseEnter={() => setOpen(true)}
         />
       )}
 
-      {/* PANEL */}
       {open && (
         <div
-          className="absolute left-1/2 -translate-x-1/2 top-full mt-0 w-[600px] rounded-xl bg-white shadow-2xl ring-1 ring-black/10 overflow-hidden z-50"
+          className="absolute left-1/2 top-full z-50 mt-0 w-[600px] -translate-x-1/2 overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-black/10"
           onMouseEnter={() => setOpen(true)}
         >
-          {/* 👇 Fixed equal height for all categories (fits ~6 rows nicely) */}
-          <div className="grid grid-cols-[200px_1fr] h-[320px]">
-            {/* LEFT (same height, scroll if long) */}
-            <div className="bg-primary text-white h-full overflow-y-auto">
+          <div className="grid h-[320px] grid-cols-[200px_1fr]">
+            <div className="h-full overflow-y-auto bg-primary text-white">
               <ul className="py-2">
-                {CATEGORIES.map((cat, i) => (
-                  <li key={i}>
-                    <button
-                      className={`w-full text-left px-4 py-3 text-sm md:text-base transition ${
-                        activeCategory === cat.name
+                {CATEGORIES.map((category) => (
+                  <li key={category.name}>
+                    <Link
+                      href={category.link}
+                      className={`block w-full px-4 py-3 text-left text-sm transition md:text-base ${
+                        activeCategory === category.name
                           ? "bg-white/15"
                           : "hover:bg-white/10"
                       }`}
-                      onMouseEnter={() => setActiveCategory(cat.name)}
+                      onMouseEnter={() => setActiveCategory(category.name)}
+                      onFocus={() => setActiveCategory(category.name)}
+                      onClick={() => setOpen(false)}
                     >
-                      {cat.name}
-                    </button>
+                      {category.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* RIGHT (one item per row, scroll if >6) */}
-            <div className="p-3 text-black h-full overflow-y-auto">
+            <div className="h-full overflow-y-auto p-3 text-black">
               <div className="flex flex-col gap-2">
-                {items.map((item, i) => (
+                {items.map((item) => (
                   <Link
-                    key={i}
-                    href={item.link || "/products"} // fallback if no link
-                    className="flex items-center gap-3 border border-primary rounded-lg bg-white px-2 py-2 hover:shadow-md transition cursor-pointer"
+                    key={item.title}
+                    href={item.link}
+                    className="flex cursor-pointer items-center gap-3 rounded-lg border border-primary bg-white px-2 py-2 transition hover:shadow-md"
+                    onClick={() => setOpen(false)}
                   >
-                    <div className="relative w-10 h-10 shrink-0">
+                    <div className="relative h-10 w-10 shrink-0">
                       <Image
                         src={item.image}
                         alt={item.title}
