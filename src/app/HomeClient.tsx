@@ -103,15 +103,22 @@ export default function Home() {
   {/* Content */}
   <div className="container !p-0">
     <div className="relative z-10 flex flex-col w-full md:w-1/2 justify-center h-full text-center px-4 container !ml-0">
-      <ScrollUpText className="text-4xl md:text-6xl font-extrabold text-white uppercase w-full text-center md:text-left horizon">
-        We Build,
-        <br />
-        What Sky Demands
-      </ScrollUpText>
-
-      <ScrollUpText className="mt-4 text-base font-semibold text-white md:text-xl capitalize text-center md:text-left">
-        Leading aerospace with bold innovation
-      </ScrollUpText>
+      <h1 className="w-full">
+        <ScrollUpText
+          as="span"
+          className="block text-4xl md:text-6xl leading-[1.1] md:leading-[1.1] font-extrabold text-white uppercase w-full text-center md:text-left horizon"
+        >
+          We Build,
+          <br />
+          What Sky Demands
+        </ScrollUpText>{" "}
+        <ScrollUpText
+          as="span"
+          className="block mt-4 text-base md:text-xl leading-[1.1] md:leading-[1.1] font-semibold text-white capitalize text-center md:text-left"
+        >
+          Defence &amp; aerospace engineering and manufacturing
+        </ScrollUpText>
+      </h1>
 
       <Link
         className="w-full md:w-auto flex justify-center md:justify-start"
@@ -136,14 +143,15 @@ export default function Home() {
       {/* ABOUT SECTION */}
       <section>
         <div className="container ">
-          <ScrollUpText className=" text-center text-[#5c5649] text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
+          <ScrollUpText as="h2" className=" text-center text-[#5c5649] text-[26px] md:text-[40px] leading-[1.1] font-extrabold uppercase mb-5 horizon">
             About our organization
           </ScrollUpText>
           <p className=" text-base text-[#000] font-medium text-center mb-0 ">
             Jetsys Defence is an agile, innovation-driven aerospace and defence
-            company based in India. We specialize in mission-critical
-            technologies for airborne platforms, avionics, and tactical systems
-            — engineered for performance, reliability, and national impact.
+            company based in Navi Mumbai, India. We specialize in
+            mission-critical technologies for airborne platforms, avionics, and
+            tactical systems — engineered for performance, reliability, and
+            national impact.
           </p>
           <div className=" hidden md:block">
             {" "}

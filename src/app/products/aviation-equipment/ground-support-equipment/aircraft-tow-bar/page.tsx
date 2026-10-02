@@ -3,14 +3,15 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
 import Image from "next/image";
+import Link from "next/link";
 import { Metadata } from "next";
 
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
 export const metadata: Metadata = {
   title:
-    "Aircraft Tow Bar – Ground Support Equipment & Towbar Solutions | Jetsys Defence",
+    "Aircraft Tow Bar | Towbars for Defence & Commercial Aircraft | Jetsys",
   description:
-    "Discover the high-performance Aircraft Tow Bar by Jetsys Defence. Engineered for reliable aircraft towing and ground handling, our towbar and wheel systems deliver superior efficiency and durability.",
+    "Aircraft tow bars by Jetsys Defence for towing and pushback: multi-head, portable and custom variants, shear-pin protection, 25–75 kN application-dependent capacity.",
   alternates: {
     canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/aircraft-tow-bar",
   },
@@ -33,12 +34,22 @@ const page = () => {
                                       src="/images/Aircraft Tow Bar.png"
                                       width={500}
                                       height={1000}
-                                      alt="Picture of the author"
+                                      alt="Jetsys Defence aircraft tow bar"
                                       className=" m-auto mb-6"
                                     />
                                     <OrderNowContactButton />
                                   </div>
-                  <br></br>      
+                  <br></br>
+                  <section className="bg-white mb-10">
+                    <div className="max-w-6xl mx-auto px-4">
+                      <h2 className="text-3xl md:text-4xl font-bold text-[#5C5649] mb-4">
+                        What Is an Aircraft Tow Bar?
+                      </h2>
+                      <p className="text-gray-700 leading-relaxed">
+                        An aircraft tow bar connects the nose landing gear to a tow tractor so the aircraft can be pushed back or towed between the hangar, apron and flight line. The tow-head locks onto the nose gear, and shear pins and retaining pins help protect the nose landing gear and tow bar in an overload. Jetsys Defence tow bars are configured to the operator&apos;s aircraft list, from business jets to regional and narrow-body types.
+                      </p>
+                    </div>
+                  </section>
                   <section className="bg-white" id="product-variants">
                     <div className="max-w-6xl mx-auto px-4">
                       <h2 className="text-3xl md:text-4xl font-bold text-[#5C5649] mb-8">
@@ -52,7 +63,7 @@ const page = () => {
                             Multi-Head Towbar
                           </h3>
                           <p className="mt-1 text-gray-700">
-                            One body, multiple certified tow-heads—ideal for mixed aircraft fleets.
+                            One body, multiple interchangeable tow-heads—ideal for mixed aircraft fleets.
                           </p>
                         </div>
 
@@ -76,9 +87,7 @@ const page = () => {
 
                      <div>
   <h3 className="font-bold text-[#5C5649]">
-    <a href="/products/aviation-equipment/ground-support-equipment/aircraft-tow-bar/custom_towbar" className="hover:underline">
-      Custom Towbar
-    </a>
+    Custom Towbar
   </h3>
   <p className="mt-1 text-gray-700">
     Project-specific geometry, material, paint code, and ground handling wheel package.
@@ -90,20 +99,20 @@ const page = () => {
                   </section>      
                       <section><br></br><br></br>
         <div >
-          <h3 className=" font-bold text-3xl text-[#5C5649] mb-5">Key Features of Nitrogen Trolley</h3>
+          <h2 className=" font-bold text-3xl text-[#5C5649] mb-5">Key Features of the Aircraft Tow Bar</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div className="text-black space-y-4">
               <ul className="list-disc pl-5">
-                <li><h4 className="font-bold text-[#5C5649]">Operator safety:</h4>Shear pins and retaining pins help protect the NLG and towbar in overload events.</li>
-                <li><h4 className="font-bold text-[#5C5649]">Fleet flexibility: Multi-head towbar</h4>options reduce total SKUs for mixed fleets.</li>
-                <li><h4 className="font-bold text-[#5C5649]">Lower downtime: </h4>Rugged wheels and sealed bearings support frequent ramp use.</li>
+                <li><strong className="block font-bold text-[#5C5649]">Operator safety:</strong>Shear pins and retaining pins help protect the NLG and towbar in overload events.</li>
+                <li><strong className="block font-bold text-[#5C5649]">Fleet flexibility:</strong>Multi-head towbar options reduce total SKUs for mixed fleets.</li>
+                <li><strong className="block font-bold text-[#5C5649]">Lower downtime: </strong>Rugged wheels and sealed bearings support frequent ramp use.</li>
               </ul>
             </div>
             <div className="text-black space-y-4">
               <ul className="list-disc pl-5">
-                <li><h4 className="font-bold text-[#5C5649]">Precision connection:</h4>Positive-lock tow-head design reduces play and wear.</li>
-                <li><h4 className="font-bold text-[#5C5649]">Weather & fluid resistant:</h4>Corrosion-protected finish and Skydrol-resistant coatings.</li>
-                <li><h4 className="font-bold text-[#5C5649]">Mobility on ramp:</h4>Towable design with balanced weight distribution for easy positioning.</li>
+                <li><strong className="block font-bold text-[#5C5649]">Precision connection:</strong>Positive-lock tow-head design reduces play and wear.</li>
+                <li><strong className="block font-bold text-[#5C5649]">Weather & fluid resistant:</strong>Corrosion-protected finish and Skydrol-resistant coatings.</li>
+                <li><strong className="block font-bold text-[#5C5649]">Mobility on ramp:</strong>Towable design with balanced weight distribution for easy positioning.</li>
                 </ul>
             </div>
           </div>
@@ -198,16 +207,16 @@ const page = () => {
                     <div className="text-black space-y-4">
                       <ul className="list-disc pl-5">
                         <li>
-                          <strong className="text-[#5C5649]">Defence bases & squadrons –</strong> Ideal for routine aircraft jacking and tyre replacement.
+                          <strong className="text-[#5C5649]">Defence bases & squadrons –</strong> Towing and repositioning aircraft between hangars, dispersal areas and the flight line.
                         </li>
                         <li>
-                          <strong className="text-[#5C5649]">MRO & line maintenance –</strong> Perfect for hangar operations, ramp inspections, and servicing tasks.
+                          <strong className="text-[#5C5649]">MRO & line maintenance –</strong> Moving aircraft in and out of hangars for inspections and servicing.
                         </li>
                         <li>
-                          <strong className="text-[#5C5649]">OEM trials & testing –</strong> Suitable for prototype testing and aircraft component validation.
+                          <strong className="text-[#5C5649]">OEM trials & testing –</strong> Ground movement of aircraft during trials and test programmes.
                         </li>
                         <li>
-                          <strong className="text-[#5C5649]">Charter & regional airlines –</strong> Dependable support for small to mid-size fleet operations.
+                          <strong className="text-[#5C5649]">Charter & regional airlines –</strong> Pushback and towing support for small to mid-size fleets.
                         </li>
                       </ul>
                     </div>
@@ -268,6 +277,32 @@ const page = () => {
         </ul>
       </div>
     </div>
+  </div>
+</section>
+<section>
+  <br /><br />
+  <div>
+    <h2 className="font-bold text-3xl text-[#5C5649] mb-5">Related Ground Support Equipment</h2>
+    <p className="text-black leading-relaxed mb-6">
+      The tow bar is part of the Jetsys Defence{" "}
+      <Link href="/products/aviation-equipment/ground-support-equipment" className="underline">
+        ground support equipment
+      </Link>{" "}
+      range, alongside the{" "}
+      <Link href="/products/aviation-equipment/ground-support-equipment/nose-jack" className="underline">
+        nose jack
+      </Link>{" "}
+      and{" "}
+      <Link href="/products/aviation-equipment/ground-support-equipment/nitrogen-trolley" className="underline">
+        nitrogen trolley
+      </Link>
+      . For loading and handling tasks, see our{" "}
+      <Link href="/products/aviation-equipment/ground-handling-equipment" className="underline">
+        ground handling equipment
+      </Link>
+      . Share your aircraft list and we will recommend a tow bar configuration.
+    </p>
+    <OrderNowContactButton />
   </div>
 </section>
         </div>

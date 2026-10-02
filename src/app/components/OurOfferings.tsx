@@ -16,7 +16,7 @@ export default function OurOffering() {
       img: "/images/offer-2.png",
       title: "Raw Materials",
       desc: "Jetsys’s raw materials are sourced and engineered for strength, durability, and consistency ensuring uncompromised quality in every aerospace and defence application.",
-      link: "/",
+      link: "/products/airborne-raw-materials",
     },
     {
       img: "/images/offer-3.png",
@@ -69,15 +69,29 @@ export default function OurOffering() {
   return (
     <section>
       <div className="container">
-        <ScrollUpText className="mx-auto text-center text-[#5c5649] text-[26px] md:text-[40px] font-extrabold uppercase horizon-text w-full md:w-[80%] mb-5 horizon">
+        <ScrollUpText as="h2" className="mx-auto text-center text-[#5c5649] text-[26px] md:text-[40px] leading-[1.1] font-extrabold uppercase horizon-text w-full md:w-[80%] mb-5 horizon">
           Our Offerings
         </ScrollUpText>
 
         <p className="text-base text-black font-medium text-center mb-5">
-          Jetsys Defence is an agile, innovation-driven aerospace and defence
-          company based in India. We specialize in mission-critical technologies
-          for airborne platforms, avionics, and tactical systems — engineered
-          for performance, reliability, and national impact.
+          We design and manufacture equipment for defence and aerospace
+          operators: aviation{" "}
+          <Link href="/products/aviation-equipment/ground-support-equipment" className="underline">
+            ground support equipment
+          </Link>{" "}
+          such as{" "}
+          <Link href="/products/aviation-equipment/ground-support-equipment/aircraft-tow-bar" className="underline">
+            aircraft tow bars
+          </Link>
+          , ground test rigs,{" "}
+          <Link href="/solutions/indegenization/indegenization-equipments" className="underline">
+            indigenized systems
+          </Link>{" "}
+          including the{" "}
+          <Link href="/solutions/indegenization/indegenization-equipments/squib-tester" className="underline">
+            squib tester
+          </Link>
+          , aircraft spares, runway spares and aerospace raw materials.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">

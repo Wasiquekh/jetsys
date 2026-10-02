@@ -2,8 +2,8 @@
 import { useEffect, useRef } from "react";
 
 export default function TrustedByLeadersHeading() {
-  const topRef = useRef<HTMLHeadingElement | null>(null);
-  const bottomRef = useRef<HTMLHeadingElement | null>(null);
+  const topRef = useRef<HTMLSpanElement | null>(null);
+  const bottomRef = useRef<HTMLSpanElement | null>(null);
 
   useEffect(() => {
     const top = topRef.current;
@@ -39,19 +39,20 @@ export default function TrustedByLeadersHeading() {
   return (
     <div className="banner-heading-wrapper w-full overflow-x-hidden py-0 select-none">
       {/* Single-line, centered, no wrapping */}
-      <h1
+      <h2>
+      <span
         ref={topRef}
-        className="banner-heading-top block mx-auto w-max whitespace-nowrap will-change-transform font-medium leading-[1.05] text-black text-[25px] md:text-[95px] text-center"
+        className="banner-heading-top block mx-auto w-max whitespace-nowrap will-change-transform font-medium leading-[1.1] text-black text-[25px] md:text-[95px] text-center"
       >
         TRUSTED BY LEADERS,
-      </h1>
-
-      <h1
+      </span>{" "}
+      <span
         ref={bottomRef}
-        className="banner-heading-bottom block mx-auto w-max whitespace-nowrap will-change-transform font-medium leading-[1.05] text-primary text-[25px] md:text-[95px] text-center"
+        className="banner-heading-bottom block mx-auto w-max whitespace-nowrap will-change-transform font-medium leading-[1.1] text-primary text-[25px] md:text-[95px] text-center"
       >
         BUILT FOR EXCELLENCE.
-      </h1>
+      </span>
+      </h2>
     </div>
   );
 }

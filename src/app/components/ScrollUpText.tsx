@@ -6,13 +6,17 @@ import { ReactNode, useEffect, useRef } from "react";
 interface ScrollUpTextProps {
   children: ReactNode;
   className?: string;
+  // Heading level (or plain element) to render; defaults to h1.
+  as?: "h1" | "h2" | "p" | "span";
 }
 
 export default function ScrollUpText({
   children,
   className = "",
+  as = "h1",
 }: ScrollUpTextProps) {
   const ref = useRef<HTMLHeadingElement | null>(null);
+  const Tag = motion[as] as typeof motion.h1;
   const controls = useAnimation();
   const inView = useInView(ref, { amount: 0.6 });
 
@@ -36,8 +40,8 @@ export default function ScrollUpText({
   }, [inView, controls]);
 
   return (
-    <motion.h1 ref={ref} className={className} animate={controls}>
+    <Tag ref={ref} className={className} animate={controls}>
       {children}
-    </motion.h1>
+    </Tag>
   );
 }

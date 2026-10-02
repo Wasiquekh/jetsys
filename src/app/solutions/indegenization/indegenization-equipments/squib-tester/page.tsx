@@ -5,12 +5,13 @@ import StickyHeader from "@/app/components/StickyHeader";
 import { Metadata } from "next";
 
 import Image from "next/image";
+import Link from "next/link";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
 export const metadata: Metadata = {
   title:
-    "Squib Tester for Aircraft Systems | Jetsys Defence Igniter Tester",
+    "Aircraft Squib Tester | Squib Circuit & Igniter Testing | Jetsys",
   description:
-    "Jetsys Defence Squib Tester ensures safe squib igniter testing without firing. Ideal for aircraft squib firing circuit checks, continuity testing, and maintenance safety.",
+    "Squib tester by Jetsys Defence. Checks continuity and resistance of aircraft squib and igniter firing circuits with a current-limited test below the firing threshold.",
   alternates: {
     canonical: "https://www.jetsys.co.in/solutions/indegenization/indegenization-equipments/squib-tester",
   },
@@ -25,9 +26,9 @@ const page = () => {
       <section>
         <div className="container">
   <div>
-                              <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Squib Tester – Indigenized Igniter Testing System for Aircraft Safety</h1>
+                              <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Aircraft Squib Tester – Indigenized Squib &amp; Igniter Circuit Testing System</h1>
                                <p className=" font-medium text-base">Jetsys Defence presents an indigenously developed Squib Tester designed for safe testing of electro-explosive devices used in aircraft and defence systems.
-                              This advanced tester measures continuity, firing circuit integrity, and resistance values without initiating ignition, ensuring complete operator safety during maintenance and system checks.
+                              This advanced tester measures continuity, firing circuit integrity, and resistance values without intentionally initiating the device, supporting safer maintenance and system checks.
                              </p>
                              <p className=" font-medium text-base">Built for military and commercial aviation fleets, our Squib Tester provides precise diagnostics for mission-critical systems such as ejection seats, countermeasure deployment, rocket ignition sequences, fire suppression bottles, airbag triggers, and explosive bolts.
                             </p><br></br><br></br>
@@ -36,22 +37,40 @@ const page = () => {
                               src="/images/Squib Tester.png"
                               width={500}
                               height={1000}
-                              alt="Picture of the author"
+                              alt="Jetsys Defence aircraft squib tester"
                               className=" m-auto mb-6"
                             />
                             <OrderNowContactButton />
                                     </div><br></br><br></br>
 <section className="w-full bg-white">
-  
+
+  <h2 className="text-2xl sm:text-3xl font-bold text-[#5C5649] mb-4">
+    What Is Squib Testing?
+  </h2>
+
+  <p className="text-black leading-relaxed mb-4">
+    A squib is a small electrically initiated device, also called an electro-explosive device (EED).
+    When a firing current passes through it, the squib sets off a cartridge or igniter.
+    On aircraft and defence systems, squibs are used in ejection seats, canopy severance devices,
+    fire bottle cartridges, and flare or countermeasure dispensers.
+  </p>
+
+  <p className="text-black leading-relaxed mb-8">
+    Squib testing is the electrical check of the squib and its firing circuit. It confirms continuity,
+    measures resistance, and looks for wiring faults or stray voltage, using a test current kept below
+    the level needed to fire the device. This lets maintenance teams verify the circuit without
+    initiating the squib.
+  </p>
+
   <h2 className="text-2xl sm:text-3xl font-bold text-[#5C5649] mb-4">
     What is a Squib Tester?
   </h2>
 
   <p className="text-black leading-relaxed mb-6">
     A Squib Tester (also known as an Aircraft Squib Tester, Squib Igniter Tester, or Squib Firing Circuit Tester)
-    is an ultra-safe electronic instrument used to verify the electrical health of explosive components
-    without triggering detonation. It applies a controlled micro-current—far below the firing threshold—to
-    measure resistance, continuity, and wiring faults.
+    is an electronic instrument used to verify the electrical health of explosive components
+    without intentionally firing them. It applies a controlled, current-limited test current—below the
+    firing threshold—to measure resistance, continuity, and wiring faults.
   </p>
 
   <h3 className="text-xl sm:text-2xl font-semibold text-[#5C5649] mb-3">
@@ -59,10 +78,10 @@ const page = () => {
   </h3>
 
   <ul className="list-disc pl-6 text-black leading-relaxed space-y-2">
-    <li>Ensures ejection seats, explosive valves, and deployment systems fire correctly when needed</li>
-    <li>Prevents accidental ignition during maintenance</li>
+    <li>Helps confirm that the firing circuits of ejection seats, explosive valves, and deployment systems are electrically intact</li>
+    <li>Reduces the risk of unintended initiation during maintenance</li>
     <li>Detects broken wiring, incorrect harness routing, stray voltages, and degraded igniters</li>
-    <li>Prevents catastrophic aircraft or crew safety failures</li>
+    <li>Helps find circuit faults before they affect aircraft or crew safety</li>
     <li>Supports defence readiness and lifecycle reliability</li>
   </ul>
 
@@ -71,21 +90,21 @@ const page = () => {
                                           
          <section>
   <div>
-    <h3 className="font-bold text-3xl text-[#5C5649] mb-5">
+    <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
       Key Features of Jetsys Defence Squib Tester
-    </h3>
+    </h2>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
       {/* LEFT COLUMN */}
       <div className="text-black space-y-4">
         <ul className="list-disc pl-5">
           <li>
-            <strong className="font-bold text-[#5C5649]">Ultra-Safe Testing</strong>
-            &nbsp;Current-limited design prevents squib firing during checks.
+            <strong className="font-bold text-[#5C5649]">Current-Limited Testing</strong>
+            &nbsp;Test current is limited below the firing threshold during checks.
           </li>
           <li>
-            <strong className="font-bold text-[#5C5649]">Ultra-Safe Testing</strong>
-            &nbsp;Fail-safe protection and zero risk of accidental ignition while measuring.
+            <strong className="font-bold text-[#5C5649]">Current-Limited Testing</strong>
+            &nbsp;Fail-safe current limiting reduces the risk of unintended initiation while measuring.
           </li>
           <li>
             <strong className="font-bold text-[#5C5649]">High-Accuracy Measurement</strong>
@@ -96,11 +115,11 @@ const page = () => {
             &nbsp;Detects short/open circuits, leakage, and stray voltage conditions.
           </li>
           <li>
-            <strong className="font-bold text-[#5C5649]">Military-Grade Design</strong>
+            <strong className="font-bold text-[#5C5649]">Rugged Design</strong>
             &nbsp;Rugged, shock-resistant housing suited for field and workshop use.
           </li>
           <li>
-            <strong className="font-bold text-[#5C5649]">Military-Grade Design</strong>
+            <strong className="font-bold text-[#5C5649]">Rugged Design</strong>
             &nbsp;Compatible with major aircraft platforms and EED families.
           </li>
         </ul>
@@ -114,7 +133,7 @@ const page = () => {
             &nbsp;Instant, stable readings on a large, easy-to-read digital display.
           </li>
           <li>
-            <strong className="font-bold text-[#5C5649]">Military-Grade Design</strong>
+            <strong className="font-bold text-[#5C5649]">Rugged Design</strong>
             &nbsp;Portable, battery-operated configuration ideal for flightline operations.
           </li>
           <li>
@@ -212,9 +231,9 @@ const page = () => {
 </section><br></br><br></br>
     <section>
   <div>
-    <h3 className="font-bold text-3xl text-[#5C5649] mb-5">
-      Applications of Squib Tester
-    </h3>
+    <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
+      Squib Tester Applications
+    </h2>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
       {/* LEFT COLUMN */}
@@ -275,7 +294,7 @@ const page = () => {
           </li>
           <li>
             <strong className="font-bold text-[#5C5649]">Defence & Aerospace Manufacturing</strong>
-            &nbsp;Used for acceptance testing and periodic compliance verification.
+            &nbsp;Used for acceptance testing and periodic verification.
           </li>
         </ul>
       </div>
@@ -284,9 +303,9 @@ const page = () => {
 </section><br></br><br></br>
 <section>
   <div>
-    <h3 className="font-bold text-3xl text-[#5C5649] mb-5">
-      Benefits of a Squib Tester
-    </h3>
+    <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
+      Why Use a Dedicated Squib Tester?
+    </h2>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
       
@@ -299,7 +318,7 @@ const page = () => {
           </li>
           <li>
             <strong className="font-bold text-[#5C5649]">Non-Destructive Testing</strong>
-            &nbsp;Allows full circuit diagnostics without triggering the squib, ensuring safe repeatable checks.
+            &nbsp;Allows circuit diagnostics without intentionally firing the squib, so checks can be repeated.
           </li>
           <li>
             <strong className="font-bold text-[#5C5649]">Accurate Fault Detection</strong>
@@ -307,7 +326,7 @@ const page = () => {
           </li>
           <li>
             <strong className="font-bold text-[#5C5649]">Pre-Flight Assurance</strong>
-            &nbsp;Ensures mission-critical systems like ejection seats, canopy severance, fire bottles, and igniters are operational.
+            &nbsp;Helps confirm the firing circuits of systems like ejection seats, canopy severance, fire bottles, and igniters are electrically serviceable.
           </li>
         </ul>
       </div>
@@ -328,8 +347,8 @@ const page = () => {
             &nbsp;Rapid diagnostics improve fleet readiness and maintenance efficiency.
           </li>
           <li>
-            <strong className="font-bold text-[#5C5649]">Standards Compliance</strong>
-            &nbsp;Supports OEM procedures, aviation safety norms, and explosive ordnance regulations.
+            <strong className="font-bold text-[#5C5649]">Procedure Support</strong>
+            &nbsp;Suited to squib circuit checks carried out under OEM maintenance procedures.
           </li>
         </ul>
       </div>
@@ -339,9 +358,9 @@ const page = () => {
 </section><br></br><br></br>
 <section>
   <div>
-    <h3 className="font-bold text-3xl text-[#5C5649] mb-5">
-      Why Choose Jetsys Defence of Squib Tester
-    </h3>
+    <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
+      Why Choose the Jetsys Defence Squib Tester
+    </h2>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
       
@@ -378,6 +397,77 @@ const page = () => {
       </div>
 
     </div>
+  </div>
+</section><br></br><br></br>
+<section>
+  <div>
+    <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
+      Frequently Asked Questions
+    </h2>
+
+    <div className="text-black space-y-6">
+      <div>
+        <h3 className="font-bold text-[#5C5649]">What is a squib tester?</h3>
+        <p className="mt-1 leading-relaxed">
+          A squib tester is an electronic instrument that checks the electrical condition of squibs,
+          igniters, and their firing circuits. It measures continuity and resistance with a
+          current-limited test, without intentionally firing the device.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="font-bold text-[#5C5649]">What is squib testing in aircraft?</h3>
+        <p className="mt-1 leading-relaxed">
+          It is the maintenance check of the squib firing circuits on an aircraft, such as those for
+          ejection seats, canopy severance, fire bottles, and countermeasure dispensers. The aim is to
+          confirm each circuit is intact and within its expected resistance before the aircraft is
+          released.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="font-bold text-[#5C5649]">What does a squib tester measure?</h3>
+        <p className="mt-1 leading-relaxed">
+          The Jetsys Defence Squib Tester measures circuit continuity and low resistance values using
+          4-wire Kelvin sensing, and detects open circuits, short circuits, leakage, and stray voltage.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="font-bold text-[#5C5649]">Where are aircraft squibs used?</h3>
+        <p className="mt-1 leading-relaxed">
+          Squibs are used in ejection seats, canopy severance devices, emergency fire bottle
+          cartridges, and flare and countermeasure deployment. In rocket and missile systems they are
+          used in igniter and stage-separation circuits.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="font-bold text-[#5C5649]">Why is squib circuit testing required?</h3>
+        <p className="mt-1 leading-relaxed">
+          These systems must work the first time they are needed and cannot be function-tested by
+          firing them. Circuit testing finds broken wiring, high resistance, and stray voltage during
+          routine maintenance, before they can cause a failure to fire or an unintended initiation.
+        </p>
+      </div>
+    </div>
+
+    <p className="text-black leading-relaxed mt-8 mb-6">
+      The Squib Tester is part of our range of{" "}
+      <Link href="/solutions/indegenization/indegenization-equipments" className="underline">
+        indigenized defence equipment
+      </Link>
+      . For aircraft system checks, see our{" "}
+      <Link href="/products/aviation-equipment/ground-test-equipment" className="underline">
+        ground test equipment
+      </Link>
+      , or{" "}
+      <Link href="/contact-us" className="underline">
+        contact our team
+      </Link>{" "}
+      to discuss your requirement.
+    </p>
+    <OrderNowContactButton />
   </div>
 </section>
 
