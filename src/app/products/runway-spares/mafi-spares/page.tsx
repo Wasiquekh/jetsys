@@ -1,21 +1,23 @@
+import type { Metadata } from "next";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
 import StickyHeader from "@/app/components/StickyHeader";
 import Link from "next/link";
-import SEO from "@/app/common/seo";
+
+export const metadata: Metadata = {
+  title: "Mafi Spares – Shallow Base Units for Airfields | Jetsys Defence",
+  description:
+    "Mafi spares from Jetsys Defence, including shallow base units for runway and taxiway lighting, engineered for dependable airbase and airport operations.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/runway-spares/mafi-spares",
+  },
+};
 
 const page = () => {
   return (
     <>
-    <SEO
-        pageTitle=  {
-         "Jetsys Defence | Shallow Base – Premium Runway Spares & Units"
-            }
-        description= {
-            "Explore Jetsys Defence’s high-quality Shallow Base units for airport runway spares. Get competitive Shallow Base price quotes, reliable supply and efficient logistics for defence & aviation infrastructure."}
-        />
     <div>
       <Header />
       <StickyHeader />

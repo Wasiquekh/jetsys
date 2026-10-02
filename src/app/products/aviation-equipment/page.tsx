@@ -8,6 +8,9 @@ export const metadata = {
   title: "Aviation Equipment & Ground Support Solutions",
   description:
     "Explore precision-engineered aviation equipment for ground support, ground supply, aircraft testing and ground handling operations.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment",
+  },
   keywords: [
     "aviation equipment",
     "ground support equipment",

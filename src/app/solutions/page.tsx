@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -5,6 +6,15 @@ import Image from "next/image";
 import SolutionAnimate from "../components/SolutionAnimate";
 import ScrollUpText from "../components/ScrollUpText";
 import StickyHeader from "../components/StickyHeader";
+
+export const metadata: Metadata = {
+  title: "Aerospace & Defence Solutions | Jetsys Defence",
+  description:
+    "Jetsys Defence delivers end-to-end defence and aerospace solutions, from indigenization of critical equipment to testing and maintenance support.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/solutions",
+  },
+};
 
 const page = () => {
   return (

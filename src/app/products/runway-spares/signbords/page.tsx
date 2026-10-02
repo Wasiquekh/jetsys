@@ -1,9 +1,19 @@
+import type { Metadata } from "next";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
 import StickyHeader from "@/app/components/StickyHeader";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Airfield Signboards – Taxiway Guidance Signs | Jetsys Defence",
+  description:
+    "Airfield signboards from Jetsys Defence, including taxiway guidance signs for clear direction, location and mandatory instruction on runways and taxiways.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/runway-spares/signbords",
+  },
+};
 
 const page = () => {
   return (

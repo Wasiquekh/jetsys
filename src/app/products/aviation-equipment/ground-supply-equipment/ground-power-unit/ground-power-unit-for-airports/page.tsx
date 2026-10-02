@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "High-performance Ground Power Unit for Airports by Jetsys Defence. Reliable airport ground power unit and aircraft stand power supply for efficient aviation operations.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/ground-power-unit-for-airports",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/ground-power-unit/ground-power-unit-for-airports",
   },
 };
 

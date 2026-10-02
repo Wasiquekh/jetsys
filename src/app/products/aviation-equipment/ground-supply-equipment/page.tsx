@@ -1,9 +1,19 @@
+import type { Metadata } from "next";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
 import StickyHeader from "@/app/components/StickyHeader";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Aircraft Ground Supply Equipment – GPU, Hydraulic & Starting Trolleys | Jetsys Defence",
+  description:
+    "Aircraft ground supply equipment from Jetsys Defence: ground power units, hydraulic servicing trolleys, pneumatic control panels, engine starting trolleys and fuel consumption trolleys.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment",
+  },
+};
 
 const page = () => {
   return (

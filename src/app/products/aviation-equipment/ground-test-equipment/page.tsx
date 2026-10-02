@@ -1,9 +1,19 @@
+import type { Metadata } from "next";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
 import StickyHeader from "@/app/components/StickyHeader";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Aircraft Ground Test Equipment – Air Data, Pitot & Hydraulic Test Rigs | Jetsys Defence",
+  description:
+    "Aircraft ground test equipment from Jetsys Defence: air data test systems, automated pitot leak testers, hydraulic test rigs, brake valve and SASD test rigs, and glass optical properties checkers.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-test-equipment",
+  },
+};
 
 const page = () => {
   return (

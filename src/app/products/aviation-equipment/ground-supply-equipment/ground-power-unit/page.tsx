@@ -25,7 +25,7 @@ const page = () => {
         <section>
           <div className="container">
             <h1 className="text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
-              <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/aircraft-ground-power-unit" className="hover:underline" style={{ color: 'inherit' }}>Ground Power Unit</a> – Reliable Aircraft GPU Solutions by Jetsys Defence
+              Ground Power Unit – Reliable Aircraft GPU Solutions by Jetsys Defence
             </h1>
             <p className="font-medium text-base">
               The Jetsys Defence <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/aircraft-ground-power-unit" className="hover:underline" style={{ color: 'inherit' }}>Ground Power Unit</a> delivers stable <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/400hz-ground-power-unit" className="hover:underline" style={{ color: 'inherit' }}>400 Hz AC</a> and <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/28.5vdc-ground-power-unit" className="hover:underline" style={{ color: 'inherit' }}>28.5 V DC</a> power for parked aircraft. Built for tough flight-line conditions and continuous ramp duty, our <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/aircraft-power-supply-system" className="hover:underline" style={{ color: 'inherit' }}>GPUs</a> help operators cut APU runtime, reduce emissions, and improve turnaround efficiency—setting a benchmark among Ground Power Unit manufacturers.
@@ -45,7 +45,7 @@ const page = () => {
               <div>
                 <h3 className="font-bold text-3xl text-[#5C5649] mb-5">Product Overview</h3>
                 <p className="font-medium text-base">
-                  Our <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/aircraft-ground-power-unit" className="hover:underline" style={{ color: 'inherit' }}>Ground Power Unit (GPU)</a> line covers <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/mobile_ground_power_unit" className="hover:underline" style={{ color: 'inherit' }}>mobile trailer</a>, vehicle-mounted, <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/electric-ground-power-unit" className="hover:underline" style={{ color: 'inherit' }}>battery/eGPU</a>, <a href="/products/aviation-equipment/ground-support-equipment/ground-power-unit/solid_state_rectifier" className="hover:underline" style={{ color: 'inherit' }}>solid-state rectifier (SSR)</a>, and <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/fixed-electrical-ground-power" className="hover:underline" style={{ color: 'inherit' }}>fixed electrical ground power (FEGP)</a> configurations. Each system provides clean, tightly regulated power to protect avionics and sensitive loads across regional, narrow-body, and wide-body fleets.
+                  Our <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/aircraft-ground-power-unit" className="hover:underline" style={{ color: 'inherit' }}>Ground Power Unit (GPU)</a> line covers <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/mobile_ground_power_unit" className="hover:underline" style={{ color: 'inherit' }}>mobile trailer</a>, vehicle-mounted, <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/electric-ground-power-unit" className="hover:underline" style={{ color: 'inherit' }}>battery/eGPU</a>, <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/solid_state_rectifier" className="hover:underline" style={{ color: 'inherit' }}>solid-state rectifier (SSR)</a>, and <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/fixed-electrical-ground-power" className="hover:underline" style={{ color: 'inherit' }}>fixed electrical ground power (FEGP)</a> configurations. Each system provides clean, tightly regulated power to protect avionics and sensitive loads across regional, narrow-body, and wide-body fleets.
                 </p>
               </div>
             </section>
@@ -132,7 +132,7 @@ const page = () => {
                       </tr>
                       <tr>
                         <td className="px-4 py-2 border-b">eGPU / SSR Options</td>
-                        <td className="px-4 py-2 border-b"><a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/electric-ground-power-unit" className="hover:underline" style={{ color: 'inherit' }}>Battery-electric eGPU</a> and <a href="/products/aviation-equipment/ground-support-equipment/ground-power-unit/solid_state_rectifier" className="hover:underline" style={{ color: 'inherit' }}>solid-state rectifier</a> units</td>
+                        <td className="px-4 py-2 border-b"><a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/electric-ground-power-unit" className="hover:underline" style={{ color: 'inherit' }}>Battery-electric eGPU</a> and <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/solid_state_rectifier" className="hover:underline" style={{ color: 'inherit' }}>solid-state rectifier</a> units</td>
                       </tr>
                       <tr>
                         <td className="px-4 py-2 border-b">Noise Level</td>
@@ -188,7 +188,7 @@ const page = () => {
                     <ul className="list-disc pl-5">
                       <li>
                         <h4 className="font-bold text-[#5C5649]">
-                          <a href="/products/aviation-equipment/ground-support-equipment/ground-power-unit/solid_state_rectifier" className="hover:underline" style={{ color: 'inherit' }}>
+                          <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/solid_state_rectifier" className="hover:underline" style={{ color: 'inherit' }}>
                             Solid-State Rectifier (SSR) – 28.5 V DC
                           </a>
                         </h4>

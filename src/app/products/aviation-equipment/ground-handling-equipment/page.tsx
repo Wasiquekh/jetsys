@@ -1,9 +1,19 @@
+import type { Metadata } from "next";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
 import StickyHeader from "@/app/components/StickyHeader";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Aircraft Ground Handling Equipment – Loading Trolleys & Rescue Tools | Jetsys Defence",
+  description:
+    "Aircraft ground handling equipment from Jetsys Defence: bomb loading trolleys, LDP trolleys and spreader-cutter rescue tools built for defence aviation.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-handling-equipment",
+  },
+};
 
 const page = () => {
   return (

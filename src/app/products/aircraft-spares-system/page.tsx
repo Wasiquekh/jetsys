@@ -8,6 +8,9 @@ export const metadata = {
   title: "Aircraft Spares, Systems & Engine Components",
   description:
     "Explore reliable aircraft spares, aircraft systems, hoses, engine parts, fuel-system components and naval aviation spares.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aircraft-spares-system",
+  },
   keywords: [
     "aircraft spares",
     "aircraft systems",

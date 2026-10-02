@@ -26,7 +26,7 @@ const page = () => {
           <div className="container">
             <div>
               <h1 className="text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
-                <a href="/products/aviation-equipment/ground-support-equipment/aircraft-looms-cables-harnesses/aircraft-wiring-harness" className="hover:underline" style={{ color: 'inherit' }}>Aircraft Looms, Cables & Harnesses</a> by Jetsys Defence
+                Aircraft Looms, Cables & Harnesses by Jetsys Defence
               </h1>
               <p className="font-medium text-base">
                 Jetsys Defence designs and manufactures <a href="/products/aviation-equipment/ground-support-equipment/aircraft-looms-cables-harnesses/aircraft-cable-assembly" className="hover:underline" style={{ color: 'inherit' }}>Aircraft Looms, Cables & Harnesses</a> for defence and commercial aviation. Engineered for harsh flight-line and in-service environments, our <a href="/products/aviation-equipment/ground-support-equipment/aircraft-looms-cables-harnesses/aviation-cable-harness" className="hover:underline" style={{ color: 'inherit' }}>aviation-grade cables & harnesses</a> deliver reliable power, signal integrity, and long service life across airframe, engine, avionics, and landing-gear systems.

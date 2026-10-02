@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -6,6 +7,15 @@ import ProductAnimate from "../components/ProductAnimate";
 import StickyHeader from "../components/StickyHeader";
 import ScrollUpText from "../components/ScrollUpText";
 
+
+export const metadata: Metadata = {
+  title: "Aerospace & Defence Products | Jetsys Defence",
+  description:
+    "Browse Jetsys Defence products: aviation ground equipment, runway spares, aircraft spares and systems, and airborne raw materials for defence and aviation operators.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products",
+  },
+};
 
 const page = () => {
   return (
