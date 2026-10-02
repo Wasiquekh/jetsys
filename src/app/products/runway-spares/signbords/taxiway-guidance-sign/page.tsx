@@ -8,7 +8,7 @@ import OrderNowContactButton from "@/app/components/ContactUsModalButton";
 
 export const metadata: Metadata = {
   title:
-    "Taxiway Guidance Sign by Jetsys Defence – Quality Runway Spares & Price List",
+    "Taxiway Guidance Sign | Airfield Signage | Jetsys Defence",
   description:
     "Upgrade your airport with reliable Taxiway Guidance Sign units from Jetsys Defence. Built for clarity and longevity. Request your Taxiway Guidance Sign price and specifications today.",
   alternates: {

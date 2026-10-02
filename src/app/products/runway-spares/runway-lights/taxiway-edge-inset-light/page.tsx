@@ -8,9 +8,9 @@ import OrderNowContactButton from "@/app/components/ContactUsModalButton";
 
 export const metadata: Metadata = {
   title:
-    "Taxiway Guidance Sign by Jetsys Defence – Quality Runway Spares & Price List",
+    "Taxiway Edge Inset Light | LED & Halogen Taxiway Lighting | Jetsys Defence",
   description:
-    "Upgrade your airport with reliable Taxiway Guidance Sign units from Jetsys Defence. Built for clarity and longevity. Request your Taxiway Guidance Sign price and specifications today.",
+    "Taxiway edge inset lights by Jetsys Defence: flush-mounted in-pavement LED or halogen fixtures for 6.6 A airfield circuits, rated IP67, for taxiways and aprons.",
   alternates: {
     canonical: "https://www.jetsys.co.in/products/runway-spares/runway-lights/taxiway-edge-inset-light",
   },

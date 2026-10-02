@@ -8,7 +8,7 @@ import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
 export const metadata: Metadata = {
   title:
-    "Jetsys Defence | Shallow Base – Premium Runway Spares & Units",
+    "Shallow Base for Inset Airfield Lights | Runway Spares | Jetsys Defence",
   description:
     "Explore Jetsys Defence’s high-quality Shallow Base units for airport runway spares. Get competitive Shallow Base price quotes, reliable supply and efficient logistics for defence & aviation infrastructure.",
   alternates: {
