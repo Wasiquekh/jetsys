@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Discover bomb roller by Jetsys Defence including aircraft bomb roller systems and payload handling rollers for safe, efficient defence aviation operations.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/replacement_blades",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley/bomb-troller",
   },
 };
 

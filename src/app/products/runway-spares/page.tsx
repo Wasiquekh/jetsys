@@ -8,6 +8,9 @@ export const metadata = {
   title: "Runway Spares, Airfield Lighting & Signboards",
   description:
     "Explore dependable runway spares, Mafi spares, runway lighting and airfield signboards engineered for safe, continuous airport operations.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/runway-spares",
+  },
   keywords: [
     "runway spares",
     "Mafi spares",

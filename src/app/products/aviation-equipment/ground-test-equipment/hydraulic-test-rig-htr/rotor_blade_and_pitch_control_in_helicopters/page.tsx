@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Jetsys Defence develops rotor blade and pitch control in helicopters systems, ensuring precise rotor control, stable flight performance, and advanced helicopter flight control technology.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/rotor-blade-pitch-control",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr/rotor_blade_and_pitch_control_in_helicopters",
   },
 };
 

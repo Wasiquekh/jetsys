@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Jetsys Defence develops advanced braking and steering assemblies for aircraft, ensuring precise ground control, reliable braking performance, and safe aircraft taxi operations.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/hydraulic-test-rig-htr/braking_and_steering_assemblies",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr/braking_and_steering_assemblies",
   },
 };
 

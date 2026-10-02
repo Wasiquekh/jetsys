@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Jetsys Defence manufactures high-performance Solid-State Rectifier systems for aviation power conversion, ensuring reliable aircraft electrical systems and efficient power regulation.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment/ground-power-unit/solid_state_rectifier",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/ground-power-unit/solid_state_rectifier",
   },
 };
 

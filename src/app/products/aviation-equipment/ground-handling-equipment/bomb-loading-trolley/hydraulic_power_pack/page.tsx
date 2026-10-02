@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Explore Jetsys Defence Hydraulic Power Pack solutions including mini, portable, 12V, and diesel units. High performance hydraulic power units at competitive price.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/replacement_blades",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley/hydraulic_power_pack",
   },
 };
 

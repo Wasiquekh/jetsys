@@ -1,9 +1,19 @@
+import type { Metadata } from "next";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
 import StickyHeader from "@/app/components/StickyHeader";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Aircraft Ground Support Equipment – Harnesses, Tow Bars & Nitrogen Trolleys | Jetsys Defence",
+  description:
+    "Aircraft ground support equipment from Jetsys Defence: looms, cables and harnesses, tow bars, NATO cables, nitrogen trolleys, nose jacks and protractor units.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-support-equipment",
+  },
+};
 
 const page = () => {
   return (

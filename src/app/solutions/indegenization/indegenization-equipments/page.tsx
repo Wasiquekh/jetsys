@@ -1,8 +1,18 @@
+import type { Metadata } from "next";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Indigenized Equipment – Squib Tester, Thermal Vacuum Chamber & More | Jetsys Defence",
+  description:
+    "Indigenized defence and aerospace equipment by Jetsys Defence, including the squib tester, thermal vacuum chamber, ring oil feed, totem tray harmonization tool and conformal coating removal machine.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/solutions/indegenization/indegenization-equipments",
+  },
+};
 
 const page = () => {
   return (

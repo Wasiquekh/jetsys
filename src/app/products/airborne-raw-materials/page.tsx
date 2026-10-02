@@ -8,6 +8,9 @@ export const metadata = {
   title: "Aerospace Raw Materials, Fasteners & Adhesives",
   description:
     "Explore aerospace-grade low-carbon steel, carbon steel, fasteners and structural adhesives for aviation manufacturing and maintenance.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/airborne-raw-materials",
+  },
   keywords: [
     "aerospace raw materials",
     "low carbon steel",
@@ -109,7 +112,7 @@ export default function Page() {
                   Explore raw materials
                 </a>
                 <Link
-                  href="/contact"
+                  href="/contact-us"
                   className="rounded-sm border border-white/30 px-7 py-4 text-sm font-extrabold uppercase tracking-wider text-white transition hover:border-[#ddc569] hover:text-[#ddc569]"
                 >
                   Discuss a requirement

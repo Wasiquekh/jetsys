@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -5,6 +6,15 @@ import Image from "next/image";
 import StickyHeader from "@/app/components/StickyHeader";
 import Link from "next/link";
 
+
+export const metadata: Metadata = {
+  title: "Runway Lights – Taxiway Edge Inset & Touchdown Zone Lights | Jetsys Defence",
+  description:
+    "Runway lighting from Jetsys Defence: taxiway edge inset lights and touchdown zone lights built for clear, reliable airfield guidance.",
+  alternates: {
+    canonical: "https://www.jetsys.co.in/products/runway-spares/runway-lights",
+  },
+};
 
 const page = () => {
   return (
