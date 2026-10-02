@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -361,6 +362,22 @@ const page = () => {
                   </div>
                 </div>
               </section>
+<RelatedLinks
+  heading="Variants and Related Equipment"
+  intro="The pages below cover the individual configurations and applications in this range."
+  links={[
+    { href: "/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley/aircraft_hydraulic_servicing_trolley", label: "Aircraft Hydraulic Servicing Trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley/aviation-hydraulic-servicing-trolley", label: "Aviation Hydraulic Servicing Trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley/defence-hydraulic-servicing-trolley", label: "Defence Hydraulic Servicing Trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley/dual-circuit-hydraulic-servicing-trolley", label: "Dual Circuit Hydraulic Servicing Trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley/high-pressure-hydraulic-servicing-trolley", label: "High Pressure Hydraulic Servicing Trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley/hydraulic-ground-support-equipment", label: "Hydraulic Ground Support Equipment" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley/hydraulic-maintenance-trolley", label: "Hydraulic Maintenance Trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley/hydraulic-test-and-flushing-trolley", label: "Hydraulic Test & Flushing Trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley/mobile-hydraulic-servicing-trolley", label: "Mobile Hydraulic Servicing Trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment", label: "Ground Supply Equipment range" },
+  ]}
+/>
 
             </div>
           </div>

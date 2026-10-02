@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -369,6 +370,19 @@ const page = () => {
 
                 </section>
               </section>
+<RelatedLinks
+  heading="Variants and Related Equipment"
+  intro="The pages below cover the individual configurations and applications in this range."
+  links={[
+    { href: "/products/runway-spares/runway-lights/touchdown-zone-light/Rrunway-landing-lights-system", label: "Runway Landing Lights System" },
+    { href: "/products/runway-spares/runway-lights/touchdown-zone-light/halogen-runway-lights", label: "Halogen Runway Lights" },
+    { href: "/products/runway-spares/runway-lights/touchdown-zone-light/high-intensity-runway-lights", label: "High Intensity Runway Lights" },
+    { href: "/products/runway-spares/runway-lights/touchdown-zone-light/precision-runway-lighting-system", label: "Precision Runway Lighting System" },
+    { href: "/products/runway-spares/runway-lights/touchdown-zone-light/runway-inset-light", label: "Runway Inset Light" },
+    { href: "/products/runway-spares/runway-lights/touchdown-zone-light/runway-lighting-system", label: "Runway Lighting System" },
+    { href: "/products/runway-spares/runway-lights", label: "Runway Lights range" },
+  ]}
+/>
 
             </div>
           </div>

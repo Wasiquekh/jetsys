@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -206,6 +207,14 @@ const Page = () => {
                   Jetsys Defence is a leading aircraft fuel testing system supplier offering high-performance and reliable solutions. Choose our aviation fuel testing equipment for precision, safety, and efficiency in aviation and aerospace fuel operations.
                 </p> 
               </section>
+<RelatedLinks
+  heading="Related Equipment"
+  intro="This page covers one configuration in a wider Jetsys Defence range. The overview page has the full details."
+  links={[
+    { href: "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley", label: "Fuel Consumption Trolley overview" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/aviation-fuel-ground-support-equipment", label: "Aviation Fuel Ground Support Equipment" },
+  ]}
+/>
 
             </div>
           </div>

@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -299,6 +300,23 @@ const page = () => {
                   </section>
                 </section>
               </section>
+<RelatedLinks
+  heading="Variants and Related Equipment"
+  intro="The pages below cover the individual configurations and applications in this range."
+  links={[
+    { href: "/products/runway-spares/signbords/taxiway-guidance-sign/airfield-signage-system", label: "Blue Airfield Signage System" },
+    { href: "/products/runway-spares/signbords/taxiway-guidance-sign/airport-guidance_signs", label: "Airport Guidance Signs" },
+    { href: "/products/runway-spares/signbords/taxiway-guidance-sign/aviation-ground-signage", label: "Aviation Ground Signage" },
+    { href: "/products/runway-spares/signbords/taxiway-guidance-sign/illuminated-airfield-sign", label: "Illuminated Airfield Sign" },
+    { href: "/products/runway-spares/signbords/taxiway-guidance-sign/led-taxiway-guidance-sign", label: "LED Taxiway Guidance Sign" },
+    { href: "/products/runway-spares/signbords/taxiway-guidance-sign/mandatory_instruction_sign", label: "Mandatory Instruction Sign" },
+    { href: "/products/runway-spares/signbords/taxiway-guidance-sign/runway-distance-remaining-sign", label: "Runway Distance Remaining Sign" },
+    { href: "/products/runway-spares/signbords/taxiway-guidance-sign/taxiway-direction-sign", label: "Taxiway Direction Sign" },
+    { href: "/products/runway-spares/signbords/taxiway-guidance-sign/taxiway-information-sign", label: "Taxiway Information Sign" },
+    { href: "/products/runway-spares/signbords/taxiway-guidance-sign/taxiway-location-sign", label: "Taxiway Location Sign" },
+    { href: "/products/runway-spares/signbords", label: "Airfield Signboards range" },
+  ]}
+/>
             </div>
           </div>
         </section>

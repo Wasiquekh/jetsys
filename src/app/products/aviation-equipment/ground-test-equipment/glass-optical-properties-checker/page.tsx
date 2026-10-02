@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -488,6 +489,21 @@ const page = () => {
     </div>
   </div>
 </section>
+<RelatedLinks
+  heading="Variants and Related Equipment"
+  intro="The pages below cover the individual configurations and applications in this range."
+  links={[
+    { href: "/products/aviation-equipment/ground-test-equipment/glass-optical-properties-checker/aircraft_canopy_testing_system", label: "Aircraft Canopy Testing System" },
+    { href: "/products/aviation-equipment/ground-test-equipment/glass-optical-properties-checker/aircraft_window_testing_equipment", label: "Aircraft Window Testing Equipment" },
+    { href: "/products/aviation-equipment/ground-test-equipment/glass-optical-properties-checker/aircraft_windshield_testing_equipment", label: "Aircraft Windshield Testing Equipment" },
+    { href: "/products/aviation-equipment/ground-test-equipment/glass-optical-properties-checker/birefringence_testing_equipment", label: "Birefringence Testing Equipment" },
+    { href: "/products/aviation-equipment/ground-test-equipment/glass-optical-properties-checker/glass_testing_equipment", label: "Glass Testing Equipment" },
+    { href: "/products/aviation-equipment/ground-test-equipment/glass-optical-properties-checker/optical_test_equipment", label: "Optical Test Equipment" },
+    { href: "/products/aviation-equipment/ground-test-equipment/glass-optical-properties-checker/refractive_index_measurement_system", label: "Refractive Index Measurement System" },
+    { href: "/products/aviation-equipment/ground-test-equipment/glass-optical-properties-checker/wavefront_measurement_system", label: "Wavefront Measurement System" },
+    { href: "/products/aviation-equipment/ground-test-equipment", label: "Ground Test Equipment range" },
+  ]}
+/>
 
             </div>
         </div>

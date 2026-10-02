@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -322,6 +323,22 @@ const page = () => {
                   </div>
                 </div>
               </section>
+<RelatedLinks
+  heading="Variants and Related Equipment"
+  intro="The pages below cover the individual configurations and applications in this range."
+  links={[
+    { href: "/products/aviation-equipment/ground-supply-equipment/portable-engine-starting-trolley/24v-engine-starting-trolley", label: "24V Engine Starting Trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/portable-engine-starting-trolley/28v-aircraft-starting-trolley", label: "28V Aircraft Starting Trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/portable-engine-starting-trolley/aircraft-engine-starting-trolley", label: "Aircraft Engine Starting Trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/portable-engine-starting-trolley/aircraft-starting-power-unit", label: "Aircraft Starting Power Unit" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/portable-engine-starting-trolley/aviation-engine-starting-trolley", label: "Aviation Engine Starting Trolley By Jetsys Defence" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/portable-engine-starting-trolley/battery-powered-engine-starting-trolley", label: "Battery Powered Engine Starting Trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/portable-engine-starting-trolley/defence-engine-starting-trolley", label: "Defence Engine Starting Trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/portable-engine-starting-trolley/mobile-engine-starting-trolley", label: "Mobile Engine Starting Trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/portable-engine-starting-trolley/portable-aircraft-ground-ower-unit", label: "Portable Aircraft Ground Power Unit" },
+    { href: "/products/aviation-equipment/ground-supply-equipment", label: "Ground Supply Equipment range" },
+  ]}
+/>
 
             </div>
           </div>

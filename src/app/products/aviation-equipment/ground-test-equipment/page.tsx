@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import type { Metadata } from "next";
 import React from "react";
 import Header from "@/app/components/Header";
@@ -232,6 +233,15 @@ const page = () => {
                 </button>
               </Link>
             </div>
+<RelatedLinks
+  heading="Related Test Systems"
+  intro="Jetsys Defence also builds indigenized test systems outside the aircraft ground test range."
+  links={[
+    { href: "/solutions/indegenization/indegenization-equipments/thermal-vacuum-chamber", label: "Thermal vacuum (TVAC) chamber" },
+    { href: "/solutions/indegenization/indegenization-equipments/squib-tester", label: "Aircraft squib tester" },
+    { href: "/solutions/indegenization/indegenization-equipments", label: "Indigenized equipment range" },
+  ]}
+/>
           </div>
         </div>
       </section>

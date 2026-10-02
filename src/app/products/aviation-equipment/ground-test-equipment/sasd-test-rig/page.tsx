@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -420,6 +421,15 @@ const page = () => {
     </div>
   </div>
 </section>
+<RelatedLinks
+  heading="Variants and Related Equipment"
+  intro="The pages below cover the individual configurations and applications in this range."
+  links={[
+    { href: "/products/aviation-equipment/ground-test-equipment/sasd-test-rig/aircraft-component-test-bench", label: "Aircraft Component Test Bench" },
+    { href: "/products/aviation-equipment/ground-test-equipment/sasd-test-rig/hydraulic-and-pneumatic-test-system", label: "Hydraulic & Pneumatic Test System" },
+    { href: "/products/aviation-equipment/ground-test-equipment", label: "Ground Test Equipment range" },
+  ]}
+/>
 
               </div>
         </div>

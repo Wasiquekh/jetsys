@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -300,6 +301,22 @@ const page = () => {
                   </div>
                 </div>
               </section>
+<RelatedLinks
+  heading="Variants and Related Equipment"
+  intro="The pages below cover the individual configurations and applications in this range."
+  links={[
+    { href: "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/aircraft-fuel-consumption-trolley", label: "Aircraft Fuel Consumption Trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/aircraft-fuel-testing-equipment", label: "Aircraft Fuel Testing Equipment" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/aviation-fuel-ground-support-equipment", label: "Aviation Fuel Ground Support Equipment" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/aviation-fuel-testing-trolley", label: "Aviation Fuel Testing Trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/defence-fuel-consumption-trolley", label: "Defence Fuel Consumption Trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/digital-fuel-metering-trolley", label: "Digital Fuel Metering Trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/fuel-flow-measurement-trolley", label: "Fuel Flow Measurement Trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/fuel-flushing-trolley", label: "Fuel Flushing Trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/fuel-transfer-and-defueling-trolley", label: "Fuel Transfer & Defueling Trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment", label: "Ground Supply Equipment range" },
+  ]}
+/>
 
             </div>
           </div>

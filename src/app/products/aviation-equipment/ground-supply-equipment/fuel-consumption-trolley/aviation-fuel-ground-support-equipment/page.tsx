@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -206,6 +207,14 @@ const Page = () => {
                   Jetsys Defence is a leading aviation fuel equipment supplier offering complete aviation fuel ground support equipment solutions. Choose our systems for high performance, safety, and reliability in aviation, defence, and aerospace fuel operations.
                 </p>
               </section>
+<RelatedLinks
+  heading="Related Equipment"
+  intro="This page covers one configuration in a wider Jetsys Defence range. The overview page has the full details."
+  links={[
+    { href: "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley", label: "Fuel Consumption Trolley overview" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/aviation-fuel-testing-trolley", label: "Aviation Fuel Testing Trolley" },
+  ]}
+/>
 
             </div>
           </div>

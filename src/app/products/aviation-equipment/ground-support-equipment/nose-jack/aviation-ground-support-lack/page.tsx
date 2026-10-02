@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -193,6 +194,13 @@ const page = () => {
               <p className="font-medium text-base mt-4">
                 Contact us today to get your aerospace ground support jack tailored to your aircraft requirements.
               </p>
+<RelatedLinks
+  heading="Related Equipment"
+  intro="This page covers one configuration in a wider Jetsys Defence range. The overview page has the full details."
+  links={[
+    { href: "/products/aviation-equipment/ground-support-equipment/nose-jack", label: "Nose Jack & Main Jack overview" },
+  ]}
+/>
             </div>
           </div>
         </section>

@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -260,6 +261,14 @@ const page = () => {
                   </p>
                 </div>
               </section>
+<RelatedLinks
+  heading="Related Equipment"
+  intro="This page covers one configuration in a wider Jetsys Defence range. The overview page has the full details."
+  links={[
+    { href: "/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine", label: "Spreader & Cutter With Petrol Engine overview" },
+    { href: "/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/aviation_tool", label: "Aircraft Rescue Tool" },
+  ]}
+/>
             </div>
           </div>
         </section>
