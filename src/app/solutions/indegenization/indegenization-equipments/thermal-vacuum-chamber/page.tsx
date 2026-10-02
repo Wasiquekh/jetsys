@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -8,9 +9,9 @@ import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
 export const metadata: Metadata = {
   title:
-    "Thermal Vacuum Chamber | Space Simulation System – Jetsys Defence",
+    "Thermal Vacuum Chamber Manufacturer in India | TVAC Systems | Jetsys",
   description:
-    "Jetsys Defence Thermal Vacuum Chamber simulates extreme space temperature & pressure for satellite, component & payload testing. Ideal for thermal vacuum qualification.",
+    "Jetsys Defence designs and manufactures thermal vacuum (TVAC) chambers for space simulation, thermal cycling and bake-out of satellite subsystems and payloads.",
   alternates: {
     canonical: "https://www.jetsys.co.in/solutions/indegenization/indegenization-equipments/thermal-vacuum-chamber",
   },
@@ -25,7 +26,7 @@ const page = () => {
       <section>
         <div className="container">
 <div>
-                                <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Thermal Vacuum Chamber (TVC) – Indigenization by Jetsys Defence</h1>
+                                <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Thermal Vacuum Chamber (TVAC) – Space Simulation Chambers by Jetsys Defence</h1>
                                  <p className=" font-medium text-base"> Jetsys Defence designs and manufactures Thermal Vacuum Chambers that accurately simulate space conditions—deep-vacuum and extreme thermal cycling—for qualification, screening and R&D. Our TVC systems support satellite subsystems, payloads, optics and electronics where a space simulation vacuum chamber and thermal vacuum testing chamber are essential.
                                </p><br></br><br></br>
         
@@ -34,7 +35,7 @@ const page = () => {
                     src="/images/Thermal Vacuum Chamber.png"
                     width={500}
                     height={1000}
-                    alt="Picture of the author"
+                    alt="Jetsys Defence thermal vacuum chamber"
                     className=" m-auto mb-6"
                   />
                   <OrderNowContactButton />
@@ -51,12 +52,41 @@ const page = () => {
     compliance—exactly what a space simulation vacuum chamber or thermal vacuum testing chamber
     must achieve.
   </p>
+
+  <h2 className="text-2xl sm:text-3xl font-bold text-[#5C5649] mb-4">
+    Thermal Vacuum Testing for Aerospace and Space Systems
+  </h2>
+
+  <p className="text-black leading-relaxed mb-4">
+    Thermal vacuum (TVAC) testing exposes flight hardware to vacuum and controlled hot and cold
+    cycles before launch. Jetsys Defence chambers are built for the test types that space programmes
+    run most often:
+  </p>
+
+  <ul className="list-disc pl-6 text-black leading-relaxed space-y-2 mb-8">
+    <li>Thermal cycling for qualification and acceptance campaigns, using programmable ramps and soaks</li>
+    <li>Thermal balance tests that check a design against its thermal model</li>
+    <li>Vacuum bake-out to drive off volatiles and contaminants before spacecraft integration</li>
+    <li>Functional testing and burn-in of space electronics, optics and mechanisms under vacuum</li>
+  </ul>
+
+  <h2 className="text-2xl sm:text-3xl font-bold text-[#5C5649] mb-4">
+    Chamber Configurations
+  </h2>
+
+  <p className="text-black leading-relaxed mb-6">
+    Each chamber is configured to the test article. Chambers are available in cylindrical or
+    rectangular formats, from benchtop units and smallsat test benches to large, field-constructed
+    integration chambers. Options include an LN₂ cryo-shroud, heated and cooled platens, IR
+    sun-simulation, payload carts, and electrical, RF, fibre-optic and fluid feedthroughs. Final
+    specifications are set by test article size, thermal load and cleanliness class.
+  </p>
 </section>
 <section className="mt-10">
   <div>
-    <h3 className="font-bold text-3xl text-[#5C5649] mb-5">
-      Key Features of Jetsys Defence TVC
-    </h3>
+    <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
+      Key System Features
+    </h2>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
 
@@ -125,9 +155,9 @@ const page = () => {
 </section>
 <section className="mt-10">
   <div>
-    <h3 className="font-bold text-3xl text-[#5C5649] mb-5">
+    <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
       Benefits of Thermal Vacuum Chamber (TVC)
-    </h3>
+    </h2>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
 
@@ -297,9 +327,9 @@ const page = () => {
 </section>
 <section className="mt-10">
   <div>
-    <h3 className="font-bold text-3xl text-[#5C5649] mb-5">
+    <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
       Applications of Thermal Vacuum Chamber (TVC)
-    </h3>
+    </h2>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
 
@@ -353,9 +383,9 @@ const page = () => {
 </section>
 <section className="mt-10">
   <div>
-    <h3 className="font-bold text-3xl text-[#5C5649] mb-5">
-      Why Choose Jetsys Defence for TVAC?
-    </h3>
+    <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
+      Why Jetsys Defence for Thermal Vacuum Chambers
+    </h2>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
 
@@ -394,6 +424,72 @@ const page = () => {
     </div>
   </div>
 </section>
+<section className="mt-10">
+  <div>
+    <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
+      Frequently Asked Questions
+    </h2>
+
+    <div className="text-black space-y-6">
+      <div>
+        <h3 className="font-bold text-[#5C5649]">What is TVAC testing?</h3>
+        <p className="mt-1 leading-relaxed">
+          TVAC (thermal vacuum) testing places hardware in a high-vacuum chamber and cycles its
+          temperature to replicate on-orbit conditions. It is used to check survivability, functional
+          performance and outgassing before the hardware flies.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="font-bold text-[#5C5649]">What vacuum and temperature range do the chambers cover?</h3>
+        <p className="mt-1 leading-relaxed">
+          Typical systems are in the 1×10⁻⁶ torr class, with a shroud range of approximately −185 °C to
+          +165 °C and platen options up to +200 °C. These ranges are indicative and depend on the
+          configuration.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="font-bold text-[#5C5649]">What chamber sizes are available?</h3>
+        <p className="mt-1 leading-relaxed">
+          Chambers range from benchtop units and smallsat test benches to large, field-constructed
+          integration chambers, in cylindrical or rectangular formats.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="font-bold text-[#5C5649]">Can the chamber be used for vacuum bake-out?</h3>
+        <p className="mt-1 leading-relaxed">
+          Yes. Vacuum bake-out and contamination control are standard applications, supported by
+          low-outgassing materials and cleanable liners.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="font-bold text-[#5C5649]">What support is provided after delivery?</h3>
+        <p className="mt-1 leading-relaxed">
+          Installation, operator training, calibration, AMC/PMC and on-site service are available
+          across India, with documentation that includes IQ/OQ protocols and FAT/SAT reports.
+        </p>
+      </div>
+    </div>
+
+    <div className="mt-8">
+      <OrderNowContactButton />
+    </div>
+  </div>
+</section>
+<RelatedLinks
+  heading="Related Test Systems"
+  intro="The thermal vacuum chamber is one of the indigenized test systems built by Jetsys Defence."
+  links={[
+    { href: "/solutions/indegenization/indegenization-equipments", label: "Indigenized equipment range" },
+    { href: "/solutions/indegenization/indegenization-equipments/squib-tester", label: "Aircraft squib tester" },
+    { href: "/solutions/indegenization/indegenization-equipments/conformal-coating-removal-machine", label: "Conformal coating removal machine" },
+    { href: "/products/aviation-equipment/ground-test-equipment", label: "Aircraft ground test equipment" },
+  ]}
+/>
+
 
 
   </div>
