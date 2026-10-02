@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "High-performance hydraulic test & flushing trolley by Jetsys Defence for aviation, industrial, and defence use. Reliable hydraulic flushing unit for testing, cleaning, and system maintenance.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley/hydraulic-test-&-flushing-trolley",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley/hydraulic-test-and-flushing-trolley",
   },
 };
 

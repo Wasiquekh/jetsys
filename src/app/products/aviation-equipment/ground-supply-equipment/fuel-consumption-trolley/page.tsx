@@ -92,7 +92,7 @@ const page = () => {
                         </li>
                         <li>
                           <h4 className="font-bold text-[#5C5649]">Defueling & Transfer</h4>
-                          Safely remove fuel to a bowser or storage tank, and <a href="/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/fuel-transfer-&-defueling-trolley" className="hover:underline" style={{ color: 'inherit' }}>transfer between tanks</a> with controlled pressure and flow.
+                          Safely remove fuel to a bowser or storage tank, and <a href="/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/fuel-transfer-and-defueling-trolley" className="hover:underline" style={{ color: 'inherit' }}>transfer between tanks</a> with controlled pressure and flow.
                         </li>
                       </ul>
                     </div>

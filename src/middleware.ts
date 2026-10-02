@@ -1,6 +1,15 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { REDIRECTS } from "./redirects";
 
+// Redirect keys are stored decoded, so "%26" and a literal "&" both match.
+function decodePath(path: string) {
+  try {
+    return decodeURIComponent(path);
+  } catch {
+    return path;
+  }
+}
+
 export function middleware(request: NextRequest) {
   // request.url keeps the trailing slash; nextUrl.pathname may normalise it.
   const { pathname, search } = new URL(request.url);
@@ -8,7 +17,7 @@ export function middleware(request: NextRequest) {
   // a protocol-relative URL.
   const path = "/" + pathname.replace(/^\/+|\/+$/g, "");
   const destination =
-    REDIRECTS[path] ?? (path !== pathname ? path : null);
+    REDIRECTS[decodePath(path)] ?? (path !== pathname ? path : null);
 
   if (!destination) return NextResponse.next();
 

@@ -176,7 +176,7 @@ const page = () => {
                         </li>
                         <li>
                           <h4 className="font-bold text-[#5C5649]">MRO & Production Test</h4>
-                          <a href="/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley/hydraulic-test-&-flushing-trolley" className="hover:underline" style={{ color: 'inherit' }}>System flushing, pressure/flow proving</a>, component testing, and acceptance procedures.
+                          <a href="/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley/hydraulic-test-and-flushing-trolley" className="hover:underline" style={{ color: 'inherit' }}>System flushing, pressure/flow proving</a>, component testing, and acceptance procedures.
                         </li>
                       </ul>
                     </div>

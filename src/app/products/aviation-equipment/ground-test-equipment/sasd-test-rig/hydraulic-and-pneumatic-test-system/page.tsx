@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Explore hydraulic & pneumatic test system by Jetsys Defence including hydro pneumatic test solutions for accurate aircraft system testing and validation.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-test-equipment/sasd-test-rig/hydraulic-&-pneumatic-test-system",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-test-equipment/sasd-test-rig/hydraulic-and-pneumatic-test-system",
   },
 };
 

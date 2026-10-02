@@ -72,4 +72,18 @@ const CONSOLIDATED: Record<string, string> = {
   // @@CONSOLIDATED@@
 };
 
-export const REDIRECTS: Record<string, string> = { ...LEGACY, ...CONSOLIDATED };
+// URLs renamed to drop special characters (the old paths contained a literal "&").
+const RENAMED: Record<string, string> = {
+  "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/fuel-transfer-&-defueling-trolley":
+    "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/fuel-transfer-and-defueling-trolley",
+  "/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley/hydraulic-test-&-flushing-trolley":
+    "/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley/hydraulic-test-and-flushing-trolley",
+  "/products/aviation-equipment/ground-test-equipment/sasd-test-rig/hydraulic-&-pneumatic-test-system":
+    "/products/aviation-equipment/ground-test-equipment/sasd-test-rig/hydraulic-and-pneumatic-test-system",
+};
+
+export const REDIRECTS: Record<string, string> = {
+  ...LEGACY,
+  ...CONSOLIDATED,
+  ...RENAMED,
+};

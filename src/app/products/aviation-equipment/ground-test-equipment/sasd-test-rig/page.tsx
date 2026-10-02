@@ -196,7 +196,7 @@ const page = () => {
         <tbody>
           <tr>
             <td className="px-4 py-2 border-b">Working Fluid</td>
-            <td className="px-4 py-2 border-b"><a href="/products/aviation-equipment/ground-test-equipment/sasd-test-rig/hydraulic-&-pneumatic-test-system" className={linkClass}>Hydraulic Oil / Synthetic Fluids</a></td>
+            <td className="px-4 py-2 border-b"><a href="/products/aviation-equipment/ground-test-equipment/sasd-test-rig/hydraulic-and-pneumatic-test-system" className={linkClass}>Hydraulic Oil / Synthetic Fluids</a></td>
             <td className="px-4 py-2 border-b">Compatible with aerospace-grade fluids</td>
           </tr>
 

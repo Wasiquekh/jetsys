@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "High-performance Fuel Transfer & Defueling Trolley by Jetsys Defence for safe aircraft fuel transfer, defueling, and circulation. Ideal for aviation fuel handling, ground support, and military operations.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/fuel-transfer-&-defueling-trolley",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/fuel-transfer-and-defueling-trolley",
   },
 };
 
