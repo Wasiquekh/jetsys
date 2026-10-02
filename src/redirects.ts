@@ -29,6 +29,22 @@ const CONSOLIDATED: Record<string, string> = {
     "/products/aviation-equipment/ground-supply-equipment/ground-power-unit",
   "/products/aviation-equipment/ground-supply-equipment/ground-power-unit/ground-power-unit-for-aircraft-maintenance":
     "/products/aviation-equipment/ground-supply-equipment/ground-power-unit",
+  "/products/aviation-equipment/ground-test-equipment/air-data-test-system/air_data_test_equipment":
+    "/products/aviation-equipment/ground-test-equipment/air-data-test-system",
+  "/products/aviation-equipment/ground-test-equipment/air-data-test-system/aircraft_pitot_static_tester":
+    "/products/aviation-equipment/ground-test-equipment/air-data-test-system/pitot_static_test_equipment",
+  "/products/aviation-equipment/ground-test-equipment/air-data-test-system/pitot_static_calibration_system":
+    "/products/aviation-equipment/ground-test-equipment/air-data-test-system/aircraft_air_data_calibration_system",
+  "/products/aviation-equipment/ground-test-equipment/automated-pitot-leak-tester/air_data_test_equipment":
+    "/products/aviation-equipment/ground-test-equipment/air-data-test-system/pitot_static_test_equipment",
+  "/products/aviation-equipment/ground-test-equipment/automated-pitot-leak-tester/aircraft-pitot-static-tester":
+    "/products/aviation-equipment/ground-test-equipment/air-data-test-system/pitot_static_test_equipment",
+  "/products/aviation-equipment/ground-test-equipment/automated-pitot-leak-tester/aircraft_air_data_calibration_system":
+    "/products/aviation-equipment/ground-test-equipment/air-data-test-system/aircraft_air_data_calibration_system",
+  "/products/aviation-equipment/ground-test-equipment/automated-pitot-leak-tester/pitot_static_leak_tester":
+    "/products/aviation-equipment/ground-test-equipment/automated-pitot-leak-tester",
+  "/products/aviation-equipment/ground-test-equipment/automated-pitot-leak-tester/pitot_static_test_equipment":
+    "/products/aviation-equipment/ground-test-equipment/air-data-test-system/pitot_static_test_equipment",
   // @@CONSOLIDATED@@
 };
 
