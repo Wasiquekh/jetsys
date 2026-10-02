@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -275,6 +276,16 @@ const page = () => {
                   </p>
                 </div>
               </section>
+<RelatedLinks
+  heading="Related Equipment"
+  intro="This page covers one configuration in the Jetsys Defence ground power range. The main ground power unit page lists every variant and the full specification table."
+  links={[
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit", label: "Ground power unit overview and specifications" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit/electric-ground-power-unit", label: "Electric ground power unit (eGPU)" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit/mobile_ground_power_unit", label: "Mobile and portable GPU" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/portable-engine-starting-trolley", label: "Portable engine starting trolley" },
+  ]}
+/>
 
             </div>
           </div>

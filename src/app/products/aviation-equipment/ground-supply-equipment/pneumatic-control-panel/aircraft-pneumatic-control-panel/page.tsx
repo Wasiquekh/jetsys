@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -7,9 +8,9 @@ import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
 
 export const metadata: Metadata = {
-  title: "Military Ground Power Unit | Aviation Pneumatic Control Panel System | Jetsys Defence",
+  title: "Aircraft Pneumatic Control Panel with Integrated Ground Power | Jetsys Defence",
   description:
-    "Military Ground Power Unit with aviation pneumatic control panel system by Jetsys Defence. Advanced aircraft pneumatic control system for reliable ground operations and defense aviation.",
+    "Aircraft pneumatic control panel by Jetsys Defence integrated with a military ground power unit, combining regulated compressed air and 400 Hz AC / 28.5 V DC power for ground support.",
   alternates: {
     canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/pneumatic-control-panel/aircraft-pneumatic-control-panel",
   },
@@ -24,9 +25,7 @@ const page = () => {
         <section>
           <div className="container">
             <div>
-              <h1 className="text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
-                Military Ground Power Unit with Aviation Pneumatic Control Panel System by Jetsys Defence
-              </h1>
+              <h1 className="text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Aircraft Pneumatic Control Panel with Integrated Military Ground Power Unit</h1>
               <p className="font-medium text-base">
                 Jetsys Defence delivers a high-performance Military Ground Power Unit integrated with an advanced aviation
                 pneumatic control panel system, designed under the Aviation Equipment – Pneumatic Control Panel category.
@@ -326,6 +325,14 @@ const page = () => {
                   </p>
                 </div>
               </section>
+<RelatedLinks
+  heading="Related Equipment"
+  intro="This page covers one configuration in a wider Jetsys Defence range. The overview page has the full details."
+  links={[
+    { href: "/products/aviation-equipment/ground-supply-equipment/pneumatic-control-panel", label: "Pneumatic Control Panel overview" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/pneumatic-control-panel/defence-pneumatic-control-panel", label: "Defence Pneumatic Control Panel" },
+  ]}
+/>
 
             </div>
           </div>

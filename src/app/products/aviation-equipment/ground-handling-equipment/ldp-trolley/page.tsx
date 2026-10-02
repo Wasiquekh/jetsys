@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -316,6 +317,18 @@ const page = () => {
     </div>
   </div>
 </section>
+<RelatedLinks
+  heading="Variants and Related Equipment"
+  intro="The pages below cover the individual configurations and applications in this range."
+  links={[
+    { href: "/products/aviation-equipment/ground-handling-equipment/ldp-trolley/aircraft_payload_trolley", label: "Aircraft Payload Trolley" },
+    { href: "/products/aviation-equipment/ground-handling-equipment/ldp-trolley/aircraft_pylon_loading_trolley", label: "Aircraft Pylon Loading Trolley" },
+    { href: "/products/aviation-equipment/ground-handling-equipment/ldp-trolley/dummy_pod_trolley", label: "Dummy Pod Trolley" },
+    { href: "/products/aviation-equipment/ground-handling-equipment/ldp-trolley/laser_designation_pod", label: "Laser Designation Pod Trolley" },
+    { href: "/products/aviation-equipment/ground-handling-equipment/ldp-trolley/practice_bomb_handling_trolley", label: "Practice Bomb Handling Trolley" },
+    { href: "/products/aviation-equipment/ground-handling-equipment", label: "Ground Handling Equipment range" },
+  ]}
+/>
 
               </div> 
         </div>

@@ -84,7 +84,7 @@ const Page = () => {
                 />
                 <div className=" bg-[#EDEBD2] border border-primary rounded-2xl flex flex-col items-center py-8">
                   <p className=" font-bold text-[40px] mb-2">1000+</p>
-                  <ScrollUpText className=" font-medium text-base">
+                  <ScrollUpText as="p" className=" font-medium text-base leading-[1.1]">
                     Precision Parts <br /> Manufactured
                   </ScrollUpText>
                 </div>
@@ -98,7 +98,7 @@ const Page = () => {
                 />
                 <div className=" bg-[#EDEBD2] border border-primary rounded-2xl flex flex-col items-center py-8">
                   <p className=" font-bold text-[40px] mb-2">99%</p>
-                  <ScrollUpText className=" font-medium text-base text-center">
+                  <ScrollUpText as="p" className=" font-medium text-base leading-[1.1] text-center">
                     Quality <br /> Assurance Rate
                   </ScrollUpText>
                 </div>
@@ -112,7 +112,7 @@ const Page = () => {
                 />
                 <div className=" bg-[#EDEBD2] border border-primary rounded-2xl flex flex-col items-center py-8">
                   <p className=" font-bold text-[40px] mb-2">300+</p>
-                  <ScrollUpText className=" font-medium text-base text-center">
+                  <ScrollUpText as="p" className=" font-medium text-base leading-[1.1] text-center">
                     Precision Tests <br /> Conducted
                   </ScrollUpText>
                 </div>
@@ -126,7 +126,7 @@ const Page = () => {
                 />
                 <div className=" bg-[#EDEBD2] border border-primary rounded-2xl flex flex-col items-center py-8">
                   <p className=" font-bold text-[40px] mb-2">18+</p>
-                  <ScrollUpText className=" font-medium text-base text-center">
+                  <ScrollUpText as="p" className=" font-medium text-base leading-[1.1] text-center">
                     Testing & Validation <br /> Processes
                   </ScrollUpText>
                 </div>

@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -215,6 +216,14 @@ const page = () => {
                   </div>
                 </div>
               </section>
+<RelatedLinks
+  heading="Variants and Related Equipment"
+  intro="The pages below cover the individual configurations and applications in this range."
+  links={[
+    { href: "/products/aviation-equipment/ground-support-equipment/nose-jack/aviation-ground-support-lack", label: "Aviation Ground Support Jack" },
+    { href: "/products/aviation-equipment/ground-support-equipment", label: "Ground Support Equipment range" },
+  ]}
+/>
             </div>
           </div>
         </section>

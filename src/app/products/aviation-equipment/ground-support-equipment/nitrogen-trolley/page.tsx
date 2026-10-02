@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -446,6 +447,16 @@ const page = () => {
                 </div>
               </div>
             </section>
+<RelatedLinks
+  heading="Variants and Related Equipment"
+  intro="The pages below cover the individual configurations and applications in this range."
+  links={[
+    { href: "/products/aviation-equipment/ground-support-equipment/nitrogen-trolley/hydraulic_accumulator_charging", label: "Hydraulic Accumulator Charging Equipment" },
+    { href: "/products/aviation-equipment/ground-support-equipment/nitrogen-trolley/nitrogen_purging", label: "Nitrogen Purging System for Aviation Equipment" },
+    { href: "/products/aviation-equipment/ground-support-equipment/nitrogen-trolley/tire_inflation", label: "Aviation Tire Inflation Equipment" },
+    { href: "/products/aviation-equipment/ground-support-equipment", label: "Ground Support Equipment range" },
+  ]}
+/>
           </div>
         </section>
         <Footer />

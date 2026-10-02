@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -9,9 +10,9 @@ import OrderNowContactButton from "@/app/components/ContactUsModalButton";
 
 export const metadata: Metadata = {
   title:
-    "Aircraft Air Data Calibration System | Jetsys Defence",
+    "Aircraft Air Data Calibration System | Pitot Static Calibration | Jetsys Defence",
   description:
-    "Discover aircraft air data calibration system by Jetsys Defence for precise air data testing, pressure calibration, and reliable aviation system validation solutions.",
+    "Aircraft air data calibration system by Jetsys Defence for calibrating pitot-static, altitude and airspeed instruments, with digital, portable and integrated configurations.",
   alternates: {
     canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-test-equipment/air-data-test-system/aircraft_air_data_calibration_system",
   },
@@ -241,6 +242,16 @@ const page = () => {
                   </p>
                 </div>
               </section>
+<RelatedLinks
+  heading="Related Air Data Test Equipment"
+  intro="Calibration systems are part of the Jetsys Defence air data test range."
+  links={[
+    { href: "/products/aviation-equipment/ground-test-equipment/air-data-test-system", label: "Air data test system (ADTS)" },
+    { href: "/products/aviation-equipment/ground-test-equipment/air-data-test-system/pitot_static_test_equipment", label: "Pitot static test equipment" },
+    { href: "/products/aviation-equipment/ground-test-equipment/automated-pitot-leak-tester", label: "Automated pitot leak tester" },
+    { href: "/products/aviation-equipment/ground-test-equipment", label: "All ground test equipment" },
+  ]}
+/>
             </div>
           </div>
         </section>

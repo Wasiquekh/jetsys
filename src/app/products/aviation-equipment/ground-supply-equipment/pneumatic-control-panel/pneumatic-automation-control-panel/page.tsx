@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -353,6 +354,14 @@ const page = () => {
                   </p>
                 </div>
               </section>
+<RelatedLinks
+  heading="Related Equipment"
+  intro="This page covers one configuration in a wider Jetsys Defence range. The overview page has the full details."
+  links={[
+    { href: "/products/aviation-equipment/ground-supply-equipment/pneumatic-control-panel", label: "Pneumatic Control Panel overview" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/pneumatic-control-panel/pneumatic-filtration-panel", label: "Pneumatic Filtration Panel" },
+  ]}
+/>
 
             </div>
           </div>

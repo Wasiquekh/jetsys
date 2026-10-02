@@ -15,7 +15,7 @@ export default function Page() {
                 <section>
                   <div className="container">
                     <ScrollUpText className=" text-center text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
-                      Our Solutions
+                      Testing &amp; Maintenance Solutions
                            </ScrollUpText>
                     <h2 className=" font-bold text-3xl text-[#5C5649] text-center mb-5">
                       End-to-end defence solutions for indigenization and self-reliance.

@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -9,9 +10,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Air Data Test System for Aircraft | Jetsys Defence Aviation Equipment",
+    "Air Data Test System (ADTS) for Aircraft | Air Data Test Set | Jetsys Defence",
   description:
-    "Discover Jetsys Defence Air Data Test System engineered for aircraft pressure & pitot-static calibration. View full Air Data Test System set & best price today.",
+    "Air Data Test System (ADTS) by Jetsys Defence for testing and calibrating aircraft pitot-static, altitude and airspeed systems, with altitude to 60,000 ft and airspeed to 650 kt.",
   alternates: {
     canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-test-equipment/air-data-test-system",
   },
@@ -30,9 +31,7 @@ const page = () => {
                 Air Data Test System — Advanced Calibration for Aircraft Systems by Jetsys Defence
               </h1>
               <p className="font-medium text-base">
-                The <Link href="/products/aviation-equipment/ground-test-equipment/air-data-test-system/air_data_test_equipment" className="hover:underline no-underline text-inherit">
-                  Air Data Test System (ADTS)
-                </Link> from Jetsys Defence is a state-of-the-art solution for precise calibration and testing of aircraft pressure, pitot-static, and altitude systems. Essential for MROs, OEMs, and aviation technicians, our system ensures peak accuracy in airspeed, altitude, and other atmospheric measurements for all aircraft types.
+                The Air Data Test System (ADTS) from Jetsys Defence is a state-of-the-art solution for precise calibration and testing of aircraft pressure, pitot-static, and altitude systems. Essential for MROs, OEMs, and aviation technicians, our system ensures peak accuracy in airspeed, altitude, and other atmospheric measurements for all aircraft types.
               </p>
               
               <br></br><br></br>
@@ -51,9 +50,7 @@ const page = () => {
                 <div>
                   <h3 className="font-bold text-3xl text-[#5C5649] mb-5">Product Overview</h3>
                   <p className="text-black mb-6">
-                    The Jetsys Defence <Link href="/products/aviation-equipment/ground-test-equipment/air-data-test-system/air_data_test_equipment" className="hover:underline no-underline text-inherit">
-                      Air Data Test Equipment
-                    </Link> delivers highly accurate, fast, and reliable results for 
+                    The Jetsys Defence Air Data Test Equipment delivers highly accurate, fast, and reliable results for 
                     <Link href="/products/aviation-equipment/ground-test-equipment/air-data-test-system/pitot_static_test_equipment" className="hover:underline no-underline text-inherit">
                       pitot-static systems
                     </Link> on both civil and military aircraft. With fully automated functions and easy-to-use interfaces, this system simplifies routine maintenance, troubleshooting, and compliance verification for flight-critical systems.
@@ -81,7 +78,7 @@ const page = () => {
                         <li>
                           <h4 className="font-bold text-[#5C5649]">Aircraft Maintenance & Overhaul</h4>
                           Perform precise {" "}
-                          <Link href="/products/aviation-equipment/ground-test-equipment/air-data-test-system/aircraft_pitot_static_tester" className="hover:underline no-underline text-inherit">
+                          <Link href="/products/aviation-equipment/ground-test-equipment/air-data-test-system/pitot_static_test_equipment" className="hover:underline no-underline text-inherit">
                             pitot-static tests
                           </Link> after component installation or during routine inspection.
                         </li>
@@ -180,9 +177,7 @@ const page = () => {
               <section><br></br><br></br>
                 <div>
                   <h3 className="font-bold text-3xl text-[#5C5649] mb-5">
-                    <Link href="/products/aviation-equipment/ground-test-equipment/air-data-test-system/air_data_test_equipment" className="hover:underline no-underline text-inherit">
-                      Air Data Test System Set
-                    </Link> — What&quot;s Included
+                    Air Data Test System Set — What&quot;s Included
                   </h3>
 
                   <h4 className="font-bold text-[#5C5649] mb-3">Standard Kit Includes:</h4>
@@ -221,9 +216,7 @@ const page = () => {
                   </h3>
                   <p className="text-black">
                     The {" "}
-                    <Link href="/products/aviation-equipment/ground-test-equipment/air-data-test-system/air_data_test_equipment" className="hover:underline no-underline text-inherit">
-                      Air Data Test System
-                    </Link> price varies based on configuration (channels, remote operation features, and accessories). 
+                    Air Data Test System price varies based on configuration (channels, remote operation features, and accessories). 
                     For the best price tailored to your fleet&quot;s needs, please contact Jetsys Defence for a personalized quote.
                   </p>
                 </div>
@@ -233,7 +226,7 @@ const page = () => {
                 <div>
                   <h3 className="font-bold text-3xl text-[#5C5649] mb-5">
                     Why Jetsys Defence for {" "}
-                    <Link href="/products/aviation-equipment/ground-test-equipment/air-data-test-system/pitot_static_calibration_system" className="hover:underline no-underline text-inherit">
+                    <Link href="/products/aviation-equipment/ground-test-equipment/air-data-test-system/aircraft_air_data_calibration_system" className="hover:underline no-underline text-inherit">
                       Air Data Test System
                     </Link>
                   </h3>
@@ -261,6 +254,16 @@ const page = () => {
                   </div> 
                 </div>
               </section>
+<RelatedLinks
+  heading="Related Air Data Test Equipment"
+  intro="The air data range also covers dedicated pitot-static testers, calibration and leak testing."
+  links={[
+    { href: "/products/aviation-equipment/ground-test-equipment/air-data-test-system/pitot_static_test_equipment", label: "Pitot static test equipment" },
+    { href: "/products/aviation-equipment/ground-test-equipment/air-data-test-system/aircraft_air_data_calibration_system", label: "Air data calibration system" },
+    { href: "/products/aviation-equipment/ground-test-equipment/automated-pitot-leak-tester", label: "Automated pitot leak tester" },
+    { href: "/products/aviation-equipment/ground-test-equipment", label: "All ground test equipment" },
+  ]}
+/>
             </div>
           </div>
         </section>

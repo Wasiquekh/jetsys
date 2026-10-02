@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "High-performance Fuel Transfer & Defueling Trolley by Jetsys Defence for safe aircraft fuel transfer, defueling, and circulation. Ideal for aviation fuel handling, ground support, and military operations.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/fuel-transfer-&-defueling-trolley",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/fuel-transfer-and-defueling-trolley",
   },
 };
 
@@ -190,6 +191,14 @@ const Page = () => {
                 <div className="mt-6">
                 </div>
               </section>
+<RelatedLinks
+  heading="Related Equipment"
+  intro="This page covers one configuration in a wider Jetsys Defence range. The overview page has the full details."
+  links={[
+    { href: "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley", label: "Fuel Consumption Trolley overview" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/aircraft-fuel-consumption-trolley", label: "Aircraft Fuel Consumption Trolley" },
+  ]}
+/>
             </div>
           </div>
         </section>

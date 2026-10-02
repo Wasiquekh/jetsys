@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -419,6 +420,20 @@ const page = () => {
     </div>
   </div>
 </section>
+<RelatedLinks
+  heading="Variants and Related Equipment"
+  intro="The pages below cover the individual configurations and applications in this range."
+  links={[
+    { href: "/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley/aircraft_bomb_loader", label: "Aircraft Bomb Loader" },
+    { href: "/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley/aircraft_pylon_loader", label: "Aircraft Pylon Loader" },
+    { href: "/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley/bomb-troller", label: "Bomb Roller" },
+    { href: "/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley/fuel_tank_handling_trolley", label: "Fuel Tank Handling Trolley" },
+    { href: "/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley/hydraulic_power_pack", label: "Hydraulic Power Pack" },
+    { href: "/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley/missile-loading-trolley", label: "Missile Loading Trolley" },
+    { href: "/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley/seal_kit", label: "Seal Kit for Hydraulic & Aviation Systems" },
+    { href: "/products/aviation-equipment/ground-handling-equipment", label: "Ground Handling Equipment range" },
+  ]}
+/>
 
           </div>       
         </div>

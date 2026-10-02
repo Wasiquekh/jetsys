@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -7,7 +8,7 @@ import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
 
 export const metadata: Metadata = {
-  title: "Ground Power Unit for Airports | Airport Ground Power Unit System | Jetsys Defence",
+  title: "Ground Power Unit for Airports | Airport GPU Systems | Jetsys Defence",
   description:
     "High-performance Ground Power Unit for Airports by Jetsys Defence. Reliable airport ground power unit and aircraft stand power supply for efficient aviation operations.",
   alternates: {
@@ -29,8 +30,7 @@ const page = () => {
               </h1>
               <p className="font-medium text-base">
                 Jetsys Defence presents a high-efficiency Ground Power Unit for Airports, designed to deliver reliable and
-                continuous airport ground power unit solutions for modern aviation infrastructure. As part of our Runway
-                Spares category, this advanced system ensures stable aircraft stand power supply for seamless airport
+                continuous airport ground power unit solutions for modern aviation infrastructure. As part of our ground supply equipment range, this advanced system ensures stable aircraft stand power supply for seamless airport
                 operations. Our expertise in ground power system airport solutions positions Jetsys Defence as a trusted
                 provider for civil and military aviation environments.
               </p>
@@ -330,6 +330,16 @@ const page = () => {
                   </p>
                 </div>
               </section>
+<RelatedLinks
+  heading="Related Equipment"
+  intro="This page covers one configuration in the Jetsys Defence ground power range. The main ground power unit page lists every variant and the full specification table."
+  links={[
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit", label: "Ground power unit overview and specifications" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit/solid_state_rectifier", label: "Solid-state rectifier" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit/28.5vdc-ground-power-unit", label: "28.5 V DC ground power unit" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/portable-engine-starting-trolley", label: "Portable engine starting trolley" },
+  ]}
+/>
 
             </div>
           </div>

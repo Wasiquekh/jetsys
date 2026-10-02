@@ -9,9 +9,9 @@ export default function TeamSlider({ slides }: { slides: string[] }) {
   return (
     <section className="bg-[#F0EFE9]">
       <div className="container !pb-0">
-        <h1 className="text-center text-[#5c5649] text-[26px] md:text-[40px] font-extrabold uppercase mb-7 horizon">
+        <h2 className="text-center text-[#5c5649] text-[26px] md:text-[40px] leading-[1.1] font-extrabold uppercase mb-7 horizon">
           Our team
-        </h1>
+        </h2>
         <div className="w-full mx-auto">
           <Swiper
             modules={[Autoplay]}

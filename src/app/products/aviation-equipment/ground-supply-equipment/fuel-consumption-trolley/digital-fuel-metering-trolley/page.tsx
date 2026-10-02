@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -206,6 +207,14 @@ const Page = () => {
                   Jetsys Defence is a leading aviation fuel metering system supplier delivering high-performance, accurate, and reliable systems. Choose our digital fuel metering trolley for advanced fuel measurement, monitoring, and control in aviation and aerospace applications.
                 </p>
               </section>
+<RelatedLinks
+  heading="Related Equipment"
+  intro="This page covers one configuration in a wider Jetsys Defence range. The overview page has the full details."
+  links={[
+    { href: "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley", label: "Fuel Consumption Trolley overview" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/fuel-flow-measurement-trolley", label: "Fuel Flow Measurement Trolley" },
+  ]}
+/>
 
             </div>
           </div>

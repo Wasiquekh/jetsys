@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -8,9 +9,9 @@ import OrderNowContactButton from "@/app/components/ContactUsModalButton";
 
 export const metadata: Metadata = {
   title:
-    "Taxiway Guidance Sign by Jetsys Defence – Quality Runway Spares & Price List",
+    "Taxiway Edge Inset Light | LED & Halogen Taxiway Lighting | Jetsys Defence",
   description:
-    "Upgrade your airport with reliable Taxiway Guidance Sign units from Jetsys Defence. Built for clarity and longevity. Request your Taxiway Guidance Sign price and specifications today.",
+    "Taxiway edge inset lights by Jetsys Defence: flush-mounted in-pavement LED or halogen fixtures for 6.6 A airfield circuits, rated IP67, for taxiways and aprons.",
   alternates: {
     canonical: "https://www.jetsys.co.in/products/runway-spares/runway-lights/taxiway-edge-inset-light",
   },
@@ -354,6 +355,21 @@ const page = () => {
                   Our fixtures are developed to outperform in demanding airfield environments.
                 </p>
               </section>
+<RelatedLinks
+  heading="Variants and Related Equipment"
+  intro="The pages below cover the individual configurations and applications in this range."
+  links={[
+    { href: "/products/runway-spares/runway-lights/taxiway-edge-inset-light/airfield-lighting-system", label: "Airfield Lighting System" },
+    { href: "/products/runway-spares/runway-lights/taxiway-edge-inset-light/airport-ground-lighting-system", label: "Airport Ground Lighting System" },
+    { href: "/products/runway-spares/runway-lights/taxiway-edge-inset-light/blue-taxiway-edge-lights", label: "Blue Taxiway Edge Lights" },
+    { href: "/products/runway-spares/runway-lights/taxiway-edge-inset-light/halogen-taxiway-lights", label: "Halogen Taxiway Lights" },
+    { href: "/products/runway-spares/runway-lights/taxiway-edge-inset-light/led-taxiway-lights", label: "LED Taxiway Lights" },
+    { href: "/products/runway-spares/runway-lights/taxiway-edge-inset-light/taxiway-edge-lights", label: "Taxiway Edge Lights" },
+    { href: "/products/runway-spares/runway-lights/taxiway-edge-inset-light/taxiway-inset-lights", label: "Taxiway Inset Lights" },
+    { href: "/products/runway-spares/runway-lights/taxiway-edge-inset-light/taxiway-lighting-system", label: "Taxiway Lighting System" },
+    { href: "/products/runway-spares/runway-lights", label: "Runway Lights range" },
+  ]}
+/>
             </div>
           </div>
         </section>

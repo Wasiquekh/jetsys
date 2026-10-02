@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -8,7 +9,7 @@ import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
 export const metadata: Metadata = {
   title:
-    "Jetsys Defence | Shallow Base – Premium Runway Spares & Units",
+    "Shallow Base for Inset Airfield Lights | Runway Spares | Jetsys Defence",
   description:
     "Explore Jetsys Defence’s high-quality Shallow Base units for airport runway spares. Get competitive Shallow Base price quotes, reliable supply and efficient logistics for defence & aviation infrastructure.",
   alternates: {
@@ -337,6 +338,22 @@ const page = () => {
     </div>
   </div>
 </section>
+<RelatedLinks
+  heading="Variants and Related Equipment"
+  intro="The pages below cover the individual configurations and applications in this range."
+  links={[
+    { href: "/products/runway-spares/mafi-spares/shallow-base/airfield-lighting-base", label: "Airfield Lighting Base" },
+    { href: "/products/runway-spares/mafi-spares/shallow-base/apron_lighting_base", label: "Apron Lighting Base" },
+    { href: "/products/runway-spares/mafi-spares/shallow-base/helipad-lighting-base", label: "Helipad Lighting Base" },
+    { href: "/products/runway-spares/mafi-spares/shallow-base/inset-light-base", label: "Inset Light Base" },
+    { href: "/products/runway-spares/mafi-spares/shallow-base/led-airfield-light-base", label: "LED Airfield Light Base" },
+    { href: "/products/runway-spares/mafi-spares/shallow-base/runway-light-base", label: "Runway Light Base" },
+    { href: "/products/runway-spares/mafi-spares/shallow-base/runway-lighting-base-system", label: "Runway Lighting Base System" },
+    { href: "/products/runway-spares/mafi-spares/shallow-base/solar-airfield-light-base", label: "Solar Airfield Light Base" },
+    { href: "/products/runway-spares/mafi-spares/shallow-base/taxiway-lighting-base", label: "Taxiway Lighting Base" },
+    { href: "/products/runway-spares/mafi-spares", label: "Mafi Spares range" },
+  ]}
+/>
 
      </div>       
         </div>

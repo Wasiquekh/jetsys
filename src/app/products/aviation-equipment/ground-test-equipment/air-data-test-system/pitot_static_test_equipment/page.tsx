@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -9,7 +10,7 @@ import OrderNowContactButton from "@/app/components/ContactUsModalButton";
 
 export const metadata: Metadata = {
   title:
-    "Pitot Static Test Equipment | Jetsys Defence Aviation Systems",
+    "Pitot Static Test Equipment | Aircraft Pitot Static Testers | Jetsys Defence",
   description:
     "Explore pitot static test equipment by Jetsys Defence including pitot static testers, test boxes, and leak testers for accurate aircraft air data system calibration.",
   alternates: {
@@ -26,9 +27,7 @@ const page = () => {
         <section>
           <div className="container">
             <div>
-              <h1 className="text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
-                Pitot Static Test Equipment – Aviation Equipment by Jetsys Defence
-              </h1>
+              <h1 className="text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Pitot Static Test Equipment – Aircraft Pitot Static Testers by Jetsys Defence</h1>
               <p className="font-medium text-base">
                 The Pitot Static Test Equipment by Jetsys Defence is a
                 high-precision aviation testing solution designed to calibrate
@@ -278,6 +277,16 @@ const page = () => {
                   </p>
                 </div>
               </section>
+<RelatedLinks
+  heading="Related Air Data Test Equipment"
+  intro="Pitot-static testers are part of the Jetsys Defence air data test range."
+  links={[
+    { href: "/products/aviation-equipment/ground-test-equipment/air-data-test-system", label: "Air data test system (ADTS)" },
+    { href: "/products/aviation-equipment/ground-test-equipment/air-data-test-system/aircraft_air_data_calibration_system", label: "Air data calibration system" },
+    { href: "/products/aviation-equipment/ground-test-equipment/automated-pitot-leak-tester", label: "Automated pitot leak tester" },
+    { href: "/products/aviation-equipment/ground-test-equipment", label: "All ground test equipment" },
+  ]}
+/>
             </div>
           </div>
         </section>

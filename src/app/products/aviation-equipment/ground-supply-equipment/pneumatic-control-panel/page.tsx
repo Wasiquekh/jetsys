@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -320,6 +321,22 @@ const page = () => {
                   </div>
                 </div>
               </section>
+<RelatedLinks
+  heading="Variants and Related Equipment"
+  intro="The pages below cover the individual configurations and applications in this range."
+  links={[
+    { href: "/products/aviation-equipment/ground-supply-equipment/pneumatic-control-panel/aircraft-pneumatic-control-panel", label: "Aircraft Pneumatic Control Panel with Integrated Military Ground Power Unit" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/pneumatic-control-panel/defence-pneumatic-control-panel", label: "Defence Pneumatic Control Panel" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/pneumatic-control-panel/electro-pneumatic-control-panel", label: "Electro Pneumatic Control Panel" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/pneumatic-control-panel/plc-based-pneumatic-control-panel", label: "PLC Based Pneumatic Control Panel" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/pneumatic-control-panel/pneumatic-automation-control-panel", label: "Pneumatic Automation Control Panel" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/pneumatic-control-panel/pneumatic-filtration-panel", label: "Pneumatic Filtration Panel" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/pneumatic-control-panel/pneumatic-pressure-control-panel", label: "Pneumatic Pressure Control Panel" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/pneumatic-control-panel/pneumatic-test-control-panel", label: "Pneumatic Test Control Panel" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/pneumatic-control-panel/pneumatic-valve-control-panel", label: "Pneumatic Valve Control Panel" },
+    { href: "/products/aviation-equipment/ground-supply-equipment", label: "Ground Supply Equipment range" },
+  ]}
+/>
             </div>
           </div>
         </section>

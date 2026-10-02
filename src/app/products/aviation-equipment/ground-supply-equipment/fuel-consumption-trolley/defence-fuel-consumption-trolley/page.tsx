@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -206,6 +207,14 @@ const Page = () => {
                   Jetsys Defence is a leading military fuel service trolley supplier delivering high-performance, reliable, and precise fuel systems. Choose our defence fuel consumption trolley for advanced fuel monitoring, measurement, and control in defence and aerospace operations.
                 </p>
               </section>
+<RelatedLinks
+  heading="Related Equipment"
+  intro="This page covers one configuration in a wider Jetsys Defence range. The overview page has the full details."
+  links={[
+    { href: "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley", label: "Fuel Consumption Trolley overview" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/digital-fuel-metering-trolley", label: "Digital Fuel Metering Trolley" },
+  ]}
+/>
 
             </div>
           </div>

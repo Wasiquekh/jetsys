@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -171,7 +172,7 @@ const page = () => {
 
                         <tr>
                           <td className="px-4 py-2 border-b">Light Source</td>
-                          <td className="px-4 py-2 border-b"><a href="/products/runway-spares/runway-lights/touchdown-zone-light/led-runway-lights" className="hover:underline" style={{ color: 'inherit' }}>LED</a> / <a href="/products/runway-spares/runway-lights/touchdown-zone-light/halogen-runway-lights" className="hover:underline" style={{ color: 'inherit' }}>Halogen</a> options</td>
+                          <td className="px-4 py-2 border-b"><a href="/products/runway-spares/runway-lights/touchdown-zone-light/high-intensity-runway-lights" className="hover:underline" style={{ color: 'inherit' }}>LED</a> / <a href="/products/runway-spares/runway-lights/touchdown-zone-light/halogen-runway-lights" className="hover:underline" style={{ color: 'inherit' }}>Halogen</a> options</td>
                         </tr>
 
                         <tr>
@@ -237,7 +238,7 @@ const page = () => {
 
                   <p className="text-black mb-4">
                     Jetsys Defence provides direct manufacturer pricing for TDZL units, spare assemblies, and maintenance components.
-                    Since the price varies based on runway length, operational category, <a href="/products/runway-spares/runway-lights/touchdown-zone-light/led-runway-lights" className="hover:underline" style={{ color: 'inherit' }}>LED</a> or <a href="/products/runway-spares/runway-lights/touchdown-zone-light/halogen-runway-lights" className="hover:underline" style={{ color: 'inherit' }}>halogen</a> configuration, and installation type,
+                    Since the price varies based on runway length, operational category, <a href="/products/runway-spares/runway-lights/touchdown-zone-light/high-intensity-runway-lights" className="hover:underline" style={{ color: 'inherit' }}>LED</a> or <a href="/products/runway-spares/runway-lights/touchdown-zone-light/halogen-runway-lights" className="hover:underline" style={{ color: 'inherit' }}>halogen</a> configuration, and installation type,
                     we provide customised quotations for each project.
                   </p>
 
@@ -248,7 +249,7 @@ const page = () => {
                   <ul className="list-disc pl-5 space-y-2 text-black">
                     <li>Share runway category (<a href="/products/runway-spares/runway-lights/touchdown-zone-light/precision-runway-lighting-system" className="hover:underline" style={{ color: 'inherit' }}>precision</a> / non-precision)</li>
                     <li>Required runway length</li>
-                    <li><a href="/products/runway-spares/runway-lights/touchdown-zone-light/led-runway-lights" className="hover:underline" style={{ color: 'inherit' }}>LED</a> or <a href="/products/runway-spares/runway-lights/touchdown-zone-light/halogen-runway-lights" className="hover:underline" style={{ color: 'inherit' }}>halogen</a> preference</li>
+                    <li><a href="/products/runway-spares/runway-lights/touchdown-zone-light/high-intensity-runway-lights" className="hover:underline" style={{ color: 'inherit' }}>LED</a> or <a href="/products/runway-spares/runway-lights/touchdown-zone-light/halogen-runway-lights" className="hover:underline" style={{ color: 'inherit' }}>halogen</a> preference</li>
                     <li>Quantity and spare parts required</li>
                   </ul>
 
@@ -291,7 +292,7 @@ const page = () => {
                         Aviation-Grade Optics & LED Technology
                       </h3>
                       <ul className="list-disc pl-6">
-                        <li>High-intensity <a href="/products/runway-spares/runway-lights/touchdown-zone-light/led-runway-lights" className="hover:underline" style={{ color: 'inherit' }}>LED lighting</a> with uniform brightness.</li>
+                        <li>High-intensity <a href="/products/runway-spares/runway-lights/touchdown-zone-light/high-intensity-runway-lights" className="hover:underline" style={{ color: 'inherit' }}>LED lighting</a> with uniform brightness.</li>
                         <li>Low power consumption and long operating life.</li>
                         <li>Performs efficiently in harsh weather conditions.</li>
                       </ul>
@@ -369,6 +370,19 @@ const page = () => {
 
                 </section>
               </section>
+<RelatedLinks
+  heading="Variants and Related Equipment"
+  intro="The pages below cover the individual configurations and applications in this range."
+  links={[
+    { href: "/products/runway-spares/runway-lights/touchdown-zone-light/Rrunway-landing-lights-system", label: "Runway Landing Lights System" },
+    { href: "/products/runway-spares/runway-lights/touchdown-zone-light/halogen-runway-lights", label: "Halogen Runway Lights" },
+    { href: "/products/runway-spares/runway-lights/touchdown-zone-light/high-intensity-runway-lights", label: "High Intensity Runway Lights" },
+    { href: "/products/runway-spares/runway-lights/touchdown-zone-light/precision-runway-lighting-system", label: "Precision Runway Lighting System" },
+    { href: "/products/runway-spares/runway-lights/touchdown-zone-light/runway-inset-light", label: "Runway Inset Light" },
+    { href: "/products/runway-spares/runway-lights/touchdown-zone-light/runway-lighting-system", label: "Runway Lighting System" },
+    { href: "/products/runway-spares/runway-lights", label: "Runway Lights range" },
+  ]}
+/>
 
             </div>
           </div>

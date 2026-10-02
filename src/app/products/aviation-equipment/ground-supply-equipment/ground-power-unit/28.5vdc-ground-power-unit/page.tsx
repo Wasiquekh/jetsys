@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -7,7 +8,7 @@ import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
 
 export const metadata: Metadata = {
-  title: "28.5V DC Ground Power Unit | Aircraft DC Power Supply System | Jetsys Defence",
+  title: "28.5V DC Ground Power Unit | Aircraft DC Power Supply | Jetsys Defence",
   description:
     "Explore 28.5V DC Ground Power Unit by Jetsys Defence – reliable aircraft DC power supply system for aviation, military, and airport operations. High-performance DC GPU aircraft solutions.",
   alternates: {
@@ -24,12 +25,10 @@ const page = () => {
         <section>
           <div className="container">
             <div>
-              <h1 className="text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
-                28.5V DC Ground Power Unit | Aircraft DC Power Supply System | Jetsys Defence
-              </h1>
+              <h1 className="text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">28.5V DC Ground Power Unit – Aircraft DC Power Supply System</h1>
               <p className="font-medium text-base">
                 Jetsys Defence introduces a high-performance 28.5V DC Ground Power Unit, engineered to deliver stable and
-                efficient aircraft DC power supply for aviation environments. Designed under our Runway Spares category,
+                efficient aircraft DC power supply for aviation environments. Designed within our ground supply equipment range,
                 this advanced DC GPU aircraft system ensures uninterrupted ground operations with precision-engineered
                 power delivery. Our aviation DC power unit supports both civil and military aircraft, making Jetsys Defence
                 a trusted name among DC GPU aircraft manufacturers.
@@ -314,6 +313,16 @@ const page = () => {
                   </p>
                 </div>
               </section>
+<RelatedLinks
+  heading="Related Equipment"
+  intro="This page covers one configuration in the Jetsys Defence ground power range. The main ground power unit page lists every variant and the full specification table."
+  links={[
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit", label: "Ground power unit overview and specifications" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit/400hz-ground-power-unit", label: "400 Hz ground power unit" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit/electric-ground-power-unit", label: "Electric ground power unit (eGPU)" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/portable-engine-starting-trolley", label: "Portable engine starting trolley" },
+  ]}
+/>
 
             </div>
           </div>

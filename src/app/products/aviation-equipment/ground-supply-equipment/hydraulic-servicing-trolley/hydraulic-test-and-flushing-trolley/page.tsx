@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "High-performance hydraulic test & flushing trolley by Jetsys Defence for aviation, industrial, and defence use. Reliable hydraulic flushing unit for testing, cleaning, and system maintenance.",
   alternates: {
-    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley/hydraulic-test-&-flushing-trolley",
+    canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley/hydraulic-test-and-flushing-trolley",
   },
 };
 
@@ -303,6 +304,14 @@ const page = () => {
                   </p>                                                                                                                                                   
                 </div>
               </section>
+<RelatedLinks
+  heading="Related Equipment"
+  intro="This page covers one configuration in a wider Jetsys Defence range. The overview page has the full details."
+  links={[
+    { href: "/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley", label: "Hydraullic Servicing Trolley overview" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley/mobile-hydraulic-servicing-trolley", label: "Mobile Hydraulic Servicing Trolley" },
+  ]}
+/>
 
             </div>
           </div>

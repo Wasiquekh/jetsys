@@ -1,19 +1,14 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { REDIRECTS } from "./redirects";
 
-// Legacy WordPress URLs that have a genuine equivalent on the current site.
-// Anything without an equivalent is intentionally left to 404.
-const LEGACY_REDIRECTS: Record<string, string> = {
-  "/about": "/about-us",
-  "/contacts": "/contact-us",
-  "/what-we-do": "/solutions",
-  "/service/indigenization": "/solutions/indegenization",
-  "/service/test-rigs-test-chambers":
-    "/products/aviation-equipment/ground-test-equipment",
-  "/services/rig-chamber": "/products/aviation-equipment/ground-test-equipment",
-  "/steel": "/products/airborne-raw-materials",
-  "/service/aircraft-spares": "/products/aircraft-spares-system",
-  "/service/raw-materials": "/products/airborne-raw-materials",
-};
+// Redirect keys are stored decoded, so "%26" and a literal "&" both match.
+function decodePath(path: string) {
+  try {
+    return decodeURIComponent(path);
+  } catch {
+    return path;
+  }
+}
 
 export function middleware(request: NextRequest) {
   // request.url keeps the trailing slash; nextUrl.pathname may normalise it.
@@ -22,7 +17,7 @@ export function middleware(request: NextRequest) {
   // a protocol-relative URL.
   const path = "/" + pathname.replace(/^\/+|\/+$/g, "");
   const destination =
-    LEGACY_REDIRECTS[path] ?? (path !== pathname ? path : null);
+    REDIRECTS[decodePath(path)] ?? (path !== pathname ? path : null);
 
   if (!destination) return NextResponse.next();
 

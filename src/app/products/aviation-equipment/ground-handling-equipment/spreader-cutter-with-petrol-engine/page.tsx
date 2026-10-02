@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -402,6 +403,19 @@ const page = () => {
     </div>
   </div>
 </section>
+<RelatedLinks
+  heading="Variants and Related Equipment"
+  intro="The pages below cover the individual configurations and applications in this range."
+  links={[
+    { href: "/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/aircraft_door_opening_tool", label: "Aircraft Door Opening Tool" },
+    { href: "/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/aviation_tool", label: "Aircraft Rescue Tool" },
+    { href: "/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/hydraulic_cutter", label: "Hydraulic Cutter" },
+    { href: "/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/hydraulic_spreader", label: "Hydraulic Spreader" },
+    { href: "/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/metal_cutting_tool", label: "Metal Cutting Tool" },
+    { href: "/products/aviation-equipment/ground-handling-equipment/spreader-cutter-with-petrol-engine/replacement_blades", label: "Replacement Blades for Aviation Equipment" },
+    { href: "/products/aviation-equipment/ground-handling-equipment", label: "Ground Handling Equipment range" },
+  ]}
+/>
 
         </div>       
         </div>

@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import type { Metadata } from "next";
 import React from "react";
 import Header from "@/app/components/Header";
@@ -194,6 +195,14 @@ const page = () => {
                 </button>
               </Link>
             </div>
+<RelatedLinks
+  heading="Related Equipment"
+  intro="Related equipment from the wider Jetsys Defence range."
+  links={[
+    { href: "/products/aviation-equipment/ground-test-equipment", label: "Aircraft ground test equipment" },
+    { href: "/products/aviation-equipment/ground-support-equipment", label: "Ground support equipment" },
+  ]}
+/>
           </div>
         </div>
       </section>

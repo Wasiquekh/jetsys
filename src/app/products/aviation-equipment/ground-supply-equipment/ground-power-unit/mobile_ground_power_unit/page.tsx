@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -7,9 +8,9 @@ import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
 
 export const metadata: Metadata = {
-  title: "Aircraft Power Supply System | Portable GPU – Jetsys Defence",
+  title: "Mobile Ground Power Unit | Portable Aircraft GPU | Jetsys Defence",
   description:
-    "Discover Aircraft Power Supply Systems by Jetsys Defence. High-performance portable aircraft ground power units for reliable aviation power in airports and field operations.",
+    "Mobile and portable aircraft ground power units by Jetsys Defence for ground handling, maintenance and remote operations where fixed power is not available.",
   alternates: {
     canonical: "https://www.jetsys.co.in/products/aviation-equipment/ground-supply-equipment/ground-power-unit/mobile_ground_power_unit",
   },
@@ -24,9 +25,7 @@ const page = () => {
         <section>
           <div className="container">
             <div>
-              <h1 className="text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">
-                Aircraft Power Supply System – Portable Ground Power Solutions by Jetsys Defence
-              </h1>
+              <h1 className="text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">Mobile Ground Power Unit – Portable Aircraft GPU Systems by Jetsys Defence</h1>
               <p className="font-medium text-base">
                 Jetsys Defence provides advanced Aircraft Power Supply System solutions with a strong focus on portable
                 aircraft ground power unit systems. Designed for flexibility and efficiency, our aviation power solutions
@@ -277,6 +276,16 @@ const page = () => {
                   </p>
                 </div>
               </section>
+<RelatedLinks
+  heading="Related Equipment"
+  intro="This page covers one configuration in the Jetsys Defence ground power range. The main ground power unit page lists every variant and the full specification table."
+  links={[
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit", label: "Ground power unit overview and specifications" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit/military-ground-power-unit", label: "Military ground power unit" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit/ground-power-unit-for-airports", label: "Ground power units for airports" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/portable-engine-starting-trolley", label: "Portable engine starting trolley" },
+  ]}
+/>
 
             </div>
           </div>

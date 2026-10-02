@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -188,6 +189,14 @@ const Page = () => {
                   Jetsys Defence is a leading aviation fuel flow testing equipment supplier delivering high-performance, reliable, and precise systems. Choose our fuel flow measurement trolley for advanced fuel monitoring, calibration, and testing in aviation and aerospace applications.
                 </p>
               </section>
+<RelatedLinks
+  heading="Related Equipment"
+  intro="This page covers one configuration in a wider Jetsys Defence range. The overview page has the full details."
+  links={[
+    { href: "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley", label: "Fuel Consumption Trolley overview" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/fuel-consumption-trolley/fuel-flushing-trolley", label: "Fuel Flushing Trolley" },
+  ]}
+/>
 
             </div>
           </div>

@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -391,6 +392,14 @@ const page = () => {
                   </div>
                 </div>
               </section>
+<RelatedLinks
+  heading="Related Equipment"
+  intro="This page covers one configuration in a wider Jetsys Defence range. The overview page has the full details."
+  links={[
+    { href: "/products/aviation-equipment/ground-support-equipment/aircraft-looms-cables-harnesses", label: "Aircraft Looms, Cables & Harnesses overview" },
+    { href: "/products/aviation-equipment/ground-support-equipment/aircraft-looms-cables-harnesses/aviation-cable-harness", label: "Aviation Cable Harness" },
+  ]}
+/>
 
             </div>
           </div>

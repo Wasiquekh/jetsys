@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -291,6 +292,22 @@ const page = () => {
                   </div>
                 </div>
               </section>
+<RelatedLinks
+  heading="Variants and Related Equipment"
+  intro="The pages below cover the individual configurations and applications in this range."
+  links={[
+    { href: "/products/aviation-equipment/ground-support-equipment/aircraft-looms-cables-harnesses/aerospace-cable-harness", label: "Aerospace Cable Harness" },
+    { href: "/products/aviation-equipment/ground-support-equipment/aircraft-looms-cables-harnesses/aircraft-cable-assembly", label: "Aircraft Cable Assembly" },
+    { href: "/products/aviation-equipment/ground-support-equipment/aircraft-looms-cables-harnesses/aircraft-electrical-harness", label: "Aircraft Electrical Harness" },
+    { href: "/products/aviation-equipment/ground-support-equipment/aircraft-looms-cables-harnesses/aircraft-wiring-harness", label: "Aircraft Wiring Harness" },
+    { href: "/products/aviation-equipment/ground-support-equipment/aircraft-looms-cables-harnesses/aviation-cable-harness", label: "Aviation Cable Harness" },
+    { href: "/products/aviation-equipment/ground-support-equipment/aircraft-looms-cables-harnesses/avionics-wiring-harness", label: "Avionics Wiring Harness" },
+    { href: "/products/aviation-equipment/ground-support-equipment/aircraft-looms-cables-harnesses/defence-aircraft-wiring-harness", label: "Defence Aircraft Wiring Harness" },
+    { href: "/products/aviation-equipment/ground-support-equipment/aircraft-looms-cables-harnesses/engine-wiring-harness-aircraft", label: "Engine Wiring Harness Aircraft" },
+    { href: "/products/aviation-equipment/ground-support-equipment/aircraft-looms-cables-harnesses/landing-gear-wiring-harness", label: "Landing Gear Wiring Harness" },
+    { href: "/products/aviation-equipment/ground-support-equipment", label: "Ground Support Equipment range" },
+  ]}
+/>
 
             </div>
           </div>
