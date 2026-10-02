@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -7,7 +8,7 @@ import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
 
 export const metadata: Metadata = {
-  title: "Electric Ground Power Unit (eGPU) | Battery Ground Power Unit Aircraft | Jetsys Defence",
+  title: "Electric Ground Power Unit (eGPU) | Battery Aircraft GPU | Jetsys Defence",
   description:
     "Discover Electric Ground Power Unit (eGPU) by Jetsys Defence – efficient battery ground power unit for aircraft. Reliable, eco-friendly aircraft ground power system for modern aviation operations.",
   alternates: {
@@ -29,7 +30,7 @@ const page = () => {
               </h1>
               <p className="font-medium text-base">
                 Jetsys Defence presents a next-generation Electric Ground Power Unit (eGPU) designed to deliver clean and
-                efficient ground power supply aircraft solutions. Under our Runway Spares category, this advanced eGPU
+                efficient ground power supply aircraft solutions. Within our ground supply equipment range, this advanced eGPU
                 aircraft system is engineered for modern aviation needs where sustainability, efficiency, and performance
                 are critical. Our battery ground power unit technology eliminates dependency on fuel-based systems, making
                 Jetsys Defence a preferred choice for high-performance ground aircraft power solutions.
@@ -330,6 +331,16 @@ const page = () => {
                   </p>
                 </div>
               </section>
+<RelatedLinks
+  heading="Related Equipment"
+  intro="This page covers one configuration in the Jetsys Defence ground power range. The main ground power unit page lists every variant and the full specification table."
+  links={[
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit", label: "Ground power unit overview and specifications" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit/mobile_ground_power_unit", label: "Mobile and portable GPU" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit/military-ground-power-unit", label: "Military ground power unit" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/portable-engine-starting-trolley", label: "Portable engine starting trolley" },
+  ]}
+/>
 
             </div>
           </div>

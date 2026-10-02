@@ -1,3 +1,4 @@
+import RelatedLinks from "@/app/components/RelatedLinks";
 import React from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -28,7 +29,7 @@ const page = () => {
               Ground Power Unit – Reliable Aircraft GPU Solutions by Jetsys Defence
             </h1>
             <p className="font-medium text-base">
-              The Jetsys Defence <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/aircraft-ground-power-unit" className="hover:underline" style={{ color: 'inherit' }}>Ground Power Unit</a> delivers stable <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/400hz-ground-power-unit" className="hover:underline" style={{ color: 'inherit' }}>400 Hz AC</a> and <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/28.5vdc-ground-power-unit" className="hover:underline" style={{ color: 'inherit' }}>28.5 V DC</a> power for parked aircraft. Built for tough flight-line conditions and continuous ramp duty, our <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/aircraft-power-supply-system" className="hover:underline" style={{ color: 'inherit' }}>GPUs</a> help operators cut APU runtime, reduce emissions, and improve turnaround efficiency—setting a benchmark among Ground Power Unit manufacturers.
+              The Jetsys Defence Ground Power Unit delivers stable <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/400hz-ground-power-unit" className="hover:underline" style={{ color: 'inherit' }}>400 Hz AC</a> and <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/28.5vdc-ground-power-unit" className="hover:underline" style={{ color: 'inherit' }}>28.5 V DC</a> power for parked aircraft. Built for tough flight-line conditions and continuous ramp duty, our GPUs help operators cut APU runtime, reduce emissions, and improve turnaround efficiency—setting a benchmark among Ground Power Unit manufacturers.
             </p>
             <br /><br />
             <Image
@@ -45,7 +46,7 @@ const page = () => {
               <div>
                 <h3 className="font-bold text-3xl text-[#5C5649] mb-5">Product Overview</h3>
                 <p className="font-medium text-base">
-                  Our <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/aircraft-ground-power-unit" className="hover:underline" style={{ color: 'inherit' }}>Ground Power Unit (GPU)</a> line covers <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/mobile_ground_power_unit" className="hover:underline" style={{ color: 'inherit' }}>mobile trailer</a>, vehicle-mounted, <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/electric-ground-power-unit" className="hover:underline" style={{ color: 'inherit' }}>battery/eGPU</a>, <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/solid_state_rectifier" className="hover:underline" style={{ color: 'inherit' }}>solid-state rectifier (SSR)</a>, and <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/fixed-electrical-ground-power" className="hover:underline" style={{ color: 'inherit' }}>fixed electrical ground power (FEGP)</a> configurations. Each system provides clean, tightly regulated power to protect avionics and sensitive loads across regional, narrow-body, and wide-body fleets.
+                  Our Ground Power Unit (GPU) line covers <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/mobile_ground_power_unit" className="hover:underline" style={{ color: 'inherit' }}>mobile trailer</a>, vehicle-mounted, <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/electric-ground-power-unit" className="hover:underline" style={{ color: 'inherit' }}>battery/eGPU</a>, <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/solid_state_rectifier" className="hover:underline" style={{ color: 'inherit' }}>solid-state rectifier (SSR)</a>, and fixed electrical ground power (FEGP) configurations. Each system provides clean, tightly regulated power to protect avionics and sensitive loads across regional, narrow-body, and wide-body fleets.
                 </p>
               </div>
             </section>
@@ -156,7 +157,7 @@ const page = () => {
                       </tr>
                       <tr>
                         <td className="px-4 py-2 border-b">Mounting Options</td>
-                        <td className="px-4 py-2 border-b"><a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/mobile_ground_power_unit" className="hover:underline" style={{ color: 'inherit' }}>Towable trailer</a>, vehicle-mounted, skid, <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/fixed-electrical-ground-power" className="hover:underline" style={{ color: 'inherit' }}>fixed (FEGP)</a></td>
+                        <td className="px-4 py-2 border-b"><a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/mobile_ground_power_unit" className="hover:underline" style={{ color: 'inherit' }}>Towable trailer</a>, vehicle-mounted, skid, fixed (FEGP)</td>
                       </tr>
                       <tr>
                         <td className="px-4 py-2 border-b">Accessories</td>
@@ -175,7 +176,7 @@ const page = () => {
                   <div className="text-black space-y-4">
                     <ul className="list-disc pl-5">
                       <li>
-                        <h4 className="font-bold text-[#5C5649]"><a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/diesel_ground_power_unit" className="hover:underline" style={{ color: 'inherit' }}>Diesel Mobile GPU</a></h4>
+                        <h4 className="font-bold text-[#5C5649]">Diesel Mobile GPU</h4>
                         High-duty solution for busy ramps with fast deployment between stands.
                       </li>
                       <li>
@@ -192,10 +193,10 @@ const page = () => {
                             Solid-State Rectifier (SSR) – 28.5 V DC
                           </a>
                         </h4>
-                        Compact, low-maintenance power source for shop use and line-station servicing of <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/aircraft-ground-power-unit" className="hover:underline" style={{ color: 'inherit' }}>Ground Power Unit aircraft</a>.
+                        Compact, low-maintenance power source for shop use and line-station servicing of Ground Power Unit aircraft.
                       </li>
                       <li>
-                        <h4 className="font-bold text-[#5C5649]"><a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/fixed-electrical-ground-power" className="hover:underline" style={{ color: 'inherit' }}>Fixed Electrical Ground Power (FEGP)</a></h4>
+                        <h4 className="font-bold text-[#5C5649]">Fixed Electrical Ground Power (FEGP)</h4>
                         Bridge- or pit-mounted solutions offering continuous gate availability and minimal operating cost.
                       </li>
                     </ul>
@@ -232,7 +233,7 @@ const page = () => {
                   <div className="text-black space-y-4">
                     <ul className="list-disc pl-5">
                       <li><h4 className="font-bold text-[#5C5649]">Gate & Remote Stand Power</h4>Used during aircraft turnaround and transit operations.</li>
-                      <li><h4 className="font-bold text-[#5C5649]">Maintenance Operations</h4>Ideal for line maintenance, avionics updates, and onboard servicing – <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/ground-power-unit-for-aircraft-maintenance" className="hover:underline" style={{ color: 'inherit' }}>Ground Power Unit for aircraft maintenance</a>.</li>
+                      <li><h4 className="font-bold text-[#5C5649]">Maintenance Operations</h4>Ideal for line maintenance, avionics updates, and onboard servicing – Ground Power Unit for aircraft maintenance.</li>
                     </ul>
                   </div>
                   <div className="text-black space-y-4">
@@ -281,7 +282,7 @@ const page = () => {
                       </li>
                       <li>
                         <h4 className="font-bold text-[#5C5649]">Lower APU Fuel Burn & Noise</h4>
-                        Replacing APU power with <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/aircraft-power-supply-system" className="hover:underline" style={{ color: 'inherit' }}>GPUs</a> reduces fuel consumption, carbon emissions, and noise at civilian and military airfields.
+                        Replacing APU power with GPUs reduces fuel consumption, carbon emissions, and noise at civilian and military airfields.
                       </li>
                     </ul>
                   </div>
@@ -289,7 +290,7 @@ const page = () => {
                     <ul className="list-disc pl-5">
                       <li>
                         <h4 className="font-bold text-[#5C5649]">Configurations for Every Operation</h4>
-                        <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/mobile_ground_power_unit" className="hover:underline" style={{ color: 'inherit' }}>Mobile trailer GPUs</a>, vehicle-mounted systems, <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/fixed-electrical-ground-power" className="hover:underline" style={{ color: 'inherit' }}>fixed ground power units</a>, and <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/electric-ground-power-unit" className="hover:underline" style={{ color: 'inherit' }}>battery-electric eGPUs</a> for silent indoor operation.
+                        <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/mobile_ground_power_unit" className="hover:underline" style={{ color: 'inherit' }}>Mobile trailer GPUs</a>, vehicle-mounted systems, fixed ground power units, and <a href="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/electric-ground-power-unit" className="hover:underline" style={{ color: 'inherit' }}>battery-electric eGPUs</a> for silent indoor operation.
                       </li>
                       <li>
                         <h4 className="font-bold text-[#5C5649]">Fast Service & Local Support</h4>
@@ -304,6 +305,21 @@ const page = () => {
                 </div>
               </div>
             </section>
+<RelatedLinks
+  heading="Ground Power Unit Range and Related Equipment"
+  intro="Each configuration in the Jetsys Defence ground power range has its own page, alongside other ground supply equipment used on the flight line."
+  links={[
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit/28.5vdc-ground-power-unit", label: "28.5 V DC ground power unit" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit/400hz-ground-power-unit", label: "400 Hz ground power unit" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit/electric-ground-power-unit", label: "Electric ground power unit (eGPU)" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit/mobile_ground_power_unit", label: "Mobile and portable GPU" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit/military-ground-power-unit", label: "Military ground power unit" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit/ground-power-unit-for-airports", label: "Ground power units for airports" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/ground-power-unit/solid_state_rectifier", label: "Solid-state rectifier" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/portable-engine-starting-trolley", label: "Portable engine starting trolley" },
+    { href: "/products/aviation-equipment/ground-supply-equipment/hydraulic-servicing-trolley", label: "Hydraulic servicing trolley" },
+  ]}
+/>
           </div>
         </section>
         <Footer />
