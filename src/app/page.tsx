@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import HomeClient from "./HomeClient";
 
 export const metadata: Metadata = {
-  title: "Aerospace Innovation & Defence R&D in India | Jetsys Defence",
+  title: "Jetsys Defence | Defence & Aerospace Company in Navi Mumbai, India",
   description:
-    "Pioneering R&D in aerospace and defence, Jetsys Defence develops indigenous technologies for avionics, AI-based control, and tactical applications.",
+    "Jetsys Defence is a defence and aerospace engineering and manufacturing company in Navi Mumbai, India: aviation ground equipment, test systems and spares.",
   alternates: {
     canonical: "https://www.jetsys.co.in/",
   },
