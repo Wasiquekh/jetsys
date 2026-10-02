@@ -181,12 +181,12 @@ const page = () => {
                       </Link> – For comprehensive brake system validation and calibration.
                     </li>
                     <li>
-                      <Link href="/products/aviation-equipment/ground-test-equipment/brake-valve-test-rig/aircraft_testing_equipment" className="text-primary hover:underline font-semibold">
+                      <Link href="/products/aviation-equipment/ground-test-equipment" className="text-primary hover:underline font-semibold">
                         Aircraft Testing Equipment
                       </Link> – Complete range of aviation testing solutions for various aircraft systems.
                     </li>
                     <li>
-                      <Link href="/products/aviation-equipment/ground-test-equipment/brake-valve-test-rig/hydraulic_test_rig" className="text-primary hover:underline font-semibold">
+                      <Link href="/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr" className="text-primary hover:underline font-semibold">
                         Hydraulic Test Rig
                       </Link> – Precision hydraulic system testing for aircraft components.
                     </li>

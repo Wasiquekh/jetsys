@@ -29,7 +29,7 @@ const page = () => {
         <div className="container">
   <div>
                 <h1 className=" text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">SASD Test Rig for Aircraft – Precision Testing by Jetsys Defence</h1>
-                 <p className=" font-medium text-base">The SASD Test Rig by Jetsys Defence is engineered for dependable testing of aircraft hydraulic and pneumatic systems. Built with aerospace-grade components and smart automation, it helps maintenance facilities, research labs, and MRO centers ensure <a href="/products/aviation-equipment/ground-test-equipment/sasd-test-rig/aircraft-testing-equipment" className={linkClass}>aircraft system performance</a> under real operational loads. Whether an organization needs a new SASD Test Rig, wants to find a nearest SASD Test Rig branch, or is evaluating SASD Test Rig price options, Jetsys Defence offers a complete, scalable solution.
+                 <p className=" font-medium text-base">The SASD Test Rig by Jetsys Defence is engineered for dependable testing of aircraft hydraulic and pneumatic systems. Built with aerospace-grade components and smart automation, it helps maintenance facilities, research labs, and MRO centers ensure <a href="/products/aviation-equipment/ground-test-equipment" className={linkClass}>aircraft system performance</a> under real operational loads. Whether an organization needs a new SASD Test Rig, wants to find a nearest SASD Test Rig branch, or is evaluating SASD Test Rig price options, Jetsys Defence offers a complete, scalable solution.
                   </p><br></br>
                <br></br>
                <div>
@@ -325,7 +325,7 @@ const page = () => {
       <div className="text-black space-y-4">
         <ul className="list-disc pl-5 space-y-4">
           <li>Research and educational labs</li>
-          <li><a href="/products/aviation-equipment/ground-test-equipment/sasd-test-rig/hydraulic-test-ig" className={linkClass}>Hydraulic equipment producers</a></li>
+          <li><a href="/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr" className={linkClass}>Hydraulic equipment producers</a></li>
           <li>MRO and overhaul workshops</li>
         </ul>
       </div>

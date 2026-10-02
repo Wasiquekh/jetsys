@@ -235,9 +235,7 @@ const page = () => {
           <li><strong className="text-[#5C5649]">DAU vane adapter set –</strong> Shoes, pins, and shims for multiple vane models.</li>
          <li>
   <strong className="text-[#5C5649]">
-    <a href="/products/aviation-equipment/ground-support-equipment/protractor-unit-for-dau-vane-angles/mounting_system" className="hover:underline">
-      Mounting system –
-    </a>
+    Mounting system –
   </strong>
   Non-marring clamp plus optional suction/magnetic base.
 </li>
