@@ -45,18 +45,6 @@ const CONSOLIDATED: Record<string, string> = {
     "/products/aviation-equipment/ground-test-equipment/automated-pitot-leak-tester",
   "/products/aviation-equipment/ground-test-equipment/automated-pitot-leak-tester/pitot_static_test_equipment":
     "/products/aviation-equipment/ground-test-equipment/air-data-test-system/pitot_static_test_equipment",
-  "/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr/braking_and_steering_assemblies":
-    "/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr",
-  "/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr/cargo_door_actuation_systems":
-    "/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr",
-  "/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr/flap_and_slat_mechanisms":
-    "/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr",
-  "/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr/landing_gear":
-    "/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr",
-  "/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr/primary_and_secondary_flight_controls":
-    "/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr",
-  "/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr/rotor_blade_and_pitch_control_in_helicopters":
-    "/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr",
   "/products/aviation-equipment/ground-test-equipment/brake-valve-test-rig/aircraft_testing_equipment":
     "/products/aviation-equipment/ground-test-equipment",
   "/products/aviation-equipment/ground-test-equipment/sasd-test-rig/aircraft-testing-equipment":

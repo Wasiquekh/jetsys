@@ -65,7 +65,7 @@ const page = () => {
 
   <ul className="list-disc pl-6 text-black leading-relaxed space-y-2 mb-8">
     <li>Thermal cycling for qualification and acceptance campaigns, using programmable ramps and soaks</li>
-    <li>Thermal balance tests that check a design against its thermal model</li>
+    <li>Thermal balance tests carried out before spacecraft integration</li>
     <li>Vacuum bake-out to drive off volatiles and contaminants before spacecraft integration</li>
     <li>Functional testing and burn-in of space electronics, optics and mechanisms under vacuum</li>
   </ul>
