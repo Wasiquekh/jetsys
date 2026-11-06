@@ -1,12 +1,8 @@
-import 'dotenv/config';
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
-import path from "path";
-import dotenv from "dotenv";
-dotenv.config({ path: path.resolve(process.cwd(), ".env.local") });
 
 type ContactBody = {
   name: string;
