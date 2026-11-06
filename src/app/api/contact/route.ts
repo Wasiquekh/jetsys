@@ -3,6 +3,9 @@ export const dynamic = "force-dynamic";
 
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import path from "path";
+import dotenv from "dotenv";
+dotenv.config({ path: path.resolve(process.cwd(), ".env.local") });
 
 type ContactBody = {
   name: string;
@@ -75,8 +78,8 @@ export async function POST(request: Request) {
     // ✅ Transporter
     const transporter = nodemailer.createTransport({
       host: process.env.CPANEL_EMAIL_HOST,
-      port: 465,
-      secure: true,
+      port: parseInt(process.env.CPANEL_EMAIL_PORT || "465"),
+      secure: parseInt(process.env.CPANEL_EMAIL_PORT || "465") === 465, // true for 465, false for other ports
       auth: {
         user: process.env.CPANEL_EMAIL_USER!,
         pass: process.env.CPANEL_EMAIL_PASSWORD!,
