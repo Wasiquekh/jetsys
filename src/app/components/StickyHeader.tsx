@@ -4,12 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
+import SectionLinks from "./nav/SectionLinks";
 
 const SCROLL_TRIGGER = 120; // px before the sticky header shows
 
 const StickyHeader: React.FC = () => {
   const [show, setShow] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const closeMenu = () => setIsMobileMenuOpen(false);
 
   useEffect(() => {
     const onScroll = () => setShow((window.scrollY || 0) > SCROLL_TRIGGER);
@@ -22,15 +24,15 @@ const StickyHeader: React.FC = () => {
     <div
       className={[
         "fixed top-0 inset-x-0 z-[60]",
-        "-translate-y-full", // start hidden (valid Tailwind)
-        show ? "translate-y-0" : "",
-        "transition-transform duration-300 ease-out will-change-transform",
+        show ? "translate-y-0" : "-translate-y-full",
+        "transition-transform duration-300 ease-out will-change-transform motion-reduce:transition-none",
       ].join(" ")}
       aria-hidden={!show}
+      inert={!show}
     >
       <header className="text-white w-full bg-black border-b-2 border-b-secondary">
         <div className="max-w-[1120px] mx-auto px-5 py-2 flex justify-between items-center">
-          <div>
+          <div className="shrink-0">
             <Link href="/">
               <Image
                 src="/images/jetsys-logo.svg"
@@ -42,7 +44,10 @@ const StickyHeader: React.FC = () => {
             </Link>
           </div>
 
-          <nav className="hidden md:ml-auto md:flex items-center text-base font-medium">
+          <nav
+            aria-label="Sticky navigation"
+            className="hidden items-center whitespace-nowrap text-sm font-medium lg:ml-auto lg:flex xl:text-base"
+          >
             <Link href="/about-us" className="mr-5 hover:text-secondary">
               ABOUT US
             </Link>
@@ -52,19 +57,23 @@ const StickyHeader: React.FC = () => {
             <Link href="/solutions" className="mr-5 hover:text-secondary">
               SOLUTIONS
             </Link>
-            <Link href="/" className="mr-10 hover:text-secondary">
+            <SectionLinks className="mr-3 uppercase hover:text-secondary xl:mr-5 aria-[current=page]:text-secondary" />
+            <Link href="/" className="mr-5 hover:text-secondary xl:mr-10">
               COMPANY
             </Link>
             <Link href="/contact-us">
-              <button className="hidden md:inline-flex items-center bg-primary border border-primary py-2 px-6 rounded text-base font-medium hover:bg-white text-white hover:text-black transition">
+              <button className="inline-flex items-center bg-primary border border-primary py-2 px-6 rounded text-base font-medium hover:bg-white text-white hover:text-black transition">
                 Get In Touch
               </button>
             </Link>
           </nav>
 
           <button
-            className="md:hidden"
+            type="button"
+            className="lg:hidden"
             aria-label="Open menu"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls={isMobileMenuOpen ? "sticky-mobile-navigation" : undefined}
             onClick={() => setIsMobileMenuOpen(true)}
           >
             <RxHamburgerMenu className="text-3xl" />
@@ -72,41 +81,38 @@ const StickyHeader: React.FC = () => {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="fixed top-0 left-0 bg-white w-full h-screen z-[70] flex flex-col gap-6 justify-center items-center">
-            <AiOutlineClose
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="absolute top-6 right-5 text-3xl text-black cursor-pointer"
+          <nav
+            id="sticky-mobile-navigation"
+            aria-label="Sticky mobile navigation"
+            className="fixed inset-x-0 top-0 z-[70] flex h-dvh flex-col overflow-y-auto bg-white px-5 pb-8 pt-20 lg:hidden"
+          >
+            <button
+              type="button"
+              onClick={closeMenu}
+              className="absolute right-5 top-6 text-3xl text-black"
               aria-label="Close menu"
-            />
-            <Link
-              href="/"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-xl font-medium text-black"
             >
-              HOME
-            </Link>
-            <Link
-              href="/"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-xl font-medium text-black"
-            >
-              PRODUCTS
-            </Link>
-            <Link
-              href="/"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-xl font-medium text-black"
-            >
-              SOLUTIONS
-            </Link>
-            <Link
-              href="/"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-xl font-medium text-black"
-            >
-              COMPANY
-            </Link>
-          </div>
+              <AiOutlineClose />
+            </button>
+            <div className="my-auto flex flex-col items-center gap-5">
+              <Link href="/" onClick={closeMenu} className="text-xl font-medium text-black">
+                HOME
+              </Link>
+              <Link href="/" onClick={closeMenu} className="text-xl font-medium text-black">
+                PRODUCTS
+              </Link>
+              <Link href="/" onClick={closeMenu} className="text-xl font-medium text-black">
+                SOLUTIONS
+              </Link>
+              <SectionLinks
+                className="text-xl font-medium uppercase text-black aria-[current=page]:text-primary"
+                onNavigate={closeMenu}
+              />
+              <Link href="/" onClick={closeMenu} className="text-xl font-medium text-black">
+                COMPANY
+              </Link>
+            </div>
+          </nav>
         )}
       </header>
     </div>
