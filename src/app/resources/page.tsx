@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, ChevronDown } from "lucide-react";
+import { ArrowDown, ArrowRight, ChevronDown } from "lucide-react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import StickyHeader from "../components/StickyHeader";
@@ -12,13 +12,21 @@ const topics = [
   {
     title: "Aircraft Ground Power",
     description: "Explore the choices behind aircraft ground power, including power formats, equipment mobility and how units are powered. Use these topics to prepare questions about aircraft compatibility and operating needs.",
-    subjects: ["28 V DC vs 400 Hz", "Diesel vs electric GPUs", "Fixed vs mobile ground power"],
+    subjects: [
+      { label: "28 V DC vs 400 Hz", href: "/resources/28v-dc-vs-400hz-ground-power" },
+      { label: "Diesel vs electric GPUs", href: "/resources/diesel-vs-electric-ground-power-unit" },
+      { label: "Fixed vs mobile ground power", href: "/resources/fixed-electrical-ground-power-fegp" },
+    ],
     image: "/images/H1 Ground Power Unit for Aircraft Maintenance.png",
   },
   {
     title: "Air Data & Pitot-Static Testing",
     description: "Understand where pitot-static testing and air data test set calibration fit into aircraft maintenance discussions. Get familiar with the equipment and documentation to ask about when defining a test requirement.",
-    subjects: ["Pitot-static testing", "Air data test sets", "Calibration"],
+    subjects: [
+      { label: "Pitot-static testing", href: "/resources/aircraft-pitot-static-testing" },
+      "Air data test sets",
+      "Calibration",
+    ],
     image: "/images/Pitot Static Test Equipment.png",
   },
   {
@@ -183,7 +191,18 @@ export default function ResourcesPage() {
                     <h3>{title}</h3>
                     <p>{description}</p>
                     <ul className={styles.subjects} aria-label={`${title} topics`}>
-                      {subjects.map((subject) => <li key={subject}>{subject}</li>)}
+                      {subjects.map((subject) =>
+                        typeof subject === "string" ? (
+                          <li key={subject}>{subject}</li>
+                        ) : (
+                          <li key={subject.href} className={styles.linkedSubject}>
+                            <Link href={subject.href} className={styles.subjectLink}>
+                              {subject.label}
+                              <ArrowRight size={14} aria-hidden="true" />
+                            </Link>
+                          </li>
+                        ),
+                      )}
                     </ul>
                   </div>
                 </li>
