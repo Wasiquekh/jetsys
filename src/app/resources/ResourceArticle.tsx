@@ -17,15 +17,17 @@ export default function ResourceArticle({
   jumpLink,
   sections,
   draftNote,
+  showArticleFooter = true,
   children,
 }: {
   category?: string;
   title: ReactNode;
   heroImage: string;
-  heroVariant?: "equipment";
+  heroVariant?: "equipment" | "equipment-photo";
   jumpLink: ArticleLink;
   sections: readonly ArticleLink[];
-  draftNote: string;
+  draftNote?: string;
+  showArticleFooter?: boolean;
   children: ReactNode;
 }) {
   return (
@@ -41,7 +43,7 @@ export default function ResourceArticle({
                 alt=""
                 fill
                 priority
-                sizes={heroVariant === "equipment" ? "(max-width: 720px) 100vw, 55vw" : "(max-width: 720px) 100vw, 70vw"}
+                sizes={heroVariant ? "(max-width: 720px) 100vw, 55vw" : "(max-width: 720px) 100vw, 70vw"}
               />
             </div>
             <div className={`${styles.shell} ${styles.heroInner}`}>
@@ -71,15 +73,19 @@ export default function ResourceArticle({
 
             <div className={styles.articleBody}>
               {children}
-              <footer className={styles.articleFooter}>
-                <details className={styles.draftNote} suppressHydrationWarning>
-                  <summary>Draft formatting note</summary>
-                  <p>{draftNote}</p>
-                </details>
-                <Link href="/resources" className={styles.backLink}>
-                  Explore more resources <ArrowRight size={17} aria-hidden="true" />
-                </Link>
-              </footer>
+              {showArticleFooter ? (
+                <footer className={styles.articleFooter}>
+                  {draftNote ? (
+                    <details className={styles.draftNote} suppressHydrationWarning>
+                      <summary>Draft formatting note</summary>
+                      <p>{draftNote}</p>
+                    </details>
+                  ) : null}
+                  <Link href="/resources" className={styles.backLink}>
+                    Explore more resources <ArrowRight size={17} aria-hidden="true" />
+                  </Link>
+                </footer>
+              ) : null}
             </div>
           </div>
         </article>
@@ -133,7 +139,9 @@ export function ArticleFaq({ entries }: { entries: readonly { question: string; 
     <div className={styles.faqList}>
       {entries.map(({ question, answer }) => (
         <details key={question} name="resource-article-faq" className={styles.faqItem} suppressHydrationWarning>
-          <summary>{question} <ChevronDown size={19} aria-hidden="true" /></summary>
+          <summary>
+            <h3>{question} <ChevronDown size={19} aria-hidden="true" /></h3>
+          </summary>
           <p>{answer}</p>
         </details>
       ))}

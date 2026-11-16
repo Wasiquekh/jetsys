@@ -24,15 +24,19 @@ const topics = [
     description: "Understand where pitot-static testing and air data test set calibration fit into aircraft maintenance discussions. Get familiar with the equipment and documentation to ask about when defining a test requirement.",
     subjects: [
       { label: "Pitot-static testing", href: "/resources/aircraft-pitot-static-testing" },
-      "Air data test sets",
-      "Calibration",
+      { label: "Air data test sets", href: "/resources/air-data-test-set-calibration#what-is-an-air-data-test-set" },
+      { label: "Calibration", href: "/resources/air-data-test-set-calibration" },
     ],
     image: "/images/Pitot Static Test Equipment.png",
   },
   {
     title: "Thermal Vacuum & Space Testing",
     description: "Explore the purpose of thermal vacuum testing and the decisions involved in selecting a chamber for a space test programme. Start with the hardware being tested and the conditions the test needs to represent.",
-    subjects: ["TVAC testing", "Chamber design", "Space hardware testing"],
+    subjects: [
+      { label: "TVAC testing", href: "/resources/thermal-vacuum-testing" },
+      { label: "Chamber design", href: "/resources/thermal-vacuum-testing#thermal-vacuum-chamber" },
+      { label: "Space hardware testing", href: "/resources/thermal-vacuum-testing#applications-and-use-cases" },
+    ],
     image: "/images/Thermal Vacuum Chamber.png",
   },
   {

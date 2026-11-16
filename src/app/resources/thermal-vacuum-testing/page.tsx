@@ -1,0 +1,40 @@
+import type { Metadata } from "next";
+import ResourceArticle, { ArticleParagraphs } from "../ResourceArticle";
+import { ReferenceSection } from "../ResourceReference";
+import styles from "../resource-article.module.css";
+import { introduction, metaDescription, metaTitle, sections, title } from "./article-content";
+
+const overview = { id: "overview", title: "Overview" };
+const contents = [overview, ...sections];
+
+export const metadata: Metadata = {
+  title: metaTitle,
+  description: metaDescription,
+  alternates: { canonical: "https://www.jetsys.co.in/resources/thermal-vacuum-testing" },
+};
+
+export default function ThermalVacuumTestingPage() {
+  return (
+    <ResourceArticle
+      category="Thermal Vacuum & Space Testing"
+      title={title}
+      heroImage="/images/Thermal Vacuum Chamber.png"
+      heroVariant="equipment-photo"
+      jumpLink={sections[0]}
+      sections={contents}
+      showArticleFooter={false}
+    >
+      <section id={overview.id} aria-label={overview.title} className={`${styles.section} ${styles.overview}`}>
+        <ArticleParagraphs paragraphs={introduction} />
+      </section>
+
+      {sections.map((section) => (
+        <ReferenceSection
+          key={section.id}
+          section={section}
+          className={section.id === "test-process" ? `${styles.checklist} ${styles.referenceSteps}` : undefined}
+        />
+      ))}
+    </ResourceArticle>
+  );
+}
