@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
-import { MoveHorizontal } from "lucide-react";
+import Link from "next/link";
+import { ArrowUpRight, MoveHorizontal } from "lucide-react";
 import { ArticleFaq } from "./ResourceArticle";
 import styles from "./resource-article.module.css";
 
@@ -15,6 +16,25 @@ export type ArticleSection = {
   title: string;
   blocks: ArticleBlock[];
 };
+
+const internalLink = /\[([^\]\r\n]+)\]\((\/(?!\/)[a-z0-9/_-]+(?:#[a-z0-9_-]+)?)\)/gi;
+
+function referenceText(text: string) {
+  if (!text.includes("](/")) return text;
+
+  const parts: ReactNode[] = [];
+  let cursor = 0;
+  for (const match of text.matchAll(internalLink)) {
+    const [source, label, href] = match;
+    const start = match.index;
+    parts.push(text.slice(cursor, start));
+    parts.push(<Link key={start} href={href}>{label}</Link>);
+    cursor = start + source.length;
+  }
+
+  parts.push(text.slice(cursor));
+  return parts;
+}
 
 export function ReferenceSection({ section, className, children }: {
   section: ArticleSection;
@@ -34,8 +54,20 @@ export function ReferenceSection({ section, className, children }: {
 
 function ReferenceBlock({ block }: { block: ArticleBlock }) {
   switch (block.kind) {
-    case "paragraph":
-      return <div className={styles.paragraphs}><p>{block.text}</p></div>;
+    case "paragraph": {
+      const action = /^\[([^\]\r\n]+)\]\(\/contact-us\)$/.exec(block.text);
+      if (action) {
+        return (
+          <div>
+            <Link href="/contact-us" className={styles.referenceAction}>
+              {action[1]} <ArrowUpRight size={17} aria-hidden="true" />
+            </Link>
+          </div>
+        );
+      }
+
+      return <div className={styles.paragraphs}><p>{referenceText(block.text)}</p></div>;
+    }
     case "heading":
       return <h3>{block.title}</h3>;
     case "list": {
@@ -65,8 +97,8 @@ function ReferenceBlock({ block }: { block: ArticleBlock }) {
               <tbody>
                 {block.rows.map(([label, ...cells]) => (
                   <tr key={label}>
-                    <th scope="row">{label}</th>
-                    {cells.map((cell, index) => <td key={block.headers[index + 1]}>{cell}</td>)}
+                    <th scope="row">{referenceText(label)}</th>
+                    {cells.map((cell, index) => <td key={block.headers[index + 1]}>{referenceText(cell)}</td>)}
                   </tr>
                 ))}
               </tbody>

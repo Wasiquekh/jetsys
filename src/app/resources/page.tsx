@@ -42,7 +42,12 @@ const topics = [
   {
     title: "Airfield Lighting & Signage",
     description: "Get familiar with the lighting and signs used across airfields. Compare equipment by its location, intended purpose and installation requirements.",
-    subjects: ["Airfield signs", "LED vs halogen", "Inset vs elevated lights"],
+    subjects: [
+      { label: "Airfield ground lighting", href: "/resources/airfield-ground-lighting" },
+      { label: "Airfield signs", href: "/resources/airfield-signs-guide" },
+      { label: "LED vs halogen", href: "/resources/led-vs-halogen-airfield-lights" },
+      "Inset vs elevated lights",
+    ],
     image: "/images/airfield-lighting-system.png",
   },
   {

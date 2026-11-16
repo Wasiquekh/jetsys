@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowRight, ChevronDown, ChevronRight, List } from "lucide-react";
@@ -8,9 +8,12 @@ import StickyHeader from "../components/StickyHeader";
 import styles from "./resource-article.module.css";
 
 type ArticleLink = { id: string; title: string };
+type Breadcrumb = { links: readonly { href: string; label: string }[]; current: string };
+const resourcesLink = { href: "/resources", label: "Resources" };
 
 export default function ResourceArticle({
   category = "Aircraft Ground Power",
+  breadcrumb = { links: [resourcesLink], current: category },
   title,
   heroImage,
   heroVariant,
@@ -21,6 +24,7 @@ export default function ResourceArticle({
   children,
 }: {
   category?: string;
+  breadcrumb?: Breadcrumb;
   title: ReactNode;
   heroImage: string;
   heroVariant?: "equipment" | "equipment-photo";
@@ -48,9 +52,13 @@ export default function ResourceArticle({
             </div>
             <div className={`${styles.shell} ${styles.heroInner}`}>
               <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-                <Link href="/resources">Resources</Link>
-                <ChevronRight size={14} aria-hidden="true" />
-                <span aria-current="page">{category}</span>
+                {breadcrumb.links.map(({ href, label }) => (
+                  <Fragment key={href}>
+                    <Link href={href}>{label}</Link>
+                    <ChevronRight size={14} aria-hidden="true" />
+                  </Fragment>
+                ))}
+                <span aria-current="page">{breadcrumb.current}</span>
               </nav>
               <h1 id="resource-article-title">{title}</h1>
               <a href={`#${jumpLink.id}`} className={styles.heroLink}>
