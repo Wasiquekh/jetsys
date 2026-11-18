@@ -1,4 +1,4 @@
-export const metaTitle = "28 V DC vs 400 Hz Ground Power for Aircraft | Jetsys Defence";
+   export const metaTitle = "28 V DC vs 400 Hz Ground Power for Aircraft | Jetsys Defence";
 export const metaDescription = "Compare 28 V DC vs 400 Hz Ground Power for aircraft. Learn which GPU output, connector and load rating suit your fleet, from ramp turnarounds to hangar maintenance.";
 export const draftNote = "Heading levels in this draft use # for H1, ## for H2 and ### for H3.";
 

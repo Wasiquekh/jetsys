@@ -179,9 +179,8 @@ export const sections: ArticleSection[] = [
     title: "Fixture Types, Construction and Installation",
     blocks: [
       { kind: "heading", title: "Elevated and Inset Fixtures" },
-      { kind: "paragraph", text: "Elevated fixtures stand above the surface on a frangible stem, and are used wherever there is no risk of an aircraft running over them — runway and taxiway edges, approach lighting, and most signs." },
-      { kind: "paragraph", text: "Inset fixtures sit flush in the pavement, protruding only a few millimetres, and are used wherever aircraft wheels pass over them — runway centreline, touchdown zone, taxiway centreline, stop bars." },
-      { kind: "paragraph", text: "The consequence is worth stating plainly, because inset fixtures look like simple components and are not. An inset light must survive full wheel loading from a loaded widebody, jet blast, thermal shock when rain hits a lens that has been in the sun all afternoon, pressure washing, de-icing chemicals and standing water — while holding a sealed optical cavity and a precise beam pattern. That combination makes inset fixtures a fundamentally harder product than their size suggests, and it is reflected in their price, their failure modes and their replacement cycle." },
+      { kind: "paragraph", text: "Elevated fixtures stand above the pavement on a frangible mounting and commonly mark runway and taxiway edges. Inset fixtures sit within the pavement where aircraft wheels may pass over them, such as runway centrelines and touchdown zones. The approved lighting layout determines which fixture type is required at each position." },
+      { kind: "paragraph", text: "See the [inset versus elevated airfield lights comparison](/resources/inset-vs-elevated-airfield-lights) for differences in construction, installation and maintenance." },
       { kind: "heading", title: "Frangibility and Why It Is Mandatory" },
       { kind: "paragraph", text: "Elevated fixtures and their mountings are designed to break away cleanly on impact rather than damage an aircraft that strikes them. This is a regulatory requirement, not a design preference, and frangible couplings are a specified item in their own right with their own compliance evidence." },
       { kind: "paragraph", text: "It is worth knowing why airfield light posts snap: a rigid post at the runway edge is an obstacle, and an aircraft departing the paved surface at speed must be able to pass through the lighting without the lighting tearing into the airframe. A frangible coupling that has been replaced with a solid bolt after a strike — which happens — defeats the entire provision." },
@@ -398,19 +397,7 @@ export const sections: ArticleSection[] = [
       },
       { kind: "heading", title: "Elevated vs Inset Fixtures" },
       { kind: "paragraph", text: "The choice is made by location rather than preference, but the cost and maintenance consequences are worth understanding before an installation is laid out." },
-      {
-        kind: "table",
-        label: "Elevated vs Inset Fixtures",
-        headers: ["Factor", "Elevated", "Inset"],
-        rows: [
-          ["Where used", "Runway and taxiway edges, approach lighting, signs", "Runway and taxiway centrelines, touchdown zone, stop bars"],
-          ["Installation cost and civil works", "Lower — frangible stem on a base", "Higher — core drilling or cast-in bases in pavement"],
-          ["Maintenance access", "Straightforward, above surface", "Requires pavement access and often a closure"],
-          ["Vulnerability to damage", "Strike damage to stem and coupling", "Wheel loading, jet blast, abrasion from traffic"],
-          ["Load and blast exposure", "Blast only", "Full wheel loads and blast"],
-          ["Visibility in snow or standing water", "Remains visible above the surface", "Can be obscured; drainage and snow clearance matter"],
-        ],
-      },
+      { kind: "paragraph", text: "See the [side-by-side comparison of inset versus elevated airfield lights](/resources/inset-vs-elevated-airfield-lights#side-by-side-comparison) for installation, access and service-life trade-offs." },
       { kind: "heading", title: "Circuit-Level vs Individual Lamp Monitoring" },
       { kind: "paragraph", text: "Individual lamp monitoring is not required everywhere, and saying so plainly is more useful than selling it universally. What drives the requirement is the approach category and the serviceability obligations attached to it." },
       {

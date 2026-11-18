@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import ScrollReveal from "../components/ScrollReveal";
 import StickyHeader from "../components/StickyHeader";
 import styles from "../hubs.module.css";
 
@@ -47,6 +48,7 @@ export default function IndustriesPage() {
     <>
       <Header />
       <StickyHeader />
+      <ScrollReveal />
       <main className={styles.industries}>
         <section className={styles.industryHero} aria-labelledby="industries-title">
           <Image
@@ -70,11 +72,24 @@ export default function IndustriesPage() {
         </section>
 
         <section className={`${styles.shell} ${styles.sectorSection}`} aria-labelledby="sectors-title">
-          <h2 id="sectors-title" className={styles.sectionTitle}>Sectors we serve</h2>
+          <div className={styles.sectionHead} data-animate>
+            <div>
+              <p className={styles.eyebrow}>Where our equipment works</p>
+              <h2 id="sectors-title" className={styles.sectionTitle}>Sectors we serve</h2>
+              <p className={styles.sectionIntro}>
+                From flight line servicing to satellite environmental testing.
+              </p>
+            </div>
+            <p className={styles.countPill}>{sectors.length} sectors</p>
+          </div>
+
           <ul className={styles.sectorGrid}>
-            {sectors.map(({ title, image, description, contain }) => (
-              <li key={title} className={styles.sectorCard}>
+            {sectors.map(({ title, image, description, contain }, index) => (
+              <li key={title} className={styles.sectorCard} data-animate>
                 <div className={styles.sectorMedia}>
+                  <span className={styles.cardIndex} aria-hidden="true">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
                   <Image
                     src={image}
                     alt=""
@@ -91,8 +106,14 @@ export default function IndustriesPage() {
             ))}
           </ul>
 
-          <div className={styles.industryContact}>
-            <h2>Have a project in mind?</h2>
+          <div className={styles.industryContact} data-animate>
+            <div>
+              <h2>Have a project in mind?</h2>
+              <p>
+                Tell us the aircraft, airfield or test programme involved, and the Jetsys
+                team will help work out what the requirement needs.
+              </p>
+            </div>
             <Link href="/contact-us" className={styles.contactLink}>
               Contact Jetsys <ArrowUpRight size={19} aria-hidden="true" />
             </Link>

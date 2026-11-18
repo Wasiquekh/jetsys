@@ -1,14 +1,25 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUpRight, ChevronDown } from "lucide-react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import StickyHeader from "../components/StickyHeader";
 import styles from "../hubs.module.css";
-import ResourceTopicGrid from "./ResourceTopicGrid";
+import ScrollReveal from "../components/ScrollReveal";
 
-const topics = [
+type SubjectLink = { label: string; href: string };
+type Subject = string | SubjectLink;
+
+type Topic = {
+  title: string;
+  description: string;
+  subjects: Subject[];
+  image: string;
+  cover?: boolean;
+};
+
+const topics: Topic[] = [
   {
     title: "Aircraft Ground Power",
     description: "Explore the choices behind aircraft ground power, including power formats, equipment mobility and how units are powered. Use these topics to prepare questions about aircraft compatibility and operating needs.",
@@ -46,26 +57,38 @@ const topics = [
       { label: "Airfield ground lighting", href: "/resources/airfield-ground-lighting" },
       { label: "Airfield signs", href: "/resources/airfield-signs-guide" },
       { label: "LED vs halogen", href: "/resources/led-vs-halogen-airfield-lights" },
-      "Inset vs elevated lights",
+      { label: "Inset vs elevated lights", href: "/resources/inset-vs-elevated-airfield-lights" },
     ],
     image: "/images/airfield-lighting-system.png",
   },
   {
     title: "Aerospace Wiring & Manufacturing",
     description: "Learn what to discuss when specifying aircraft wire harnesses, from drawings and interfaces to inspection, testing and traceability documentation.",
-    subjects: ["Wire harness manufacturing", "Inspection and testing", "Traceability"],
+    subjects: [
+      { label: "Wire harness manufacturing", href: "/resources/aerospace-wire-harness-manufacturing" },
+      { label: "Inspection and testing", href: "/resources/aerospace-wire-harness-manufacturing#inspection-and-testing" },
+      { label: "Traceability", href: "/resources/aerospace-wire-harness-manufacturing#traceability" },
+    ],
     image: "/images/aircraft-wiring-harness.png",
   },
   {
     title: "Aircraft Ground Support",
     description: "Explore equipment used for aircraft movement, servicing and engine starting. Identify the aircraft interface and operational requirements before comparing equipment options.",
-    subjects: ["Aircraft tow bars", "Nitrogen servicing", "Engine starting equipment"],
+    subjects: [
+      { label: "Aircraft tow bars", href: "/resources/how-to-choose-an-aircraft-tow-bar" },
+      { label: "Nitrogen servicing", href: "/resources/nitrogen-for-aircraft-tyres" },
+      { label: "Engine starting equipment", href: "/resources/engine-starting-trolley-vs-ground-power-unit" },
+    ],
     image: "/images/Aircraft Tow Bar.png",
   },
   {
     title: "Avionics & Fuel Testing",
     description: "Browse aircraft test equipment topics for avionics and fuel systems. Understand how measurement needs, equipment interfaces and reporting requirements shape an enquiry.",
-    subjects: ["Avionics test equipment", "Aviation fuel testing", "Test benches"],
+    subjects: [
+      "Avionics test equipment",
+      { label: "Fuel testing", href: "/resources/aviation-fuel-testing-equipment" },
+      "Test benches",
+    ],
     image: "/images/aircraft-fuel-testing-equipment.png",
   },
   {
@@ -81,6 +104,22 @@ const topics = [
     image: "/images/Indegenization.png",
     cover: true,
   },
+];
+
+const articleCount = new Set(
+  topics.flatMap(({ subjects }) =>
+    subjects
+      .filter((subject): subject is SubjectLink => typeof subject !== "string")
+      .map((subject) => subject.href.split("#")[0]),
+  ),
+).size;
+
+const subjectCount = topics.reduce((total, { subjects }) => total + subjects.length, 0);
+
+const heroStats = [
+  { label: "Topic areas", value: topics.length },
+  { label: "In-depth articles", value: articleCount },
+  { label: "Subjects covered", value: subjectCount },
 ];
 
 const faqs = [
@@ -124,6 +163,7 @@ export default function ResourcesPage() {
     <>
       <Header />
       <StickyHeader />
+      <ScrollReveal />
       <main className={styles.resources}>
         <section className={styles.resourceHero} aria-labelledby="resources-title">
           <div className={styles.resourceBackdrop}>
@@ -136,7 +176,9 @@ export default function ResourcesPage() {
               className={styles.resourceImage}
             />
           </div>
+          <div className={styles.heroGrid} aria-hidden="true" />
           <div className={`${styles.shell} ${styles.resourceHeroInner}`}>
+            <p className={styles.heroEyebrow}>Technical Resource Library</p>
             <h1 id="resources-title" className={`horizon ${styles.resourceTitle}`}>
               Aviation &amp; Aerospace Resources
             </h1>
@@ -145,32 +187,48 @@ export default function ResourcesPage() {
               aerospace manufacturing. Get familiar with the terminology, understand
               what to compare, and prepare clearer technical enquiries.
             </p>
-            <a className={styles.topicLink} href="#resource-topics">
-              Explore Resource Topics <ArrowDown size={18} aria-hidden="true" />
-            </a>
+            <div className={styles.heroActions}>
+              <a className={styles.topicLink} href="#resource-topics">
+                Explore Resource Topics <ArrowDown size={18} aria-hidden="true" />
+              </a>
+              <Link className={styles.ghostLink} href="/contact-us">
+                Discuss a requirement <ArrowUpRight size={17} aria-hidden="true" />
+              </Link>
+            </div>
+            <dl className={styles.heroStats}>
+              {heroStats.map(({ label, value }) => (
+                <div key={label} className={styles.heroStat}>
+                  <dt>{label}</dt>
+                  <dd>{String(value).padStart(2, "0")}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </section>
 
         <section className={styles.resourceEditorial} aria-labelledby="resource-intro-title">
           <div className={`${styles.shell} ${styles.editorialLayout}`}>
-            <h2 id="resource-intro-title" className={styles.sectionTitle}>
-              Understand the equipment behind the operation
-            </h2>
+            <div className={styles.editorialHead} data-animate>
+              <p className={styles.eyebrow}>Overview</p>
+              <h2 id="resource-intro-title" className={styles.sectionTitle}>
+                Understand the equipment behind the operation
+              </h2>
+            </div>
             <div className={styles.editorialCopy}>
-              <p>
+              <p data-animate>
                 An equipment requirement usually begins with a practical question.
                 What type of ground power does the operation need? What should a test
                 system help verify? Which airfield lighting options should be compared?
                 Understanding the application makes it easier to identify the right
                 questions before reviewing a specification or requesting a quote.
               </p>
-              <p>
+              <p data-animate>
                 This section brings together topics for engineering, maintenance and
                 procurement teams working across aviation and aerospace. Browse the areas
                 below to get familiar with equipment categories, common terminology and
                 the information worth preparing for a technical discussion.
               </p>
-              <p>
+              <p data-animate>
                 Use the <Link href="/products">Jetsys product catalogue</Link> when you
                 need details about a particular model or configuration. If your requirement
                 depends on an aircraft interface, test profile or operating environment,
@@ -182,12 +240,25 @@ export default function ResourcesPage() {
 
         <section id="resource-topics" className={styles.topicSection} aria-labelledby="topics-title">
           <div className={styles.shell}>
-            <h2 id="topics-title" className={styles.sectionTitle}>Explore Resource Topics</h2>
-            <p className={styles.topicIntro}>Browse by equipment, application or technical subject.</p>
-            <ResourceTopicGrid>
-              {topics.map(({ title, description, subjects, image, cover }) => (
-                <li key={title} className={styles.topicCard}>
+            <div className={styles.sectionHead} data-animate>
+              <div>
+                <p className={styles.eyebrow}>Browse the library</p>
+                <h2 id="topics-title" className={styles.sectionTitle}>Explore Resource Topics</h2>
+                <p className={styles.sectionIntro}>
+                  Browse by equipment, application or technical subject.
+                </p>
+              </div>
+              <p className={styles.countPill}>
+                {topics.length} topic areas · {articleCount} articles
+              </p>
+            </div>
+            <ul className={styles.topicGrid}>
+              {topics.map(({ title, description, subjects, image, cover }, index) => (
+                <li key={title} className={styles.topicCard} data-animate>
                   <div className={styles.topicMedia}>
+                    <span className={styles.cardIndex} aria-hidden="true">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
                     <Image
                       src={image}
                       alt=""
@@ -216,24 +287,42 @@ export default function ResourcesPage() {
                   </div>
                 </li>
               ))}
-            </ResourceTopicGrid>
+            </ul>
           </div>
         </section>
 
         <section className={styles.faqSection} aria-labelledby="faq-title">
           <div className={`${styles.shell} ${styles.faqLayout}`}>
-            <h2 id="faq-title" className={styles.sectionTitle}>Frequently Asked Questions</h2>
+            <div className={styles.editorialHead} data-animate>
+              <p className={styles.eyebrow}>Good to know</p>
+              <h2 id="faq-title" className={styles.sectionTitle}>Frequently Asked Questions</h2>
+            </div>
             <div className={styles.faqList}>
               {faqs.map(({ question, answer }) => (
-                <details key={question} name="resources-faq" className={styles.faqItem}>
+                <details key={question} name="resources-faq" className={styles.faqItem} data-animate>
                   <summary>
                     {question}
-                    <ChevronDown className={styles.faqChevron} size={20} aria-hidden="true" />
+                    <ChevronDown className={styles.faqChevron} size={26} aria-hidden="true" />
                   </summary>
                   <p>{answer}</p>
                 </details>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className={styles.resourceCta} aria-labelledby="resource-cta-title">
+          <div className={`${styles.shell} ${styles.ctaInner}`} data-animate>
+            <div>
+              <h2 id="resource-cta-title">Have a requirement to discuss?</h2>
+              <p>
+                Share the application, aircraft or equipment interface and operating
+                environment, and the Jetsys team will take it from there.
+              </p>
+            </div>
+            <Link className={styles.contactLink} href="/contact-us">
+              Contact the team <ArrowUpRight size={17} aria-hidden="true" />
+            </Link>
           </div>
         </section>
       </main>

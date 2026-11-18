@@ -6,13 +6,14 @@ import styles from "./resource-article.module.css";
 
 type ArticleBlock =
   | { kind: "paragraph"; text: string }
-  | { kind: "heading"; title: string }
+  | { kind: "heading"; id?: string; title: string }
   | { kind: "list"; items: string[]; ordered?: boolean }
   | { kind: "table"; label: string; headers: string[]; rows: string[][] }
   | { kind: "faq"; entries: { question: string; answer: string }[] };
 
 export type ArticleSection = {
   id: string;
+  headingId?: string;
   title: string;
   blocks: ArticleBlock[];
 };
@@ -36,6 +37,14 @@ function referenceText(text: string) {
   return parts;
 }
 
+export function ReferenceParagraphs({ paragraphs }: { paragraphs: readonly string[] }) {
+  return (
+    <div className={styles.paragraphs}>
+      {paragraphs.map((paragraph) => <p key={paragraph}>{referenceText(paragraph)}</p>)}
+    </div>
+  );
+}
+
 export function ReferenceSection({ section, className, children }: {
   section: ArticleSection;
   className?: string;
@@ -43,7 +52,7 @@ export function ReferenceSection({ section, className, children }: {
 }) {
   return (
     <section id={section.id} className={className ? `${styles.section} ${className}` : styles.section}>
-      <h2>{section.title}</h2>
+      <h2 id={section.headingId} className={section.headingId ? styles.headingAnchor : undefined}>{section.title}</h2>
       <div className={styles.referenceBlocks}>
         {section.blocks.map((block, index) => <ReferenceBlock key={index} block={block} />)}
       </div>
@@ -66,16 +75,16 @@ function ReferenceBlock({ block }: { block: ArticleBlock }) {
         );
       }
 
-      return <div className={styles.paragraphs}><p>{referenceText(block.text)}</p></div>;
+      return <ReferenceParagraphs paragraphs={[block.text]} />;
     }
     case "heading":
-      return <h3>{block.title}</h3>;
+      return <h3 id={block.id} className={block.id ? styles.headingAnchor : undefined}>{block.title}</h3>;
     case "list": {
       const Tag = block.ordered ? "ol" : "ul";
       const className = block.ordered ? `${styles.criteriaList} ${styles.numberedList}` : styles.criteriaList;
       return (
         <Tag className={className}>
-          {block.items.map((item) => <li key={item}>{item}</li>)}
+          {block.items.map((item) => <li key={item}>{referenceText(item)}</li>)}
         </Tag>
       );
     }

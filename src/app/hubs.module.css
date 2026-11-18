@@ -9,11 +9,13 @@
   margin-inline: auto;
 }
 
+/* ---------------------------------------------------------------- hero -- */
+
 .resourceHero {
   position: relative;
   display: grid;
   align-items: center;
-  min-height: clamp(35rem, 52vw, 45rem);
+  min-height: clamp(36rem, 54vw, 47rem);
   overflow: hidden;
   isolation: isolate;
   color: #fff;
@@ -30,6 +32,14 @@
     linear-gradient(0deg, #161915ad, transparent 58%);
 }
 
+.resourceHero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 3px;
+  background: linear-gradient(90deg, #767101, #e4d6a7 38%, #e4d6a700 88%);
+}
+
 .resourceBackdrop {
   position: absolute;
   inset: -1rem -1rem -1rem 28%;
@@ -41,8 +51,39 @@
   object-position: 38% center;
 }
 
+.heroGrid {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(#e4d6a714 1px, transparent 1px),
+    linear-gradient(90deg, #e4d6a714 1px, transparent 1px);
+  background-size: 68px 68px;
+  mask-image: linear-gradient(100deg, #000 6%, #0006 44%, transparent 72%);
+}
+
 .resourceHeroInner {
   padding-block: clamp(3.5rem, 7vw, 6rem);
+}
+
+.heroEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1.15rem;
+  color: #e4d6a7;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.heroEyebrow::before {
+  content: "";
+  width: 2.1rem;
+  height: 2px;
+  background: linear-gradient(90deg, #767101, #e4d6a7);
 }
 
 .resourceTitle {
@@ -61,6 +102,49 @@
   font-weight: 500;
   line-height: 1.7;
 }
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  margin-top: 1.9rem;
+}
+
+.heroStats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem clamp(1.5rem, 4vw, 3.25rem);
+  max-width: 34rem;
+  margin-top: clamp(2rem, 4vw, 2.9rem);
+  padding-top: 1.5rem;
+  border-top: 1px solid #e4d6a73d;
+}
+
+.heroStat {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.25rem;
+}
+
+.heroStat dd {
+  color: #fff;
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
+  font-weight: 750;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  font-variant-numeric: tabular-nums;
+}
+
+.heroStat dt {
+  color: #c9c3a6;
+  font-size: 0.68rem;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* ------------------------------------------------------------- shared --- */
 
 .eyebrow {
   display: flex;
@@ -107,20 +191,43 @@
 }
 
 .topicLink {
-  margin-top: 1.75rem;
+  position: relative;
   min-height: 48px;
-  padding: 0.7rem 1rem;
+  padding: 0.75rem 1.25rem;
   border: 1px solid #c2b27f;
+  border-radius: 999px;
   color: #292817;
   background: #e4d6a7;
+  box-shadow: 0 10px 24px -16px #e4d6a7cc;
 }
 
 .topicLink:hover {
   background: #f5e8bf;
+  box-shadow: 0 16px 30px -16px #c2b27fd9;
+}
+
+.ghostLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 48px;
+  padding: 0.75rem 1.2rem;
+  border: 1px solid #ffffff38;
+  border-radius: 999px;
+  color: #f1eee4;
+  font-size: 0.88rem;
+  font-weight: 650;
+}
+
+.ghostLink:hover {
+  border-color: #e4d6a7;
+  color: #fff;
+  background: #ffffff12;
 }
 
 .topicLink:focus-visible,
-.contactLink:focus-visible {
+.contactLink:focus-visible,
+.ghostLink:focus-visible {
   outline: 2px solid #e4d6a7;
   outline-offset: 5px;
 }
@@ -152,12 +259,31 @@
   background: var(--color-primary);
 }
 
+.editorialHead {
+  align-self: start;
+}
+
 .editorialCopy {
   max-width: 42rem;
   display: grid;
-  gap: 1rem;
+  gap: 1.1rem;
   color: #4f4d42;
   line-height: 1.8;
+}
+
+.editorialCopy p {
+  position: relative;
+  padding-left: 1.15rem;
+}
+
+.editorialCopy p::before {
+  content: "";
+  position: absolute;
+  inset-block: 0.45em 0.25em;
+  left: 0;
+  width: 2px;
+  border-radius: 2px;
+  background: linear-gradient(#c2b27f, #c2b27f00);
 }
 
 .editorialCopy a,
@@ -168,6 +294,12 @@
   text-underline-offset: 0.18em;
 }
 
+.editorialCopy a:hover,
+.faqItem a:hover {
+  color: #767101;
+  text-decoration-thickness: 2px;
+}
+
 .editorialCopy a:focus-visible,
 .faqItem summary:focus-visible,
 .faqItem a:focus-visible {
@@ -175,10 +307,28 @@
   outline-offset: 2px;
 }
 
+/* ------------------------------------------------------ topic section --- */
+
 .topicSection {
+  position: relative;
   scroll-margin-top: 5.5rem;
+  overflow: hidden;
   border-block: 1px solid #dedbce;
   background: #efede3;
+}
+
+.topicSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(#b7ad8438 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: radial-gradient(ellipse 85% 60% at 50% 0%, #000, transparent 75%);
+}
+
+.topicSection > * {
+  position: relative;
 }
 
 .sectionTitle {
@@ -189,14 +339,50 @@
   letter-spacing: -0.04em;
 }
 
-.topicSection .sectionTitle {
-  margin-bottom: 0.55rem;
+.sectionHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.8rem 2rem;
+  margin-bottom: clamp(1.6rem, 3vw, 2.3rem);
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #d7d3c1;
 }
 
-.topicIntro {
-  margin-bottom: 1.6rem;
+.sectionHead .sectionTitle {
+  margin-bottom: 0.5rem;
+}
+
+.sectionIntro {
+  max-width: 34rem;
   color: #4f4d42;
   line-height: 1.7;
+}
+
+.countPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid #c9bd8e;
+  border-radius: 999px;
+  color: #4a4713;
+  background: #f6f1dd;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.countPill::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #767101;
+  box-shadow: 0 0 0 3px #76710126;
 }
 
 .topicGrid,
@@ -207,55 +393,183 @@
 
 .topicGrid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.35rem);
 }
 
-.topicCard {
+/* ---------------------------------------------- shared card chrome ------ */
+
+.topicCard,
+.sectorCard {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-width: 0;
   overflow: hidden;
-  border: 1px solid #dbd7c8;
+  border: 1px solid #e0dccb;
+  border-radius: 16px;
   background: #fff;
+  box-shadow:
+    0 1px 2px #26261f0a,
+    0 14px 30px -24px #26261f73;
 }
+
+.topicCard::before,
+.sectorCard::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 3;
+  height: 3px;
+  background: linear-gradient(90deg, #767101, #c2b27f 45%, #e4d6a7);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.topicCard::after,
+.sectorCard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(105deg, #fff0 38%, #ffffff8c 48%, #fff0 60%);
+  opacity: 0;
+}
+
+.topicCard:hover,
+.topicCard:focus-within,
+.sectorCard:hover,
+.sectorCard:focus-within {
+  border-color: #cbbf90;
+  box-shadow:
+    0 2px 4px #26261f0d,
+    0 26px 48px -28px #26261fa6;
+}
+
+.topicCard:hover::before,
+.topicCard:focus-within::before,
+.sectorCard:hover::before,
+.sectorCard:focus-within::before {
+  transform: scaleX(1);
+}
+
+/* --------------------------------------------------------- topic card --- */
 
 .topicMedia {
   position: relative;
-  aspect-ratio: 2 / 1;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
-  border-bottom: 1px solid #dedbce;
+  border-bottom: 1px solid #e6e2d4;
   background:
-    linear-gradient(#a39a7520 1px, transparent 1px),
-    linear-gradient(90deg, #a39a7520 1px, transparent 1px),
-    radial-gradient(ellipse at center, #f5f2e8, #e7e3d4);
-  background-size: 24px 24px, 24px 24px, auto;
+    linear-gradient(#a39a7514 1px, transparent 1px),
+    linear-gradient(90deg, #a39a7514 1px, transparent 1px),
+    radial-gradient(ellipse 80% 70% at 50% 42%, #fdfcf8, #ebe7d8);
+  background-size: 22px 22px, 22px 22px, auto;
+}
+
+.topicMedia::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(ellipse 70% 55% at 50% 118%, #76710129, transparent 70%);
+  opacity: 0;
+}
+
+.topicCard:hover .topicMedia::after,
+.topicCard:focus-within .topicMedia::after {
+  opacity: 1;
 }
 
 .topicImage {
-  padding: 0.8rem;
+  padding: 1rem 1.1rem 1.15rem;
   object-fit: contain;
+  filter: drop-shadow(0 10px 14px #26261f1f);
 }
 
 .topicImageCover {
   object-fit: cover;
 }
 
+.cardIndex {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ffffff8a;
+  border-radius: 8px;
+  color: #3d3a1d;
+  background: #fffffff0;
+  box-shadow: 0 6px 14px -10px #26261f8c;
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  font-variant-numeric: tabular-nums;
+}
+
 .topicCopy {
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding: clamp(1.1rem, 2.4vw, 1.5rem);
+  padding: clamp(1.15rem, 2.4vw, 1.55rem);
 }
 
-.topicCard h3,
+.topicCard h3 {
+  position: relative;
+  margin-bottom: 0.7rem;
+  padding-bottom: 0.65rem;
+  font-size: clamp(1.1rem, 2.1vw, 1.32rem);
+  font-weight: 750;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+.topicCard h3::after {
+  content: "";
+  position: absolute;
+  inset: auto auto 0 0;
+  width: 1.6rem;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #767101, #c2b27f);
+}
+
+.topicCard p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  color: #56533f;
+  font-size: 0.9rem;
+  line-height: 1.68;
+}
+
 .sectorCopy h3 {
-  margin-bottom: 0.45rem;
+  position: relative;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.7rem;
   font-size: clamp(1.16rem, 2.2vw, 1.55rem);
   font-weight: 750;
   line-height: 1.25;
   letter-spacing: -0.025em;
 }
 
-.topicCard p,
+.sectorCopy h3::after {
+  content: "";
+  position: absolute;
+  inset: auto auto 0 0;
+  width: 1.6rem;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #767101, #c2b27f);
+}
+
 .sectorCopy p {
   color: #514e42;
   font-size: 0.93rem;
@@ -265,39 +579,47 @@
 .subjects {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
+  gap: 0.4rem;
   margin-top: auto;
-  padding-top: 1.2rem;
+  padding-top: 1.25rem;
 }
 
 .subjects li {
-  padding: 0.3rem 0.55rem;
-  border: 1px solid #e1decf;
-  background: #f8f7f0;
-  color: #514e32;
-  font-size: 0.72rem;
+  padding: 0.33rem 0.6rem;
+  border: 1px dashed #d7d2bd;
+  border-radius: 999px;
+  color: #6a6753;
+  background: #faf9f3;
+  font-size: 0.715rem;
   font-weight: 650;
   line-height: 1.35;
 }
 
 .subjects .linkedSubject {
   padding: 0;
-  border-color: #b1a474;
-  background: #eee5c7;
+  border-style: solid;
+  border-color: #cfc295;
+  background: #f6efd8;
 }
 
 .subjectLink {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  padding: 0.3rem 0.55rem;
+  gap: 0.4rem;
+  padding: 0.33rem 0.7rem 0.33rem 0.62rem;
+  border-radius: 999px;
   color: #3d3616;
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
 }
 
-.subjectLink:hover {
-  background: #e3d6a8;
+.subjectLink svg {
+  flex-shrink: 0;
+  color: #767101;
+}
+
+.linkedSubject:hover {
+  border-color: #a8995f;
+  background: #e8dcb2;
+  box-shadow: 0 6px 14px -10px #55511799;
 }
 
 .subjectLink:focus-visible {
@@ -305,17 +627,29 @@
   outline-offset: 2px;
 }
 
+/* ---------------------------------------------------------------- faq --- */
+
 .faqSection {
   padding-block: clamp(2.75rem, 6vw, 5.25rem);
   background: #f8f7f2;
 }
 
 .faqList {
-  border-top: 1px solid #c9c4af;
+  display: grid;
+  gap: 0.6rem;
+  align-self: start;
 }
 
 .faqItem {
-  border-bottom: 1px solid #c9c4af;
+  overflow: hidden;
+  border: 1px solid #ddd9c8;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.faqItem[open] {
+  border-color: #c9bd8e;
+  box-shadow: 0 16px 34px -28px #26261fa6;
 }
 
 .faqItem summary {
@@ -324,7 +658,8 @@
   justify-content: space-between;
   gap: 0.8rem;
   min-height: 48px;
-  padding: 1rem 0.75rem;
+  padding: 1rem 1.1rem;
+  font-size: 0.97rem;
   font-weight: 700;
   line-height: 1.45;
   list-style: none;
@@ -338,24 +673,80 @@
 .faqItem summary:hover,
 .faqItem[open] summary {
   color: #504e10;
-  background: #e6e2d2;
+  background: #f4f1e2;
 }
 
 .faqChevron {
   flex-shrink: 0;
+  padding: 3px;
+  border: 1px solid #ddd9c8;
+  border-radius: 50%;
   color: #555117;
+  background: #faf8ef;
 }
 
 .faqItem[open] .faqChevron {
   transform: rotate(180deg);
+  border-color: #c2b27f;
+  background: #efe6c7;
 }
 
 .faqItem p {
-  padding: 0.85rem 0.75rem 1.25rem;
+  padding: 0.25rem 1.1rem 1.25rem;
   color: #514e42;
   font-size: 0.93rem;
   line-height: 1.7;
 }
+
+/* ------------------------------------------------------------ cta band -- */
+
+.resourceCta {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
+  color: #fff;
+  background: linear-gradient(118deg, #1b1e18, #2c2f22 58%, #3a3a26);
+}
+
+.resourceCta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 48% 120% at 86% 50%, #e4d6a72e, transparent 70%),
+    linear-gradient(#e4d6a70f 1px, transparent 1px),
+    linear-gradient(90deg, #e4d6a70f 1px, transparent 1px);
+  background-size: auto, 60px 60px, 60px 60px;
+}
+
+.ctaInner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem 2.5rem;
+}
+
+.ctaInner h2 {
+  max-inline-size: 16em;
+  font-size: clamp(1.35rem, 3vw, 2.1rem);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.ctaInner p {
+  max-width: 34rem;
+  margin-top: 0.7rem;
+  color: #d9d5c3;
+  font-size: 0.97rem;
+  line-height: 1.7;
+}
+
+/* --------------------------------------------------------- industries --- */
 
 .industryHero {
   position: relative;
@@ -398,15 +789,7 @@
 
 .sectorGrid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.sectorCard {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  overflow: hidden;
-  border: 1px solid #e0ddce;
-  background: #fff;
+  gap: clamp(1rem, 2vw, 1.35rem);
 }
 
 .sectorCard:first-child {
@@ -414,7 +797,7 @@
   grid-column: 1 / -1;
   grid-template-columns: 1.15fr 1fr;
   align-items: stretch;
-  background: #efecdf;
+  background: linear-gradient(120deg, #fffefa, #f4f1e4);
 }
 
 .sectorMedia {
@@ -422,7 +805,36 @@
   aspect-ratio: 2.2 / 1;
   overflow: hidden;
   isolation: isolate;
-  background: #ebe8dd;
+  border-bottom: 1px solid #e6e2d4;
+  background:
+    linear-gradient(#a39a7514 1px, transparent 1px),
+    linear-gradient(90deg, #a39a7514 1px, transparent 1px),
+    radial-gradient(ellipse 80% 70% at 50% 42%, #fdfcf8, #ebe7d8);
+  background-size: 22px 22px, 22px 22px, auto;
+}
+
+/* Only while the feature card is side-by-side: stacked, it keeps its ratio. */
+@media (min-width: 641px) {
+  .sectorCard:first-child .sectorMedia {
+    aspect-ratio: auto;
+    border-right: 1px solid #e6e2d4;
+    border-bottom: 0;
+  }
+}
+
+.sectorMedia::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(ellipse 70% 55% at 50% 118%, #76710129, transparent 70%);
+  opacity: 0;
+}
+
+.sectorCard:hover .sectorMedia::after,
+.sectorCard:focus-within .sectorMedia::after {
+  opacity: 1;
 }
 
 .sectorImage,
@@ -432,7 +844,8 @@
 
 .sectorImageContain {
   object-fit: contain;
-  padding: 0.8rem;
+  padding: 1rem 1.1rem;
+  filter: drop-shadow(0 10px 14px #26261f1f);
 }
 
 .sectorCopy {
@@ -441,20 +854,48 @@
 }
 
 .industryContact {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 0.9rem 1.5rem;
+  gap: 1.2rem 2.5rem;
   margin-top: clamp(2rem, 5vw, 3.75rem);
-  padding: clamp(1.2rem, 3vw, 2.2rem);
+  padding: clamp(1.5rem, 3.5vw, 2.6rem);
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 16px;
   color: #fff;
-  background: #353522;
+  background: linear-gradient(118deg, #1b1e18, #2c2f22 58%, #3a3a26);
+}
+
+.industryContact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 48% 120% at 86% 50%, #e4d6a72e, transparent 70%),
+    linear-gradient(#e4d6a70f 1px, transparent 1px),
+    linear-gradient(90deg, #e4d6a70f 1px, transparent 1px);
+  background-size: auto, 60px 60px, 60px 60px;
 }
 
 .industryContact h2 {
-  font-size: clamp(1.15rem, 2.8vw, 1.55rem);
-  font-weight: 700;
+  max-inline-size: 16em;
+  font-size: clamp(1.25rem, 3vw, 1.85rem);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.industryContact p {
+  max-width: 34rem;
+  margin-top: 0.7rem;
+  color: #d9d5c3;
+  font-size: 0.97rem;
+  line-height: 1.7;
 }
 
 .contactLink {
@@ -468,13 +909,31 @@
   background: #e4d6a7;
 }
 
+.resourceCta .contactLink,
+.industryContact .contactLink {
+  min-height: 48px;
+  padding: 0.75rem 1.3rem;
+  border-radius: 999px;
+  color: #292817;
+  background: #e4d6a7;
+  font-weight: 700;
+}
+
+.resourceCta .contactLink:hover,
+.industryContact .contactLink:hover {
+  background: #f5e8bf;
+  box-shadow: 0 16px 32px -18px #e4d6a7cc;
+}
+
+/* -------------------------------------------------------- breakpoints --- */
+
 @media (min-width: 951px) {
   .topicCard:nth-child(3n + 2) {
-    --topic-delay: 55ms;
+    --reveal-delay: 90ms;
   }
 
   .topicCard:nth-child(3n + 3) {
-    --topic-delay: 110ms;
+    --reveal-delay: 180ms;
   }
 }
 
@@ -484,7 +943,14 @@
   }
 
   .topicCard:nth-child(even) {
-    --topic-delay: 55ms;
+    --reveal-delay: 90ms;
+  }
+}
+
+/* The first sector card spans both columns, so the right-hand ones are odd. */
+@media (min-width: 641px) {
+  .sectorCard:nth-child(odd):not(:first-child) {
+    --reveal-delay: 90ms;
   }
 }
 
@@ -496,6 +962,10 @@
 
   .resourceHero::before {
     background: linear-gradient(0deg, #161915 35%, #161915d4 62%, #16191524 100%);
+  }
+
+  .heroGrid {
+    mask-image: linear-gradient(0deg, #000 10%, transparent 70%);
   }
 
   .resourceBackdrop {
@@ -511,9 +981,17 @@
     font-size: clamp(1.65rem, 6.3vw, 3.4rem);
   }
 
+  .heroStats {
+    gap: 1rem 1.75rem;
+  }
+
   .editorialLayout,
   .faqLayout {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .editorialHead {
+    margin-bottom: 1.5rem;
   }
 
   .industryHero {
@@ -547,38 +1025,160 @@
   .sectorCard:first-child {
     grid-template-columns: minmax(0, 1fr);
   }
+
+  .heroActions {
+    gap: 0.6rem;
+  }
+
+  .heroActions > * {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
 }
+
+/* ------------------------------------------------------------- motion --- */
 
 @media (prefers-reduced-motion: no-preference) {
   .enter {
     animation: enter 500ms ease-out both;
   }
 
+  .heroEyebrow,
   .resourceTitle,
   .resourceLede,
-  .topicLink {
-    animation: enter 470ms ease-out both;
+  .heroActions,
+  .heroStats {
+    animation: enter 560ms cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
   .resourceLede {
-    animation-delay: 85ms;
+    animation-delay: 90ms;
   }
 
-  .topicLink {
-    animation-delay: 170ms;
+  .heroActions {
+    animation-delay: 180ms;
+  }
+
+  .heroStats {
+    animation-delay: 260ms;
   }
 
   .resourceImage {
     animation: revealResourceImage 1050ms ease-out both;
   }
 
-  .topicCard[data-reveal="pending"] {
-    opacity: 0;
-    transform: translateY(0.65rem);
+  .topicLink svg {
+    animation: nudgeDown 2.1s ease-in-out infinite;
   }
 
-  .topicCard[data-reveal="visible"] {
-    animation: enter 360ms ease-out var(--topic-delay, 0ms) both;
+  .resources [data-reveal="pending"],
+  .industries [data-reveal="pending"] {
+    opacity: 0;
+    transform: translateY(1.15rem);
+  }
+
+  .resources [data-reveal="visible"],
+  .industries [data-reveal="visible"] {
+    animation: riseIn 640ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms) both;
+  }
+
+  .topicCard,
+  .sectorCard {
+    transition:
+      transform 480ms cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 480ms cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 300ms ease-out;
+  }
+
+  .topicCard:hover,
+  .topicCard:focus-within {
+    transform: translateY(-7px);
+  }
+
+  /* Sector cards carry no link, so they lift less than the topic cards. */
+  .sectorCard:hover,
+  .sectorCard:focus-within {
+    transform: translateY(-4px);
+  }
+
+  .topicCard::before,
+  .sectorCard::before {
+    transition: transform 460ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .topicCard:hover::after,
+  .topicCard:focus-within::after,
+  .sectorCard:hover::after,
+  .sectorCard:focus-within::after {
+    animation: sheen 950ms ease-out;
+  }
+
+  .topicMedia::after,
+  .sectorMedia::after {
+    transition: opacity 420ms ease-out;
+  }
+
+  .topicImage,
+  .topicImageCover,
+  .sectorImage,
+  .sectorImageContain {
+    transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .topicCard:hover .topicImage,
+  .topicCard:focus-within .topicImage,
+  .topicCard:hover .topicImageCover,
+  .topicCard:focus-within .topicImageCover,
+  .sectorCard:hover .sectorImage,
+  .sectorCard:focus-within .sectorImage,
+  .sectorCard:hover .sectorImageContain,
+  .sectorCard:focus-within .sectorImageContain {
+    transform: scale(1.055);
+  }
+
+  .topicCard h3::after,
+  .sectorCopy h3::after {
+    transition: width 460ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .topicCard:hover h3::after,
+  .topicCard:focus-within h3::after,
+  .sectorCard:hover h3::after,
+  .sectorCard:focus-within h3::after {
+    width: 3.4rem;
+  }
+
+  .cardIndex {
+    transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1), background-color 300ms ease-out;
+  }
+
+  .topicCard:hover .cardIndex,
+  .topicCard:focus-within .cardIndex,
+  .sectorCard:hover .cardIndex,
+  .sectorCard:focus-within .cardIndex {
+    transform: translateY(-2px);
+    background: #fff;
+  }
+
+  .subjects li {
+    transition:
+      transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+      background-color 220ms ease-out,
+      border-color 220ms ease-out,
+      box-shadow 260ms ease-out;
+  }
+
+  .linkedSubject:hover {
+    transform: translateY(-2px);
+  }
+
+  .subjectLink svg {
+    transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .subjectLink:hover svg,
+  .subjectLink:focus-visible svg {
+    transform: translateX(3px);
   }
 
   @supports selector(::details-content) and (interpolate-size: allow-keywords) {
@@ -589,7 +1189,7 @@
     .faqItem::details-content {
       block-size: 0;
       overflow: clip;
-      transition: block-size 220ms ease-out, content-visibility 220ms allow-discrete;
+      transition: block-size 260ms ease-out, content-visibility 260ms allow-discrete;
     }
 
     .faqItem[open]::details-content {
@@ -597,13 +1197,36 @@
     }
   }
 
+  .faqItem,
+  .faqItem summary {
+    transition: background-color 220ms ease-out, border-color 220ms ease-out, box-shadow 280ms ease-out;
+  }
+
   .faqChevron {
-    transition: transform 180ms ease-out;
+    transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1), background-color 220ms ease-out,
+      border-color 220ms ease-out;
   }
 
   .topicLink,
+  .ghostLink,
   .contactLink {
-    transition: color 180ms ease-out, background-color 180ms ease-out;
+    transition:
+      color 200ms ease-out,
+      background-color 200ms ease-out,
+      border-color 200ms ease-out,
+      box-shadow 300ms ease-out,
+      transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .topicLink:hover,
+  .ghostLink:hover,
+  .resourceCta .contactLink:hover {
+    transform: translateY(-2px);
+  }
+
+  .editorialCopy a,
+  .faqItem a {
+    transition: color 180ms ease-out, text-decoration-thickness 180ms ease-out;
   }
 }
 
@@ -616,6 +1239,42 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(1.15rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sheen {
+  from {
+    opacity: 1;
+    transform: translateX(-120%);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(120%);
+  }
+}
+
+@keyframes nudgeDown {
+  0%,
+  65%,
+  100% {
+    transform: translateY(0);
+  }
+
+  80% {
+    transform: translateY(3px);
   }
 }
 
