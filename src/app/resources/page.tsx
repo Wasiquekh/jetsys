@@ -85,7 +85,7 @@ const topics: Topic[] = [
     title: "Avionics & Fuel Testing",
     description: "Browse aircraft test equipment topics for avionics and fuel systems. Understand how measurement needs, equipment interfaces and reporting requirements shape an enquiry.",
     subjects: [
-      "Avionics test equipment",
+      { label: "Avionics test equipment", href: "/resources/aviation-fuel-testing-equipment" },
       { label: "Fuel testing", href: "/resources/aviation-fuel-testing-equipment" },
       "Test benches",
     ],
@@ -275,7 +275,7 @@ export default function ResourcesPage() {
                         typeof subject === "string" ? (
                           <li key={subject}>{subject}</li>
                         ) : (
-                          <li key={subject.href} className={styles.linkedSubject}>
+                          <li key={subject.label} className={styles.linkedSubject}>
                             <Link href={subject.href} className={styles.subjectLink}>
                               {subject.label}
                               <ArrowRight size={14} aria-hidden="true" />

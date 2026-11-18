@@ -567,7 +567,7 @@
   gap: 0.85rem;
 }
 
-.page :is(.paragraphs, .matrix, .criteriaList) a {
+.page :is(.paragraphs, .matrix, .criteriaList, .faqItem) a {
   color: var(--accent);
   font-weight: 750;
   text-decoration: underline;

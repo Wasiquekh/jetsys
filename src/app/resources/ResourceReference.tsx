@@ -117,6 +117,6 @@ function ReferenceBlock({ block }: { block: ArticleBlock }) {
       );
     }
     case "faq":
-      return <ArticleFaq entries={block.entries} />;
+      return <ArticleFaq entries={block.entries} renderAnswer={referenceText} />;
   }
 }

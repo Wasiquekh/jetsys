@@ -169,7 +169,7 @@ const SolutionAnimate = () => {
                             </p>
                           </div>
                         </Link>
-                        <Link href="#">
+                        <Link href="/solutions/custom-test-rig-design">
                           <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                             <Image
                               src="/images/Test Stands & Test Rigs.svg"

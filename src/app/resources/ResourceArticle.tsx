@@ -142,7 +142,10 @@ export function ArticleChecklist({ steps }: { steps: readonly string[] }) {
   );
 }
 
-export function ArticleFaq({ entries }: { entries: readonly { question: string; answer: string }[] }) {
+export function ArticleFaq({ entries, renderAnswer }: {
+  entries: readonly { question: string; answer: string }[];
+  renderAnswer?: (answer: string) => ReactNode;
+}) {
   return (
     <div className={styles.faqList}>
       {entries.map(({ question, answer }) => (
@@ -150,7 +153,7 @@ export function ArticleFaq({ entries }: { entries: readonly { question: string; 
           <summary>
             <h3>{question} <ChevronDown size={19} aria-hidden="true" /></h3>
           </summary>
-          <p>{answer}</p>
+          <p>{renderAnswer ? renderAnswer(answer) : answer}</p>
         </details>
       ))}
     </div>

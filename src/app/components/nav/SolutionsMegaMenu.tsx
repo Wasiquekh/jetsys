@@ -36,7 +36,7 @@ const SOLUTIONS = [
       {
         title: "Test Stands & Test Rigs",
         image: "/images/Test Stands & Test Rigs.svg",
-        link: "/solutions",
+        link: "/solutions/custom-test-rig-design",
       },
       {
         title: "Aircraft Fixtures",
