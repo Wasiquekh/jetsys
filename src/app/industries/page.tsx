@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import ScrollReveal from "../components/ScrollReveal";
@@ -106,18 +104,6 @@ export default function IndustriesPage() {
             ))}
           </ul>
 
-          <div className={styles.industryContact} data-animate>
-            <div>
-              <h2>Have a project in mind?</h2>
-              <p>
-                Tell us the aircraft, airfield or test programme involved, and the Jetsys
-                team will help work out what the requirement needs.
-              </p>
-            </div>
-            <Link href="/contact-us" className={styles.contactLink}>
-              Contact Jetsys <ArrowUpRight size={19} aria-hidden="true" />
-            </Link>
-          </div>
         </section>
       </main>
       <Footer />

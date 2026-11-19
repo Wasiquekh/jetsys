@@ -180,8 +180,7 @@
   line-height: 1.75;
 }
 
-.topicLink,
-.contactLink {
+.topicLink {
   display: inline-flex;
   align-items: center;
   gap: 0.85rem;
@@ -226,7 +225,6 @@
 }
 
 .topicLink:focus-visible,
-.contactLink:focus-visible,
 .ghostLink:focus-visible {
   outline: 2px solid #e4d6a7;
   outline-offset: 5px;
@@ -698,54 +696,6 @@
   line-height: 1.7;
 }
 
-/* ------------------------------------------------------------ cta band -- */
-
-.resourceCta {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  padding-block: clamp(2.5rem, 6vw, 4.5rem);
-  color: #fff;
-  background: linear-gradient(118deg, #1b1e18, #2c2f22 58%, #3a3a26);
-}
-
-.resourceCta::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background:
-    radial-gradient(ellipse 48% 120% at 86% 50%, #e4d6a72e, transparent 70%),
-    linear-gradient(#e4d6a70f 1px, transparent 1px),
-    linear-gradient(90deg, #e4d6a70f 1px, transparent 1px);
-  background-size: auto, 60px 60px, 60px 60px;
-}
-
-.ctaInner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem 2.5rem;
-}
-
-.ctaInner h2 {
-  max-inline-size: 16em;
-  font-size: clamp(1.35rem, 3vw, 2.1rem);
-  font-weight: 750;
-  line-height: 1.2;
-  letter-spacing: -0.035em;
-  text-wrap: balance;
-}
-
-.ctaInner p {
-  max-width: 34rem;
-  margin-top: 0.7rem;
-  color: #d9d5c3;
-  font-size: 0.97rem;
-  line-height: 1.7;
-}
-
 /* --------------------------------------------------------- industries --- */
 
 .industryHero {
@@ -851,78 +801,6 @@
 .sectorCopy {
   align-content: center;
   padding: clamp(1.25rem, 3vw, 2.4rem);
-}
-
-.industryContact {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.2rem 2.5rem;
-  margin-top: clamp(2rem, 5vw, 3.75rem);
-  padding: clamp(1.5rem, 3.5vw, 2.6rem);
-  overflow: hidden;
-  isolation: isolate;
-  border-radius: 16px;
-  color: #fff;
-  background: linear-gradient(118deg, #1b1e18, #2c2f22 58%, #3a3a26);
-}
-
-.industryContact::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background:
-    radial-gradient(ellipse 48% 120% at 86% 50%, #e4d6a72e, transparent 70%),
-    linear-gradient(#e4d6a70f 1px, transparent 1px),
-    linear-gradient(90deg, #e4d6a70f 1px, transparent 1px);
-  background-size: auto, 60px 60px, 60px 60px;
-}
-
-.industryContact h2 {
-  max-inline-size: 16em;
-  font-size: clamp(1.25rem, 3vw, 1.85rem);
-  font-weight: 750;
-  line-height: 1.2;
-  letter-spacing: -0.035em;
-  text-wrap: balance;
-}
-
-.industryContact p {
-  max-width: 34rem;
-  margin-top: 0.7rem;
-  color: #d9d5c3;
-  font-size: 0.97rem;
-  line-height: 1.7;
-}
-
-.contactLink {
-  padding: 0.5rem 0.85rem;
-  border: 1px solid #c2b27f;
-  color: #f8f2dd;
-}
-
-.contactLink:hover {
-  color: #242416;
-  background: #e4d6a7;
-}
-
-.resourceCta .contactLink,
-.industryContact .contactLink {
-  min-height: 48px;
-  padding: 0.75rem 1.3rem;
-  border-radius: 999px;
-  color: #292817;
-  background: #e4d6a7;
-  font-weight: 700;
-}
-
-.resourceCta .contactLink:hover,
-.industryContact .contactLink:hover {
-  background: #f5e8bf;
-  box-shadow: 0 16px 32px -18px #e4d6a7cc;
 }
 
 /* -------------------------------------------------------- breakpoints --- */
@@ -1208,8 +1086,7 @@
   }
 
   .topicLink,
-  .ghostLink,
-  .contactLink {
+  .ghostLink {
     transition:
       color 200ms ease-out,
       background-color 200ms ease-out,
@@ -1219,8 +1096,7 @@
   }
 
   .topicLink:hover,
-  .ghostLink:hover,
-  .resourceCta .contactLink:hover {
+  .ghostLink:hover {
     transform: translateY(-2px);
   }
 

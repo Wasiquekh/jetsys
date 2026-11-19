@@ -8,7 +8,7 @@ type ArticleBlock =
   | { kind: "paragraph"; text: string }
   | { kind: "heading"; id?: string; title: string }
   | { kind: "list"; items: string[]; ordered?: boolean }
-  | { kind: "table"; label: string; headers: string[]; rows: string[][] }
+  | { kind: "table"; label: string; caption?: string; headers: string[]; rows: string[][] }
   | { kind: "faq"; entries: { question: string; answer: string }[] };
 
 export type ArticleSection = {
@@ -18,10 +18,10 @@ export type ArticleSection = {
   blocks: ArticleBlock[];
 };
 
-const internalLink = /\[([^\]\r\n]+)\]\((\/(?!\/)[a-z0-9/_-]+(?:#[a-z0-9_-]+)?)\)/gi;
+const internalLink = /\[([^\]\r\n]+)\]\((\/(?!\/)[a-z0-9/_-]+(?:#[a-z0-9_-]+)?|#[a-z0-9_-]+)\)/gi;
 
 function referenceText(text: string) {
-  if (!text.includes("](/")) return text;
+  if (!text.includes("](/") && !text.includes("](#")) return text;
 
   const parts: ReactNode[] = [];
   let cursor = 0;
@@ -29,7 +29,9 @@ function referenceText(text: string) {
     const [source, label, href] = match;
     const start = match.index;
     parts.push(text.slice(cursor, start));
-    parts.push(<Link key={start} href={href}>{label}</Link>);
+    parts.push(href.startsWith("#")
+      ? <a key={start} href={href}>{label}</a>
+      : <Link key={start} href={href}>{label}</Link>);
     cursor = start + source.length;
   }
 
@@ -100,6 +102,7 @@ function ReferenceBlock({ block }: { block: ArticleBlock }) {
           </p>
           <div className={styles.tableScroll} role="region" aria-label={block.label} tabIndex={0}>
             <table className={styles.matrix}>
+              {block.caption ? <caption>{block.caption}</caption> : null}
               <thead>
                 <tr>{block.headers.map((header) => <th key={header} scope="col">{header}</th>)}</tr>
               </thead>

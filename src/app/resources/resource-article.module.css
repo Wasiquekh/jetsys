@@ -293,6 +293,14 @@
   vertical-align: top;
 }
 
+.matrix caption {
+  padding-bottom: 0.85rem;
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 750;
+  text-align: left;
+}
+
 .matrix thead {
   color: #fff;
   background: #272b23;

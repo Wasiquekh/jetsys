@@ -87,14 +87,18 @@ const topics: Topic[] = [
     subjects: [
       { label: "Avionics test equipment", href: "/resources/aviation-fuel-testing-equipment" },
       { label: "Fuel testing", href: "/resources/aviation-fuel-testing-equipment" },
-      "Test benches",
+      { label: "Test benches", href: "/solutions/custom-test-rig-design" },
     ],
     image: "/images/aircraft-fuel-testing-equipment.png",
   },
   {
     title: "Engineering Standards & Glossary",
     description: "Find a starting point for understanding the abbreviations and standards that appear in aviation equipment discussions, specifications and procurement documents.",
-    subjects: ["MIL-STD-704", "Aviation terminology", "Equipment acronyms"],
+    subjects: [
+      { label: "MIL-STD-704", href: "/resources/mil-std-704-aircraft-electrical-power" },
+      { label: "Aviation terminology", href: "/resources/aviation-ground-support-equipment-glossary" },
+      { label: "Equipment acronyms", href: "/resources/aviation-ground-support-equipment-glossary#abbreviations-quick-reference" },
+    ],
     image: "/images/Aircraft Air Data Calibration System.png",
   },
   {
@@ -311,20 +315,6 @@ export default function ResourcesPage() {
           </div>
         </section>
 
-        <section className={styles.resourceCta} aria-labelledby="resource-cta-title">
-          <div className={`${styles.shell} ${styles.ctaInner}`} data-animate>
-            <div>
-              <h2 id="resource-cta-title">Have a requirement to discuss?</h2>
-              <p>
-                Share the application, aircraft or equipment interface and operating
-                environment, and the Jetsys team will take it from there.
-              </p>
-            </div>
-            <Link className={styles.contactLink} href="/contact-us">
-              Contact the team <ArrowUpRight size={17} aria-hidden="true" />
-            </Link>
-          </div>
-        </section>
       </main>
       <Footer />
     </>

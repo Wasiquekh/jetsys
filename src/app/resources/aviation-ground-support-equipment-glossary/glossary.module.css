@@ -1,0 +1,101 @@
+.jumpIndex {
+  margin-block: 1.75rem;
+}
+
+.jumpIndex p,
+.categoryIndex p {
+  margin-bottom: 0.75rem;
+  color: var(--ink);
+  font-weight: 750;
+}
+
+.jumpIndex ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0;
+  list-style: none;
+}
+
+.jumpIndex :is(a, span) {
+  display: grid;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  place-items: center;
+  padding-inline: 0.5rem;
+  border: 1px solid var(--line);
+  color: var(--accent);
+  font-size: 0.88rem;
+  font-weight: 750;
+}
+
+.jumpIndex a {
+  background: #eeebdf;
+}
+
+.jumpIndex a:hover {
+  color: var(--ink);
+  background: var(--gold);
+}
+
+.jumpIndex span {
+  color: #77786f;
+  border-color: transparent;
+}
+
+.categoryIndex {
+  margin-bottom: 1.75rem;
+  padding: 1.2rem;
+  border-inline-start: 3px solid #c2b27f;
+  background: #efede2;
+}
+
+.categoryIndex ul {
+  display: grid;
+  gap: 0.55rem;
+  padding: 0;
+  list-style: none;
+}
+
+.categoryIndex a {
+  color: var(--accent);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.categoryIndex a:hover,
+.termLinks a:hover {
+  color: var(--ink);
+}
+
+.abbreviationsLink {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 750;
+}
+
+.indexTable th:first-child {
+  width: 4.5rem;
+  min-width: 4.5rem;
+}
+
+.termLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.termLinks li {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.termLinks a {
+  display: inline-block;
+  overflow-wrap: anywhere;
+  line-height: 1.6;
+}
