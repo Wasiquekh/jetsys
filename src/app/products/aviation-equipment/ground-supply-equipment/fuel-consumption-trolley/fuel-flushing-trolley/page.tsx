@@ -7,7 +7,6 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
-import { h1 } from "framer-motion/m";
 
 export const metadata: Metadata = {
   title:

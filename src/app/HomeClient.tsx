@@ -52,7 +52,7 @@ export default function Home() {
     loop
     muted
     playsInline
-    preload="auto"
+    preload="metadata"
     poster="/images/poster.jpg"
     controls={false}
     disablePictureInPicture
@@ -228,52 +228,57 @@ export default function Home() {
   <div className="max-w-[1120px] px-5 mx-auto flex justify-between relative z-20">
     {[
       {
-        src: "/images/Expert-Engineers.gif",
+        src: "/images/Expert-Engineers.webm",
         alt: "Expert Engineers",
         className: "relative left-[10px]",
       },
       {
-        src: "/images/Rapid-Deployment.gif",
+        src: "/images/Rapid-Deployment.webm",
         alt: "Rapid Deployment",
         className: "relative left-[7px]",
       },
       {
-        src: "/images/Global-Reach.gif",
+        src: "/images/Global-Reach.webm",
         alt: "Global Reach",
         className: "relative left-[5.5px]",
       },
       {
-        src: "/images/Indigenous-Capability.gif",
+        src: "/images/Indigenous-Capability.webm",
         alt: "Indigenous Capability",
         className: "relative left-[2px]",
       },
       {
-        src: "/images/Precise-Production.gif",
+        src: "/images/Precise-Production.webm",
         alt: "Precise Production",
         className: "relative right-[1px]",
       },
       {
-        src: "/images/Innovation-at-Core.gif",
+        src: "/images/Innovation-at-Core.webm",
         alt: "Innovation at Core",
         className: "relative right-[4.5px]",
       },
       {
-        src: "/images/end-to-end-solutions.gif",
+        src: "/images/end-to-end-solutions.webm",
         alt: "End to end solutions",
         className: "relative right-[7px]",
       },
       {
-        src: "/images/Custom-Fit.gif",
+        src: "/images/Custom-Fit.webm",
         alt: "Custom-Fit",
         className: "relative right-[10px]",
       },
     ].map((item) => (
-      <img
+      <video
         key={item.alt}
         src={item.src}
-        alt={item.alt}
+        aria-label={item.alt}
+        role="img"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
         className={`w-[80px] h-[80px] object-contain block ${item.className}`}
-        draggable={false}
       />
     ))}
   </div>
@@ -331,52 +336,57 @@ export default function Home() {
   <div className="container !pt-0 grid grid-cols-2 gap-4">
     {[
       {
-        src: "/images/Expert-Engineers.gif",
+        src: "/images/Expert-Engineers.webm",
         alt: "Expert Engineers",
         title: "Expert Engineers",
       },
       {
-        src: "/images/Rapid-Deployment.gif",
+        src: "/images/Rapid-Deployment.webm",
         alt: "Rapid Deployment",
         title: "Rapid Deployment",
       },
       {
-        src: "/images/Global-Reach.gif",
+        src: "/images/Global-Reach.webm",
         alt: "Global Reach",
         title: "Global Reach",
       },
       {
-        src: "/images/Indigenous-Capability.gif",
+        src: "/images/Indigenous-Capability.webm",
         alt: "Indigenous Capability",
         title: "Indigenous Capability",
       },
       {
-        src: "/images/Precise-Production.gif",
+        src: "/images/Precise-Production.webm",
         alt: "Precise Production",
         title: "Precise Production",
       },
       {
-        src: "/images/Innovation-at-Core.gif",
+        src: "/images/Innovation-at-Core.webm",
         alt: "Innovation at Core",
         title: "Innovation at Core",
       },
       {
-        src: "/images/end-to-end-solutions.gif",
+        src: "/images/end-to-end-solutions.webm",
         alt: "End to end solutions",
         title: "End to end solutions",
       },
       {
-        src: "/images/Custom-Fit.gif",
+        src: "/images/Custom-Fit.webm",
         alt: "Custom-Fit",
         title: "Custom-Fit",
       },
     ].map((item) => (
       <div key={item.title} className="w-full">
-        <img
+        <video
           src={item.src}
-          alt={item.alt}
-          className="w-3/4 mb-2 m-auto object-contain block"
-          draggable={false}
+          aria-label={item.alt}
+          role="img"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          className="w-3/4 aspect-square mb-2 m-auto object-contain block"
         />
         <p className="text-center">{item.title}</p>
       </div>

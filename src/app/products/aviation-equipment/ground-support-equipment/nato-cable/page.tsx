@@ -6,7 +6,6 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
-import { Link } from "lucide-react";
 export const metadata: Metadata = {
   title:
     "NATO Cable – Military-Grade Cables & NATO Slave Connectors | Jetsys Defence",
