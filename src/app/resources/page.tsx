@@ -102,11 +102,28 @@ const topics: Topic[] = [
     image: "/images/Aircraft Air Data Calibration System.png",
   },
   {
-    title: "Defence Indigenization",
-    description: "Explore the terminology used in indigenization projects, including requirements definition, local manufacturing, validation and documentation.",
-    subjects: ["Local manufacturing", "Validation", "Engineering documentation"],
+    title: "Defence Indigenisation",
+    description: "Explore the terminology used in indigenisation projects, including requirements definition, local manufacturing, validation and documentation.",
+    // Interim targets: all three point at the existing solutions page until
+    // /resources/how-defence-indigenisation-works is published, at which point
+    // they move to #engineering-work, #qualification-and-certification and
+    // #documentation-set respectively.
+    subjects: [
+      { label: "Local manufacturing", href: "/solutions/indegenization" },
+      { label: "Validation", href: "/solutions/indegenization" },
+      { label: "Engineering documentation", href: "/solutions/indegenization" },
+    ],
     image: "/images/Indegenization.png",
     cover: true,
+  },
+  {
+    title: "Egress and Ordnance Circuit Testing",
+    description: "Understand how squib and firing circuit testing confirms a device and its circuit are intact without initiating them, and what makes a test instrument safe to connect to one.",
+    subjects: [
+      { label: "Squib testing", href: "/resources/squib-testing#what-is-a-squib" },
+      { label: "Failsafe test equipment", href: "/resources/squib-testing#squib-testers" },
+    ],
+    image: "/images/Squib Tester.png",
   },
 ];
 

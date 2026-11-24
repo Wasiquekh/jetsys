@@ -44,48 +44,20 @@ const page = () => {
                                     </div><br></br><br></br>
 <section className="w-full bg-white">
 
-  <h2 className="text-2xl sm:text-3xl font-bold text-[#5C5649] mb-4">
-    What Is Squib Testing?
-  </h2>
+  <p className="text-black leading-relaxed mb-3">
+    Squib testing measures bridgewire resistance and continuity in a squib, initiator or its firing
+    circuit, using a test current held far below the level that would initiate the device.
+  </p>
 
   <p className="text-black leading-relaxed mb-4">
-    A squib is a small electrically initiated device, also called an electro-explosive device (EED).
-    When a firing current passes through it, the squib sets off a cartridge or igniter.
-    On aircraft and defence systems, squibs are used in ejection seats, canopy severance devices,
-    fire bottle cartridges, and flare or countermeasure dispensers.
+    The full guide covers how the measurement works, what it measures, which standards apply and how
+    to select a failsafe instrument:{" "}
+    <Link href="/resources/squib-testing" className="font-semibold text-[#5C5649] underline">
+      Squib Testing for Aircraft and Defence Systems
+    </Link>.
   </p>
 
-  <p className="text-black leading-relaxed mb-8">
-    Squib testing is the electrical check of the squib and its firing circuit. It confirms continuity,
-    measures resistance, and looks for wiring faults or stray voltage, using a test current kept below
-    the level needed to fire the device. This lets maintenance teams verify the circuit without
-    initiating the squib.
-  </p>
-
-  <h2 className="text-2xl sm:text-3xl font-bold text-[#5C5649] mb-4">
-    What is a Squib Tester?
-  </h2>
-
-  <p className="text-black leading-relaxed mb-6">
-    A Squib Tester (also known as an Aircraft Squib Tester, Squib Igniter Tester, or Squib Firing Circuit Tester)
-    is an electronic instrument used to verify the electrical health of explosive components
-    without intentionally firing them. It applies a controlled, current-limited test current—below the
-    firing threshold—to measure resistance, continuity, and wiring faults.
-  </p>
-
-  <h3 className="text-xl sm:text-2xl font-semibold text-[#5C5649] mb-3">
-    Why Squib Testing Is Critical
-  </h3>
-
-  <ul className="list-disc pl-6 text-black leading-relaxed space-y-2">
-    <li>Helps confirm that the firing circuits of ejection seats, explosive valves, and deployment systems are electrically intact</li>
-    <li>Reduces the risk of unintended initiation during maintenance</li>
-    <li>Detects broken wiring, incorrect harness routing, stray voltages, and degraded igniters</li>
-    <li>Helps find circuit faults before they affect aircraft or crew safety</li>
-    <li>Supports defence readiness and lifecycle reliability</li>
-  </ul>
-
-</section>     
+</section>
 <br></br><br></br>
                                           
          <section>
@@ -103,7 +75,7 @@ const page = () => {
             &nbsp;Test current is limited below the firing threshold during checks.
           </li>
           <li>
-            <strong className="font-bold text-[#5C5649]">Current-Limited Testing</strong>
+            <strong className="font-bold text-[#5C5649]">Fail-Safe Current Limiting</strong>
             &nbsp;Fail-safe current limiting reduces the risk of unintended initiation while measuring.
           </li>
           <li>
@@ -111,7 +83,7 @@ const page = () => {
             &nbsp;Precision micro-ohm resistance readings for reliable diagnostics.
           </li>
           <li>
-            <strong className="font-bold text-[#5C5649]">High-Accuracy Measurement</strong>
+            <strong className="font-bold text-[#5C5649]">Fault Detection</strong>
             &nbsp;Detects short/open circuits, leakage, and stray voltage conditions.
           </li>
           <li>
@@ -119,7 +91,7 @@ const page = () => {
             &nbsp;Rugged, shock-resistant housing suited for field and workshop use.
           </li>
           <li>
-            <strong className="font-bold text-[#5C5649]">Rugged Design</strong>
+            <strong className="font-bold text-[#5C5649]">Broad Compatibility</strong>
             &nbsp;Compatible with major aircraft platforms and EED families.
           </li>
         </ul>
@@ -129,11 +101,11 @@ const page = () => {
       <div className="text-black space-y-4">
         <ul className="list-disc pl-5">
           <li>
-            <strong className="font-bold text-[#5C5649]">High-Accuracy Measurement</strong>
+            <strong className="font-bold text-[#5C5649]">Clear Digital Readout</strong>
             &nbsp;Instant, stable readings on a large, easy-to-read digital display.
           </li>
           <li>
-            <strong className="font-bold text-[#5C5649]">Rugged Design</strong>
+            <strong className="font-bold text-[#5C5649]">Portable and Battery-Powered</strong>
             &nbsp;Portable, battery-operated configuration ideal for flightline operations.
           </li>
           <li>
@@ -141,15 +113,15 @@ const page = () => {
             &nbsp;Single-person operation for quick turnarounds.
           </li>
           <li>
-            <strong className="font-bold text-[#5C5649]">Operator-Friendly</strong>
+            <strong className="font-bold text-[#5C5649]">Four-Wire Kelvin Leads</strong>
             &nbsp;4-wire (Kelvin) test lead configuration for precise low-resistance tests.
           </li>
           <li>
-            <strong className="font-bold text-[#5C5649]">Operator-Friendly</strong>
+            <strong className="font-bold text-[#5C5649]">Calibration and Automation Support</strong>
             &nbsp;Digital calibration and automation support to streamline procedures.
           </li>
           <li>
-            <strong className="font-bold text-[#5C5649]">Operator-Friendly</strong>
+            <strong className="font-bold text-[#5C5649]">Data Logging and Traceability</strong>
             &nbsp;Optional data logging for maintenance records and traceability.
           </li>
         </ul>

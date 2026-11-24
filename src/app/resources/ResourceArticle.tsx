@@ -26,7 +26,7 @@ export default function ResourceArticle({
   category?: string;
   breadcrumb?: Breadcrumb;
   title: ReactNode;
-  heroImage: string;
+  heroImage?: string;
   heroVariant?: "equipment" | "equipment-photo";
   jumpLink: ArticleLink;
   sections: readonly ArticleLink[];
@@ -41,15 +41,17 @@ export default function ResourceArticle({
       <main className={styles.page}>
         <article aria-labelledby="resource-article-title">
           <header className={styles.hero} data-variant={heroVariant}>
-            <div className={styles.heroMedia}>
-              <Image
-                src={heroImage}
-                alt=""
-                fill
-                priority
-                sizes={heroVariant ? "(max-width: 720px) 100vw, 55vw" : "(max-width: 720px) 100vw, 70vw"}
-              />
-            </div>
+            {heroImage ? (
+              <div className={styles.heroMedia}>
+                <Image
+                  src={heroImage}
+                  alt=""
+                  fill
+                  priority
+                  sizes={heroVariant ? "(max-width: 720px) 100vw, 55vw" : "(max-width: 720px) 100vw, 70vw"}
+                />
+              </div>
+            ) : null}
             <div className={`${styles.shell} ${styles.heroInner}`}>
               <nav className={styles.breadcrumb} aria-label="Breadcrumb">
                 {breadcrumb.links.map(({ href, label }) => (

@@ -848,3 +848,22 @@
   from { transform: translateY(12px); }
   to { transform: translateY(0); }
 }
+
+.section h4 {
+  font-size: clamp(0.95rem, 1.7vw, 1.05rem);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  color: var(--copy);
+}
+
+.referenceBlocks > h4:not(:first-child) {
+  margin-top: 0.35rem;
+}
+
+.diagram {
+  margin: 0.5rem 0;
+  padding: clamp(0.85rem, 2.4vw, 1.45rem);
+  border: 1px solid var(--line);
+  background: #fff;
+}

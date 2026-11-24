@@ -6,10 +6,11 @@ import styles from "./resource-article.module.css";
 
 type ArticleBlock =
   | { kind: "paragraph"; text: string }
-  | { kind: "heading"; id?: string; title: string }
+  | { kind: "heading"; id?: string; title: string; level?: 3 | 4 }
   | { kind: "list"; items: string[]; ordered?: boolean }
   | { kind: "table"; label: string; caption?: string; headers: string[]; rows: string[][] }
-  | { kind: "faq"; entries: { question: string; answer: string }[] };
+  | { kind: "faq"; entries: { question: string; answer: string }[] }
+  | { kind: "diagram"; name: string };
 
 export type ArticleSection = {
   id: string;
@@ -47,23 +48,29 @@ export function ReferenceParagraphs({ paragraphs }: { paragraphs: readonly strin
   );
 }
 
-export function ReferenceSection({ section, className, children }: {
+export function ReferenceSection({ section, className, children, renderDiagram }: {
   section: ArticleSection;
   className?: string;
   children?: ReactNode;
+  renderDiagram?: (name: string) => ReactNode;
 }) {
   return (
     <section id={section.id} className={className ? `${styles.section} ${className}` : styles.section}>
       <h2 id={section.headingId} className={section.headingId ? styles.headingAnchor : undefined}>{section.title}</h2>
       <div className={styles.referenceBlocks}>
-        {section.blocks.map((block, index) => <ReferenceBlock key={index} block={block} />)}
+        {section.blocks.map((block, index) => (
+          <ReferenceBlock key={index} block={block} renderDiagram={renderDiagram} />
+        ))}
       </div>
       {children}
     </section>
   );
 }
 
-function ReferenceBlock({ block }: { block: ArticleBlock }) {
+function ReferenceBlock({ block, renderDiagram }: {
+  block: ArticleBlock;
+  renderDiagram?: (name: string) => ReactNode;
+}) {
   switch (block.kind) {
     case "paragraph": {
       const action = /^\[([^\]\r\n]+)\]\(\/contact-us\)$/.exec(block.text);
@@ -79,8 +86,10 @@ function ReferenceBlock({ block }: { block: ArticleBlock }) {
 
       return <ReferenceParagraphs paragraphs={[block.text]} />;
     }
-    case "heading":
-      return <h3 id={block.id} className={block.id ? styles.headingAnchor : undefined}>{block.title}</h3>;
+    case "heading": {
+      const Heading = block.level === 4 ? "h4" : "h3";
+      return <Heading id={block.id} className={block.id ? styles.headingAnchor : undefined}>{block.title}</Heading>;
+    }
     case "list": {
       const Tag = block.ordered ? "ol" : "ul";
       const className = block.ordered ? `${styles.criteriaList} ${styles.numberedList}` : styles.criteriaList;
@@ -121,5 +130,7 @@ function ReferenceBlock({ block }: { block: ArticleBlock }) {
     }
     case "faq":
       return <ArticleFaq entries={block.entries} renderAnswer={referenceText} />;
+    case "diagram":
+      return renderDiagram ? <figure className={styles.diagram}>{renderDiagram(block.name)}</figure> : null;
   }
 }
