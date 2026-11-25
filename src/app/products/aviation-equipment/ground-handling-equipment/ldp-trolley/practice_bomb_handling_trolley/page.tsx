@@ -6,6 +6,7 @@ import StickyHeader from "@/app/components/StickyHeader";
 import { Metadata } from "next";
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+import ProductJsonLd from "@/app/components/ProductJsonLd";
 
 export const metadata: Metadata = {
   title: "Practice Bomb Handling Trolley | Jetsys Defence Aviation Equipment",
@@ -22,6 +23,7 @@ const page = () => {
       <div>
         <Header />
         <StickyHeader />
+        <ProductJsonLd route="/products/aviation-equipment/ground-handling-equipment/ldp-trolley/practice_bomb_handling_trolley" />
         <section>
           <div className="container">
             <div>

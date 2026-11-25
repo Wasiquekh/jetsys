@@ -6,6 +6,7 @@ import StickyHeader from "@/app/components/StickyHeader";
 import { Metadata } from "next";
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+import ProductJsonLd from "@/app/components/ProductJsonLd";
 
 export const metadata: Metadata = {
   title: "Seal Kit for Hydraulic Systems | Jetsys Defence Aviation Parts",
@@ -22,6 +23,7 @@ const page = () => {
       <div>
         <Header />
         <StickyHeader />
+        <ProductJsonLd route="/products/aviation-equipment/ground-handling-equipment/bomb-loading-trolley/seal_kit" />
         <section>
           <div className="container">
             <div>

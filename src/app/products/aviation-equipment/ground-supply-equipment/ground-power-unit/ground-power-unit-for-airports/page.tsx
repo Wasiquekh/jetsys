@@ -6,6 +6,7 @@ import StickyHeader from "@/app/components/StickyHeader";
 import { Metadata } from "next";
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+import ProductJsonLd from "@/app/components/ProductJsonLd";
 
 export const metadata: Metadata = {
   title: "Ground Power Unit for Airports | Airport GPU Systems | Jetsys Defence",
@@ -22,6 +23,7 @@ const page = () => {
       <div>
         <Header />
         <StickyHeader />
+        <ProductJsonLd route="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/ground-power-unit-for-airports" />
         <section>
           <div className="container">
             <div>

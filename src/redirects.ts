@@ -17,6 +17,25 @@ const LEGACY: Record<string, string> = {
   "/service/raw-materials": "/products/airborne-raw-materials",
 };
 
+// Legacy URLs that still draw impressions while returning 404. Each one points
+// at the closest page that exists today, which is not always a close match:
+// these are holding redirects, to be repointed at the dedicated page as it
+// launches rather than left here permanently.
+const LEGACY_WITH_TRAFFIC: Record<string, string> = {
+  // 78 impressions. No gallery page exists; About Us carries the company imagery.
+  "/gallery-regular": "/about-us",
+  // 40 impressions. Nickel alloy is one of the airborne raw materials.
+  "/nickel-alloy": "/products/airborne-raw-materials",
+  // 20 impressions. No founder or leadership page exists yet.
+  "/portfolio/founder": "/about-us",
+  // 5 impressions. Titanium is one of the airborne raw materials.
+  "/titanium": "/products/airborne-raw-materials",
+  // No team page exists yet.
+  "/team/team": "/about-us",
+  // No certificates page exists yet.
+  "/certificates": "/about-us",
+};
+
 // Pages merged into a stronger page covering the same product or intent.
 const CONSOLIDATED: Record<string, string> = {
   "/products/aviation-equipment/ground-supply-equipment/ground-power-unit/aircraft-ground-power-unit":
@@ -72,6 +91,7 @@ const RENAMED: Record<string, string> = {
 
 export const REDIRECTS: Record<string, string> = {
   ...LEGACY,
+  ...LEGACY_WITH_TRAFFIC,
   ...CONSOLIDATED,
   ...RENAMED,
 };

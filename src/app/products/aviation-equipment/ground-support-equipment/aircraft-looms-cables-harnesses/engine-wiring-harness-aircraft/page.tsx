@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+import ProductJsonLd from "@/app/components/ProductJsonLd";
 
 export const metadata: Metadata = {
   title:
@@ -24,6 +25,7 @@ const page = () => {
       <div>
         <Header />
         <StickyHeader />
+        <ProductJsonLd route="/products/aviation-equipment/ground-support-equipment/aircraft-looms-cables-harnesses/engine-wiring-harness-aircraft" />
         <section>
           <div className="container">
             <div>

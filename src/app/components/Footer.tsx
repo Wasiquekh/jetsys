@@ -1,8 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { FaLinkedin, FaStopwatch, FaXTwitter } from "react-icons/fa6";
-import { GrInstagram } from "react-icons/gr";
-import { IoLogoFacebook, IoMdMail } from "react-icons/io";
+import { FaLinkedin, FaStopwatch } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
 import { ImLinkedin } from "react-icons/im";
 import Link from "next/link";
 import { IoCallSharp } from "react-icons/io5";
@@ -29,41 +28,22 @@ const Footer = () => {
               import of hi-tech defense equipment.
             </p>
 
+            {/*
+              Only the accounts we actually have are listed. The X, Instagram
+              and Facebook icons used to sit here pointing at "/", so all four
+              were really just links back to the homepage. Add an icon back when
+              there is a real profile URL for it, never a placeholder href.
+            */}
             <ul
               className="flex gap-8 justify-center md:justify-start mb-6"
               aria-label="Social links"
             >
               <li>
                 <Link
-                  href="/"
-                  aria-label="Twitter"
-                  className=" hover:text-secondary"
-                >
-                  <FaXTwitter />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  aria-label="Instagram"
-                  className=" hover:text-secondary"
-                >
-                  <GrInstagram />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  aria-label="Facebook"
-                  className=" hover:text-secondary"
-                >
-                  <IoLogoFacebook />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  aria-label="LinkedIn"
+                  href="https://www.linkedin.com/company/jetsys-defence/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Jetsys Defence on LinkedIn"
                   className=" hover:text-secondary"
                 >
                   <ImLinkedin />

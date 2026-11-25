@@ -6,6 +6,7 @@ import StickyHeader from "@/app/components/StickyHeader";
 import { Metadata } from "next";
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+import ProductJsonLd from "@/app/components/ProductJsonLd";
 
 export const metadata: Metadata = {
   title: "Nitrogen Purging System for Aviation Equipment | Jetsys Defence",
@@ -45,6 +46,7 @@ const page = () => {
       <div>
         <Header />
         <StickyHeader />
+        <ProductJsonLd route="/products/aviation-equipment/ground-support-equipment/nitrogen-trolley/nitrogen_purging" />
         <section>
           <div className="container max-w-7xl mx-auto px-1 py-2">
             <h1 className="text-primary text-[26px] md:text-[40px] font-extrabold uppercase mb-5 horizon">

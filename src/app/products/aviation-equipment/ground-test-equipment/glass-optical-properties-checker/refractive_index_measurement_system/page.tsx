@@ -6,6 +6,7 @@ import StickyHeader from "@/app/components/StickyHeader";
 import { Metadata } from "next";
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+import ProductJsonLd from "@/app/components/ProductJsonLd";
 
 export const metadata: Metadata = {
   title: "Refractive Index Measurement System | Jetsys Defence Aviation Equipment",
@@ -22,6 +23,7 @@ const Page = () => {
       <div>
         <Header />
         <StickyHeader />
+        <ProductJsonLd route="/products/aviation-equipment/ground-test-equipment/glass-optical-properties-checker/refractive_index_measurement_system" />
         <section>
           <div className="container">
             <div>

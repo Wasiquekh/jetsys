@@ -4,8 +4,11 @@ import "./globals.css";
 import { Montserrat } from "next/font/google";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import SiteStructuredData from "./components/SiteStructuredData";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Aerospace Innovation & Defence R&D in India | Jetsys Defence",
   description:
     "Pioneering R&D in aerospace and defence, Jetsys Defence develops indigenous technologies for avionics, AI-based control, and tactical applications.",
@@ -52,7 +55,10 @@ export default function RootLayout({
         </Script>
       </head>
 
-      <body className={`${montserrat.variable} antialiased`}>{children}</body>
+      <body className={`${montserrat.variable} antialiased`}>
+        <SiteStructuredData />
+        {children}
+      </body>
     </html>
   );
 }

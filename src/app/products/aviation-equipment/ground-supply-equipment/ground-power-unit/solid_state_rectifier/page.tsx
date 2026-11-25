@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+import ProductJsonLd from "@/app/components/ProductJsonLd";
 
 export const metadata: Metadata = {
   title: "Solid-State Rectifier for Aviation Power Systems | Jetsys Defence",
@@ -23,6 +24,7 @@ const Page = () => {
       <div>
         <Header />
         <StickyHeader />
+        <ProductJsonLd route="/products/aviation-equipment/ground-supply-equipment/ground-power-unit/solid_state_rectifier" />
         <section>
           <div className="container">
             <div>

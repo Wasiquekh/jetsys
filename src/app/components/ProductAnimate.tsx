@@ -252,7 +252,7 @@ const ProductAnimate = () => {
                     </div>
                     <div className="w-full md:w-[50%]">
                       <div className=" grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch mt-4 md:mt-0">
-                        <Link href="#">
+                        <Link href="/products/aircraft-spares-system">
                           <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                             <Image
                               src="/images/Aircraft Spares.svg"
@@ -266,7 +266,7 @@ const ProductAnimate = () => {
                             </p>
                           </div>
                         </Link>
-                        <Link href="#">
+                        <Link href="/products/aircraft-spares-system">
                           <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                             <Image
                               src="/images/Aircraft Systems.svg"
@@ -280,7 +280,7 @@ const ProductAnimate = () => {
                             </p>
                           </div>
                         </Link>
-                        <Link href="#">
+                        <Link href="/products/aircraft-spares-system">
                           <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer  border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                             <Image
                               src="/images/Navy Spares.svg"
@@ -294,7 +294,7 @@ const ProductAnimate = () => {
                             </p>
                           </div>
                         </Link>
-                        <Link href="#">
+                        <Link href="/products/aircraft-spares-system">
                           <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                             <Image
                               src="/images/Aircraft Hoses.svg"
@@ -308,7 +308,7 @@ const ProductAnimate = () => {
                             </p>
                           </div>
                         </Link>
-                        <Link href="#">
+                        <Link href="/products/aircraft-spares-system">
                           <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                             <Image
                               src="/images/engine parts.svg"
@@ -322,7 +322,7 @@ const ProductAnimate = () => {
                             </p>
                           </div>
                         </Link>
-                        <Link href="#">
+                        <Link href="/products/aircraft-spares-system">
                           <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                             <Image
                               src="/images/Fuel System Parts.svg"
@@ -375,7 +375,7 @@ const ProductAnimate = () => {
                     </div>
                     <div className="w-full md:w-[50%]">
                       <div className=" grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch mt-4 md:mt-0">
-                        <Link href="#">
+                        <Link href="/products/airborne-raw-materials">
                           <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                             <Image
                               src="/images/Steel (Carbon).svg"
@@ -389,7 +389,7 @@ const ProductAnimate = () => {
                             </p>
                           </div>
                         </Link>
-                        <Link href="#">
+                        <Link href="/products/airborne-raw-materials">
                           <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                             <Image
                               src="/images/Steel (Carbon).svg"
@@ -403,7 +403,7 @@ const ProductAnimate = () => {
                             </p>
                           </div>
                         </Link>
-                        <Link href="#">
+                        <Link href="/products/airborne-raw-materials">
                           <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer  border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                             <Image
                               src="/images/Fasteners.svg"
@@ -417,7 +417,7 @@ const ProductAnimate = () => {
                             </p>
                           </div>
                         </Link>
-                        <Link href="#">
+                        <Link href="/products/airborne-raw-materials">
                           <div className=" bg-[#F0EFE9] hover:bg-[#D1CFC6] cursor-pointer border border-primary rounded-[8px] overflow-hidden p-4 h-full">
                             <Image
                               src="/images/Airborne Glues.svg"
@@ -612,7 +612,7 @@ const ProductAnimate = () => {
                 precision.
               </p>
             <Link
-  href="#"
+  href="/products"
   className="block w-full bg-primary px-8 py-3 rounded mb-5 mt-auto text-center hover:bg-[#5f5b00] transition"
 >
   <span className="text-[#E9DCB4] font-semibold text-base">

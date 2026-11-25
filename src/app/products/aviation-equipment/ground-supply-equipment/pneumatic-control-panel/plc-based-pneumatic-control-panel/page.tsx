@@ -6,6 +6,7 @@ import StickyHeader from "@/app/components/StickyHeader";
 import { Metadata } from "next";
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+import ProductJsonLd from "@/app/components/ProductJsonLd";
 
 export const metadata: Metadata = {
   title: "PLC Based Pneumatic Control Panel | PLC Pneumatic Control System | Jetsys Defence",
@@ -22,6 +23,7 @@ export default function Page() {
       <div>
         <Header />
         <StickyHeader />
+        <ProductJsonLd route="/products/aviation-equipment/ground-supply-equipment/pneumatic-control-panel/plc-based-pneumatic-control-panel" />
         <section>
           <div className="container">
             <div>

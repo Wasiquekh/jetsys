@@ -7,6 +7,7 @@ import { Metadata } from "next";
 
 
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+import ProductJsonLd from "@/app/components/ProductJsonLd";
 export const metadata: Metadata = {
   title:
     "Protractor Unit for DAU Vane Angles – Aircraft Tooling Protractors | Jetsys Defence",
@@ -23,6 +24,7 @@ const page = () => {
     <div>
       <Header />
       <StickyHeader />
+      <ProductJsonLd route="/products/aviation-equipment/ground-support-equipment/protractor-unit-for-dau-vane-angles" />
       <section>
         <div className="container">
       <div>

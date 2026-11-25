@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+import ProductJsonLd from "@/app/components/ProductJsonLd";
 export const metadata: Metadata = {
   title:
     "NATO Cable – Military-Grade Cables & NATO Slave Connectors | Jetsys Defence",
@@ -22,6 +23,7 @@ const page = () => {
     <div>
       <Header />
       <StickyHeader />
+      <ProductJsonLd route="/products/aviation-equipment/ground-support-equipment/nato-cable" />
       <section>
         <div className="container">
       <div>

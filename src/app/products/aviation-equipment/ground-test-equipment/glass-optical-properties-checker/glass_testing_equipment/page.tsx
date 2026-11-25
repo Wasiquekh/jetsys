@@ -6,6 +6,7 @@ import StickyHeader from "@/app/components/StickyHeader";
 import { Metadata } from "next";
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+import ProductJsonLd from "@/app/components/ProductJsonLd";
 
 export const metadata: Metadata = {
   title: "Glass Testing Equipment | Jetsys Defence Aviation Solutions",
@@ -22,6 +23,7 @@ const Page = () => {
       <div>
         <Header />
         <StickyHeader />
+        <ProductJsonLd route="/products/aviation-equipment/ground-test-equipment/glass-optical-properties-checker/glass_testing_equipment" />
         <section>
           <div className="container">
             <div>

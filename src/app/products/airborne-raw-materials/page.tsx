@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
+import ProductJsonLd from "@/app/components/ProductJsonLd";
 
 export const metadata = {
   title: "Aerospace Raw Materials, Fasteners & Adhesives",
@@ -75,6 +76,7 @@ export default function Page() {
     <div className="overflow-hidden bg-[#f6f4ed] text-[#292820]">
       <Header />
       <StickyHeader />
+      <ProductJsonLd route="/products/airborne-raw-materials" />
 
       <main>
         <section className="relative isolate min-h-[620px] overflow-hidden bg-[#191a14]">
