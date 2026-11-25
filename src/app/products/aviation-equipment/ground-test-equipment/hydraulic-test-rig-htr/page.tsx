@@ -6,6 +6,7 @@ import { Metadata } from "next";
 
 import Image from "next/image";
 import OrderNowContactButton from "@/app/components/ContactUsModalButton";
+import ProductJsonLd from "@/app/components/ProductJsonLd";
 export const metadata: Metadata = {
   title:
     "Advanced Hydraulic Test Rig (HTR) | Jetsys Defence Aviation Systems",
@@ -22,6 +23,7 @@ const page = () => {
     <div>
       <Header />
       <StickyHeader />
+      <ProductJsonLd route="/products/aviation-equipment/ground-test-equipment/hydraulic-test-rig-htr" />
       <section>
         <div className="container">
   <div>

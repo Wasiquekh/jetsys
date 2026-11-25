@@ -57,6 +57,7 @@ export default function GroundPowerResourcePage() {
 
   return (
     <ResourceArticle
+      route="/resources/28v-dc-vs-400hz-ground-power"
       title={(
         <>
           <span className={styles.titleLine}>28 V DC vs <span className={styles.frequency}>400 Hz</span></span>{" "}

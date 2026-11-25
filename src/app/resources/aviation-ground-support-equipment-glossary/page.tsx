@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function AviationGroundSupportEquipmentGlossaryPage() {
   return (
     <ResourceArticle
+      route="/resources/aviation-ground-support-equipment-glossary"
       breadcrumb={{
         links: [{ href: "/", label: "Home" }, { href: "/resources", label: "Resources" }],
         current: "Glossary",

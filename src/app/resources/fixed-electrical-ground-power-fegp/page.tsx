@@ -62,6 +62,7 @@ export const metadata: Metadata = {
 export default function FixedElectricalGroundPowerPage() {
   return (
     <ResourceArticle
+      route="/resources/fixed-electrical-ground-power-fegp"
       title="FEGP vs Mobile Ground Power Units for Aircraft"
       heroImage="/images/Other Offerings.png"
       jumpLink={{ id: comparison.id, title: "Compare fixed and mobile ground power" }}

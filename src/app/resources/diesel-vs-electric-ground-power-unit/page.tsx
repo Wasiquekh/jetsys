@@ -55,6 +55,7 @@ export const metadata: Metadata = {
 export default function DieselVsElectricGroundPowerPage() {
   return (
     <ResourceArticle
+      route="/resources/diesel-vs-electric-ground-power-unit"
       title={title}
       heroImage="/images/Aircraft ROH.png"
       jumpLink={{ id: "at-a-glance", title: "Compare the units" }}

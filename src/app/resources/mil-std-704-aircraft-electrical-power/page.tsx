@@ -9,7 +9,6 @@ const externalPower = {
   id: "external-power-and-ground-power-equipment",
   title: "External power and ground power equipment",
 };
-const contents = [overview, ...sections];
 
 export const metadata: Metadata = {
   title: metaTitle,
@@ -20,6 +19,7 @@ export const metadata: Metadata = {
 export default function MilStd704AircraftElectricalPowerPage() {
   return (
     <ResourceArticle
+      route="/resources/mil-std-704-aircraft-electrical-power"
       breadcrumb={{
         links: [
           { href: "/", label: "Home" },
@@ -31,7 +31,7 @@ export default function MilStd704AircraftElectricalPowerPage() {
       heroImage="/images/aircraft-ground-power-unit.png"
       heroVariant="equipment"
       jumpLink={externalPower}
-      sections={contents}
+      sections={sections}
       showArticleFooter={false}
     >
       <section id={overview.id} aria-label={overview.title} className={`${styles.section} ${styles.overview}`}>

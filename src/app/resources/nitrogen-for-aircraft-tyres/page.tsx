@@ -6,7 +6,6 @@ import { introduction, metaDescription, metaTitle, sections, title } from "./art
 
 const overview = { id: "overview", title: "Overview" };
 const whyNitrogen = { id: "why-dry-nitrogen-is-used", title: "Why dry nitrogen is used" };
-const contents = [overview, ...sections];
 
 export const metadata: Metadata = {
   title: metaTitle,
@@ -17,12 +16,13 @@ export const metadata: Metadata = {
 export default function NitrogenForAircraftTyresPage() {
   return (
     <ResourceArticle
+      route="/resources/nitrogen-for-aircraft-tyres"
       category="Aircraft Ground Support"
       title={title}
       heroImage="/images/tire_infliation.png"
       heroVariant="equipment"
       jumpLink={whyNitrogen}
-      sections={contents}
+      sections={sections}
       showArticleFooter={false}
     >
       <section id={overview.id} aria-label={overview.title} className={`${styles.section} ${styles.overview}`}>

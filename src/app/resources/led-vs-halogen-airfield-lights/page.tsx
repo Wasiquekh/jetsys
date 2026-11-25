@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 export default function LedVsHalogenAirfieldLightsPage() {
   return (
     <ResourceArticle
+      route="/resources/led-vs-halogen-airfield-lights"
       breadcrumb={breadcrumb}
       title={title}
       heroImage="/images/led-runway-lights.png"

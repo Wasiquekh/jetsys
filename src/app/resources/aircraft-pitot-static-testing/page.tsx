@@ -62,6 +62,7 @@ export const metadata: Metadata = {
 export default function AircraftPitotStaticTestingPage() {
   return (
     <ResourceArticle
+      route="/resources/aircraft-pitot-static-testing"
       category="Air Data & Pitot-Static Testing"
       title="Aircraft Pitot Static Testing and Test Equipment"
       heroImage="/images/aircraft_pitot_static_tester.png"

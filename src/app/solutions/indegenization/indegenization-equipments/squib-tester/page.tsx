@@ -207,68 +207,53 @@ const page = () => {
       Squib Tester Applications
     </h2>
 
+    {/*
+      Each application group is named once as a heading with its own bullets.
+      These were previously flat lists where the group name was repeated as a
+      bold label on every bullet - "Aircraft Safety Systems" four times,
+      "Maintenance & Diagnostics" three - so the labels carried no information
+      and the lists read as duplicates. Same content, regrouped so each group
+      sits wholly in one column.
+    */}
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
       {/* LEFT COLUMN */}
-      <div className="text-black space-y-4">
-        <ul className="list-disc pl-5">
-          <li>
-            <strong className="font-bold text-[#5C5649]">Aircraft Safety Systems</strong>
-            &nbsp;Used for ejection seats to ensure reliable ignition during emergency deployment.
-          </li>
-          <li>
-            <strong className="font-bold text-[#5C5649]">Aircraft Safety Systems</strong>
-            &nbsp;Validates canopy severance devices for safe pilot exit operations.
-          </li>
-          <li>
-            <strong className="font-bold text-[#5C5649]">Aircraft Safety Systems</strong>
-            &nbsp;Checks emergency fire bottle squib cartridges to ensure rapid discharge.
-          </li>
-          <li>
-            <strong className="font-bold text-[#5C5649]">Aircraft Safety Systems</strong>
-            &nbsp;Used for flare and countermeasure deployment verification.
-          </li>
-
-          <li>
-            <strong className="font-bold text-[#5C5649]">Rocket & Missile Systems</strong>
-            &nbsp;Performs igniter circuit continuity and resistance checks.
-          </li>
-          <li>
-            <strong className="font-bold text-[#5C5649]">Rocket & Missile Systems</strong>
-            &nbsp;Validates stage-separation charges for mission-critical sequencing.
-          </li>
-        </ul>
+      <div className="text-black space-y-6">
+        <div>
+          <h3 className="font-bold text-[#5C5649] mb-2">Aircraft Safety Systems</h3>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Ejection seats, to confirm reliable ignition during emergency deployment.</li>
+            <li>Canopy severance devices, for safe pilot exit operations.</li>
+            <li>Emergency fire bottle squib cartridges, to confirm rapid discharge.</li>
+            <li>Flare and countermeasure deployment verification.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-bold text-[#5C5649] mb-2">Rocket &amp; Missile Systems</h3>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Igniter circuit continuity and resistance checks.</li>
+            <li>Stage-separation charges, for mission-critical sequencing.</li>
+            <li>Safety and arming circuits, for correct electrical parameters.</li>
+          </ul>
+        </div>
       </div>
 
       {/* RIGHT COLUMN */}
-      <div className="text-black space-y-4">
-        <ul className="list-disc pl-5">
-          <li>
-            <strong className="font-bold text-[#5C5649]">Rocket & Missile Systems</strong>
-            &nbsp;Tests safety and arming circuits for correct electrical parameters.
-          </li>
-
-          <li>
-            <strong className="font-bold text-[#5C5649]">Maintenance & Diagnostics</strong>
-            &nbsp;Used for continuity and firing-circuit validation in on-ground inspections.
-          </li>
-          <li>
-            <strong className="font-bold text-[#5C5649]">Maintenance & Diagnostics</strong>
-            &nbsp;Supports pre-flight and post-storage safety inspections.
-          </li>
-          <li>
-            <strong className="font-bold text-[#5C5649]">Maintenance & Diagnostics</strong>
-            &nbsp;Essential for depot-level electrical testing of explosive devices.
-          </li>
-
-          <li>
-            <strong className="font-bold text-[#5C5649]">Defence & Aerospace Manufacturing</strong>
-            &nbsp;Ensures production quality assurance for squibs and cartridges.
-          </li>
-          <li>
-            <strong className="font-bold text-[#5C5649]">Defence & Aerospace Manufacturing</strong>
-            &nbsp;Used for acceptance testing and periodic verification.
-          </li>
-        </ul>
+      <div className="text-black space-y-6">
+        <div>
+          <h3 className="font-bold text-[#5C5649] mb-2">Maintenance &amp; Diagnostics</h3>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Continuity and firing-circuit validation during on-ground inspections.</li>
+            <li>Pre-flight and post-storage safety inspections.</li>
+            <li>Depot-level electrical testing of explosive devices.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-bold text-[#5C5649] mb-2">Defence &amp; Aerospace Manufacturing</h3>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Production quality assurance for squibs and cartridges.</li>
+            <li>Acceptance testing and periodic verification.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -373,57 +358,13 @@ const page = () => {
 </section><br></br><br></br>
 <section>
   <div>
-    <h2 className="font-bold text-3xl text-[#5C5649] mb-5">
-      Frequently Asked Questions
-    </h2>
-
-    <div className="text-black space-y-6">
-      <div>
-        <h3 className="font-bold text-[#5C5649]">What is a squib tester?</h3>
-        <p className="mt-1 leading-relaxed">
-          A squib tester is an electronic instrument that checks the electrical condition of squibs,
-          igniters, and their firing circuits. It measures continuity and resistance with a
-          current-limited test, without intentionally firing the device.
-        </p>
-      </div>
-
-      <div>
-        <h3 className="font-bold text-[#5C5649]">What is squib testing in aircraft?</h3>
-        <p className="mt-1 leading-relaxed">
-          It is the maintenance check of the squib firing circuits on an aircraft, such as those for
-          ejection seats, canopy severance, fire bottles, and countermeasure dispensers. The aim is to
-          confirm each circuit is intact and within its expected resistance before the aircraft is
-          released.
-        </p>
-      </div>
-
-      <div>
-        <h3 className="font-bold text-[#5C5649]">What does a squib tester measure?</h3>
-        <p className="mt-1 leading-relaxed">
-          The Jetsys Defence Squib Tester measures circuit continuity and low resistance values using
-          4-wire Kelvin sensing, and detects open circuits, short circuits, leakage, and stray voltage.
-        </p>
-      </div>
-
-      <div>
-        <h3 className="font-bold text-[#5C5649]">Where are aircraft squibs used?</h3>
-        <p className="mt-1 leading-relaxed">
-          Squibs are used in ejection seats, canopy severance devices, emergency fire bottle
-          cartridges, and flare and countermeasure deployment. In rocket and missile systems they are
-          used in igniter and stage-separation circuits.
-        </p>
-      </div>
-
-      <div>
-        <h3 className="font-bold text-[#5C5649]">Why is squib circuit testing required?</h3>
-        <p className="mt-1 leading-relaxed">
-          These systems must work the first time they are needed and cannot be function-tested by
-          firing them. Circuit testing finds broken wiring, high resistance, and stray voltage during
-          routine maintenance, before they can cause a failure to fire or an unintended initiation.
-        </p>
-      </div>
-    </div>
-
+    {/*
+      The "what is squib testing" explainer that used to sit here - five
+      definitional Q&As - moved to /resources/squib-testing, which now owns that
+      content. The two pages were competing for the same queries. The summary
+      and link near the top of this page are the only explainer this product
+      page carries; keep product detail here and concepts in the guide.
+    */}
     <p className="text-black leading-relaxed mt-8 mb-6">
       The Squib Tester is part of our range of{" "}
       <Link href="/solutions/indegenization/indegenization-equipments" className="underline">

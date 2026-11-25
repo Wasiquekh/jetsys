@@ -6,7 +6,6 @@ import { introduction, metaDescription, metaTitle, sections, title } from "./art
 
 const overview = { id: "overview", title: "Overview" };
 const process = { id: "manufacturing-process", title: "See the manufacturing process" };
-const contents = [overview, ...sections];
 
 export const metadata: Metadata = {
   title: metaTitle,
@@ -17,12 +16,13 @@ export const metadata: Metadata = {
 export default function AerospaceWireHarnessManufacturingPage() {
   return (
     <ResourceArticle
+      route="/resources/aerospace-wire-harness-manufacturing"
       category="Aerospace Wiring & Manufacturing"
       title={title}
       heroImage="/images/aircraft-electrical-harness.png"
       heroVariant="equipment"
       jumpLink={process}
-      sections={contents}
+      sections={sections}
       showArticleFooter={false}
     >
       <section id={overview.id} aria-label={overview.title} className={`${styles.section} ${styles.overview}`}>

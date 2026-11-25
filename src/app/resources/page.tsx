@@ -82,10 +82,14 @@ const topics: Topic[] = [
     image: "/images/Aircraft Tow Bar.png",
   },
   {
-    title: "Avionics & Fuel Testing",
-    description: "Browse aircraft test equipment topics for avionics and fuel systems. Understand how measurement needs, equipment interfaces and reporting requirements shape an enquiry.",
+    // Was "Avionics & Fuel Testing" with three chips, two of which resolved to
+    // the same fuel-testing guide and one of which was labelled "Avionics test
+    // equipment" while pointing at it. There is no avionics testing guide, so
+    // the duplicate chip is gone and the card now claims only what it covers.
+    // Restore an avionics chip when an avionics guide actually exists.
+    title: "Fuel Testing & Test Benches",
+    description: "Browse aircraft fuel testing equipment and custom test bench topics. Understand how measurement needs, equipment interfaces and reporting requirements shape an enquiry.",
     subjects: [
-      { label: "Avionics test equipment", href: "/resources/aviation-fuel-testing-equipment" },
       { label: "Fuel testing", href: "/resources/aviation-fuel-testing-equipment" },
       { label: "Test benches", href: "/solutions/custom-test-rig-design" },
     ],
@@ -104,14 +108,10 @@ const topics: Topic[] = [
   {
     title: "Defence Indigenisation",
     description: "Explore the terminology used in indigenisation projects, including requirements definition, local manufacturing, validation and documentation.",
-    // Interim targets: all three point at the existing solutions page until
-    // /resources/how-defence-indigenisation-works is published, at which point
-    // they move to #engineering-work, #qualification-and-certification and
-    // #documentation-set respectively.
     subjects: [
-      { label: "Local manufacturing", href: "/solutions/indegenization" },
-      { label: "Validation", href: "/solutions/indegenization" },
-      { label: "Engineering documentation", href: "/solutions/indegenization" },
+      { label: "Local manufacturing", href: "/resources/how-defence-indigenisation-works#engineering-work" },
+      { label: "Validation", href: "/resources/how-defence-indigenisation-works#qualification-and-certification" },
+      { label: "Engineering documentation", href: "/resources/how-defence-indigenisation-works#documentation-set" },
     ],
     image: "/images/Indegenization.png",
     cover: true,

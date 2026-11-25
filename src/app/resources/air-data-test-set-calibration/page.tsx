@@ -13,7 +13,6 @@ import {
 } from "./article-content";
 
 const overview = { id: "overview", title: "Overview" };
-const contents = [overview, ...sections];
 
 export const metadata: Metadata = {
   title: metaTitle,
@@ -24,12 +23,13 @@ export const metadata: Metadata = {
 export default function AirDataTestSetCalibrationPage() {
   return (
     <ResourceArticle
+      route="/resources/air-data-test-set-calibration"
       category="Air Data & Pitot-Static Testing"
       title={title}
       heroImage="/images/Aircraft Air Data Calibration System.png"
       heroVariant="equipment"
       jumpLink={sections[0]}
-      sections={contents}
+      sections={sections}
     >
       <section id={overview.id} className={`${styles.section} ${styles.overview}`}>
         <h2>{overview.title}</h2>

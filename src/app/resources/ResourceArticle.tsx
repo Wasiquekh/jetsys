@@ -5,37 +5,98 @@ import { ArrowDown, ArrowRight, ChevronDown, ChevronRight, List } from "lucide-r
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import StickyHeader from "../components/StickyHeader";
+import JsonLd from "../components/JsonLd";
+import { PAGE_INDEX } from "@/lib/page-index";
+import { articleNode } from "@/lib/structured-data";
+import { graph } from "@/lib/schema-base";
 import styles from "./resource-article.module.css";
 
 type ArticleLink = { id: string; title: string };
 type Breadcrumb = { links: readonly { href: string; label: string }[]; current: string };
 const resourcesLink = { href: "/resources", label: "Resources" };
 
+/**
+ * The id of the lead-in block every guide opens with. It is styled as an
+ * unheaded lead paragraph, so it has no <h2> for a contents link to land on.
+ */
+const OVERVIEW_ID = "overview";
+
+/**
+ * Builds the "On this page" list.
+ *
+ * Guides used to prepend their own `{ id: "overview", title: "Overview" }`
+ * entry by hand while rendering the lead-in without a heading, which left
+ * twelve pages advertising a section that did not visibly exist. The contents
+ * list is now derived here instead, and an Overview entry only appears when
+ * `overviewHeading` is set - which is also the only thing that renders the
+ * matching <h2>. Entry and heading are produced together or not at all, so a
+ * new guide cannot reintroduce the mismatch.
+ */
+function contentsFor(sections: readonly ArticleLink[], overviewHeading?: string) {
+  const rest = sections.filter((section) => section.id !== OVERVIEW_ID);
+  return overviewHeading
+    ? [{ id: OVERVIEW_ID, title: overviewHeading }, ...rest]
+    : rest;
+}
+
 export default function ResourceArticle({
   category = "Aircraft Ground Power",
   breadcrumb = { links: [resourcesLink], current: category },
+  route,
+  articleType = "Article",
   title,
   heroImage,
   heroVariant,
   jumpLink,
   sections,
+  overviewHeading,
   draftNote,
   showArticleFooter = true,
   children,
 }: {
   category?: string;
   breadcrumb?: Breadcrumb;
+  /**
+   * This guide's own path, e.g. "/resources/squib-testing". Supplying it emits
+   * the Article structured data for the page, with the headline, description
+   * and dates read from the generated page index - so the article's
+   * dateModified and the sitemap's lastmod are always the same value. The
+   * BreadcrumbList is emitted site-wide from the root layout, not here.
+   */
+  route?: string;
+  /** TechArticle where a guide is genuinely technical reference material. */
+  articleType?: "Article" | "TechArticle";
   title: ReactNode;
   heroImage?: string;
   heroVariant?: "equipment" | "equipment-photo";
   jumpLink: ArticleLink;
   sections: readonly ArticleLink[];
+  /**
+   * Set this only when the lead-in block really renders a heading with this
+   * text. Leaving it unset keeps the lead-in out of the contents list.
+   */
+  overviewHeading?: string;
   draftNote?: string;
   showArticleFooter?: boolean;
   children: ReactNode;
 }) {
+  const contents = contentsFor(sections, overviewHeading);
+  const record = route ? PAGE_INDEX[route] : undefined;
+
   return (
     <>
+      {route && record ? (
+        <JsonLd
+          data={graph(
+            articleNode({
+              route,
+              headline: record.label,
+              description: record.description,
+              type: articleType,
+            }),
+          )}
+        />
+      ) : null}
       <Header />
       <StickyHeader />
       <main className={styles.page}>
@@ -75,7 +136,7 @@ export default function ResourceArticle({
                 <List size={18} aria-hidden="true" /> On this page
               </p>
               <ul>
-                {sections.map(({ id, title }) => (
+                {contents.map(({ id, title }) => (
                   <li key={id}><a href={`#${id}`}>{title}</a></li>
                 ))}
               </ul>

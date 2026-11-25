@@ -4,25 +4,36 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import StickyHeader from "@/app/components/StickyHeader";
 
+// Retitled around "Aircraft Ground Support Equipment (GSE)": generic GSE
+// queries were ranking 40-59 against a title that led with "Aviation
+// Equipment", a phrase nobody searches for.
+//
+// Note for whoever picks this up: the child page
+// /products/aviation-equipment/ground-support-equipment is titled "Aircraft
+// Ground Support Equipment - Harnesses, Tow Bars & Nitrogen Trolleys", so this
+// hub and that child now lead with the same phrase. Only one of them should own
+// the generic term. The hub is the umbrella over all four equipment families,
+// so the child is the one to narrow.
 export const metadata = {
-  title: "Aviation Equipment & Ground Support Solutions",
+  title: "Aircraft Ground Support Equipment (GSE) | Jetsys Defence",
   description:
-    "Explore precision-engineered aviation equipment for ground support, ground supply, aircraft testing and ground handling operations.",
+    "Aircraft ground support equipment (GSE) from Jetsys Defence: ground support, ground supply, ground test and ground handling equipment for civil and military aviation.",
   alternates: {
     canonical: "https://www.jetsys.co.in/products/aviation-equipment",
   },
   keywords: [
+    "aircraft ground support equipment",
+    "GSE",
     "aviation equipment",
-    "ground support equipment",
     "ground supply equipment",
     "ground test equipment",
     "ground handling equipment",
     "aerospace engineering",
   ],
   openGraph: {
-    title: "Aviation Equipment & Ground Support Solutions",
+    title: "Aircraft Ground Support Equipment (GSE) | Jetsys Defence",
     description:
-      "Mission-ready aviation equipment engineered for safe, efficient and dependable ground operations.",
+      "Mission-ready aircraft ground support equipment engineered for safe, efficient and dependable ground operations.",
     type: "website",
   },
 };

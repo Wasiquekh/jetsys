@@ -6,7 +6,6 @@ import { introduction, metaDescription, metaTitle, sections, title } from "./art
 
 const overview = { id: "overview", title: "Overview" };
 const checklist = { id: "aircraft-tow-bar-selection-checklist", title: "Aircraft Tow Bar Selection Checklist" };
-const contents = [overview, ...sections];
 
 export const metadata: Metadata = {
   title: metaTitle,
@@ -17,12 +16,13 @@ export const metadata: Metadata = {
 export default function AircraftTowBarGuidePage() {
   return (
     <ResourceArticle
+      route="/resources/how-to-choose-an-aircraft-tow-bar"
       category="Aircraft Ground Support"
       title={title}
       heroImage="/images/Aircraft Tow Bar.png"
       heroVariant="equipment-photo"
       jumpLink={checklist}
-      sections={contents}
+      sections={sections}
       showArticleFooter={false}
     >
       <section id={overview.id} aria-label={overview.title} className={`${styles.section} ${styles.overview}`}>

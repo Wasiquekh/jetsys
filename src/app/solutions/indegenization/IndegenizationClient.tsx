@@ -79,10 +79,10 @@ export default function Page() {
                 src="/images/Indegenization.png"
                 width={500}
                 height={500}
-                alt="Indegenization"
+                alt="Indigenization"
                 className="mb-5 rounded-2xl"
               />
-              <h2 className="font-bold text-2xl mb-5">Indegenization</h2>
+              <h2 className="font-bold text-2xl mb-5">Indigenization</h2>
               <p className="font-bold text-sm mb-5">Precision Beyond Expectations</p>
               <p className="font-normal text-sm mb-5">
                 Our aviation equipment portfolio is engineered to deliver high performance,

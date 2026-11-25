@@ -13,7 +13,6 @@ const breadcrumb = {
   links: [{ href: "/solutions", label: "Solutions" }],
   current: title,
 };
-const contents = [overview, ...sections];
 
 export const metadata: Metadata = {
   title: metaTitle,
@@ -29,7 +28,7 @@ export default function CustomTestRigDesignPage() {
       heroImage="/images/aircraft-component-test-bench.png"
       heroVariant="equipment"
       jumpLink={process}
-      sections={contents}
+      sections={sections}
       showArticleFooter={false}
     >
       <section id={overview.id} aria-label={overview.title} className={`${styles.section} ${styles.overview}`}>

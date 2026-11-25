@@ -116,8 +116,13 @@ function ReferenceBlock({ block, renderDiagram }: {
                 <tr>{block.headers.map((header) => <th key={header} scope="col">{header}</th>)}</tr>
               </thead>
               <tbody>
-                {block.rows.map(([label, ...cells]) => (
-                  <tr key={label}>
+                {/*
+                  Keyed by position, not by the row label: a table can legitimately
+                  repeat a row label when two rows differ only by the condition in a
+                  later column, and keying on the label silently collides.
+                */}
+                {block.rows.map(([label, ...cells], rowIndex) => (
+                  <tr key={rowIndex}>
                     <th scope="row">{referenceText(label)}</th>
                     {cells.map((cell, index) => <td key={block.headers[index + 1]}>{referenceText(cell)}</td>)}
                   </tr>

@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import ResourceArticle from "../ResourceArticle";
+import JsonLd from "../../components/JsonLd";
+import { faqNode } from "@/lib/structured-data";
+import { graph } from "@/lib/schema-base";
 import { ReferenceParagraphs, ReferenceSection } from "../ResourceReference";
 import styles from "../resource-article.module.css";
 import FourWireMeasurement from "../../components/resources/diagrams/FourWireMeasurement";
 import InstrumentClasses from "../../components/resources/diagrams/InstrumentClasses";
 import ProcedureFlow from "../../components/resources/diagrams/ProcedureFlow";
 import {
-  dateModified,
-  datePublished,
   faqSection,
   introduction,
   metaDescription,
@@ -17,9 +18,7 @@ import {
   title,
 } from "./article-content";
 
-const siteUrl = "https://www.jetsys.co.in";
-const canonicalUrl = `${siteUrl}/resources/squib-testing`;
-const publisher = { "@type": "Organization", name: "Jetsys Defence", url: siteUrl };
+const canonicalUrl = "https://www.jetsys.co.in/resources/squib-testing";
 const overview = { id: "overview", title: "Overview" };
 const breadcrumb = {
   links: [
@@ -51,57 +50,34 @@ const faq = faqSection.blocks.find((block) => block.kind === "faq");
 // part of the answer, so it is dropped from the schema text only.
 const schemaAnswer = (answer: string) => answer.replace(/\s*\[[^\]]+\]\(#[^)]*\)\s*$/, "").trim();
 
-// TechArticle matches the one other Resources article that emits JSON-LD.
-// No HowTo: section 5 describes what a procedure consists of and is explicitly
-// not steps for the reader to perform. No Product: that belongs on the ground
-// test equipment page. Organization appears only as author and publisher.
-const structuredData = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "TechArticle",
-      headline: title,
-      description: metaDescription,
-      mainEntityOfPage: canonicalUrl,
-      datePublished,
-      dateModified,
-      author: publisher,
-      publisher,
-    },
-    {
-      "@type": "BreadcrumbList",
-      itemListElement: [...breadcrumb.links, { href: canonicalUrl, label: breadcrumb.current }]
-        .map(({ href, label }, index) => ({
-          "@type": "ListItem",
-          position: index + 1,
-          name: label,
-          item: new URL(href, siteUrl).href,
+// Only the FAQPage lives here now. The Article comes from ResourceArticle via
+// the `route` prop and the BreadcrumbList from the root layout, so this page no
+// longer hand-rolls either. No HowTo: section 5 describes what a procedure
+// consists of and is explicitly not steps for the reader to perform. No
+// Product: that belongs on the ground test equipment page.
+const structuredData = graph(
+  faq
+    ? faqNode({
+        route: "/resources/squib-testing",
+        entries: faq.entries.map(({ question, answer }) => ({
+          question,
+          answer: schemaAnswer(answer),
         })),
-    },
-    ...(faq ? [{
-      "@type": "FAQPage",
-      mainEntity: faq.entries.map(({ question, answer }) => ({
-        "@type": "Question",
-        name: question,
-        acceptedAnswer: { "@type": "Answer", text: schemaAnswer(answer) },
-      })),
-    }] : []),
-  ],
-};
+      })
+    : null,
+);
 
 export default function SquibTestingPage() {
   return (
     <ResourceArticle
+      route="/resources/squib-testing"
       breadcrumb={breadcrumb}
       title={title}
       jumpLink={sections[0]}
       sections={sections}
       showArticleFooter={false}
     >
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
-      />
+      <JsonLd data={structuredData} />
 
       <section id={overview.id} aria-label={overview.title} className={`${styles.section} ${styles.overview}`}>
         <ReferenceParagraphs paragraphs={introduction} />

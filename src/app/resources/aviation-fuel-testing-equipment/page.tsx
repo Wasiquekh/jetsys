@@ -6,7 +6,6 @@ import { introduction, metaDescription, metaTitle, sections, title } from "./art
 
 const overview = { id: "overview", title: "Overview" };
 const comparison = { id: sections[0].id, title: "Compare testing methods" };
-const contents = [overview, ...sections];
 
 export const metadata: Metadata = {
   title: metaTitle,
@@ -17,12 +16,13 @@ export const metadata: Metadata = {
 export default function AviationFuelTestingEquipmentPage() {
   return (
     <ResourceArticle
+      route="/resources/aviation-fuel-testing-equipment"
       category="Avionics & Fuel Testing"
       title={title}
       heroImage="/images/aviation-fuel-testing-trolley.png"
       heroVariant="equipment"
       jumpLink={comparison}
-      sections={contents}
+      sections={sections}
       showArticleFooter={false}
     >
       <section id={overview.id} aria-label={overview.title} className={`${styles.section} ${styles.overview}`}>

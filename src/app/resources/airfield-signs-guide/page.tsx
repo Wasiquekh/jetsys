@@ -5,7 +5,6 @@ import styles from "../resource-article.module.css";
 import { introduction, metaDescription, metaTitle, sections, title } from "./article-content";
 
 const overview = { id: "overview", title: "Overview" };
-const contents = [overview, ...sections];
 
 export const metadata: Metadata = {
   title: metaTitle,
@@ -16,12 +15,13 @@ export const metadata: Metadata = {
 export default function AirfieldSignsGuidePage() {
   return (
     <ResourceArticle
+      route="/resources/airfield-signs-guide"
       category="Airfield Lighting & Signage"
       title={title}
       heroImage="/images/Taxiway Direction.png"
       heroVariant="equipment"
       jumpLink={sections[0]}
-      sections={contents}
+      sections={sections}
       showArticleFooter={false}
     >
       <section id={overview.id} aria-label={overview.title} className={`${styles.section} ${styles.overview}`}>
