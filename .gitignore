@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# build output kept for debugging only; regenerate on demand with
+# `npm run build 2>&1 | tee build-log.txt` rather than committing it
+build-log.txt
